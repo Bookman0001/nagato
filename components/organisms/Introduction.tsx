@@ -1,11 +1,10 @@
-import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
 
 import Title from '../atoms/Title'
 import ParagraphContent from '../atoms/ParagraphContent'
-import '../../locale/I18n'
+import 'locale/I18n'
 
 export default function Introduction() {
   const { t } = useTranslation()

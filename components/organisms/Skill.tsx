@@ -1,6 +1,4 @@
-import React from 'react'
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 import Title from '../atoms/Title'
 import SquarePicture from '../atoms/Picture'

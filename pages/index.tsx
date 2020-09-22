@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 
-import { GlobalStyle } from '../theme'
-import Introduction from '../components/organisms/Introduction'
-import Skill from '../components/organisms/Skill'
-import EnginnerCareer from '../components/organisms/EnginnerCareer'
-import Header from '../components/molecures/Header'
-import Footer from '../components/molecures/Footer'
-import BackGroundPicture from '../components/atoms/BackgroundPicture'
-import Button from '../components/atoms/Button'
+import { GlobalStyle } from 'theme'
+import Introduction from 'components/organisms/Introduction'
+import Skill from 'components/organisms/Skill'
+import EnginnerCareer from 'components/organisms/EnginnerCareer'
+import Header from 'components/molecures/Header'
+import Footer from 'components/molecures/Footer'
+import BackGroundPicture from 'components/atoms/BackgroundPicture'
+import Button from 'components/atoms/Button'
 
 export default function Home() {
   const [isClicked, setIsClicked] = useState<boolean>(false)

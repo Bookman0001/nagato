@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
@@ -6,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import Title from '../atoms/Title'
 import CirclePicture from '../atoms/Picture'
 import ParagraphContent from '../atoms/ParagraphContent'
-import '../../locale/I18n'
+import 'locale/I18n'
 
 export default function EnginnerCareer() {
   const { t } = useTranslation()
