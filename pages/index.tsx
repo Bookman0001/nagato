@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import { GlobalStyle } from 'theme'
 import Introduction from 'components/organisms/Introduction'
+import Oss from 'components/organisms/Oss'
 import Skill from 'components/organisms/Skill'
 import EnginnerCareer from 'components/organisms/EnginnerCareer'
 import Header from 'components/molecures/Header'
@@ -23,6 +24,7 @@ export default function Home() {
         <Skill />
         {isClicked ? (
           <>
+            <Oss />
             <EnginnerCareer />
           </>
         ) : (

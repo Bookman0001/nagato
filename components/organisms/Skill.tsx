@@ -61,6 +61,9 @@ export default function Skill() {
       </Title>
       <SkillContent>
         <IconWrapper>
+          <SquarePicture src="/assets/next.png" alt="next" />
+        </IconWrapper>
+        <IconWrapper>
           <SquarePicture src="/assets/vue.png" alt="vue" />
         </IconWrapper>
         <IconWrapper>
@@ -85,4 +88,7 @@ const IconWrapper = styled.div`
   margin: 20px;
   background-color: #303030;
   align-items: center;
+  img {
+    background-color: #ffffff;
+  }
 `
