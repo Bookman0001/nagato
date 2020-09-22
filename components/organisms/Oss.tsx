@@ -7,30 +7,24 @@ import CirclePicture from '../atoms/Picture'
 import ParagraphContent from '../atoms/ParagraphContent'
 import 'locale/I18n'
 
-export default function EnginnerCareer() {
+export default function Oss() {
   const { t } = useTranslation()
   return (
     <Container>
       <Title>
-        <span>C</span>areer
+        <span>O</span>ss
       </Title>
       <DetailWrapper>
         <ImageWrapper>
-          <CirclePicture src="/assets/hospital.png" alt="hospital" isCircle />
+          <CirclePicture src="/assets/github.png" alt="github" isCircle />
         </ImageWrapper>
-        <ParagraphContent>{t('step1')}</ParagraphContent>
-      </DetailWrapper>
-      <DetailWrapper>
-        <ImageWrapper>
-          <CirclePicture src="/assets/net.png" alt="net" isCircle />
-        </ImageWrapper>
-        <ParagraphContent>{t('step2')}</ParagraphContent>
-      </DetailWrapper>
-      <DetailWrapper>
-        <ImageWrapper>
-          <CirclePicture src="/assets/frontend.png" alt="frontend" isCircle />
-        </ImageWrapper>
-        <ParagraphContent>{t('now')}</ParagraphContent>
+        <ParagraphContent>
+          {t('oss')}
+          <br />
+          <Link href="https://github.com/covid19india/covid19india-react">
+            ・covid19india-react
+          </Link>
+        </ParagraphContent>
       </DetailWrapper>
     </Container>
   )
@@ -57,3 +51,5 @@ const DetailWrapper = styled.div`
 const ImageWrapper = styled.div`
   margin-right: 50px;
 `
+
+const Link = styled.a``
