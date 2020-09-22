@@ -1,16 +1,32 @@
+import { useState } from 'react'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
 
 import Picture from '../atoms/Picture'
+import Button from '../atoms/Button'
+import 'locale/I18n'
 
 export default function Header() {
+  const [t, i18n] = useTranslation()
+  const [lang, setLang] = useState<string>('ja')
+
+  const handleClick = () => {
+    const targetedLang = lang === 'en' ? 'ja' : 'en'
+    i18n.changeLanguage(targetedLang)
+    setLang(targetedLang)
+  }
+
   return (
     <HeaderContainer>
       <p>
         <Link href="/">Kengo Okamoto</Link>
       </p>
-      <Link href="mailto:odonel51486666@gmail.com">
+      <MailLink href="mailto:odonel51486666@gmail.com">
         <Picture src={'/assets/mail.png'} alt={'mail'} width={25} height={25} />
-      </Link>
+      </MailLink>
+      <ButtonContainer>
+        <Button onClick={handleClick}>{t('change')}</Button>
+      </ButtonContainer>
     </HeaderContainer>
   )
 }
@@ -23,15 +39,26 @@ const HeaderContainer = styled.header`
   border-bottom: 1px solid #e5e5e5;
   z-index: 1000;
   width: 100%;
-  height: 60px;
+  flex: 1;
   p {
     font-size: 16px;
-    margin: 20px;
     color: #303030;
   }
 `
 
 const Link = styled.a`
   width: 25px;
-  margin: 0 10px;
+  margin: 0 20px;
+`
+
+const MailLink = styled.a`
+  margin-right: 20px;
+`
+
+const ButtonContainer = styled.div`
+  margin-bottom: 5px;
+  button {
+    font-size: 12px;
+    padding: 0 10px;
+  }
 `
