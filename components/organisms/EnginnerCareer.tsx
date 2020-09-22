@@ -12,7 +12,7 @@ export default function EnginnerCareer() {
   return (
     <Container>
       <Title>
-        <span>E</span>ngineer Career
+        <span>C</span>areer
       </Title>
       <DetailWrapper>
         <ImageWrapper>
