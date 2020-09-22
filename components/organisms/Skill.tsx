@@ -57,7 +57,7 @@ export default function Skill() {
         </IconWrapper>
       </SkillContent>
       <Title>
-        <span>P</span>rivate Experience
+        <span>P</span>rivate
       </Title>
       <SkillContent>
         <IconWrapper>
