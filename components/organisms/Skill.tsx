@@ -5,7 +5,7 @@ import SquarePicture from '../atoms/Picture'
 
 export default function Skill() {
   return (
-    <>
+    <Container>
       <Title>
         <span>S</span>kill
       </Title>
@@ -70,15 +70,19 @@ export default function Skill() {
           <SquarePicture src="/assets/csharp.png" alt="csharp" />
         </IconWrapper>
       </SkillContent>
-    </>
+    </Container>
   )
 }
+
+const Container = styled.div`
+  margin-bottom: 50px;
+`
 
 const SkillContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 10px;
+  margin: 10px 10px 50px;
 `
 
 const IconWrapper = styled.div`

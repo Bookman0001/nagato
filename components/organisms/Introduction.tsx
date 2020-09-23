@@ -9,14 +9,14 @@ import 'locale/I18n'
 export default function Introduction() {
   const { t } = useTranslation()
   return (
-    <>
+    <Container>
       <Title>
         <span>I</span>ntroduction
       </Title>
       <IntroductionWrapper>
         <ParagraphContent>{t('introduction')}</ParagraphContent>
       </IntroductionWrapper>
-    </>
+    </Container>
   )
 }
 
@@ -29,6 +29,10 @@ const Animation = keyframes`
   margin: 10px 0;
   opacity: 1;
 }
+`
+
+const Container = styled.div`
+  margin-bottom: 50px;
 `
 
 const IntroductionWrapper = styled.div`
