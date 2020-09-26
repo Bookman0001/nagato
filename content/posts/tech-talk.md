@@ -7,6 +7,8 @@ published: 2020-09-12
 
 今年の春ごろ getStaticProps と getStaticPaths メソッドが公開されてから Next.js は SSR と SSG 技術をより洗練させ、静的ジェネレーターとしてかなり傾けている節が見受けられる。
 
+[→ 詳しくは Next.js のブログより](https://nextjs.org/blog/next-9-3)
+
 前置きはさておき、ここ最近はブログや HP 関連の作成技術が JavaScript,TypeScript で完結できる仕組みが登場している。
 
 この世界的な潮流は個人的には 一部の界隈が WordPress による構築と運営によるコストが高いと感じ、フロント技術と CDN 配信技術でコストを抑えようという思いを強く感じる。
