@@ -1,19 +1,30 @@
 import { useState } from 'react'
+import fs from 'fs'
 import styled from 'styled-components'
 
+import { Blogs } from 'types'
+import { readContentFiles } from 'lib/blogPostLoader'
 import { GlobalStyle } from 'theme'
 import Introduction from 'components/organisms/Introduction'
 import Oss from 'components/organisms/Oss'
 import Skill from 'components/organisms/Skill'
 import EnginnerCareer from 'components/organisms/EnginnerCareer'
+import Blog from 'components/organisms/Blog'
 import Header from 'components/molecures/Header'
 import Footer from 'components/molecures/Footer'
 import BackGroundPicture from 'components/atoms/BackgroundPicture'
-import Button from 'components/atoms/Button'
 
-export default function Home() {
-  const [isClicked, setIsClicked] = useState<boolean>(false)
+export async function getStaticProps() {
+  const LIST_MAX_COUNT = 5
+  const posts = await readContentFiles({ fs })
+  return {
+    props: {
+      posts: posts.slice(0, LIST_MAX_COUNT),
+    },
+  }
+}
 
+export default function Home({ posts }: Blogs) {
   return (
     <>
       <GlobalStyle />
@@ -21,17 +32,10 @@ export default function Home() {
       <BackGroundPicture src="/assets/overview.png" alt="overview" />
       <Container>
         <Introduction />
+        <Blog posts={posts} />
         <Skill />
-        {isClicked ? (
-          <>
-            <Oss />
-            <EnginnerCareer />
-          </>
-        ) : (
-          <ButtonWrapper>
-            <Button onClick={() => setIsClicked(true)}>More View</Button>
-          </ButtonWrapper>
-        )}
+        <Oss />
+        <EnginnerCareer />
       </Container>
       <Footer />
     </>
@@ -42,8 +46,4 @@ const Container = styled.div`
   max-width: 768px;
   margin: 0 auto;
   padding: 30px;
-`
-
-const ButtonWrapper = styled.div`
-  margin: 50px 0;
 `

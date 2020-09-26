@@ -6,7 +6,11 @@ import Picture from '../atoms/Picture'
 import Button from '../atoms/Button'
 import 'locale/I18n'
 
-export default function Header() {
+interface Props {
+  hideLangSwitch?: boolean
+}
+
+export default function Header({ hideLangSwitch = false }: Props) {
   const [t, i18n] = useTranslation()
   const [lang, setLang] = useState<string>('ja')
 
@@ -24,9 +28,11 @@ export default function Header() {
       <MailLink href="mailto:odonel51486666@gmail.com">
         <Picture src={'/assets/mail.png'} alt={'mail'} width={25} height={25} />
       </MailLink>
-      <ButtonContainer>
-        <Button onClick={handleClick}>{t('change')}</Button>
-      </ButtonContainer>
+      {hideLangSwitch ? null : (
+        <ButtonContainer>
+          <Button onClick={handleClick}>{t('change')}</Button>
+        </ButtonContainer>
+      )}
     </HeaderContainer>
   )
 }
@@ -40,6 +46,7 @@ const HeaderContainer = styled.header`
   z-index: 1000;
   width: 100%;
   flex: 1;
+  top: 0;
   p {
     font-size: 16px;
     color: #303030;
