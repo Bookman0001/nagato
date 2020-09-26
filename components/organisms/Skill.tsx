@@ -82,7 +82,7 @@ const SkillContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 10px 10px 50px;
+  margin-bottom: 50px;
 `
 
 const IconWrapper = styled.div`

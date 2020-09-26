@@ -22,50 +22,61 @@ export default function Header({ hideLangSwitch = false }: Props) {
 
   return (
     <HeaderContainer>
-      <p>
+      <Container>
+        {hideLangSwitch ? null : (
+          <ButtonContainer>
+            <Button onClick={handleClick}>{t('change')}</Button>
+          </ButtonContainer>
+        )}
         <Link href="/">Kengo Okamoto</Link>
-      </p>
-      <MailLink href="mailto:odonel51486666@gmail.com">
-        <Picture src={'/assets/mail.png'} alt={'mail'} width={25} height={25} />
-      </MailLink>
-      {hideLangSwitch ? null : (
-        <ButtonContainer>
-          <Button onClick={handleClick}>{t('change')}</Button>
-        </ButtonContainer>
-      )}
+        <MailLink href="mailto:odonel51486666@gmail.com">
+          <Picture
+            src={'/assets/mail.png'}
+            alt={'mail'}
+            width={25}
+            height={25}
+          />
+        </MailLink>
+      </Container>
     </HeaderContainer>
   )
 }
 
 const HeaderContainer = styled.header`
-  display: flex;
   position: fixed;
-  align-items: center;
+  top: 0;
+  width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #e5e5e5;
   z-index: 1000;
-  width: 100%;
-  flex: 1;
-  top: 0;
-  p {
-    font-size: 16px;
-    color: #303030;
+  color: #303030;
+  font-size: 12px;
+`
+
+const Container = styled.div`
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+`
+
+const ButtonContainer = styled.div`
+  margin-left: 10px;
+  button {
+    padding: 0 10px;
+    font-size: 12px;
   }
 `
 
 const Link = styled.a`
-  width: 25px;
-  margin: 0 20px;
+  display: block;
+  position: absolute;
+  left: calc(50% - 45px);
 `
 
 const MailLink = styled.a`
-  margin-right: 20px;
-`
-
-const ButtonContainer = styled.div`
-  margin-bottom: 5px;
-  button {
-    font-size: 12px;
-    padding: 0 10px;
-  }
+  display: block;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
 `

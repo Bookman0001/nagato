@@ -21,4 +21,5 @@ const Image = styled.img<{ src: string; alt: string }>`
   src: ${(props) => props.src};
   alt: ${(props) => props.alt};
   width: 100%;
+  height: auto;
 `
