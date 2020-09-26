@@ -56,12 +56,13 @@ export default function Post({ title, content }: Props) {
 const Container = styled.div`
   max-width: 768px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 1rem;
 `
 
 const LinkWrapper = styled.div`
   display: flex;
-  margin: 0 20px;
 `
 
 const Content = styled.div``

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import fs from 'fs'
 import styled from 'styled-components'
 
@@ -29,7 +28,9 @@ export default function Home({ posts }: Blogs) {
     <>
       <GlobalStyle />
       <Header />
-      <BackGroundPicture src="/assets/overview.png" alt="overview" />
+      <PictureContainer>
+        <BackGroundPicture src="/assets/overview.png" alt="overview" />
+      </PictureContainer>
       <Container>
         <Introduction />
         <Blog posts={posts} />
@@ -45,5 +46,9 @@ export default function Home({ posts }: Blogs) {
 const Container = styled.div`
   max-width: 768px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 20px;
+`
+
+const PictureContainer = styled.div`
+  margin-top: 50px;
 `

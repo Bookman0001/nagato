@@ -11,14 +11,18 @@ type Props = {
 export default function BlogLayout({ title, children }: Props) {
   return (
     <Container>
-      <Title>{title}</Title>
+      <TitleWrapper>
+        <Title>{title}</Title>
+      </TitleWrapper>
       <Wrapper>{children}</Wrapper>
     </Container>
   )
 }
 
-const Container = styled.div`
-  margin: 80px 20px 50px;
+const Container = styled.div``
+
+const TitleWrapper = styled.div`
+  margin-bottom: 50px;
 `
 
 const Wrapper = styled.div`

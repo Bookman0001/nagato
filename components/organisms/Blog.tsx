@@ -31,7 +31,7 @@ const Container = styled.div`
 `
 
 const DetailWrapper = styled.div`
-  margin: 30px 0;
+  padding: 20px 0;
   display: block;
   align-items: center;
   border-radius: 10px;
