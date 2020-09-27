@@ -23,15 +23,18 @@ export default class MyDocument extends Document<Props> {
       <Html lang="ja">
         <Head>
           <meta charSet="utf-8" />
-          <meta property="og:title" content={'Kengo Okamoto enginner'} />
+          <title>k工房</title>
+          <meta property="og:title" content={'k工房'} />
           <meta
             property="og:description"
-            content={'enginner home page.　エンジニアのページです。'}
+            content={
+              'フロントエンド周りの技術情報や思ったことを発進しています。'
+            }
           />
           <meta name="keywords" content={'engineer'} />
           <meta property="og:type" content="blog" />
           <meta property="og:image" content={'/assets/overview.png'} />
-          <meta property="og:site_name" content={'Kengo Okamoto enginner'} />
+          <meta property="og:site_name" content={'k-puppeteer'} />
           {this.props.styleTags}
         </Head>
         <body>
