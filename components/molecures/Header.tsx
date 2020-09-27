@@ -73,7 +73,7 @@ const ButtonContainer = styled.div`
 const Link = styled.a`
   display: block;
   position: absolute;
-  left: calc(50% - 50px);
+  left: calc(50% - 25px);
   height: 40px;
 `
 
