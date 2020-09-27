@@ -23,7 +23,6 @@ export default class MyDocument extends Document<Props> {
       <Html lang="ja">
         <Head>
           <meta charSet="utf-8" />
-          <title>k工房</title>
           <meta property="og:title" content={'k工房'} />
           <meta
             property="og:description"
