@@ -27,7 +27,7 @@ export default function Blog({ posts }: Blogs) {
 }
 
 const Container = styled.div`
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 `
 
 const DetailWrapper = styled.div`
@@ -35,7 +35,6 @@ const DetailWrapper = styled.div`
   padding: 20px 0;
   display: block;
   align-items: center;
-  border-radius: 10px;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
   p {

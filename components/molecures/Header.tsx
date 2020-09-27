@@ -28,7 +28,9 @@ export default function Header({ hideLangSwitch = false }: Props) {
             <Button onClick={handleClick}>{t('change')}</Button>
           </ButtonContainer>
         )}
-        <Link href="/">Kengo Okamoto</Link>
+        <Link href="/">
+          <Picture src={'/favicon.ico'} alt={'mail'} width={40} height={40} />
+        </Link>
         <MailLink href="mailto:odonel51486666@gmail.com">
           <Picture
             src={'/assets/mail.png'}
@@ -71,7 +73,8 @@ const ButtonContainer = styled.div`
 const Link = styled.a`
   display: block;
   position: absolute;
-  left: calc(50% - 45px);
+  left: calc(50% - 50px);
+  height: 40px;
 `
 
 const MailLink = styled.a`
