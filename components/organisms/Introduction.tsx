@@ -32,7 +32,8 @@ const Animation = keyframes`
 `
 
 const Container = styled.div`
-  margin-bottom: 50px;
+  margin-top: calc(100px - 30px);
+  margin-bottom: 100px;
 `
 
 const IntroductionWrapper = styled.div`

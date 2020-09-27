@@ -61,7 +61,7 @@ const Container = styled.div`
 `
 
 const ButtonContainer = styled.div`
-  margin-left: 10px;
+  margin-left: 20px;
   button {
     padding: 0 10px;
     font-size: 12px;
@@ -78,5 +78,5 @@ const MailLink = styled.a`
   display: block;
   position: absolute;
   right: 0;
-  margin-right: 10px;
+  margin-right: 20px;
 `

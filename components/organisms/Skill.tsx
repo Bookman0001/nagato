@@ -75,21 +75,21 @@ export default function Skill() {
 }
 
 const Container = styled.div`
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 `
 
 const SkillContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 `
 
 const IconWrapper = styled.div`
   background: #ffffff;
   width: 100px;
   height: 100px;
-  margin: 20px;
+  margin: 15px;
   background-color: #303030;
   align-items: center;
   img {

@@ -46,7 +46,7 @@ export default function Home({ posts }: Blogs) {
 const Container = styled.div`
   max-width: 768px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
 `
 
 const PictureContainer = styled.div`
