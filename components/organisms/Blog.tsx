@@ -27,17 +27,19 @@ export default function Blog({ posts }: Blogs) {
 }
 
 const Container = styled.div`
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 `
 
 const DetailWrapper = styled.div`
+  margin-top: 10px;
   padding: 20px 0;
   display: block;
   align-items: center;
   border-radius: 10px;
-  background-color: ;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
   p {
-    margin: 20px 0;
+    padding: 20px 0;
   }
 `
 

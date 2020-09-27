@@ -55,9 +55,8 @@ export default function Post({ title, content }: Props) {
 
 const Container = styled.div`
   max-width: 768px;
-  margin: 0 auto;
-  padding: 20px;
-  margin-top: 50px;
+  padding: 30px;
+  margin: 50px auto 150px;
   font-size: 1rem;
 `
 

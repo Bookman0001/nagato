@@ -31,7 +31,7 @@ export default function Oss() {
 }
 
 const Container = styled.div`
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 `
 
 const DetailWrapper = styled.div`
