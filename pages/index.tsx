@@ -14,7 +14,7 @@ import Footer from 'components/molecures/Footer'
 import BackGroundPicture from 'components/atoms/BackgroundPicture'
 
 export async function getStaticProps() {
-  const LIST_MAX_COUNT = 5
+  const LIST_MAX_COUNT = 7
   const posts = await readContentFiles({ fs })
   return {
     props: {
