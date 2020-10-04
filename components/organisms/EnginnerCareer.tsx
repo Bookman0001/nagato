@@ -37,7 +37,10 @@ export default function EnginnerCareer() {
 }
 
 const Container = styled.div`
-  margin-bottom: 200px;
+  margin-bottom: 150px;
+  ${media.lessThan('medium')`
+  margin-bottom: 100px;
+  `}
 `
 
 const DetailWrapper = styled.div`

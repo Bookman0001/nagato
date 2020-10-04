@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 import Title from '../atoms/Title'
 import SquarePicture from '../atoms/Picture'
@@ -75,14 +76,20 @@ export default function Skill() {
 }
 
 const Container = styled.div`
-  margin-bottom: 200px;
+  margin-bottom: 150px;
+  ${media.lessThan('medium')`
+  margin-bottom: 100px;
+  `}
 `
 
 const SkillContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
+  ${media.lessThan('medium')`
+  margin-bottom: 100px;
+  `}
 `
 
 const IconWrapper = styled.div`
