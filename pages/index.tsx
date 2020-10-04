@@ -1,6 +1,5 @@
 import fs from 'fs'
 import styled from 'styled-components'
-import Media from 'react-media'
 
 import { Blogs } from 'types'
 import { readContentFiles } from 'lib/blogPostLoader'
