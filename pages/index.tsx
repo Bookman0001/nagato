@@ -30,15 +30,7 @@ export default function Home({ posts }: Blogs) {
       <GlobalStyle />
       <Header />
       <PictureContainer>
-        <Media query="(max-width: 768px)">
-          {(matches) =>
-            matches ? (
-              <BackGroundPicture src="/assets/overviewSP.png" alt="overview" />
-            ) : (
-              <BackGroundPicture src="/assets/overview.png" alt="overview" />
-            )
-          }
-        </Media>
+        <BackGroundPicture src="/assets/overview.png" alt="overview" />
       </PictureContainer>
       <Container>
         <Introduction />
