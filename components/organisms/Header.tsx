@@ -68,7 +68,7 @@ const Container = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  ${media.greaterThan('medium')`
+  ${media.greaterThan('small')`
      max-width: 768px;
      margin: 0 auto;
   `}
@@ -80,9 +80,6 @@ const ButtonContainer = styled.div`
     padding: 0 10px;
     font-size: 1rem;
   }
-  ${media.greaterThan('medium')`
-     margin-left: 0;
-  `}
 `
 
 const Link = styled.a`
@@ -98,9 +95,6 @@ const SharingContainer = styled.div`
   right: 0;
   margin-right: 20px;
   cursor: pointer;
-  ${media.greaterThan('medium')`
-     margin-right: 0;
-  `}
 `
 
 
