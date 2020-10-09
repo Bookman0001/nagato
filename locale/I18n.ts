@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next'
 const resources = {
   ja: {
     translation: {
-      change: 'in English',
+      change: 'EN',
       introduction:
         'フロントエンドをメインにエンジニアリングをしています。直近で最も得意としているのはTypeScriptとReactによるコンポーネント設計です。他に保守レベルでのバックエンドでのエンジニアリング、AWS運用も経験があります。一貫性のあるユーザービリティの高いシステムを追求し続けています。',
       oss:
@@ -18,7 +18,7 @@ const resources = {
   },
   en: {
     translation: {
-      change: '日本語で',
+      change: 'JP',
       introduction:
         'I am front-end developer.Especially, I love TypeScript and React component logic. Also, I experienced back-end enginnering including AWS management.',
       step1: 'I developed and modified package software app(medical system). ',

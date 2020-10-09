@@ -9,8 +9,8 @@ import Oss from 'components/organisms/Oss'
 import Skill from 'components/organisms/Skill'
 import EnginnerCareer from 'components/organisms/EnginnerCareer'
 import Blog from 'components/organisms/Blog'
-import Header from 'components/molecures/Header'
-import Footer from 'components/molecures/Footer'
+import Header from 'components/organisms/Header'
+import Footer from 'components/organisms/Footer'
 import BackGroundPicture from 'components/atoms/BackgroundPicture'
 
 export async function getStaticProps() {
@@ -43,12 +43,12 @@ export default function Home({ posts }: Blogs) {
   )
 }
 
-const Container = styled.div`
+const Container = styled.main`
   max-width: 768px;
   margin: 0 auto;
   padding: 30px;
 `
 
 const PictureContainer = styled.div`
-  margin-top: 50px;
+  margin-top: 51px;
 `

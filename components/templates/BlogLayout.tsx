@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-import Title from '../atoms/Title'
+import MainTitle from '../atoms/MainTitle'
 
 type Props = {
   title: string
@@ -12,9 +12,9 @@ export default function BlogLayout({ title, children }: Props) {
   return (
     <Container>
       <TitleWrapper>
-        <Title>{title}</Title>
+        <MainTitle>{title}</MainTitle>
       </TitleWrapper>
-      <Wrapper>{children}</Wrapper>
+      <Main>{children}</Main>
     </Container>
   )
 }
@@ -25,7 +25,7 @@ const TitleWrapper = styled.div`
   margin-bottom: 50px;
 `
 
-const Wrapper = styled.div`
+const Main = styled.main`
   margin: 10px 0;
   display: flex;
   align-items: center;
