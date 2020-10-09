@@ -10,7 +10,7 @@ import 'locale/I18n'
 export default function Oss() {
   const { t } = useTranslation()
   return (
-    <Container>
+    <Section>
       <Title>
         <span>O</span>ss
       </Title>
@@ -26,11 +26,11 @@ export default function Oss() {
           </Link>
         </ParagraphContent>
       </DetailWrapper>
-    </Container>
+    </Section>
   )
 }
 
-const Container = styled.div`
+const Section = styled.section`
   margin-bottom: 150px;
   ${media.lessThan('medium')`
   margin-bottom: 100px;

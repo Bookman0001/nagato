@@ -10,7 +10,7 @@ import 'locale/I18n'
 export default function EnginnerCareer() {
   const { t } = useTranslation()
   return (
-    <Container>
+    <Section>
       <Title>
         <span>C</span>areer
       </Title>
@@ -32,11 +32,11 @@ export default function EnginnerCareer() {
         </ImageWrapper>
         <ParagraphContent>{t('now')}</ParagraphContent>
       </DetailWrapper>
-    </Container>
+    </Section>
   )
 }
 
-const Container = styled.div`
+const Section = styled.section`
   margin-bottom: 150px;
   ${media.lessThan('medium')`
   margin-bottom: 100px;
@@ -48,7 +48,6 @@ const DetailWrapper = styled.div`
   display: flex;
   align-items: center;
   border-radius: 10px;
-  background-color: ;
   ${media.lessThan('small')`
     display: block;
   `}

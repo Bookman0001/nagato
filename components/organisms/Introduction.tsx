@@ -2,21 +2,21 @@ import styled, { keyframes } from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
 
-import Title from '../atoms/Title'
+import MainTitle from '../atoms/MainTitle'
 import ParagraphContent from '../atoms/ParagraphContent'
 import 'locale/I18n'
 
 export default function Introduction() {
   const { t } = useTranslation()
   return (
-    <Container>
-      <Title>
+    <Section>
+      <MainTitle>
         <span>I</span>ntroduction
-      </Title>
+      </MainTitle>
       <IntroductionWrapper>
         <ParagraphContent>{t('introduction')}</ParagraphContent>
       </IntroductionWrapper>
-    </Container>
+    </Section>
   )
 }
 
@@ -31,7 +31,7 @@ const Animation = keyframes`
 }
 `
 
-const Container = styled.div`
+const Section = styled.section`
   margin-bottom: 150px;
   ${media.lessThan('medium')`
   margin-bottom: 100px;

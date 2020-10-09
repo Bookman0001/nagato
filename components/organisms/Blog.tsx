@@ -8,7 +8,7 @@ export default function Blog({ posts }: Blogs) {
   if (!posts.length) return null
 
   return (
-    <Container>
+    <Section>
       <Title>
         <span>B</span>log
       </Title>
@@ -22,11 +22,11 @@ export default function Blog({ posts }: Blogs) {
           )
         })}
       </DetailWrapper>
-    </Container>
+    </Section>
   )
 }
 
-const Container = styled.div`
+const Section = styled.section`
   margin-bottom: 150px;
   ${media.lessThan('medium')`
   margin-bottom: 100px;

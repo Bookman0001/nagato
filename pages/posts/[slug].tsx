@@ -6,8 +6,8 @@ import media from 'styled-media-query'
 import { readContentFile, listContetFileNameList } from 'lib/blogPostLoader'
 import { GlobalStyle } from 'theme'
 import BlogLayout from 'components/templates/BlogLayout'
-import Header from 'components/molecures/Header'
-import Footer from 'components/molecures/Footer'
+import Header from 'components/organisms/Header'
+import Footer from 'components/organisms/Footer'
 
 type Props = {
   title: string
