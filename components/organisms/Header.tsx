@@ -32,8 +32,8 @@ export default function Header({ hideLangSwitch = false }: Props) {
       <Container>
         {hideLangSwitch ? null : (
           <ButtonContainer>
-           <Button onClick={handleClick}>{t('change')}</Button>
-         </ButtonContainer>
+            <Button onClick={handleClick}>{t('change')}</Button>
+          </ButtonContainer>
         )}
         <Link href="/">
           <Picture src={'/favicon.ico'} alt={'mail'} width={40} height={40} />
@@ -47,7 +47,7 @@ export default function Header({ hideLangSwitch = false }: Props) {
           />
         </SharingContainer>
         {showSharing ? <Sharing /> : null}
-      </Container> 
+      </Container>
     </HeaderContainer>
   )
 }
@@ -85,7 +85,7 @@ const ButtonContainer = styled.div`
 const Link = styled.a`
   display: block;
   position: absolute;
-  left: calc(50% - 25px);
+  left: calc(50% - 20px);
   height: 40px;
 `
 
@@ -96,5 +96,3 @@ const SharingContainer = styled.div`
   margin-right: 20px;
   cursor: pointer;
 `
-
-

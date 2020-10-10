@@ -1,6 +1,6 @@
-import styled, {keyframes} from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import media from 'styled-media-query'
-import {FacebookShareButton,TwitterShareButton} from 'react-share'
+import { FacebookShareButton, TwitterShareButton } from 'react-share'
 
 import Icon from '../atoms/Picture'
 
@@ -9,18 +9,23 @@ export default function Sharing() {
     <Section>
       <Container>
         <FacebookShareButton url={location.href}>
-          <Icon src="/assets/facebook.png" alt="facebook" width={40} height={40}/>
-        </FacebookShareButton>
-        <TwitterShareButton url={location.href}>
-          <Icon src="/assets/twitter.png" alt="twitter" width={40} height={40} />
-        </TwitterShareButton>
-        <MailLink href="mailto:odonel51486666@gmail.com">
           <Icon
-            src={'/assets/mail.png'}
-            alt={'mail'}
+            src="/assets/facebook.png"
+            alt="facebook"
             width={40}
             height={40}
           />
+        </FacebookShareButton>
+        <TwitterShareButton url={location.href}>
+          <Icon
+            src="/assets/twitter.png"
+            alt="twitter"
+            width={40}
+            height={40}
+          />
+        </TwitterShareButton>
+        <MailLink href="mailto:odonel51486666@gmail.com">
+          <Icon src={'/assets/mail.png'} alt={'mail'} width={40} height={40} />
         </MailLink>
       </Container>
     </Section>
@@ -36,8 +41,7 @@ const Animation = keyframes`
   }
 `
 
-const Section = styled.section`
-`
+const Section = styled.section``
 
 const Container = styled.div`
   animation: ${Animation} 0.2s linear;
@@ -51,7 +55,7 @@ const Container = styled.div`
   background-color: #f5f5f5;
   padding: 20px;
   display: flex;
-  border-radius : 20px;
+  border-radius: 20px;
   img {
     margin: 0 10px;
   }
@@ -69,8 +73,7 @@ const Container = styled.div`
   }
   ${media.greaterThan('medium')`
     right: 5px;
-  `}   
+  `}
 `
 
-const MailLink = styled.a`
-`
+const MailLink = styled.a``
