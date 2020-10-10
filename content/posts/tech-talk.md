@@ -1,6 +1,7 @@
 ---
 title: ブログ技術のトレンド
 published: 2020-09-12
+description: 最近は Next.js が尋常でない速度でアップデートが行われている。今年の春ごろ getStaticProps と getStaticPaths メソッドが公開されてから Next.js は SSR と SSG 技術をより洗練させ、静的ジェネレーターとしてかなり傾けている節が見受けられる。
 ---
 
 最近は Next.js が尋常でない速度でアップデートが行われている。

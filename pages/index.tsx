@@ -1,5 +1,6 @@
 import fs from 'fs'
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 import { Blogs } from 'types'
 import { readContentFiles } from 'lib/blogPostLoader'
@@ -47,6 +48,9 @@ const Container = styled.main`
   max-width: 768px;
   margin: 0 auto;
   padding: 30px;
+  ${media.lessThan('small')`
+    padding: 15px;
+  `}
 `
 
 const PictureContainer = styled.div`

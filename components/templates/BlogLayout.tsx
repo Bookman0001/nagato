@@ -33,4 +33,7 @@ const Main = styled.main`
   ${media.lessThan('medium')`
     display: block;
   `}
+  p {
+    line-height: 2;
+  }
 `

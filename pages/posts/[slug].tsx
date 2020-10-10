@@ -58,6 +58,9 @@ const Container = styled.div`
   padding: 30px;
   margin: 50px auto 150px;
   font-size: 1rem;
+  ${media.lessThan('small')`
+    padding: 15px;
+  `}
 `
 
 const LinkWrapper = styled.div`
