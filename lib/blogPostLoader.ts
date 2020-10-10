@@ -26,11 +26,12 @@ export const readContentFile = async ({
   }
   const raw = fs.readFileSync(path.join(dir, `${slug}${extend}`), 'utf8')
   const matterResult = matter(raw)
-  const { title, published: rawPublished } = matterResult.data
+  const { title, description, published: rawPublished } = matterResult.data
   const parsedContent = await remark().use(html).process(matterResult.content)
   const content = parsedContent.toString()
   return {
     title,
+    description,
     published: formatDate(rawPublished),
     content,
     slug,

@@ -3,5 +3,6 @@ export type Blogs = {
     title: string
     slug: string
     published: string
+    description: string
   }[]
 }
