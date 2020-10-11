@@ -30,7 +30,7 @@ export default function Home({ posts }: Blogs) {
       <GlobalStyle />
       <Header />
       <PictureContainer>
-        <BackGroundPicture src="/assets/overview.png" alt="overview" />
+        <BackGroundPicture src="/assets/overview.jpg" alt="overview" />
       </PictureContainer>
       <Container>
         <Introduction />
