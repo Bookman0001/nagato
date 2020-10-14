@@ -1,5 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 import media from 'styled-media-query'
+import Link from 'next/link'
 import { FacebookShareButton, TwitterShareButton } from 'react-share'
 
 import Icon from '../atoms/Picture'
@@ -24,9 +25,9 @@ export default function Sharing() {
             height={40}
           />
         </TwitterShareButton>
-        <MailLink href="mailto:odonel51486666@gmail.com">
+        <Link href="mailto:odonel51486666@gmail.com">
           <Icon src={'/assets/mail.png'} alt={'mail'} width={40} height={40} />
-        </MailLink>
+        </Link>
       </Container>
     </Section>
   )
@@ -75,5 +76,3 @@ const Container = styled.div`
     right: 5px;
   `}
 `
-
-const MailLink = styled.a``

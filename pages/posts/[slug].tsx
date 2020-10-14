@@ -1,7 +1,9 @@
 import fs from 'fs'
 import path from 'path'
+import { useEffect } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import Link from 'next/link'
 
 import { readContentFile, listContetFileNameList } from 'lib/blogPostLoader'
 import { GlobalStyle } from 'theme'
@@ -36,6 +38,10 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ title, content }: Props) {
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
+
   return (
     <>
       <GlobalStyle />
@@ -45,7 +51,9 @@ export default function Post({ title, content }: Props) {
           <Content dangerouslySetInnerHTML={{ __html: content }} />
         </BlogLayout>
         <LinkWrapper>
-          <Link href={'/'}>←Back</Link>
+          <Link href={'/'}>
+            <StyledLink>←Back</StyledLink>
+          </Link>
         </LinkWrapper>
       </Container>
       <Footer />
@@ -69,8 +77,9 @@ const LinkWrapper = styled.div`
 
 const Content = styled.div``
 
-const Link = styled.a`
+const StyledLink = styled.span`
   display: block;
+  cursor: pointer;
   width: 100%;
   font-size: 24px;
   font-weight: bold;

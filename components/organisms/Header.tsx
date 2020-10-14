@@ -2,6 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
+import Link from 'next/link'
 
 import Sharing from '../molecures/Sharing'
 import Picture from '../atoms/Picture'
@@ -36,7 +37,9 @@ export default function Header({ hideLangSwitch = false }: Props) {
           </ButtonContainer>
         )}
         <Link href="/">
-          <Picture src={'/favicon.ico'} alt={'mail'} width={40} height={40} />
+          <StyledLink>
+            <Picture src={'/favicon.ico'} alt={'mail'} width={40} height={40} />
+          </StyledLink>
         </Link>
         <SharingContainer onClick={handleSharingClick}>
           <Picture
@@ -82,7 +85,7 @@ const ButtonContainer = styled.div`
   }
 `
 
-const Link = styled.a`
+const StyledLink = styled.span`
   display: block;
   position: absolute;
   left: calc(50% - 20px);
