@@ -10,23 +10,34 @@ export default function Sharing() {
     <Section>
       <Container>
         <FacebookShareButton url={location.href}>
-          <Icon
-            src="/assets/facebook.png"
-            alt="facebook"
-            width={40}
-            height={40}
-          />
+          <StyledLink>
+            <Icon
+              src="/assets/facebook.png"
+              alt="facebook"
+              width={40}
+              height={40}
+            />
+          </StyledLink>
         </FacebookShareButton>
         <TwitterShareButton url={location.href}>
-          <Icon
-            src="/assets/twitter.png"
-            alt="twitter"
-            width={40}
-            height={40}
-          />
+          <StyledLink>
+            <Icon
+              src="/assets/twitter.png"
+              alt="twitter"
+              width={40}
+              height={40}
+            />
+          </StyledLink>
         </TwitterShareButton>
         <Link href="mailto:odonel51486666@gmail.com">
-          <Icon src={'/assets/mail.png'} alt={'mail'} width={40} height={40} />
+          <StyledLink>
+            <Icon
+              src={'/assets/mail.png'}
+              alt={'mail'}
+              width={40}
+              height={40}
+            />
+          </StyledLink>
         </Link>
       </Container>
     </Section>
@@ -75,4 +86,8 @@ const Container = styled.div`
   ${media.greaterThan('medium')`
     right: 5px;
   `}
+`
+
+const StyledLink = styled.span`
+  cursor: pointer;
 `
