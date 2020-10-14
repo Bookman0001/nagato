@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
+import Link from 'next/link'
 
 import Title from '../atoms/Title'
 import CirclePicture from '../atoms/Picture'
@@ -54,5 +55,3 @@ const DetailWrapper = styled.div`
 const ImageWrapper = styled.div`
   margin-right: 50px;
 `
-
-const Link = styled.a``

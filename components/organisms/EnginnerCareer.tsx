@@ -24,13 +24,25 @@ export default function EnginnerCareer() {
         <ImageWrapper>
           <CirclePicture src="/assets/net.png" alt="net" isCircle />
         </ImageWrapper>
-        <ParagraphContent>{t('step2')}</ParagraphContent>
+        <ParagraphContent>
+          {t('step2')}
+          <br />
+          {t('column21')}
+          <br />
+          {t('column22')}
+          <br />
+          {t('column23')}
+        </ParagraphContent>
       </DetailWrapper>
       <DetailWrapper>
         <ImageWrapper>
           <CirclePicture src="/assets/frontend.png" alt="frontend" isCircle />
         </ImageWrapper>
-        <ParagraphContent>{t('now')}</ParagraphContent>
+        <ParagraphContent>
+          {t('now')}
+          <br />
+          {t('column31')}
+        </ParagraphContent>
       </DetailWrapper>
     </Section>
   )

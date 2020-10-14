@@ -1,4 +1,5 @@
 import fs from 'fs'
+import { useEffect } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
@@ -25,6 +26,10 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts }: Blogs) {
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
+
   return (
     <>
       <GlobalStyle />

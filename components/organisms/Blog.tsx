@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import Link from 'next/link'
 
 import { Blogs } from 'types'
 import Title from '../atoms/Title'
@@ -16,17 +17,19 @@ export default function Blog({ posts }: Blogs) {
       <DetailWrapper>
         {posts.map((post, index) => {
           return (
-            <BlogWrapper key={index}>
+            <div key={index}>
               <Link href={`/posts/${post.slug}`}>
-                <SubTitle key={index}>{post.title}</SubTitle>
-                <DescriptionWrapper>
-                  <Description>{post.description}</Description>
-                </DescriptionWrapper>
-                <PublishedWrapper>
-                  <Description>{post.published}</Description>
-                </PublishedWrapper>
+                <StyledLink>
+                  <SubTitle key={index}>{post.title}</SubTitle>
+                  <DescriptionWrapper>
+                    <Description>{post.description}</Description>
+                  </DescriptionWrapper>
+                  <PublishedWrapper>
+                    <Description>{post.published}</Description>
+                  </PublishedWrapper>
+                </StyledLink>
               </Link>
-            </BlogWrapper>
+            </div>
           )
         })}
       </DetailWrapper>
@@ -50,7 +53,8 @@ const DetailWrapper = styled.div`
   `}
 `
 
-const BlogWrapper = styled.div`
+const StyledLink = styled.span`
+  cursor: pointer;
   display: block;
   margin: 10px;
   padding: 20px;
@@ -70,12 +74,6 @@ const DescriptionWrapper = styled.div`
     -webkit-box-orient: vertical;
     line-height: 1.5;
   }
-`
-
-const Link = styled.a`
-  display: block;
-  width: 100%;
-  cursor: pointer;
 `
 
 const PublishedWrapper = styled.div`
