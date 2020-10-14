@@ -43,8 +43,7 @@ const DetailWrapper = styled.div`
   display: flex;
   align-items: center;
   border-radius: 10px;
-  background-color: ;
-  ${media.lessThan('medium')`
+  ${media.lessThan('small')`
     display: block;
   `}
   p {
