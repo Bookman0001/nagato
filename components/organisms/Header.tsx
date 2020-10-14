@@ -87,6 +87,7 @@ const ButtonContainer = styled.div`
 
 const StyledLink = styled.span`
   display: block;
+  cursor: pointer;
   position: absolute;
   left: calc(50% - 20px);
   height: 40px;
