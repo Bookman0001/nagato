@@ -30,7 +30,6 @@ export async function getStaticPaths() {
   const { getArticles } = ArticlesController()
   const articles = await getArticles()
   const paths = articles.map((article) => `/posts/${article.id}`)
-
   return { paths, fallback: false }
 }
 
