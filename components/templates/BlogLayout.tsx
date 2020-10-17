@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 import MainTitle from '../atoms/MainTitle'
 
-type Props = {
+interface Props {
   title: string
   children: React.ReactChild
 }

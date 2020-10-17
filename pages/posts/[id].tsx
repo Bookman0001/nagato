@@ -11,7 +11,7 @@ import Header from 'components/organisms/Header'
 import Footer from 'components/organisms/Footer'
 import { Article } from 'types'
 
-type Props = {
+interface Props {
   article: Article
 }
 
