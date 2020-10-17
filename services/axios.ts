@@ -1,7 +1,7 @@
 import axios, { AxiosError } from 'axios'
 
-const X_API_BASE_URL: string = process.env.X_API_BASE_URL
-const X_API_KEY: string = process.env.X_API_KEY
+const X_API_BASE_URL: string = process.env.X_API_BASE_URL || ''
+const X_API_KEY: string = process.env.X_API_KEY || ''
 
 export async function get<T = any>(path: string) {
   const response = await axios
