@@ -1,43 +1,41 @@
-import fs from 'fs'
-import path from 'path'
+import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import Link from 'next/link'
 
-import { readContentFile, listContetFileNameList } from 'lib/blogPostLoader'
+import { ArticlesController } from 'controller/articles'
+import { ArticleController } from 'controller/article'
 import { GlobalStyle } from 'theme'
 import BlogLayout from 'components/templates/BlogLayout'
 import Header from 'components/organisms/Header'
 import Footer from 'components/organisms/Footer'
+import { Article } from 'types'
 
 type Props = {
-  title: string
-  content: string
+  article: Article
 }
 
 export async function getStaticProps({ params }) {
-  const fileContent = await readContentFile({ fs, slug: params.slug })
-
+  const { getArticle } = ArticleController()
+  const article = await getArticle(params.id)
   return {
     props: {
-      title: fileContent.title,
-      content: fileContent.content,
+      article: article,
     },
   }
 }
 
 export async function getStaticPaths() {
-  const paths = listContetFileNameList({ fs }).map((fileName) => ({
-    params: {
-      slug: String(path.parse(fileName).name),
-    },
-  }))
+  const { getArticles } = ArticlesController()
+  const articles = await getArticles()
+  const paths = articles.map((article) => `/posts/${article.id}`)
 
   return { paths, fallback: false }
 }
 
-export default function Post({ title, content }: Props) {
+export default function Post({ article }: Props) {
+  const router = useRouter()
   useEffect(() => {
     window.scroll(0, 0)
   }, [])
@@ -47,8 +45,8 @@ export default function Post({ title, content }: Props) {
       <GlobalStyle />
       <Header hideLangSwitch />
       <Container>
-        <BlogLayout title={title}>
-          <Content dangerouslySetInnerHTML={{ __html: content }} />
+        <BlogLayout title={article.title}>
+          <Content dangerouslySetInnerHTML={{ __html: article.content }} />
         </BlogLayout>
         <LinkWrapper>
           <Link href={'/'}>
