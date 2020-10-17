@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
@@ -12,7 +11,7 @@ import Header from 'components/organisms/Header'
 import Footer from 'components/organisms/Footer'
 import { Article } from 'types'
 
-type Props = {
+interface Props {
   article: Article
 }
 
@@ -34,7 +33,6 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ article }: Props) {
-  const router = useRouter()
   useEffect(() => {
     window.scroll(0, 0)
   }, [])
