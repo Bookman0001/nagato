@@ -2,30 +2,34 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Link from 'next/link'
 
-import { Blogs } from 'types'
+import { Article } from 'types'
 import Title from '../atoms/Title'
 import Description from '../atoms/ParagraphContent'
 
-export default function Blog({ posts }: Blogs) {
-  if (!posts.length) return null
+interface Props {
+  articles: Article[]
+}
+
+export default function Articles({ articles }: Props) {
+  if (!articles.length) return null
 
   return (
     <Section>
       <Title>
-        <span>B</span>log
+        <span>A</span>rticles
       </Title>
       <DetailWrapper>
-        {posts.map((post, index) => {
+        {articles.map((article) => {
           return (
-            <div key={index}>
-              <Link href={`/posts/${post.slug}`}>
+            <div key={article.id}>
+              <Link href={`/posts/${article.id}`}>
                 <StyledLink>
-                  <SubTitle key={index}>{post.title}</SubTitle>
+                  <SubTitle key={article.id}>{article.title}</SubTitle>
                   <DescriptionWrapper>
-                    <Description>{post.description}</Description>
+                    <Description>{article.description}</Description>
                   </DescriptionWrapper>
                   <PublishedWrapper>
-                    <Description>{post.published}</Description>
+                    <Description>{article.publishedAt}</Description>
                   </PublishedWrapper>
                 </StyledLink>
               </Link>

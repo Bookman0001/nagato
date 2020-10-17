@@ -1,31 +1,34 @@
-import fs from 'fs'
 import { useEffect } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-import { Blogs } from 'types'
-import { readContentFiles } from 'lib/blogPostLoader'
+import { Article } from 'types'
+import { ArticlesController } from 'controller/articles'
 import { GlobalStyle } from 'theme'
 import Introduction from 'components/organisms/Introduction'
 import Oss from 'components/organisms/Oss'
 import Skill from 'components/organisms/Skill'
 import EnginnerCareer from 'components/organisms/EnginnerCareer'
-import Blog from 'components/organisms/Blog'
+import Articles from 'components/organisms/Articles'
 import Header from 'components/organisms/Header'
 import Footer from 'components/organisms/Footer'
 import BackGroundPicture from 'components/atoms/BackgroundPicture'
 
+interface Props {
+  articles: Article[]
+}
+
 export async function getStaticProps() {
-  const LIST_MAX_COUNT = 7
-  const posts = await readContentFiles({ fs })
+  const { getArticles } = ArticlesController()
+  const articles = await getArticles()
   return {
     props: {
-      posts: posts.slice(0, LIST_MAX_COUNT),
+      articles: articles,
     },
   }
 }
 
-export default function Home({ posts }: Blogs) {
+export default function Home({ articles }: Props) {
   useEffect(() => {
     window.scroll(0, 0)
   }, [])
@@ -39,7 +42,7 @@ export default function Home({ posts }: Blogs) {
       </PictureContainer>
       <Container>
         <Introduction />
-        <Blog posts={posts} />
+        <Articles articles={articles} />
         <Skill />
         <Oss />
         <EnginnerCareer />
