@@ -25,8 +25,7 @@ export default function EnginnerCareer() {
           <CirclePicture src="/assets/net.png" alt="net" isCircle />
         </ImageWrapper>
         <ParagraphContent>
-          {t('step2')}
-          <br />
+          <StyledParagraph>{t('step2')}</StyledParagraph>
           {t('column21')}
           <br />
           {t('column22')}
@@ -39,8 +38,7 @@ export default function EnginnerCareer() {
           <CirclePicture src="/assets/frontend.png" alt="frontend" isCircle />
         </ImageWrapper>
         <ParagraphContent>
-          {t('now')}
-          <br />
+          <StyledParagraph>{t('now')}</StyledParagraph>
           {t('column31')}
         </ParagraphContent>
       </DetailWrapper>
@@ -70,4 +68,8 @@ const DetailWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   margin-right: 50px;
+`
+
+const StyledParagraph = styled.div`
+  margin-bottom: 1rem;
 `

@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     a {
       text-decoration: none;
-      color: initial;
+      color: #0099ff;
       box-shadow : initial;
     }
   }
