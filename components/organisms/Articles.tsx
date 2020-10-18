@@ -62,7 +62,6 @@ const StyledLink = styled.span`
   display: block;
   margin: 10px;
   padding: 20px;
-  border-radius: 25px;
   border: 2px solid #303030;
   :hover {
     opacity: 0.8;
