@@ -14,7 +14,7 @@
     "gray-matter": "^4.0.2",
     "i18next": "^19.8.2",
     "next": "9.5.4",
-    "react": "16.13.1",
+    "react": "16.14.0",
     "react-dom": "16.13.1",
     "react-i18next": "^11.7.3",
     "react-share": "^4.3.1",
