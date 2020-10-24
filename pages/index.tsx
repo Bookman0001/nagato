@@ -2,8 +2,8 @@ import { useEffect } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-import { Article } from 'types'
-import { ArticlesController } from 'controller/articles'
+import { ArticleContents } from 'types'
+import { ArticlesController } from 'controllers/articles'
 import { GlobalStyle } from 'theme'
 import Introduction from 'components/organisms/Introduction'
 import Oss from 'components/organisms/Oss'
@@ -15,7 +15,7 @@ import Footer from 'components/organisms/Footer'
 import BackGroundPicture from 'components/atoms/BackgroundPicture'
 
 interface Props {
-  articles: Article[]
+  articles: ArticleContents
 }
 
 export async function getStaticProps() {

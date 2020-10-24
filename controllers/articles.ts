@@ -1,10 +1,10 @@
 import { fetchArticles } from 'repositories/articles'
 import { mappingArticles } from 'mapping/articles'
-import { ArticleResponse } from 'types'
+import { ArticlesApiResponse } from 'types'
 
 export function ArticlesController() {
   const getArticles = async () => {
-    return await fetchArticles().then((articles: ArticleResponse[]) => {
+    return await fetchArticles().then((articles: ArticlesApiResponse) => {
       return mappingArticles(articles)
     })
   }

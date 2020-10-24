@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Link from 'next/link'
 
-import { ArticlesController } from 'controller/articles'
-import { ArticleController } from 'controller/article'
+import { ArticlesController } from 'controllers/articles'
+import { ArticleController } from 'controllers/article'
 import { GlobalStyle } from 'theme'
 import BlogLayout from 'components/templates/BlogLayout'
 import Header from 'components/organisms/Header'
@@ -28,7 +28,8 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const { getArticles } = ArticlesController()
   const articles = await getArticles()
-  const paths = articles.map((article) => `/posts/${article.id}`)
+  const { contents } = articles
+  const paths = contents.map((article) => `/posts/${article.id}`)
   return { paths, fallback: false }
 }
 
