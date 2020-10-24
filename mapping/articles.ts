@@ -1,9 +1,12 @@
 import dayjs from 'dayjs'
 
-import { ArticleResponse, Article } from 'types'
+import { ArticlesApiResponse, ArticleContents } from 'types'
 
-export function mappingArticles(articles: ArticleResponse[]): Article[] {
-  return articles.map((article) => {
+export function mappingArticles(
+  response: ArticlesApiResponse
+): ArticleContents {
+  const { contents, totalCount, offset, limit } = response
+  const mappedContents = contents.map((article) => {
     const { id, publishedAt, title, description, content, slug } = article
     return {
       id,
@@ -14,4 +17,10 @@ export function mappingArticles(articles: ArticleResponse[]): Article[] {
       slug,
     }
   })
+  return {
+    contents: mappedContents,
+    totalCount,
+    offset,
+    limit,
+  }
 }

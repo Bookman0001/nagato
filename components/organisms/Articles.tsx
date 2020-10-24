@@ -2,16 +2,18 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Link from 'next/link'
 
-import { Article } from 'types'
+import { ArticleContents } from 'types'
 import Title from '../atoms/Title'
 import Description from '../atoms/ParagraphContent'
 
 interface Props {
-  articles: Article[]
+  articles: ArticleContents
 }
 
 export default function Articles({ articles }: Props) {
-  if (!articles.length) return null
+  const { contents } = articles
+
+  if (!contents.length) return null
 
   return (
     <Section>
@@ -19,7 +21,7 @@ export default function Articles({ articles }: Props) {
         <span>A</span>rticles
       </Title>
       <DetailWrapper>
-        {articles.map((article) => {
+        {contents.map((article) => {
           return (
             <div key={article.id}>
               <Link href={`/posts/${article.id}`}>
