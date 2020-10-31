@@ -37,10 +37,8 @@ export default function Home({ articles }: Props) {
     <>
       <GlobalStyle />
       <Header />
-      <PictureContainer>
-        <BackGroundPicture src="/assets/overview.jpg" alt="overview" />
-      </PictureContainer>
       <Container>
+        <BackGroundPicture src="/assets/overview.jpg" alt="overview" />
         <Introduction />
         <Articles articles={articles} />
         <Skill />
@@ -55,12 +53,8 @@ export default function Home({ articles }: Props) {
 const Container = styled.main`
   max-width: 768px;
   margin: 0 auto;
-  padding: 30px;
+  padding: calc(51px + 49px) 30px 30px 30px;
   ${media.lessThan('small')`
-    padding: 15px;
+    padding: calc(51px + 49px) 15px 15px 15px;
   `}
-`
-
-const PictureContainer = styled.div`
-  margin-top: 51px;
 `

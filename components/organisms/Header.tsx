@@ -1,11 +1,11 @@
 import { useState } from 'react'
+import Image from 'next/image'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 
 import Sharing from '../molecures/Sharing'
-import Picture from '../atoms/Picture'
 import Button from '../atoms/Button'
 import 'locale/I18n'
 
@@ -38,11 +38,11 @@ export default function Header({ hideLangSwitch = false }: Props) {
         )}
         <Link href="/">
           <StyledLink>
-            <Picture src={'/favicon.ico'} alt={'mail'} width={40} height={40} />
+            <Image src={'/favicon.ico'} alt={'mail'} width={40} height={40} />
           </StyledLink>
         </Link>
         <SharingContainer onClick={handleSharingClick}>
-          <Picture
+          <Image
             src={'/assets/share.png'}
             alt={'share'}
             width={25}
@@ -78,11 +78,14 @@ const Container = styled.div`
 `
 
 const ButtonContainer = styled.div`
-  margin-left: 20px;
+  margin-left: 15px;
   button {
     padding: 0 10px;
     font-size: 1rem;
   }
+  ${media.greaterThan('large')`
+    margin-left: 0;
+  `}
 `
 
 const StyledLink = styled.span`
@@ -97,6 +100,9 @@ const SharingContainer = styled.div`
   display: block;
   position: absolute;
   right: 0;
-  margin-right: 20px;
+  margin-right: 15px;
   cursor: pointer;
+  ${media.greaterThan('large')`
+    margin-right: 0;
+  `}
 `
