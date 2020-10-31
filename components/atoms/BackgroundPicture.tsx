@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import styled from 'styled-components'
 
 interface Props {
   src: string
@@ -12,3 +12,11 @@ export default function Background({ src, alt }: Props) {
     </>
   )
 }
+
+const Image = styled.img<{ src: string; alt: string }>`
+  src: ${(props) => props.src};
+  alt: ${(props) => props.alt};
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+`
