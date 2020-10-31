@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import Image from 'next/image'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
@@ -7,6 +6,7 @@ import Link from 'next/link'
 
 import Sharing from '../molecures/Sharing'
 import Button from '../atoms/Button'
+import Image from '../atoms/Picture'
 import 'locale/I18n'
 
 interface Props {
