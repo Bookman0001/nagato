@@ -1,6 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
+import { existsGaId, GA_ID } from 'lib/gtag'
+
 interface Props {
   styleTags: any
 }
@@ -35,6 +37,25 @@ export default class MyDocument extends Document<Props> {
           <meta property="og:image" content={'/assets/overview.png'} />
           <meta property="og:site_name" content={'k-puppeteer'} />
           {this.props.styleTags}
+          {existsGaId && (
+            <>
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              />
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_ID}', {
+                    page_path: window.location.pathname,
+                  });`,
+                }}
+              />
+            </>
+          )}
         </Head>
         <body>
           <Main />
