@@ -1,4 +1,3 @@
-import { ftruncate } from 'fs'
 import styled from 'styled-components'
 import Description from '../atoms/ParagraphContent'
 
