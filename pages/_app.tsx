@@ -1,14 +1,10 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { AppProps } from 'next/app'
 import * as gtag from 'lib/gtag'
 
-interface Props {
-  Component: any
-  pageProps: any
-}
-
 //ブラウザ内部でルーターが切り替わった時に発火させている
-const App = ({ Component, pageProps }: Props) => {
+const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()
   useEffect(() => {
     if (!gtag.existsGaId) {
