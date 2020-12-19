@@ -4,7 +4,7 @@ import { ServerStyleSheet } from 'styled-components'
 import { existsGaId, GA_ID } from 'lib/gtag'
 
 interface Props {
-  styleTags: any
+  styleTags: React.ReactElement
 }
 
 export default class MyDocument extends Document<Props> {
