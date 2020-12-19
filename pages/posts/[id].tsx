@@ -15,7 +15,13 @@ interface Props {
   article: Article
 }
 
-export async function getStaticProps({ params }) {
+interface Params {
+  params: {
+    id: string
+  }
+}
+
+export async function getStaticProps({ params }: Params) {
   const { getArticle } = ArticleController()
   const article = await getArticle(params.id)
   return {
