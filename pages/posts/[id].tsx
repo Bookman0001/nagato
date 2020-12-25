@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Link from 'next/link'
 
-import { ArticlesController } from 'controllers/articles'
-import { ArticleController } from 'controllers/article'
+import { useArticles } from 'controllers/articles'
+import { useArticle } from 'controllers/article'
 import { GlobalStyle } from 'theme'
 import BlogLayout from 'components/templates/BlogLayout'
 import Header from 'components/organisms/Header'
@@ -22,7 +22,7 @@ interface Params {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const { getArticle } = ArticleController()
+  const { getArticle } = useArticle()
   const article = await getArticle(params.id)
   return {
     props: {
@@ -32,8 +32,8 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export async function getStaticPaths() {
-  const { getArticles } = ArticlesController()
-  const articles = await getArticles()
+  const { getAllArticles } = useArticles()
+  const articles = await getAllArticles()
   const { contents } = articles
   const paths = contents.map((article) => `/posts/${article.id}`)
   return { paths, fallback: false }
