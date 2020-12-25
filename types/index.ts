@@ -30,6 +30,10 @@ export type Article = {
   content: string
 }
 
+export type Argument = {
+  limit: number
+}
+
 type ContactEvent = {
   action: 'submit_form'
   category: 'Contact'

@@ -1,15 +1,24 @@
-import { fetchArticles } from 'repositories/articles'
+import { fetchAllArticles, fetchLimitedArtcles } from 'repositories/articles'
 import { mappingArticles } from 'mapping/articles'
-import { ArticlesApiResponse } from 'types'
+import { ArticlesApiResponse, Argument } from 'types'
 
-export function ArticlesController() {
-  const getArticles = async () => {
-    return await fetchArticles().then((articles: ArticlesApiResponse) => {
+export function useArticles() {
+  const getAllArticles = async () => {
+    return await fetchAllArticles().then((articles: ArticlesApiResponse) => {
       return mappingArticles(articles)
     })
   }
 
+  const getLimitedArticles = async (argument: Argument) => {
+    return await fetchLimitedArtcles(argument).then(
+      (articles: ArticlesApiResponse) => {
+        return mappingArticles(articles)
+      }
+    )
+  }
+
   return {
-    getArticles,
+    getAllArticles,
+    getLimitedArticles,
   }
 }

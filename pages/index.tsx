@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 import { ArticleContents } from 'types'
-import { ArticlesController } from 'controllers/articles'
+import { useArticles } from 'controllers/articles'
 import { GlobalStyle } from 'theme'
 import Introduction from 'components/organisms/Introduction'
 import Oss from 'components/organisms/Oss'
@@ -19,8 +19,8 @@ interface Props {
 }
 
 export async function getStaticProps() {
-  const { getArticles } = ArticlesController()
-  const articles = await getArticles()
+  const { getLimitedArticles } = useArticles()
+  const articles = await getLimitedArticles({ limit: 6 })
   return {
     props: {
       articles: articles,
