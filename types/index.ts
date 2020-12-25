@@ -13,7 +13,6 @@ export type ArticleResponse = {
   title: string
   description: string
   content: string
-  slug: string
 }
 
 export type ArticleContents = {
@@ -29,7 +28,6 @@ export type Article = {
   title: string
   description: string
   content: string
-  slug: string
 }
 
 type ContactEvent = {

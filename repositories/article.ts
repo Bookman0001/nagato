@@ -9,7 +9,6 @@ type ApiResponse = {
   title: string
   description: string
   content: string
-  slug: string
 }
 
 export async function fetchArticle(

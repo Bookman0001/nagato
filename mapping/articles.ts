@@ -7,14 +7,13 @@ export function mappingArticles(
 ): ArticleContents {
   const { contents, totalCount, offset, limit } = response
   const mappedContents = contents.map((article) => {
-    const { id, publishedAt, title, description, content, slug } = article
+    const { id, publishedAt, title, description, content } = article
     return {
       id,
       publishedAt: dayjs(publishedAt).format('YYYY/MM/DD'),
       title,
       description,
       content,
-      slug,
     }
   })
   return {
