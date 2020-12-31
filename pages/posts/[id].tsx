@@ -21,6 +21,14 @@ interface Params {
   }
 }
 
+export async function getStaticPaths() {
+  const { getAllArticles } = useArticles()
+  const articles = await getAllArticles()
+  const { contents } = articles
+  const paths = contents.map((article) => `/posts/${article.id}`)
+  return { paths, fallback: false }
+}
+
 export async function getStaticProps({ params }: Params) {
   const { getArticle } = useArticle()
   const article = await getArticle(params.id)
@@ -29,14 +37,6 @@ export async function getStaticProps({ params }: Params) {
       article: article,
     },
   }
-}
-
-export async function getStaticPaths() {
-  const { getAllArticles } = useArticles()
-  const articles = await getAllArticles()
-  const { contents } = articles
-  const paths = contents.map((article) => `/posts/${article.id}`)
-  return { paths, fallback: false }
 }
 
 export default function Post({ article }: Props) {
