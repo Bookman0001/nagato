@@ -11,14 +11,14 @@ import Header from 'components/organisms/Header'
 import Footer from 'components/organisms/Footer'
 import { Article } from 'types'
 
-interface Props {
-  article: Article
-}
-
 interface Params {
   params: {
     id: string
   }
+}
+
+interface Props {
+  article: Article
 }
 
 export async function getStaticPaths() {
