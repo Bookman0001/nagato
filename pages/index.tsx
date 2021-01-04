@@ -36,6 +36,7 @@ export default function Home({ articles }: Props) {
   return (
     <>
       <GlobalStyle />
+      <title>k工房</title>
       <Header />
       <Container>
         <BackGroundPicture src="/assets/overview.jpg" alt="overview" />

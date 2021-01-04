@@ -32,6 +32,12 @@ export default class MyDocument extends Document<Props> {
               'フロントエンド周りの技術情報や思ったことを発進しています。'
             }
           />
+          <meta
+            name="description"
+            content={
+              'フロントエンド周りの技術情報や思ったことを発進しています。'
+            }
+          />
           <meta name="keywords" content={'engineer'} />
           <meta property="og:type" content="blog" />
           <meta property="og:image" content={'/assets/overview.png'} />

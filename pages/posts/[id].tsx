@@ -47,6 +47,7 @@ export default function Post({ article }: Props) {
   return (
     <>
       <GlobalStyle />
+      <title>k工房</title>
       <Header hideLangSwitch />
       <Container>
         <BlogLayout title={article.title}>
