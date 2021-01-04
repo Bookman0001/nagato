@@ -38,7 +38,7 @@ export default function Header({ hideLangSwitch = false }: Props) {
         )}
         <Link href="/">
           <StyledLink>
-            <Image src={'/favicon.ico'} alt={'mail'} width={40} height={40} />
+            <Image src={'/favicon.ico'} alt={'mail'} width={41} height={41} />
           </StyledLink>
         </Link>
         <SharingContainer onClick={handleSharingClick}>
