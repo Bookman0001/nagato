@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
+import { useTranslation } from 'react-i18next'
 
 import { useArticles } from 'controllers/articles'
 import { useArticle } from 'controllers/article'
@@ -42,6 +43,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export default function Post({ article }: Props) {
+  const { t } = useTranslation()
   useEffect(() => {
     window.scroll(0, 0)
   }, [])
@@ -49,7 +51,7 @@ export default function Post({ article }: Props) {
   return (
     <>
       <GlobalStyle />
-      <title>k工房</title>
+      <title>{t('title')}</title>
       <Header hideLangSwitch />
       <Container>
         <BlogLayout title={article.title}>
