@@ -1,18 +1,20 @@
 import { useEffect } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import dynamic from 'next/dynamic'
 
 import { ArticleContents } from 'types'
 import { useArticles } from 'controllers/articles'
 import { GlobalStyle } from 'theme'
-import Introduction from 'components/organisms/Introduction'
-import Oss from 'components/organisms/Oss'
-import Skill from 'components/organisms/Skill'
-import EnginnerCareer from 'components/organisms/EnginnerCareer'
-import Articles from 'components/organisms/Articles'
-import Header from 'components/organisms/Header'
-import Footer from 'components/organisms/Footer'
-import BackGroundPicture from 'components/atoms/BackgroundPicture'
+
+const Introduction = dynamic(() => import('components/organisms/Introduction'))
+const Oss = dynamic(() => import('components/organisms/Oss'))
+const Skill = dynamic(() => import('components/organisms/Skill'))
+const Career = dynamic(() => import('components/organisms/EnginnerCareer'))
+const Articles = dynamic(() => import('components/organisms/Articles'))
+const Header = dynamic(() => import('components/organisms/Header'))
+const Footer = dynamic(() => import('components/organisms/Footer'))
+const BackGround = dynamic(() => import('components/atoms/BackgroundPicture'))
 
 interface Props {
   articles: ArticleContents
@@ -39,12 +41,12 @@ export default function Home({ articles }: Props) {
       <title>k工房</title>
       <Header />
       <Container>
-        <BackGroundPicture src="/assets/overview.jpg" alt="overview" />
+        <BackGround src="/assets/overview.jpg" alt="overview" />
         <Introduction />
         <Articles articles={articles} />
         <Skill />
         <Oss />
-        <EnginnerCareer />
+        <Career />
       </Container>
       <Footer />
     </>

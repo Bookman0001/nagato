@@ -2,14 +2,16 @@ import { useEffect } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 
 import { useArticles } from 'controllers/articles'
 import { useArticle } from 'controllers/article'
 import { GlobalStyle } from 'theme'
-import BlogLayout from 'components/templates/BlogLayout'
-import Header from 'components/organisms/Header'
-import Footer from 'components/organisms/Footer'
 import { Article } from 'types'
+
+const BlogLayout = dynamic(() => import('components/templates/BlogLayout'))
+const Header = dynamic(() => import('components/organisms/Header'))
+const Footer = dynamic(() => import('components/organisms/Footer'))
 
 interface Params {
   params: {

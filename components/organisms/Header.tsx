@@ -3,11 +3,13 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 
-import Sharing from '../molecures/Sharing'
-import Button from '../atoms/Button'
-import Image from '../atoms/Picture'
 import 'locale/I18n'
+
+const Sharing = dynamic(() => import('components/molecures/Sharing'))
+const Button = dynamic(() => import('components/atoms/Button'))
+const Image = dynamic(() => import('components/atoms/Picture'))
 
 interface Props {
   hideLangSwitch?: boolean

@@ -1,10 +1,12 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 
 import { ArticleContents } from 'types'
-import Title from '../atoms/Title'
-import Description from '../atoms/ParagraphContent'
+
+const Title = dynamic(() => import('components/atoms/Title'))
+const Description = dynamic(() => import('components/atoms/ParagraphContent'))
 
 interface Props {
   articles: ArticleContents

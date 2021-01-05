@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import dynamic from 'next/dynamic'
 
-import MainTitle from '../atoms/MainTitle'
+const MainTitle = dynamic(() => import('components/atoms/MainTitle'))
 
 interface Props {
   title: string

@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
+import dynamic from 'next/dynamic'
 
-import Title from '../atoms/Title'
-import CirclePicture from '../atoms/Picture'
-import ParagraphContent from '../atoms/ParagraphContent'
 import 'locale/I18n'
+
+const Title = dynamic(() => import('components/atoms/Title'))
+const CirclePicture = dynamic(() => import('components/atoms/Picture'))
+const ParagraphContent = dynamic(
+  () => import('components/atoms/ParagraphContent')
+)
 
 export default function EnginnerCareer() {
   const { t } = useTranslation()
