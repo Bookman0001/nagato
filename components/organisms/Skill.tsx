@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import dynamic from 'next/dynamic'
 
-import Title from '../atoms/Title'
-import SquarePicture from '../atoms/Picture'
+const Title = dynamic(() => import('components/atoms/Title'))
+const SquarePicture = dynamic(() => import('components/atoms/Picture'))
 
 export default function Skill() {
   return (

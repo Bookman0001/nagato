@@ -1,5 +1,7 @@
 import styled from 'styled-components'
-import Description from '../atoms/ParagraphContent'
+import dynamic from 'next/dynamic'
+
+const Description = dynamic(() => import('components/atoms/ParagraphContent'))
 
 export default function Footer() {
   return (

@@ -1,10 +1,14 @@
 import styled, { keyframes } from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
+import dynamic from 'next/dynamic'
 
-import MainTitle from '../atoms/MainTitle'
-import ParagraphContent from '../atoms/ParagraphContent'
 import 'locale/I18n'
+
+const MainTitle = dynamic(() => import('components/atoms/MainTitle'))
+const ParagraphContent = dynamic(
+  () => import('components/atoms/ParagraphContent')
+)
 
 export default function Introduction() {
   const { t } = useTranslation()

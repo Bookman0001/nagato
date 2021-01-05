@@ -1,9 +1,10 @@
 import styled, { keyframes } from 'styled-components'
 import media from 'styled-media-query'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import { FacebookShareButton, TwitterShareButton } from 'react-share'
 
-import Icon from '../atoms/Picture'
+const Icon = dynamic(() => import('components/atoms/Picture'))
 
 export default function Sharing() {
   return (
