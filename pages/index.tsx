@@ -12,7 +12,6 @@ import EnginnerCareer from 'components/organisms/EnginnerCareer'
 import Articles from 'components/organisms/Articles'
 import Header from 'components/organisms/Header'
 import Footer from 'components/organisms/Footer'
-import BackGroundPicture from 'components/atoms/BackgroundPicture'
 
 interface Props {
   articles: ArticleContents
@@ -39,7 +38,6 @@ export default function Home({ articles }: Props) {
       <title>k工房</title>
       <Header />
       <Container>
-        <BackGroundPicture src="/assets/overview.jpg" alt="overview" />
         <Introduction />
         <Articles articles={articles} />
         <Skill />
