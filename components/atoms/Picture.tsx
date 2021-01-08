@@ -11,7 +11,7 @@ interface Props {
 export default function CirclePicture({
   src,
   alt,
-  isCircle,
+  isCircle = false,
   width = 100,
   height = 100,
 }: Props) {

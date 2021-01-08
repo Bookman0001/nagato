@@ -1,47 +1,30 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
+import Link from 'next/link'
 
 import Title from '../atoms/Title'
 import CirclePicture from '../atoms/Picture'
 import ParagraphContent from '../atoms/ParagraphContent'
 import 'locale/I18n'
 
-export default function EnginnerCareer() {
+export default function Oss() {
   const { t } = useTranslation()
   return (
     <Section>
       <Title>
-        <span>C</span>areer
+        <span>O</span>ss
       </Title>
       <DetailWrapper>
         <ImageWrapper>
-          <CirclePicture src="/assets/hospital.png" alt="hospital" isCircle />
-        </ImageWrapper>
-        <ParagraphContent>{t('step1')}</ParagraphContent>
-      </DetailWrapper>
-      <DetailWrapper>
-        <ImageWrapper>
-          <CirclePicture src="/assets/net.png" alt="net" isCircle />
+          <CirclePicture src="/assets/github.png" alt="github" isCircle />
         </ImageWrapper>
         <ParagraphContent>
-          {t('step2')}
+          {t('oss')}
           <br />
-          {t('column21')}
-          <br />
-          {t('column22')}
-          <br />
-          {t('column23')}
-        </ParagraphContent>
-      </DetailWrapper>
-      <DetailWrapper>
-        <ImageWrapper>
-          <CirclePicture src="/assets/frontend.png" alt="frontend" isCircle />
-        </ImageWrapper>
-        <ParagraphContent>
-          {t('now')}
-          <br />
-          {t('column31')}
+          <Link href="https://github.com/covid19india/covid19india-react">
+            ・covid19india-react
+          </Link>
         </ParagraphContent>
       </DetailWrapper>
     </Section>

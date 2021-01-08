@@ -1,9 +1,12 @@
 import styled from 'styled-components'
+import Description from '../atoms/ParagraphContent'
 
 export default function Footer() {
   return (
     <FooterContainer>
-      <p>This page contains of Next.js</p>
+      <Description>
+        © {new Date().getFullYear().toString()} k-puppeteer.com
+      </Description>
     </FooterContainer>
   )
 }
@@ -13,11 +16,6 @@ const FooterContainer = styled.footer`
   height: 60px;
   align-items: center;
   background-color: #ffffff;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #303030;
   text-align: center;
-  p {
-    font-size: 16px;
-    margin: 20px;
-    color: #303030;
-  }
 `

@@ -1,47 +1,61 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
+import { ArticleContents } from 'types'
+import { useArticles } from 'controllers/articles'
 import { GlobalStyle } from 'theme'
 import Introduction from 'components/organisms/Introduction'
+import Oss from 'components/organisms/Oss'
 import Skill from 'components/organisms/Skill'
 import EnginnerCareer from 'components/organisms/EnginnerCareer'
-import Header from 'components/molecures/Header'
-import Footer from 'components/molecures/Footer'
+import Articles from 'components/organisms/Articles'
+import Header from 'components/organisms/Header'
+import Footer from 'components/organisms/Footer'
 import BackGroundPicture from 'components/atoms/BackgroundPicture'
-import Button from 'components/atoms/Button'
 
-export default function Home() {
-  const [isClicked, setIsClicked] = useState<boolean>(false)
+interface Props {
+  articles: ArticleContents
+}
+
+export async function getStaticProps() {
+  const { getLimitedArticles } = useArticles()
+  const articles = await getLimitedArticles({ limit: 6 })
+  return {
+    props: {
+      articles: articles,
+    },
+  }
+}
+
+export default function Home({ articles }: Props) {
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
 
   return (
     <>
       <GlobalStyle />
+      <title>k工房</title>
       <Header />
-      <BackGroundPicture src="/assets/overview.png" alt="overview" />
       <Container>
+        <BackGroundPicture src="/assets/overview.jpg" alt="overview" />
         <Introduction />
+        <Articles articles={articles} />
         <Skill />
-        {isClicked ? (
-          <>
-            <EnginnerCareer />
-          </>
-        ) : (
-          <ButtonWrapper>
-            <Button onClick={() => setIsClicked(true)}>More View</Button>
-          </ButtonWrapper>
-        )}
+        <Oss />
+        <EnginnerCareer />
       </Container>
       <Footer />
     </>
   )
 }
 
-const Container = styled.div`
+const Container = styled.main`
   max-width: 768px;
   margin: 0 auto;
-  padding: 30px;
-`
-
-const ButtonWrapper = styled.div`
-  margin: 50px 0;
+  padding: calc(51px + 49px) 30px 30px 30px;
+  ${media.lessThan('small')`
+    padding: calc(51px + 49px) 15px 15px 15px;
+  `}
 `

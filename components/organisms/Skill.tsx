@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 import Title from '../atoms/Title'
 import SquarePicture from '../atoms/Picture'
 
 export default function Skill() {
   return (
-    <>
+    <Section>
       <Title>
         <span>S</span>kill
       </Title>
@@ -61,28 +62,44 @@ export default function Skill() {
       </Title>
       <SkillContent>
         <IconWrapper>
+          <SquarePicture src="/assets/next.png" alt="next" />
+        </IconWrapper>
+        <IconWrapper>
           <SquarePicture src="/assets/vue.png" alt="vue" />
         </IconWrapper>
         <IconWrapper>
           <SquarePicture src="/assets/csharp.png" alt="csharp" />
         </IconWrapper>
       </SkillContent>
-    </>
+    </Section>
   )
 }
+
+const Section = styled.section`
+  margin-bottom: 150px;
+  ${media.lessThan('medium')`
+  margin-bottom: 100px;
+  `}
+`
 
 const SkillContent = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 10px;
+  margin-bottom: 150px;
+  ${media.lessThan('medium')`
+  margin-bottom: 100px;
+  `}
 `
 
 const IconWrapper = styled.div`
   background: #ffffff;
   width: 100px;
   height: 100px;
-  margin: 20px;
+  margin: 15px;
   background-color: #303030;
   align-items: center;
+  img {
+    background-color: #ffffff;
+  }
 `
