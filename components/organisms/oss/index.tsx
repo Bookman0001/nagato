@@ -3,9 +3,9 @@ import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 
-import Title from '../atoms/Title'
-import CirclePicture from '../atoms/Picture'
-import ParagraphContent from '../atoms/ParagraphContent'
+import Title from 'components/atoms/title'
+import CirclePicture from 'components/atoms/picture'
+import ParagraphContent from 'components/atoms/paragraphContent'
 import 'locale/I18n'
 
 export default function Oss() {

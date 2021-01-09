@@ -4,9 +4,9 @@ import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 
-import Sharing from '../molecures/Sharing'
-import Button from '../atoms/Button'
-import Image from '../atoms/Picture'
+import Sharing from 'components/molecures/sharing'
+import Button from 'components/atoms/button'
+import Image from 'components/atoms/picture'
 import 'locale/I18n'
 
 interface Props {
@@ -33,7 +33,7 @@ export default function Header({ hideLangSwitch = false }: Props) {
       <Container>
         {hideLangSwitch ? null : (
           <ButtonContainer>
-            <Button onClick={handleClick}>{t('change')}</Button>
+            <Button onClick={handleClick} text={t('change')} />
           </ButtonContainer>
         )}
         <Link href="/">

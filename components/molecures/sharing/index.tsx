@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 import Link from 'next/link'
 import { FacebookShareButton, TwitterShareButton } from 'react-share'
 
-import Icon from '../atoms/Picture'
+import Icon from 'components/atoms/picture'
 
 export default function Sharing() {
   return (
