@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --ext .ts,.tsx",
-    "prettier": "prettier --check **/**/*.{ts,tsx}"
+    "prettier": "prettier --check **/**/*.{ts,tsx}",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",
@@ -31,9 +33,15 @@
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/react": "^6.1.11",
     "@types/node": "^14.14.16",
     "@types/react": "^17.0.0",
     "@types/styled-components": "^5.1.7",
+    "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.12.0",
     "husky": "^4.3.7",
     "lint-staged": "^10.5.3",

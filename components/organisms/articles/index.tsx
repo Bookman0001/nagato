@@ -3,8 +3,8 @@ import media from 'styled-media-query'
 import Link from 'next/link'
 
 import { ArticleContents } from 'types'
-import Title from '../atoms/Title'
-import Description from '../atoms/ParagraphContent'
+import Title from 'components/atoms/title'
+import Description from 'components/atoms/paragraphContent'
 
 interface Props {
   articles: ArticleContents

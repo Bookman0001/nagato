@@ -2,8 +2,8 @@ import styled, { keyframes } from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
 
-import MainTitle from '../atoms/MainTitle'
-import ParagraphContent from '../atoms/ParagraphContent'
+import MainTitle from 'components/atoms/mainTitle'
+import ParagraphContent from 'components/atoms/paragraphContent'
 import 'locale/I18n'
 
 export default function Introduction() {

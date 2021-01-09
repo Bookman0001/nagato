@@ -6,9 +6,9 @@ import Link from 'next/link'
 import { useArticles } from 'controllers/articles'
 import { useArticle } from 'controllers/article'
 import { GlobalStyle } from 'theme'
-import BlogLayout from 'components/templates/BlogLayout'
-import Header from 'components/organisms/Header'
-import Footer from 'components/organisms/Footer'
+import BlogLayout from 'components/templates/blogLayout'
+import Header from 'components/organisms/header'
+import Footer from 'components/organisms/footer'
 import { Article } from 'types'
 
 interface Params {

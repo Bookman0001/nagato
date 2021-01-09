@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
-import MainTitle from '../atoms/MainTitle'
+import MainTitle from 'components/atoms/mainTitle'
 
 interface Props {
   title: string

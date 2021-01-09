@@ -1,16 +1,12 @@
 import styled from 'styled-components'
 
 interface Props {
-  children: React.ReactNode
+  text?: string
   onClick: () => void
 }
 
-export default function Button({ children, onClick }: Props) {
-  return (
-    <ButtonItem onClick={onClick}>
-      <>{children}</>
-    </ButtonItem>
-  )
+export default function Button({ text, onClick }: Props) {
+  return <ButtonItem onClick={onClick}>{text}</ButtonItem>
 }
 
 const ButtonItem = styled.button`

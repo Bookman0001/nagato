@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Description from '../atoms/ParagraphContent'
+import Description from 'components/atoms/paragraphContent'
 
 export default function Footer() {
   return (
