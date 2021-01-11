@@ -1,4 +1,4 @@
-import { get } from 'services'
+import { get } from 'services/axios'
 import { ArticlesApiResponse, Argument } from 'types'
 
 export async function fetchAllArticles(): Promise<ArticlesApiResponse> {

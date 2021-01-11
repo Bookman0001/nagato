@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 import { ArticleContents } from 'types'
-import { useArticles } from 'controllers/articles'
+import { useArticles } from 'hooks/articles'
 import { GlobalStyle } from 'theme'
 import Introduction from 'components/organisms/introduction'
 import Oss from 'components/organisms/oss'
