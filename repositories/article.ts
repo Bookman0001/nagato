@@ -1,4 +1,4 @@
-import { get } from 'services'
+import { get } from 'services/axios'
 import { ArticleResponse } from 'types'
 
 type ApiResponse = {

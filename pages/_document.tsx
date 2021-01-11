@@ -1,7 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-import { existsGaId, GA_ID } from 'lib/gtag'
+import { existsGaId, GA_ID } from 'services/gtag'
 
 interface Props {
   styleTags: React.ReactElement
