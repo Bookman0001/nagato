@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Sharing from 'components/molecures/sharing'
 import Button from 'components/atoms/button'
 import Image from 'components/atoms/picture'
+import { COLOR } from 'theme/constants'
 import 'locale/I18n'
 
 interface Props {
@@ -59,10 +60,10 @@ const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #303030;
+  background-color: ${COLOR.WHITE};
+  border-bottom: 1px solid ${COLOR.BLACK};
   z-index: 1000;
-  color: #303030;
+  color: ${COLOR.BLACK};
   font-size: 12px;
 `
 

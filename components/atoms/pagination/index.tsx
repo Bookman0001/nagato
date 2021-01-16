@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import styled, { css } from 'styled-components'
 
+import { COLOR } from 'theme/constants'
+
 interface Props {
   totalCount: number
   limit: number
@@ -42,20 +44,20 @@ const Container = styled.div`
 
 const ButtonWrapper = styled.div<{ hasSolidBorder: boolean }>`
   button {
-    border: 1px solid #303030;
+    border: 1px solid ${COLOR.BLACK};
   }
   ${(props) =>
     props.hasSolidBorder &&
     css`
       button {
-        border: 2px solid #303030;
+        border: 2px solid ${COLOR.BLACK};
       }
     `}
 `
 
 const ButtonItem = styled.button`
   display: block;
-  background-color: #ffffff;
+  background-color: ${COLOR.WHITE};
   border-radius: 10%;
   width: 30px;
   height: 30px;

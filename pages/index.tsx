@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import { useTranslation } from 'react-i18next'
 
 import { ArticleContents } from 'types'
 import { useArticles } from 'hooks/articles'
@@ -29,6 +30,8 @@ export async function getStaticProps() {
 }
 
 export default function Home({ articles }: Props) {
+  const { t } = useTranslation()
+
   useEffect(() => {
     window.scroll(0, 0)
   }, [])
@@ -36,7 +39,7 @@ export default function Home({ articles }: Props) {
   return (
     <>
       <GlobalStyle />
-      <title>k工房</title>
+      <title>{t('title')}</title>
       <Header />
       <Container>
         <BackGroundPicture src="/assets/overview.jpg" alt="overview" />
