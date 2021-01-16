@@ -36,4 +36,7 @@ const Main = styled.main`
   p {
     line-height: 2;
   }
+  img {
+    width: 100%;
+  }
 `
