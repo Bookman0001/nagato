@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { ArticleContents } from 'types'
 import Title from 'components/atoms/title'
 import Description from 'components/atoms/paragraphContent'
+import { COLOR } from 'theme/constants'
 
 interface Props {
   articles: ArticleContents
@@ -64,10 +65,10 @@ const StyledLink = styled.span`
   display: block;
   margin: 10px;
   padding: 20px;
-  border: 2px solid #303030;
+  border: 2px solid ${COLOR.BLACK};
   :hover {
     opacity: 0.8;
-    border: 2px solid #0099ff;
+    border: 2px solid ${COLOR.BLUE};
   }
   ${media.lessThan('small')`
     width: calc(100% - 60px);

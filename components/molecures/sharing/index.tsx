@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { FacebookShareButton, TwitterShareButton } from 'react-share'
 
 import Icon from 'components/atoms/picture'
+import { COLOR } from 'theme/constants'
 
 export default function Sharing() {
   return (
@@ -64,7 +65,7 @@ const Container = styled.div`
   position: absolute;
   top: 60px;
   right: 10px;
-  background-color: #f5f5f5;
+  background-color: ${COLOR.GRAY};
   padding: 20px;
   display: flex;
   border-radius: 20px;
@@ -80,7 +81,7 @@ const Container = styled.div`
     right: 19px;
     top: -19px;
     border-right: 20px solid transparen;
-    border-bottom: 20px solid #f5f5f5;
+    border-bottom: 20px solid ${COLOR.GRAY};
     border-left: 20px solid transparent;
   }
   ${media.greaterThan('medium')`

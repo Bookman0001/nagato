@@ -1,5 +1,7 @@
 import styled from 'styled-components'
+
 import Description from 'components/atoms/paragraphContent'
+import { COLOR } from 'theme/constants'
 
 export default function Footer() {
   return (
@@ -15,7 +17,7 @@ const FooterContainer = styled.footer`
   width: 100%;
   height: 60px;
   align-items: center;
-  background-color: #ffffff;
-  border-top: 1px solid #303030;
+  background-color: ${COLOR.WHITE};
+  border-top: 1px solid ${COLOR.BLACK};
   text-align: center;
 `

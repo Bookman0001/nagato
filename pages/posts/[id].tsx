@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
+import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 
 import { useArticles } from 'hooks/articles'
@@ -10,6 +11,7 @@ import BlogLayout from 'components/templates/blogLayout'
 import Header from 'components/organisms/header'
 import Footer from 'components/organisms/footer'
 import { Article } from 'types'
+import { COLOR } from 'theme/constants'
 
 interface Params {
   params: {
@@ -40,6 +42,8 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export default function Post({ article }: Props) {
+  const { t } = useTranslation()
+
   useEffect(() => {
     window.scroll(0, 0)
   }, [])
@@ -47,7 +51,7 @@ export default function Post({ article }: Props) {
   return (
     <>
       <GlobalStyle />
-      <title>k工房</title>
+      <title>{t('title')}</title>
       <Header hideLangSwitch />
       <Container>
         <BlogLayout title={article.title}>
@@ -86,7 +90,7 @@ const StyledLink = styled.span`
   width: 100%;
   font-size: 24px;
   font-weight: bold;
-  color: #0099ff;
+  color: ${COLOR.BLUE};
   ${media.lessThan('medium')`
     font-size: 1rem;
   `}

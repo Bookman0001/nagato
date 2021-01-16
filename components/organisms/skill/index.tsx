@@ -3,6 +3,7 @@ import media from 'styled-media-query'
 
 import Title from 'components/atoms/title'
 import SquarePicture from 'components/atoms/picture'
+import { COLOR } from 'theme/constants'
 
 export default function Skill() {
   return (
@@ -93,13 +94,13 @@ const SkillContent = styled.div`
 `
 
 const IconWrapper = styled.div`
-  background: #ffffff;
+  background: ${COLOR.WHITE};
   width: 100px;
   height: 100px;
   margin: 15px;
-  background-color: #303030;
+  background-color: ${COLOR.BLACK};
   align-items: center;
   img {
-    background-color: #ffffff;
+    background-color: ${COLOR.WHITE};
   }
 `

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { COLOR } from './constants'
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -17,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     a {
       text-decoration: none;
-      color: #3740ff;
+      color: ${COLOR.BLUE};
       box-shadow : initial;
     }
   }
