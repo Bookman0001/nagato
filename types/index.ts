@@ -47,3 +47,10 @@ type ClickEvent = {
 }
 
 export type Event = ContactEvent | ClickEvent
+
+export type BreadCrumbContents = Array<BreadCrumbContent>
+
+type BreadCrumbContent = {
+  label: string
+  link: string
+}

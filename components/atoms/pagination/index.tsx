@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styled, { css } from 'styled-components'
 
-import { COLOR } from 'theme/constants'
+import { COLOR } from '../../../theme/constants'
 
 interface Props {
   totalCount: number

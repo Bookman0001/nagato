@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { COLOR } from 'theme/constants'
+import { COLOR } from '../../../theme/constants'
 
 interface Props {
   text?: string
