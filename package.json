@@ -24,7 +24,7 @@
     "next": "10.0.6",
     "prettier": "^2.2.1",
     "react": "16.14.0",
-    "react-dom": "16.14.0",
+    "react-dom": "17.0.1",
     "react-i18next": "^11.8.5",
     "react-share": "^4.3.1",
     "remark": "^13.0.0",
