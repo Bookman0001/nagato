@@ -18,7 +18,7 @@
     "eslint": "^7.20.0",
     "eslint-plugin-prettier": "^3.3.1",
     "gray-matter": "^4.0.2",
-    "husky": "^5.0.9",
+    "husky": "^5.1.1",
     "i18next": "^19.8.9",
     "lint-staged": "^10.5.4",
     "next": "10.0.7",
@@ -43,7 +43,7 @@
     "@types/styled-components": "^5.1.7",
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.12.0",
-    "husky": "^5.0.9",
+    "husky": "^5.1.1",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "typescript": "^4.1.5"
