@@ -48,12 +48,6 @@
     "prettier": "^2.2.1",
     "typescript": "^4.1.5"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn lint"
-    }
-  },
   "lint-staged": {
     "*.{ts,tsx}": [
       "prettier --write"
