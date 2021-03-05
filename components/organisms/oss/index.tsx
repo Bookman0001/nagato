@@ -13,7 +13,7 @@ export default function Oss() {
   return (
     <Section>
       <Title>
-        <span>O</span>ss
+        <span>O</span>ssです
       </Title>
       <DetailWrapper>
         <ImageWrapper>
