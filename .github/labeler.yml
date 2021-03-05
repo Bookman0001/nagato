@@ -1,2 +1,3 @@
 example:
-  - repositories/*
+  - any: ['example']
+    all: ['example']
