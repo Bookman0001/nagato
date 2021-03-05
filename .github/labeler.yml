@@ -1,3 +1,2 @@
 example:
-  - any: ['example']
-    all: ['example']
+  - '**/example/**/**.ts'
