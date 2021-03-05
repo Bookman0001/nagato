@@ -1,4 +1,4 @@
-EC
-- any: ['!./**/example/*']
-example
-- any: ['./**/example/*']
+EC:
+  - any: ['!./**/example/*']
+example:
+  - any: ['./**/example/*']
