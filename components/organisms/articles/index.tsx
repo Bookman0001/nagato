@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { ArticleContents } from 'types'
 import Title from 'components/atoms/title'
 import Description from 'components/atoms/paragraphContent'
-import { COLOR } from 'theme/constants'
 
 interface Props {
   articles: ArticleContents
@@ -45,9 +44,9 @@ export default function Articles({ articles }: Props) {
 }
 
 const Section = styled.section`
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   ${media.lessThan('small')`
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   `}
 `
 
@@ -55,7 +54,9 @@ const DetailWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   flex-wrap: wrap;
+  margin: -20px;
   ${media.lessThan('small')`
+    margin: 0;
     display: block;
   `}
 `
@@ -63,15 +64,13 @@ const DetailWrapper = styled.div`
 const StyledLink = styled.span`
   cursor: pointer;
   display: block;
-  margin: 10px;
-  padding: 20px;
-  border: 2px solid ${COLOR.BLACK};
+  margin: 20px;
   :hover {
-    opacity: 0.8;
-    border: 2px solid ${COLOR.BLUE};
+    opacity: 0.7;
   }
   ${media.lessThan('small')`
-    width: calc(100% - 60px);
+    margin: 0;
+    width: 100%;
     margin-bottom: 20px;
   `}
 `
@@ -95,4 +94,8 @@ const PublishedWrapper = styled.div`
 
 const SubTitle = styled.h3`
   font-size: 20px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 `
