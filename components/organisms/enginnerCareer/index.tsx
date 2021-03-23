@@ -49,10 +49,10 @@ export default function EnginnerCareer() {
 }
 
 const Section = styled.section`
-  margin-bottom: 150px;
-  ${media.lessThan('medium')`
-  margin-bottom: 100px;
-  `}
+  margin-bottom: 50px;
+  ${media.lessThan('small')`
+margin-bottom: 30px;
+`}
 `
 
 const DetailWrapper = styled.div`

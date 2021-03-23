@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 interface Props {
   children: React.ReactNode
@@ -17,4 +18,10 @@ const TitleContainer = styled.h1`
   span {
     font-size: 64px;
   }
+  ${media.lessThan('small')`
+    font-size: 20px;
+    span {
+      font-size: 40px;
+    }
+  `}
 `

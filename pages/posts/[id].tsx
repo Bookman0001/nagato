@@ -57,7 +57,9 @@ export default function Post({ article }: Props) {
       <title>{t('title')}</title>
       <Header hideLangSwitch />
       <Container>
-        <BreadCrumb contents={crumbContentsInArticle} />
+        <CrumbContainer>
+          <BreadCrumb contents={crumbContentsInArticle} />
+        </CrumbContainer>
         <BlogLayout title={article.title}>
           <Content dangerouslySetInnerHTML={{ __html: article.content }} />
         </BlogLayout>
@@ -98,4 +100,8 @@ const StyledLink = styled.span`
   ${media.lessThan('medium')`
     font-size: 1rem;
   `}
+`
+
+const CrumbContainer = styled.div`
+  padding-bottom: 30px;
 `

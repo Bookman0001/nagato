@@ -12,6 +12,10 @@ export const GlobalStyle = createGlobalStyle`
         overflow-x : initial;
       }
     }
+    h1 {
+      font-family: initial;
+      margin: 0;
+    }
     h2 {
       font-family: initial;
       margin: 0;
