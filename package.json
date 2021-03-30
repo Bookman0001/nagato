@@ -29,7 +29,7 @@
     "react-share": "^4.4.0",
     "remark": "^13.0.0",
     "remark-html": "^13.0.1",
-    "styled-components": "^5.2.1",
+    "styled-components": "^5.2.2",
     "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
