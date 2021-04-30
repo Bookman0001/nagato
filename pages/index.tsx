@@ -4,7 +4,7 @@ import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
 
 import { ArticleContents } from 'types'
-import { useArticles } from 'hooks/articles'
+import { articlesService } from 'hooks/articles'
 import { GlobalStyle } from 'theme'
 import Introduction from 'components/organisms/introduction'
 import Oss from 'components/organisms/oss'
@@ -20,7 +20,7 @@ interface Props {
 }
 
 export async function getStaticProps() {
-  const { getLimitedArticles } = useArticles()
+  const { getLimitedArticles } = articlesService()
   const articles = await getLimitedArticles({ limit: 6 })
   return {
     props: {

@@ -23,7 +23,7 @@ function mappingArticles(response: ArticlesApiResponse): ArticleContents {
   }
 }
 
-export function useArticles() {
+export function articlesService() {
   const getAllArticles = async () => {
     return await fetchAllArticles().then((articles: ArticlesApiResponse) => {
       return mappingArticles(articles)

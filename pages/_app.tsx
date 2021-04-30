@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import { AppProps } from 'next/app'
 import * as gtag from 'services/gtag'
 
-//ブラウザ内部でルーターが切り替わった時に発火させている
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()
   useEffect(() => {

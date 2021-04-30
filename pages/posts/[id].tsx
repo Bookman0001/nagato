@@ -4,8 +4,8 @@ import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 
-import { useArticles } from 'hooks/articles'
-import { useArticle } from 'hooks/article'
+import { articlesService } from 'hooks/articles'
+import { articleService } from 'hooks/article'
 import { useBreadCrumb } from 'hooks/routes'
 import { GlobalStyle } from 'theme'
 import BlogLayout from 'components/templates/blogLayout'
@@ -26,7 +26,7 @@ interface Props {
 }
 
 export async function getStaticPaths() {
-  const { getAllArticles } = useArticles()
+  const { getAllArticles } = articlesService()
   const articles = await getAllArticles()
   const { contents } = articles
   const paths = contents.map((article) => `/posts/${article.id}`)
@@ -34,7 +34,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: Params) {
-  const { getArticle } = useArticle()
+  const { getArticle } = articleService()
   const article = await getArticle(params.id)
   return {
     props: {
