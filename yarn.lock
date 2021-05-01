@@ -1630,7 +1630,7 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@storybook/addon-actions@6.2.9", "@storybook/addon-actions@^6.2.2":
+"@storybook/addon-actions@6.2.9", "@storybook/addon-actions@^6.2.9":
   version "6.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.2.9.tgz#688413ac77410690755a5da3c277bfa0ff1a10b0"
   integrity sha512-CkUYSMt+fvuHfWvtDzlhhaeQBCWlUo99xdL88JTsTml05P43bIHZNIRv2QJ8DwhHuxdIPeHKLmz9y/ymOagOnw==
