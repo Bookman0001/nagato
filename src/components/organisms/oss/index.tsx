@@ -22,6 +22,8 @@ export default function Oss() {
         <ParagraphContent>
           {t('oss')}
           <br />
+          <Link href="https://github.com/nuxt/nuxtjs.org">・nuxtjs.org</Link>
+          <br />
           <Link href="https://github.com/covid19india/covid19india-react">
             ・covid19india-react
           </Link>
