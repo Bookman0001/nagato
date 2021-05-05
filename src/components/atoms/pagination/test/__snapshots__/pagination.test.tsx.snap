@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination 1`] = `
+<styled.div>
+  <styled.div
+    hasSolidBorder={true}
+    key="0"
+  >
+    <styled.button
+      key="0"
+      onClick={[Function]}
+    >
+      1
+    </styled.button>
+  </styled.div>
+  <styled.div
+    hasSolidBorder={false}
+    key="1"
+  >
+    <styled.button
+      key="1"
+      onClick={[Function]}
+    >
+      2
+    </styled.button>
+  </styled.div>
+</styled.div>
+`;
