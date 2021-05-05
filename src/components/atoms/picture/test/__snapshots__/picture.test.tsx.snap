@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Picture 1`] = `
+<styled.div>
+  <styled.img
+    alt="test"
+    height={150}
+    isCircle={false}
+    src="https://placehold.jp/150x150.png"
+    width={150}
+  />
+</styled.div>
+`;

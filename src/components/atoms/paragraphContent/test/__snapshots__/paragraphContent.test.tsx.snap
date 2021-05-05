@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ParagraphContent 1`] = `
+<styled.div>
+  <styled.p>
+    test
+  </styled.p>
+</styled.div>
+`;
