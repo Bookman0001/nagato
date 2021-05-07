@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sharing 1`] = `
+<styled.section>
+  <styled.div>
+    <ForwardRef(ShareButton-facebook)
+      url="http://localhost/"
+    >
+      <styled.span>
+        <CirclePicture
+          alt="facebook"
+          height={40}
+          src="/assets/facebook.png"
+          width={40}
+        />
+      </styled.span>
+    </ForwardRef(ShareButton-facebook)>
+    <ForwardRef(ShareButton-twitter)
+      url="http://localhost/"
+    >
+      <styled.span>
+        <CirclePicture
+          alt="twitter"
+          height={40}
+          src="/assets/twitter.png"
+          width={40}
+        />
+      </styled.span>
+    </ForwardRef(ShareButton-twitter)>
+    <Link
+      href="mailto:odonel51486666@gmail.com"
+    >
+      <styled.span>
+        <CirclePicture
+          alt="mail"
+          height={40}
+          src="/assets/mail.png"
+          width={40}
+        />
+      </styled.span>
+    </Link>
+  </styled.div>
+</styled.section>
+`;
