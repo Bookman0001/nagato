@@ -10,7 +10,7 @@ export default function Sharing() {
   return (
     <Section>
       <Container>
-        <FacebookShareButton url={location.href}>
+        <FacebookShareButton url={window.location.href}>
           <StyledLink>
             <Icon
               src="/assets/facebook.png"
@@ -20,7 +20,7 @@ export default function Sharing() {
             />
           </StyledLink>
         </FacebookShareButton>
-        <TwitterShareButton url={location.href}>
+        <TwitterShareButton url={window.location.href}>
           <StyledLink>
             <Icon
               src="/assets/twitter.png"
