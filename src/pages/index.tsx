@@ -8,7 +8,6 @@ import { articlesService } from 'src/hooks/articles'
 import { GlobalStyle } from 'src/theme'
 import Introduction from 'src/components/organisms/introduction'
 import Oss from 'src/components/organisms/oss'
-import Skill from 'src/components/organisms/skill'
 import EnginnerCareer from 'src/components/organisms/enginnerCareer'
 import Articles from 'src/components/organisms/articles'
 import Header from 'src/components/organisms/header'
@@ -46,10 +45,9 @@ export default function Home({ articles }: Props) {
       </PictureContainer>
       <Container>
         <Introduction />
-        <Articles articles={articles} />
-        <Skill />
         <Oss />
         <EnginnerCareer />
+        <Articles articles={articles} />
       </Container>
       <Footer />
     </>
@@ -66,5 +64,5 @@ const Container = styled.main`
 `
 
 const PictureContainer = styled.div`
-  margin-top: 50px;
+  margin: 50px 0 70px;
 `

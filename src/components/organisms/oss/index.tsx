@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
-import Link from 'next/link'
 
 import Title from 'src/components/atoms/title'
 import CirclePicture from 'src/components/atoms/picture'
@@ -12,21 +11,38 @@ export default function Oss() {
   const { t } = useTranslation()
   return (
     <Section>
-      <Title>
-        <span>O</span>ss
-      </Title>
+      <Title>Oss/GitHub</Title>
+      <ImageWrapper>
+        <CirclePicture src="/assets/github.png" alt="github" isCircle />
+      </ImageWrapper>
+      <AccountWrapper>
+        <a
+          href="https://github.com/Bookman0001"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          MyAccount
+        </a>
+      </AccountWrapper>
       <DetailWrapper>
-        <ImageWrapper>
-          <CirclePicture src="/assets/github.png" alt="github" isCircle />
-        </ImageWrapper>
         <ParagraphContent>
           {t('oss')}
           <br />
-          <Link href="https://github.com/nuxt/nuxtjs.org">・nuxtjs.org</Link>
+          <a
+            href="https://github.com/nuxt/nuxtjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ・nuxtjs.org
+          </a>
           <br />
-          <Link href="https://github.com/covid19india/covid19india-react">
+          <a
+            href="https://github.com/covid19india/covid19india-react"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             ・covid19india-react
-          </Link>
+          </a>
         </ParagraphContent>
       </DetailWrapper>
     </Section>
@@ -34,15 +50,16 @@ export default function Oss() {
 }
 
 const Section = styled.section`
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   ${media.lessThan('small')`
-margin-bottom: 30px;
+margin-bottom: 50px;
 `}
 `
 
 const DetailWrapper = styled.div`
   margin: 30px 0;
   display: flex;
+  justify-content: center;
   align-items: center;
   border-radius: 10px;
   ${media.lessThan('small')`
@@ -54,5 +71,11 @@ const DetailWrapper = styled.div`
 `
 
 const ImageWrapper = styled.div`
-  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+`
+
+const AccountWrapper = styled.div`
+  display: flex;
+  justify-content: center;
 `

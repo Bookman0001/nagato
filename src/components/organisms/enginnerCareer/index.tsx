@@ -11,9 +11,7 @@ export default function EnginnerCareer() {
   const { t } = useTranslation()
   return (
     <Section>
-      <Title>
-        <span>C</span>areer
-      </Title>
+      <Title>Career</Title>
       <DetailWrapper>
         <ImageWrapper>
           <CirclePicture src="/assets/hospital.png" alt="hospital" isCircle />
@@ -49,25 +47,20 @@ export default function EnginnerCareer() {
 }
 
 const Section = styled.section`
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   ${media.lessThan('small')`
-margin-bottom: 30px;
-`}
+    margin-bottom: 50px;
+  `}
 `
 
 const DetailWrapper = styled.div`
-  margin: 30px 0;
-  display: flex;
-  align-items: center;
-  border-radius: 10px;
-  ${media.lessThan('small')`
-    display: block;
-  `}
   p {
-    margin: 20px 0;
+    text-align: center;
+    margin: 70px 0;
   }
 `
 
 const ImageWrapper = styled.div`
-  margin-right: 50px;
+  display: flex;
+  justify-content: center;
 `
