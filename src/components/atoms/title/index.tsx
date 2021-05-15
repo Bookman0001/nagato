@@ -15,15 +15,13 @@ export default function Title({ children }: Props) {
 }
 
 const TitleContainer = styled.h2`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
   padding-bottom: 30px;
   font-size: 32px;
-  span {
-    font-size: 64px;
-  }
   ${media.lessThan('small')`
     font-size: 20px;
-    span {
-      font-size: 40px;
-    }
   `}
 `

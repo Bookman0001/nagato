@@ -15,10 +15,11 @@ export default function MainTitle({ children }: Props) {
 }
 
 const TitleContainer = styled.h1`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
   font-size: 32px;
-  span {
-    font-size: 64px;
-  }
   ${media.lessThan('small')`
     font-size: 20px;
     span {

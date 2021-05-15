@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     border: 0;
     padding: 0;
+
     div {
       .tl-edges {
         overflow-x : initial;

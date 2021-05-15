@@ -10,9 +10,7 @@ export default function Introduction() {
   const { t } = useTranslation()
   return (
     <Section>
-      <MainTitle>
-        <span>I</span>ntroduction
-      </MainTitle>
+      <MainTitle>Introduction</MainTitle>
       <IntroductionWrapper>
         <ParagraphContent>{t('introduction')}</ParagraphContent>
       </IntroductionWrapper>
@@ -32,9 +30,9 @@ const Animation = keyframes`
 `
 
 const Section = styled.section`
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   ${media.lessThan('small')`
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   `}
 `
 
