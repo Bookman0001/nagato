@@ -41,7 +41,10 @@ export default class MyDocument extends Document<Props> {
           />
           <meta name="keywords" content={'engineer'} />
           <meta property="og:type" content="blog" />
-          <meta property="og:image" content={'/assets/overview.png'} />
+          <meta
+            property="og:image"
+            content={`https://k-puppeteer.com/assets/overview.jpg`}
+          />
           <meta property="og:site_name" content={'k-puppeteer'} />
           {this.props.styleTags}
           {existsGaId && (
