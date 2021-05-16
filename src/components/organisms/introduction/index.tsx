@@ -1,18 +1,19 @@
 import styled, { keyframes } from 'styled-components'
 import media from 'styled-media-query'
-import { useTranslation } from 'react-i18next'
+import { Trans } from 'react-i18next'
 
 import MainTitle from 'src/components/atoms/mainTitle'
 import ParagraphContent from 'src/components/atoms/paragraphContent'
 import 'src/locale/I18n'
 
 export default function Introduction() {
-  const { t } = useTranslation()
   return (
     <Section>
       <MainTitle>Introduction</MainTitle>
       <IntroductionWrapper>
-        <ParagraphContent>{t('introduction')}</ParagraphContent>
+        <ParagraphContent>
+          <Trans i18nKey={'introduction'} components={[<br key={0} />]} />
+        </ParagraphContent>
       </IntroductionWrapper>
     </Section>
   )
@@ -39,9 +40,12 @@ const Section = styled.section`
 const IntroductionWrapper = styled.div`
   margin: 10px 0;
   display: flex;
+  justify-content: center;
+  text-align: center;
   align-items: center;
   animation: ${Animation} 0.5s linear;
-  ${media.lessThan('medium')`
+  ${media.lessThan('small')`
     display: block;
+    text-align: left;
   `}
 `
