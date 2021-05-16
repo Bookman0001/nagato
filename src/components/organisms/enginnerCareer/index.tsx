@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import { useTranslation } from 'react-i18next'
+import { useTranslation, Trans } from 'react-i18next'
 
 import Title from 'src/components/atoms/title'
 import CirclePicture from 'src/components/atoms/picture'
@@ -16,14 +16,16 @@ export default function EnginnerCareer() {
         <ImageWrapper>
           <CirclePicture src="/assets/hospital.png" alt="hospital" isCircle />
         </ImageWrapper>
-        <ParagraphContent>{t('step1')}</ParagraphContent>
+        <ParagraphContent>
+          <Trans i18nKey={'step1'} components={[<br key={0} />]} />
+        </ParagraphContent>
       </DetailWrapper>
       <DetailWrapper>
         <ImageWrapper>
           <CirclePicture src="/assets/net.png" alt="net" isCircle />
         </ImageWrapper>
         <ParagraphContent>
-          {t('step2')}
+          <Trans i18nKey={'step2'} components={[<br key={0} />]} />
           <br />
           {t('column21')}
           <br />
@@ -37,7 +39,7 @@ export default function EnginnerCareer() {
           <CirclePicture src="/assets/frontend.png" alt="frontend" isCircle />
         </ImageWrapper>
         <ParagraphContent>
-          {t('now')}
+          <Trans i18nKey={'now'} components={[<br key={0} />]} />
           <br />
           {t('column31')}
         </ParagraphContent>
@@ -58,6 +60,11 @@ const DetailWrapper = styled.div`
     text-align: center;
     margin: 70px 0;
   }
+  ${media.lessThan('small')`
+    p {    
+      text-align: left;
+    }   
+  `}
 `
 
 const ImageWrapper = styled.div`
