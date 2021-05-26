@@ -59,7 +59,7 @@
     "@storybook/addon-links": "^6.2.9",
     "@storybook/react": "^6.2.9",
     "@types/node": "^15.6.0",
-    "@types/react": "^17.0.6",
+    "@types/react": "^17.0.8",
     "@types/styled-components": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",
