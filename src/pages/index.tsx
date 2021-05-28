@@ -65,4 +65,7 @@ const Container = styled.main`
 
 const PictureContainer = styled.div`
   margin: 50px 0 70px;
+  ${media.lessThan('medium')`
+    margin: 50px 0 20px;
+  `}
 `

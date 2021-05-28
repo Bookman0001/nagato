@@ -21,7 +21,7 @@ const TitleContainer = styled.h1`
   line-height: 1.5;
   font-size: 32px;
   ${media.lessThan('small')`
-    font-size: 20px;
+    font-size: 28px;
     span {
       font-size: 40px;
     }

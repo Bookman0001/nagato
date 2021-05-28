@@ -50,7 +50,7 @@ const Animation = keyframes`
     margin-top: 0;
   }
   100% {
-    margin-top: 20px
+    margin-top: 20px;
   }
 `
 
@@ -63,6 +63,7 @@ const Container = styled.div`
   animation-iteration-count: 2;
   animation-timing-function: ease-in;
   position: absolute;
+  align-items: center;
   top: 60px;
   right: 10px;
   background-color: ${COLOR.GRAY};

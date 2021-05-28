@@ -79,8 +79,11 @@ const Container = styled.div`
 `
 
 const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
   margin-left: 15px;
   button {
+    line-height: 1.5;
     padding: 0 10px;
     font-size: 1rem;
   }
