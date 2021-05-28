@@ -22,6 +22,6 @@ const TitleContainer = styled.h2`
   padding-bottom: 30px;
   font-size: 32px;
   ${media.lessThan('small')`
-    font-size: 20px;
+    font-size: 28px;
   `}
 `

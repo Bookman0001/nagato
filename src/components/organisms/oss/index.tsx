@@ -12,18 +12,23 @@ export default function Oss() {
   return (
     <Section>
       <Title>Oss/GitHub</Title>
+
       <ImageWrapper>
-        <CirclePicture src="/assets/github.png" alt="github" isCircle />
-      </ImageWrapper>
-      <AccountWrapper>
         <a
           href="https://github.com/Bookman0001"
           target="_blank"
           rel="noopener noreferrer"
         >
-          MyAccount
+          <CirclePicture src="/assets/github.png" alt="github" isCircle />
         </a>
-      </AccountWrapper>
+      </ImageWrapper>
+      <a
+        href="https://github.com/Bookman0001"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <AccountWrapper>MyAccount</AccountWrapper>
+      </a>
       <DetailWrapper>
         <ParagraphContent>
           {t('oss')}
@@ -33,7 +38,7 @@ export default function Oss() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            ・nuxtjs.org
+            nuxtjs.org
           </a>
           <br />
           <a
@@ -41,7 +46,7 @@ export default function Oss() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            ・covid19india-react
+            covid19india-react
           </a>
         </ParagraphContent>
       </DetailWrapper>
@@ -52,8 +57,8 @@ export default function Oss() {
 const Section = styled.section`
   margin-bottom: 100px;
   ${media.lessThan('small')`
-margin-bottom: 50px;
-`}
+     margin-bottom: 50px;
+  `}
 `
 
 const DetailWrapper = styled.div`
@@ -61,6 +66,7 @@ const DetailWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   border-radius: 10px;
   ${media.lessThan('small')`
     display: block;

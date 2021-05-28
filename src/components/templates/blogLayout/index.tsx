@@ -35,7 +35,7 @@ const Main = styled.main`
     display: block;
   `}
   p {
-    line-height: 2;
+    line-height: 1.7;
   }
   img {
     width: 100%;

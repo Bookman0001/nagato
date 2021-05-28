@@ -40,9 +40,6 @@ export default function Articles({ articles }: Props) {
 
 const Section = styled.section`
   margin-bottom: 100px;
-  ${media.lessThan('small')`
-  margin-bottom: 350px;
-  `}
 `
 
 const DetailWrapper = styled.div`
@@ -77,4 +74,7 @@ const SubTitle = styled.h3`
   margin-right: auto;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  ${media.lessThan('small')`
+    font-size: 20px;
+  `}
 `

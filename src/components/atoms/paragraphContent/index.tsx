@@ -16,5 +16,5 @@ export default function ParagraphContent({ children }: Props) {
 const Container = styled.div``
 
 const Paragraph = styled.p`
-  line-height: 2;
+  line-height: 1.7;
 `
