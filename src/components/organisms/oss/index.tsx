@@ -12,7 +12,6 @@ export default function Oss() {
   return (
     <Section>
       <Title>Oss/GitHub</Title>
-
       <ImageWrapper>
         <a
           href="https://github.com/Bookman0001"
@@ -22,13 +21,15 @@ export default function Oss() {
           <CirclePicture src="/assets/github.png" alt="github" isCircle />
         </a>
       </ImageWrapper>
-      <a
-        href="https://github.com/Bookman0001"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <AccountWrapper>MyAccount</AccountWrapper>
-      </a>
+      <AccountWrapper>
+        <a
+          href="https://github.com/Bookman0001"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          MyAccount
+        </a>
+      </AccountWrapper>
       <DetailWrapper>
         <ParagraphContent>
           {t('oss')}
