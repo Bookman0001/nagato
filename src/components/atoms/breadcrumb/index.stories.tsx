@@ -1,15 +1,15 @@
 import React from 'react'
 import { Meta } from '@storybook/react/types-6-0'
 
-import BreadCrumb from './'
-import { BreadCrumbContents } from 'src/types'
+import Breadcrumb from './'
+import { BreadcrumbContents } from 'src/types'
 
 export default {
-  title: 'BreadCrumb',
-  component: BreadCrumb,
+  title: 'Breadcrumb',
+  component: Breadcrumb,
 } as Meta
 
-const contents: BreadCrumbContents = [
+const contents: BreadcrumbContents = [
   { label: 'TOP', link: '/' },
   { label: 'SECOND', link: '/' },
   { label: 'THIRD', link: '/' },
@@ -17,7 +17,7 @@ const contents: BreadCrumbContents = [
 
 const Template: React.VFC<{}> = () => (
   <div>
-    <BreadCrumb contents={contents} />
+    <Breadcrumb contents={contents} />
   </div>
 )
 

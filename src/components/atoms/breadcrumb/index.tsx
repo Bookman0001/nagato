@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 
-import { BreadCrumbContents } from 'src/types'
+import { BreadcrumbContents } from 'src/types'
 
 interface Props {
-  contents: BreadCrumbContents
+  contents: BreadcrumbContents
 }
 
-export default function BreadCrumb({ contents }: Props) {
+export default function Breadcrumb({ contents }: Props) {
   const contentsLength = contents.length
   return (
     <Container>
