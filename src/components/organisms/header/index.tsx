@@ -83,6 +83,7 @@ const ButtonContainer = styled.div`
   justify-content: center;
   margin-left: 15px;
   button {
+    width: 45px;
     line-height: 1.5;
     padding: 0 10px;
     font-size: 1rem;
