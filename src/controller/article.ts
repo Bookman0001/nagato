@@ -14,7 +14,7 @@ function mappingArticle(article: ArticleResponse): Article {
   }
 }
 
-export function articleService() {
+export function articleController() {
   const getArticle = async (articleId: string) => {
     return await fetchArticle(articleId).then((article: ArticleResponse) => {
       return mappingArticle(article)
