@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BreadCrumb 1`] = `
+exports[`Breadcrumb 1`] = `
 <styled.div>
   <Link
     href="/"

@@ -1,10 +1,10 @@
 import { shallow } from 'enzyme'
 
-import BreadCrumb from '../'
+import Breadcrumb from '../'
 
-test('BreadCrumb', () => {
+test('Breadcrumb', () => {
   const component = shallow(
-    <BreadCrumb
+    <Breadcrumb
       contents={[
         { label: 'TOP', link: '/' },
         { label: 'SECOND', link: '/' },

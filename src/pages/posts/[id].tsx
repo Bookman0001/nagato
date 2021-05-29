@@ -6,12 +6,12 @@ import Link from 'next/link'
 
 import { articlesController } from 'src/controller/articles'
 import { articleController } from 'src/controller/article'
-import { useBreadCrumb } from 'src/hooks/routes'
+import { useBreadcrumb } from 'src/hooks/routes'
 import { GlobalStyle } from 'src/theme'
 import BlogLayout from 'src/components/templates/blogLayout'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
-import BreadCrumb from 'src/components/atoms/breadCrumb'
+import Breadcrumb from 'src/components/atoms/breadcrumb'
 import { Article } from 'src/types'
 import { COLOR } from 'src/theme/constants'
 
@@ -45,7 +45,7 @@ export async function getStaticProps({ params }: Params) {
 
 export default function Post({ article }: Props) {
   const { t } = useTranslation()
-  const { crumbContentsInArticle } = useBreadCrumb()
+  const { crumbContentsInArticle } = useBreadcrumb()
 
   useEffect(() => {
     window.scroll(0, 0)
@@ -58,7 +58,7 @@ export default function Post({ article }: Props) {
       <Header hideLangSwitch />
       <Container>
         <CrumbContainer>
-          <BreadCrumb contents={crumbContentsInArticle} />
+          <Breadcrumb contents={crumbContentsInArticle} />
         </CrumbContainer>
         <BlogLayout title={article.title}>
           <Content dangerouslySetInnerHTML={{ __html: article.content }} />
