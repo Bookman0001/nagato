@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 import { articlesController } from 'src/controller/articles'
 import { articleController } from 'src/controller/article'
-import { usebreadcrumb } from 'src/hooks/routes'
+import { useBreadcrumb } from 'src/hooks/routes'
 import { GlobalStyle } from 'src/theme'
 import BlogLayout from 'src/components/templates/blogLayout'
 import Header from 'src/components/organisms/header'
@@ -45,7 +45,7 @@ export async function getStaticProps({ params }: Params) {
 
 export default function Post({ article }: Props) {
   const { t } = useTranslation()
-  const { crumbContentsInArticle } = usebreadcrumb()
+  const { crumbContentsInArticle } = useBreadcrumb()
 
   useEffect(() => {
     window.scroll(0, 0)
