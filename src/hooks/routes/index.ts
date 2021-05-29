@@ -1,7 +1,7 @@
-import { BreadCrumbContents } from 'src/types'
+import { BreadcrumbContents } from 'src/types'
 
 export function useBreadCrumb() {
-  const crumbContentsInArticle: BreadCrumbContents = [
+  const crumbContentsInArticle: BreadcrumbContents = [
     { label: 'TOP', link: '/' },
   ]
 
