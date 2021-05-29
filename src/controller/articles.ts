@@ -26,7 +26,7 @@ function mappingArticles(response: ArticlesApiResponse): ArticleContents {
   }
 }
 
-export function articlesService() {
+export function articlesController() {
   const getAllArticles = async () => {
     return await fetchAllArticles().then((articles: ArticlesApiResponse) => {
       return mappingArticles(articles)
