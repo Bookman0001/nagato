@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
@@ -46,10 +45,6 @@ export async function getStaticProps({ params }: Params) {
 export default function Post({ article }: Props) {
   const { t } = useTranslation()
   const { crumbContentsInArticle } = useBreadcrumb()
-
-  useEffect(() => {
-    window.scroll(0, 0)
-  }, [])
 
   return (
     <>

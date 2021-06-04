@@ -18,6 +18,10 @@ const App = ({ Component, pageProps }: AppProps) => {
     }
   }, [router.events])
 
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
+
   return <Component {...pageProps} />
 }
 
