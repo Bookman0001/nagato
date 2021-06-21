@@ -34,6 +34,10 @@ export type Argument = {
   limit: number
 }
 
+export type SearchParams = {
+  searchWord: string
+}
+
 type ContactEvent = {
   action: 'submit_form'
   category: 'Contact'
