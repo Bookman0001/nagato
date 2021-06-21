@@ -5,7 +5,6 @@ import { SearchParams } from 'src/types'
 
 async function getSearchedArticles(req: NextApiRequest, res: NextApiResponse) {
   const reqBody = req.body as SearchParams
-  console.log(reqBody)
   const articlesResponse = await fetchSearchedArticles(reqBody)
     .then((articles) => {
       return articles
