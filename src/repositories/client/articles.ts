@@ -1,6 +1,7 @@
 import { ArticlesApiResponse, SearchParams } from 'src/types'
 
 export async function fetchSearchedArticles(params: SearchParams) {
+  // FIXME: delete as operator
   const encodedParams: SearchParams = {
     searchWord: encodeURI(params.searchWord as string),
   }
