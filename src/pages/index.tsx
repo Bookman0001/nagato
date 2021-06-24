@@ -9,6 +9,7 @@ import Introduction from 'src/components/organisms/introduction'
 import Oss from 'src/components/organisms/oss'
 import EnginnerCareer from 'src/components/organisms/enginnerCareer'
 import Articles from 'src/components/organisms/articles'
+import Search from 'src/components/organisms/search'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
 import BackGroundPicture from 'src/components/atoms/backgroundPicture'
@@ -43,6 +44,7 @@ export default function Home({ articles }: Props) {
         <Oss />
         <EnginnerCareer />
         <Articles articles={articles} />
+        <Search />
       </Container>
       <Footer />
     </>

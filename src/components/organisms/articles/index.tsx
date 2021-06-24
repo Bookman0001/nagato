@@ -1,10 +1,8 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
-import Link from 'next/link'
 
 import { ArticleContents } from 'src/types'
+import ArticleContent from 'src/components/molecures/articleContent'
 import Title from 'src/components/atoms/title'
-import Description from 'src/components/atoms/paragraphContent'
 
 interface Props {
   articles: ArticleContents
@@ -22,14 +20,7 @@ export default function Articles({ articles }: Props) {
         {contents.map((article) => {
           return (
             <div key={article.id}>
-              <Link href={`/posts/${article.id}`}>
-                <StyledLink>
-                  <SubTitle key={article.id}>{article.title}</SubTitle>
-                  <PublishedWrapper>
-                    <Description>{article.publishedAt}</Description>
-                  </PublishedWrapper>
-                </StyledLink>
-              </Link>
+              <ArticleContent article={article} />
             </div>
           )
         })}
@@ -44,37 +35,4 @@ const Section = styled.section`
 
 const DetailWrapper = styled.div`
   margin: 0;
-`
-
-const StyledLink = styled.span`
-  cursor: pointer;
-  display: flex;
-  margin: 20px;
-  :hover {
-    opacity: 0.7;
-  }
-  ${media.lessThan('small')`
-    margin: 0;
-    width: 100%;
-    margin-bottom: 20px;
-  `}
-`
-
-const PublishedWrapper = styled.div`
-  p {
-    text-align: right;
-    padding-left: 20px;
-  }
-`
-
-const SubTitle = styled.h3`
-  font-size: 20px;
-  display: -webkit-box;
-  overflow: hidden;
-  margin-right: auto;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  ${media.lessThan('small')`
-    font-size: 20px;
-  `}
 `

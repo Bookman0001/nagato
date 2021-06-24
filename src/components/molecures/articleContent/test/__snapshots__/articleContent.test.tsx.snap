@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleContent 1`] = `
+<Link
+  href="/posts/1"
+>
+  <styled.span>
+    <styled.h3
+      key="1"
+    >
+      タイトル
+    </styled.h3>
+    <styled.div>
+      <ParagraphContent>
+        2021/05/03
+      </ParagraphContent>
+    </styled.div>
+  </styled.span>
+</Link>
+`;
