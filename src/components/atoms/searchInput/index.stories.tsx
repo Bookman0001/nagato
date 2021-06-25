@@ -15,6 +15,7 @@ const Template: React.VFC<{}> = () => {
   return (
     <div>
       <SearchInput
+        defaultValue={''}
         placeholder={'add place holder'}
         onChange={(e) => setText(e.target.value)}
       />

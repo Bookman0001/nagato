@@ -6,7 +6,11 @@ import Title from 'src/components/atoms/title'
 import SearchInput from 'src/components/atoms/searchInput'
 import Button from 'src/components/atoms/button'
 
-export default function Search() {
+interface Props {
+  defaultKeyword?: string
+}
+
+export default function Search({ defaultKeyword = '' }: Props) {
   const router = useRouter()
   const [keyword, setKeyword] = useState<string>('')
 
@@ -20,9 +24,13 @@ export default function Search() {
 
   return (
     <Section>
-      <Title>Articles</Title>
+      <Title>Articles Search</Title>
       <DetailWrapper>
-        <SearchInput placeholder={'search articles'} onChange={handleChange} />
+        <SearchInput
+          placeholder={'search articles'}
+          onChange={handleChange}
+          defaultValue={defaultKeyword}
+        />
         <Button onClick={handleClick} text={'search'} />
       </DetailWrapper>
     </Section>

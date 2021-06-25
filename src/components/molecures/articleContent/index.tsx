@@ -25,7 +25,7 @@ export default function ArticleContent({ article }: Props) {
 const StyledLink = styled.span`
   cursor: pointer;
   display: flex;
-  padding: 20px;
+  padding-bottom: 20px;
   :hover {
     opacity: 0.7;
   }

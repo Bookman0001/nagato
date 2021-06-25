@@ -2,6 +2,7 @@
 
 exports[`SearchInput 1`] = `
 <styled.input
+  defaultValue=""
   onChange={[Function]}
   placeholder="test"
   type="search"

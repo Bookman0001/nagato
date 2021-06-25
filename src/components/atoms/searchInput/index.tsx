@@ -4,14 +4,20 @@ import styled from 'styled-components'
 import { COLOR } from 'src/theme/constants'
 
 interface Props {
+  defaultValue: string
   placeholder: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-export default function SearchInput({ placeholder, onChange }: Props) {
+export default function SearchInput({
+  defaultValue,
+  placeholder,
+  onChange,
+}: Props) {
   return (
     <StyledInput
       type={'search'}
+      defaultValue={defaultValue}
       placeholder={placeholder}
       onChange={onChange}
     />
