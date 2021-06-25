@@ -13,8 +13,7 @@ import { SearchParams } from 'src/types'
 export default function Posts() {
   const router = useRouter()
   const { keyword } = router.query
-  const searchKeyword = keyword
-  const params: SearchParams = { searchWord: searchKeyword }
+  const params: SearchParams = { searchWord: keyword }
   const { articles, error, isLoading } = useSearchedArticles(params)
 
   if (isLoading) {
@@ -31,7 +30,7 @@ export default function Posts() {
       <Header />
       <Section>
         <SearchWrapper>
-          <Search defaultKeyword={String(searchKeyword)} />
+          <Search defaultKeyword={String(keyword)} />
         </SearchWrapper>
         <DetailWrapper>
           <DetailWrapper>
