@@ -17,6 +17,6 @@ export async function fetchSearchedArticles(
   params: SearchParams
 ): Promise<ArticlesApiResponse> {
   return await get<ArticlesApiResponse>(
-    `/technology-articles??filters=content[contains]${params.searchWord}`
+    `/technology-articles?q=${params.searchWord}`
   )
 }

@@ -4,7 +4,13 @@ import {
   fetchAllArticles,
   fetchLimitedArtcles,
 } from 'src/repositories/articles'
-import { ArticlesApiResponse, Argument, ArticleContents } from 'src/types'
+import { fetchSearchedArticles } from 'src/repositories/client/articles'
+import {
+  ArticlesApiResponse,
+  Argument,
+  ArticleContents,
+  SearchParams,
+} from 'src/types'
 
 function mappingArticles(response: ArticlesApiResponse): ArticleContents {
   const { contents, totalCount, offset, limit } = response
@@ -44,5 +50,19 @@ export function articlesController() {
   return {
     getAllArticles,
     getLimitedArticles,
+  }
+}
+
+export function articlesClientController(searchParams: SearchParams) {
+  const getSearchedArticles = async () => {
+    return fetchSearchedArticles(searchParams).then(
+      (artcles: ArticlesApiResponse) => {
+        return mappingArticles(artcles)
+      }
+    )
+  }
+
+  return {
+    getSearchedArticles,
   }
 }
