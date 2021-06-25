@@ -17,9 +17,13 @@ export default function Posts() {
   const params: SearchParams = { searchWord: searchKeyword }
   const { articles, error, isLoading } = useSearchedArticles(params)
 
-  if (isLoading) return <>now loading</>
+  if (isLoading) {
+    return <LoadingContainer>Loading...</LoadingContainer>
+  }
 
-  if (error) return <div>error happened!</div>
+  if (error) {
+    return <ErrorContainer>Error happened!</ErrorContainer>
+  }
 
   return (
     <>
@@ -63,3 +67,14 @@ const SearchWrapper = styled.div`
 const DetailWrapper = styled.div`
   margin: 0;
 `
+
+const LoadingContainer = styled.div`
+  padding-top: 80px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+`
+
+const ErrorContainer = styled(LoadingContainer)``

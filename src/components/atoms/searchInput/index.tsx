@@ -7,12 +7,14 @@ interface Props {
   defaultValue: string
   placeholder: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  onKeyPress?: (e: React.KeyboardEvent) => void
 }
 
 export default function SearchInput({
   defaultValue,
   placeholder,
   onChange,
+  onKeyPress,
 }: Props) {
   return (
     <StyledInput
@@ -20,6 +22,7 @@ export default function SearchInput({
       defaultValue={defaultValue}
       placeholder={placeholder}
       onChange={onChange}
+      onKeyPress={onKeyPress}
     />
   )
 }

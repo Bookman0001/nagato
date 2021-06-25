@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useState, KeyboardEvent } from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
@@ -18,6 +18,12 @@ export default function Search({ defaultKeyword = '' }: Props) {
     setKeyword(e.target.value)
   }
 
+  const handleKeyPress = (e: KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      router.push({ pathname: '/posts', query: { keyword: keyword } })
+    }
+  }
+
   const handleClick = () => {
     router.push({ pathname: '/posts', query: { keyword: keyword } })
   }
@@ -30,6 +36,7 @@ export default function Search({ defaultKeyword = '' }: Props) {
           placeholder={'search articles'}
           onChange={handleChange}
           defaultValue={defaultKeyword}
+          onKeyPress={(e) => handleKeyPress(e)}
         />
         <Button onClick={handleClick} text={'search'} />
       </DetailWrapper>

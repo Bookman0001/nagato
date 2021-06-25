@@ -7,7 +7,8 @@ export function useSearchedArticles(params: SearchParams) {
   const { getSearchedArticles } = articlesClientController(params)
   const { data, error } = useSWR(
     `/api/articles?${params.searchWord}`,
-    getSearchedArticles
+    getSearchedArticles,
+    { revalidateOnFocus: false }
   )
   return { articles: data, error, isLoading: !data }
 }
