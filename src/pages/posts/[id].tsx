@@ -1,12 +1,10 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 
 import { articlesController } from 'src/controller/articles'
 import { articleController } from 'src/controller/article'
 import { useBreadcrumb } from 'src/hooks/routes'
-import { GlobalStyle } from 'src/theme'
 import BlogLayout from 'src/components/templates/blogLayout'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
@@ -43,13 +41,10 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export default function Post({ article }: Props) {
-  const { t } = useTranslation()
   const { crumbContentsInArticle } = useBreadcrumb()
 
   return (
     <>
-      <GlobalStyle />
-      <title>{t('title')}</title>
       <Header hideLangSwitch />
       <Container>
         <CrumbContainer>

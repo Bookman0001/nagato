@@ -1,10 +1,8 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import { useTranslation } from 'react-i18next'
 
 import { ArticleContents } from 'src/types'
 import { articlesController } from 'src/controller/articles'
-import { GlobalStyle } from 'src/theme'
 import Introduction from 'src/components/organisms/introduction'
 import Oss from 'src/components/organisms/oss'
 import EnginnerCareer from 'src/components/organisms/enginnerCareer'
@@ -29,12 +27,8 @@ export async function getStaticProps() {
 }
 
 export default function Home({ articles }: Props) {
-  const { t } = useTranslation()
-
   return (
     <>
-      <GlobalStyle />
-      <title>{t('title')}</title>
       <Header />
       <PictureContainer>
         <BackGroundPicture src="/assets/overview.jpg" alt="overview" />
