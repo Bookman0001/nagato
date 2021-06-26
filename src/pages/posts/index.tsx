@@ -1,9 +1,7 @@
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import { useTranslation } from 'react-i18next'
 
-import { GlobalStyle } from 'src/theme'
 import { useSearchedArticles } from 'src/hooks/search/articles'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
@@ -12,7 +10,6 @@ import Search from 'src/components/organisms/search'
 import { SearchParams } from 'src/types'
 
 export default function Posts() {
-  const { t } = useTranslation()
   const router = useRouter()
   const { keyword } = router.query
   const params: SearchParams = { searchWord: keyword }
@@ -28,8 +25,6 @@ export default function Posts() {
 
   return (
     <>
-      <GlobalStyle />
-      <title>{t('title')}</title>
       <Header />
       <Section>
         <SearchWrapper>

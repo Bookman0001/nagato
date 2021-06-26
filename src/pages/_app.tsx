@@ -1,10 +1,14 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { AppProps } from 'next/app'
+import { useTranslation } from 'react-i18next'
+
 import * as gtag from 'src/services/gtag'
+import { GlobalStyle } from 'src/theme'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()
+  const { t } = useTranslation()
   useEffect(() => {
     if (!gtag.existsGaId) {
       return
@@ -22,7 +26,13 @@ const App = ({ Component, pageProps }: AppProps) => {
     window.scroll(0, 0)
   }, [])
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <GlobalStyle />
+      <title>{t('title')}</title>
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default App
