@@ -7,7 +7,7 @@ import { GlobalStyle } from 'src/theme'
 import { useSearchedArticles } from 'src/hooks/search/articles'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
-import ArticleContent from 'src/components/molecures/articleContent'
+import SearchedArticles from 'src/components/organisms/searchedArticles'
 import Search from 'src/components/organisms/search'
 import { SearchParams } from 'src/types'
 
@@ -18,7 +18,7 @@ export default function Posts() {
   const params: SearchParams = { searchWord: keyword }
   const { articles, error, isLoading } = useSearchedArticles(params)
 
-  if (isLoading) {
+  if (isLoading || !articles) {
     return <LoadingContainer>Loading...</LoadingContainer>
   }
 
@@ -35,17 +35,7 @@ export default function Posts() {
         <SearchWrapper>
           <Search defaultKeyword={String(keyword)} />
         </SearchWrapper>
-        <DetailWrapper>
-          <DetailWrapper>
-            {articles?.contents.map((article) => {
-              return (
-                <div key={article.id}>
-                  <ArticleContent article={article} />
-                </div>
-              )
-            })}
-          </DetailWrapper>
-        </DetailWrapper>
+        <SearchedArticles articles={articles} />
       </Section>
       <Footer />
     </>
@@ -64,10 +54,6 @@ const Section = styled.section`
 
 const SearchWrapper = styled.div`
   margin-top: 50px;
-`
-
-const DetailWrapper = styled.div`
-  margin: 0;
 `
 
 const LoadingContainer = styled.div`
