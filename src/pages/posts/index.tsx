@@ -7,7 +7,7 @@ import { GlobalStyle } from 'src/theme'
 import { useSearchedArticles } from 'src/hooks/search/articles'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
-import ArticleContent from 'src/components/molecures/articleContent'
+import SearchedArticles from 'src/components/organisms/searchedArticles'
 import Search from 'src/components/organisms/search'
 import { SearchParams } from 'src/types'
 
@@ -36,15 +36,7 @@ export default function Posts() {
           <Search defaultKeyword={String(keyword)} />
         </SearchWrapper>
         <DetailWrapper>
-          <DetailWrapper>
-            {articles?.contents.map((article) => {
-              return (
-                <div key={article.id}>
-                  <ArticleContent article={article} />
-                </div>
-              )
-            })}
-          </DetailWrapper>
+          <SearchedArticles articles={articles} />
         </DetailWrapper>
       </Section>
       <Footer />

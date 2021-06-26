@@ -12,7 +12,12 @@ export default {
 const Template: React.VFC<{}> = () => (
   <>
     総件数50件で10件ずつの時
-    <Pagination totalCount={50} limit={10} onClick={action('clicked')} />
+    <Pagination
+      totalCount={50}
+      initialIndex={1}
+      limit={10}
+      onClick={action('clicked')}
+    />
   </>
 )
 

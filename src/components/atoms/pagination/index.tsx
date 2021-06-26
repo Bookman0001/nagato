@@ -1,17 +1,80 @@
-import { useState } from 'react'
+import { useCallback, useState } from 'react'
 import styled, { css } from 'styled-components'
 
 import { COLOR } from '../../../theme/constants'
 
 interface Props {
   totalCount: number
+  initialIndex: number
   limit: number
   onClick: (clickedIndex: number) => void
 }
 
-export default function Pagination({ totalCount, limit, onClick }: Props) {
-  const [currentClikedIndex, setCurrentIndex] = useState<number>(1)
-  const paginationCount = Math.floor(totalCount / limit)
+export default function Pagination({
+  totalCount,
+  initialIndex,
+  limit,
+  onClick,
+}: Props) {
+  const [currentIndex, setCurrentIndex] = useState<number>(initialIndex)
+  const totalPaginationCount = Math.floor(totalCount / limit)
+  const onceShowingPaginationLimit = 5
+  const onceMovingPagination = 2
+  const isEdgeOnOncePagination = !!(
+    initialIndex % onceShowingPaginationLimit ===
+    0
+  )
+  const isEdgeOnTotalPagination = initialIndex === totalPaginationCount
+
+  const isInitialOnOncePagination = !!(
+    (initialIndex - 1) % onceShowingPaginationLimit ===
+    0
+  )
+
+  const isInitialOnTotalPagination = initialIndex === 1
+
+  const showingPaginationCount = useCallback(() => {
+    // 最初のページネーションの時
+    if (totalPaginationCount < onceShowingPaginationLimit) {
+      const start = 1
+      const end = totalPaginationCount
+      return Array.from(Array(end - start + 1), (_, i) => i + start)
+    }
+    if (isInitialOnOncePagination && isInitialOnOncePagination) {
+      const start = 1
+      const end = onceShowingPaginationLimit
+      return Array.from(Array(end - start + 1), (_, i) => i + start)
+    }
+    // 続きがある場合でページネーションの最後の番号にいる時
+    if (isEdgeOnOncePagination && !isEdgeOnTotalPagination) {
+      const start = currentIndex - onceMovingPagination
+      const end = currentIndex + onceMovingPagination
+      return Array.from(Array(end - start + 1), (_, i) => i + start)
+    }
+    // 続きがない場合でページネーションの最後の番号にいる時
+    if (isEdgeOnOncePagination && isEdgeOnTotalPagination) {
+      const start = currentIndex - (onceShowingPaginationLimit - 1)
+      const end = currentIndex
+      return Array.from(Array(end - start + 1), (_, i) => i + start)
+    }
+    // 現在のページネーションの先頭で前のページネーションに戻れる時
+    if (isInitialOnOncePagination && !isInitialOnTotalPagination) {
+      const start = currentIndex - onceMovingPagination
+      const end = currentIndex + onceMovingPagination
+      return Array.from(Array(end - start + 1), (_, i) => i + start)
+    }
+    const start = currentIndex - 1
+    const end =
+      currentIndex + (onceShowingPaginationLimit - onceMovingPagination)
+    return Array.from(Array(end - start + 1), (_, i) => i + start)
+  }, [
+    currentIndex,
+    totalPaginationCount,
+    isEdgeOnOncePagination,
+    isInitialOnOncePagination,
+    isInitialOnTotalPagination,
+    isEdgeOnTotalPagination,
+  ])
 
   const handleClick = (clickedIndex: number) => {
     setCurrentIndex(clickedIndex)
@@ -20,14 +83,11 @@ export default function Pagination({ totalCount, limit, onClick }: Props) {
 
   return (
     <Container>
-      {[...Array(paginationCount)].map((_, index) => {
+      {showingPaginationCount().map((count, index) => {
         return (
-          <ButtonWrapper
-            key={index}
-            hasSolidBorder={currentClikedIndex === index + 1}
-          >
-            <ButtonItem onClick={() => handleClick(index + 1)} key={index}>
-              {index + 1}
+          <ButtonWrapper key={index} hasSolidBorder={currentIndex === count}>
+            <ButtonItem onClick={() => handleClick(count)} key={index}>
+              {count}
             </ButtonItem>
           </ButtonWrapper>
         )
