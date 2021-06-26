@@ -1,6 +1,7 @@
 import { ChangeEvent, useState, KeyboardEvent } from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 import Title from 'src/components/atoms/title'
 import SearchInput from 'src/components/atoms/searchInput'
@@ -33,7 +34,7 @@ export default function Search({ defaultKeyword = '' }: Props) {
       <Title>Articles Search</Title>
       <DetailWrapper>
         <SearchInput
-          placeholder={'search articles'}
+          placeholder={'keyword'}
           onChange={handleChange}
           defaultValue={defaultKeyword}
           onKeyPress={(e) => handleKeyPress(e)}
@@ -53,8 +54,13 @@ const DetailWrapper = styled.div`
   justify-content: center;
   margin: 0;
   button {
+    display: flex;
+    justify-content: center;
     margin-left: 20px;
     height: 40px;
     font-size: 20px;
+    ${media.lessThan('medium')`
+      width: 50px;
+    `}
   }
 `
