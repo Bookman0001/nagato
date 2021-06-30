@@ -28,7 +28,7 @@ export default function Posts() {
       <Header />
       <Section>
         <SearchWrapper>
-          <Search defaultKeyword={String(keyword)} />
+          <Search defaultKeyword={String(keyword || '')} />
         </SearchWrapper>
         <SearchedArticles articles={articles} />
       </Section>
