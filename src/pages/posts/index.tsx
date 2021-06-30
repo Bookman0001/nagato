@@ -15,12 +15,12 @@ export default function Posts() {
   const params: SearchParams = { searchWord: keyword }
   const { articles, error, isLoading } = useSearchedArticles(params)
 
-  if (isLoading || !articles) {
-    return <LoadingContainer>Loading...</LoadingContainer>
-  }
-
   if (error) {
     return <ErrorContainer>Error happened!</ErrorContainer>
+  }
+
+  if (isLoading || !articles) {
+    return <LoadingContainer>Loading...</LoadingContainer>
   }
 
   return (
