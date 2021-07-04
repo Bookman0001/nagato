@@ -1,14 +1,12 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { articlesController } from 'src/controller/articles'
 import { articleController } from 'src/controller/article'
-import { useBreadcrumb } from 'src/hooks/routes'
 import BlogLayout from 'src/components/templates/blogLayout'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
-import Breadcrumb from 'src/components/atoms/breadcrumb'
 import { Article } from 'src/types'
 import { COLOR } from 'src/theme/constants'
 
@@ -41,22 +39,17 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export default function Post({ article }: Props) {
-  const { crumbContentsInArticle } = useBreadcrumb()
+  const router = useRouter()
 
   return (
     <>
       <Header hideLangSwitch />
       <Container>
-        <CrumbContainer>
-          <Breadcrumb contents={crumbContentsInArticle} />
-        </CrumbContainer>
         <BlogLayout title={article.title}>
           <Content dangerouslySetInnerHTML={{ __html: article.content }} />
         </BlogLayout>
-        <LinkWrapper>
-          <Link href={'/'}>
-            <StyledLink>←Back</StyledLink>
-          </Link>
+        <LinkWrapper onClick={() => router.back()}>
+          <StyledLink>←Back</StyledLink>
         </LinkWrapper>
       </Container>
       <Footer />
@@ -90,8 +83,4 @@ const StyledLink = styled.span`
   ${media.lessThan('medium')`
     font-size: 1rem;
   `}
-`
-
-const CrumbContainer = styled.div`
-  padding-bottom: 30px;
 `
