@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import media from 'styled-media-query'
 
+import Header from 'src/components/organisms/header'
+import Footer from 'src/components/organisms/footer'
 import MainTitle from 'src/components/atoms/mainTitle'
 
 interface Props {
@@ -11,16 +13,28 @@ interface Props {
 
 export default function BlogLayout({ title, children }: Props) {
   return (
-    <Container>
-      <TitleWrapper>
-        <MainTitle>{title}</MainTitle>
-      </TitleWrapper>
-      <Main>{children}</Main>
-    </Container>
+    <>
+      <Header hideLangSwitch />
+      <Container>
+        <TitleWrapper>
+          <MainTitle>{title}</MainTitle>
+        </TitleWrapper>
+        <Main>{children}</Main>
+      </Container>
+      <Footer />
+    </>
   )
 }
 
-const Container = styled.div``
+const Container = styled.div`
+  max-width: 768px;
+  padding: 30px;
+  margin: 50px auto 150px;
+  font-size: 1rem;
+  ${media.lessThan('small')`
+    padding: 15px;
+  `}
+`
 
 const TitleWrapper = styled.div`
   margin-bottom: 50px;
