@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import media from 'styled-media-query'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { articlesController } from 'src/controller/articles'
 import { articleController } from 'src/controller/article'
@@ -39,6 +39,8 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export default function Post({ article }: Props) {
+  const router = useRouter()
+
   return (
     <>
       <Header hideLangSwitch />
@@ -46,10 +48,8 @@ export default function Post({ article }: Props) {
         <BlogLayout title={article.title}>
           <Content dangerouslySetInnerHTML={{ __html: article.content }} />
         </BlogLayout>
-        <LinkWrapper>
-          <Link href={'/'}>
-            <StyledLink>←Back</StyledLink>
-          </Link>
+        <LinkWrapper onClick={() => router.back()}>
+          <StyledLink>←Back</StyledLink>
         </LinkWrapper>
       </Container>
       <Footer />
