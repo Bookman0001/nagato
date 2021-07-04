@@ -51,10 +51,3 @@ type ClickEvent = {
 }
 
 export type Event = ContactEvent | ClickEvent
-
-export type BreadcrumbContents = Array<BreadcrumbContent>
-
-type BreadcrumbContent = {
-  label: string
-  link: string
-}
