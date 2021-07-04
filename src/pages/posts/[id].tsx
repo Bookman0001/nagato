@@ -5,8 +5,6 @@ import { useRouter } from 'next/router'
 import { articlesController } from 'src/controller/articles'
 import { articleController } from 'src/controller/article'
 import BlogLayout from 'src/components/templates/blogLayout'
-import Header from 'src/components/organisms/header'
-import Footer from 'src/components/organisms/footer'
 import { Article } from 'src/types'
 import { COLOR } from 'src/theme/constants'
 
@@ -42,30 +40,16 @@ export default function Post({ article }: Props) {
   const router = useRouter()
 
   return (
-    <>
-      <Header hideLangSwitch />
-      <Container>
-        <BlogLayout title={article.title}>
-          <Content dangerouslySetInnerHTML={{ __html: article.content }} />
-        </BlogLayout>
+    <BlogLayout title={article.title}>
+      <>
+        <Content dangerouslySetInnerHTML={{ __html: article.content }} />
         <LinkWrapper onClick={() => router.back()}>
           <StyledLink>←Back</StyledLink>
         </LinkWrapper>
-      </Container>
-      <Footer />
-    </>
+      </>
+    </BlogLayout>
   )
 }
-
-const Container = styled.div`
-  max-width: 768px;
-  padding: 30px;
-  margin: 50px auto 150px;
-  font-size: 1rem;
-  ${media.lessThan('small')`
-    padding: 15px;
-  `}
-`
 
 const LinkWrapper = styled.div`
   display: flex;

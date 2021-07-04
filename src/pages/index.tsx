@@ -4,13 +4,11 @@ import media from 'styled-media-query'
 import { ArticleContents } from 'src/types'
 import { articlesController } from 'src/controller/articles'
 import Introduction from 'src/components/organisms/introduction'
+import TopLayout from 'src/components/templates/topLayout'
 import Oss from 'src/components/organisms/oss'
 import EnginnerCareer from 'src/components/organisms/enginnerCareer'
 import Articles from 'src/components/organisms/articles'
 import Search from 'src/components/organisms/search'
-import Header from 'src/components/organisms/header'
-import Footer from 'src/components/organisms/footer'
-import BackGroundPicture from 'src/components/atoms/backgroundPicture'
 
 interface Props {
   articles: ArticleContents
@@ -28,11 +26,7 @@ export async function getStaticProps() {
 
 export default function Home({ articles }: Props) {
   return (
-    <>
-      <Header />
-      <PictureContainer>
-        <BackGroundPicture src="/assets/overview.jpg" alt="overview" />
-      </PictureContainer>
+    <TopLayout>
       <Container>
         <Introduction />
         <Oss />
@@ -40,8 +34,7 @@ export default function Home({ articles }: Props) {
         <Articles articles={articles} />
         <Search defaultKeyword={''} />
       </Container>
-      <Footer />
-    </>
+    </TopLayout>
   )
 }
 
@@ -51,12 +44,5 @@ const Container = styled.main`
   padding: 30px 0;
   ${media.lessThan('medium')`
     padding: 30px;
-  `}
-`
-
-const PictureContainer = styled.div`
-  margin: 50px 0 70px;
-  ${media.lessThan('medium')`
-    margin: 50px 0 20px;
   `}
 `
