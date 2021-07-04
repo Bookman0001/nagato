@@ -8,12 +8,12 @@ import SearchInput from 'src/components/atoms/searchInput'
 import Button from 'src/components/atoms/button'
 
 interface Props {
-  defaultKeyword?: string
+  defaultKeyword: string
 }
 
-export default function Search({ defaultKeyword = '' }: Props) {
+export default function Search({ defaultKeyword }: Props) {
   const router = useRouter()
-  const [keyword, setKeyword] = useState<string>('')
+  const [keyword, setKeyword] = useState<string>(defaultKeyword)
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setKeyword(e.target.value)

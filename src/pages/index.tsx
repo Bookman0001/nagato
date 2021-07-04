@@ -38,7 +38,7 @@ export default function Home({ articles }: Props) {
         <Oss />
         <EnginnerCareer />
         <Articles articles={articles} />
-        <Search />
+        <Search defaultKeyword={''} />
       </Container>
       <Footer />
     </>
