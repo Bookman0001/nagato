@@ -44,11 +44,11 @@ export default function Posts() {
 
 const Section = styled.section`
   max-width: 768px;
-  min-height: calc(100vh - 50px - 80px);
+  min-height: calc(100vh - 50px - 60px);
+  padding: 50px 0 0 0;
   margin: 0 auto;
-  padding: 30px 0;
   ${media.lessThan('medium')`
-    padding: 30px;
+    padding: 50px 30px 0;
   `}
 `
 
@@ -57,12 +57,14 @@ const SearchWrapper = styled.div`
 `
 
 const LoadingContainer = styled.div`
-  height: calc(100vh - 70px);
+  max-width: 768px;
+  height: calc(100vh - 50px - 60px);
+  padding-top: 50px;
+  margin: 0 auto;
   font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
 `
 
 const ErrorContainer = styled(LoadingContainer)``

@@ -32,7 +32,6 @@ const StyledLink = styled.span`
   ${media.lessThan('small')`
     margin: 0;
     width: 100%;
-    margin-bottom: 20px;
   `}
 `
 
