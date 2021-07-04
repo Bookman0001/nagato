@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import media from 'styled-media-query'
 
 import { useSearchedArticles } from 'src/hooks/search/articles'
-import Header from 'src/components/organisms/header'
-import Footer from 'src/components/organisms/footer'
+import SearchedLayout from 'src/components/templates/searchedLayout'
 import SearchedArticles from 'src/components/organisms/searchedArticles'
 import Search from 'src/components/organisms/search'
 import { SearchParams } from 'src/types'
@@ -16,24 +15,30 @@ export default function Posts() {
   const { articles, error, isLoading } = useSearchedArticles(params)
 
   if (error) {
-    return <ErrorContainer>Error happened!</ErrorContainer>
+    return (
+      <SearchedLayout>
+        <ErrorContainer>Error happened!</ErrorContainer>
+      </SearchedLayout>
+    )
   }
 
   if (isLoading || !articles) {
-    return <LoadingContainer>Loading...</LoadingContainer>
+    return (
+      <SearchedLayout>
+        <LoadingContainer>Loading...</LoadingContainer>
+      </SearchedLayout>
+    )
   }
 
   return (
-    <>
-      <Header />
+    <SearchedLayout>
       <Section>
         <SearchWrapper>
           <Search defaultKeyword={String(keyword) || ''} />
         </SearchWrapper>
         <SearchedArticles articles={articles} />
       </Section>
-      <Footer />
-    </>
+    </SearchedLayout>
   )
 }
 
@@ -52,7 +57,7 @@ const SearchWrapper = styled.div`
 `
 
 const LoadingContainer = styled.div`
-  padding-top: 80px;
+  height: calc(100vh - 70px);
   font-size: 20px;
   display: flex;
   justify-content: center;
