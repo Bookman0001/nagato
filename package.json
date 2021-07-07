@@ -60,7 +60,7 @@
     "@storybook/addon-essentials": "^6.3.2",
     "@storybook/addon-links": "^6.3.0",
     "@storybook/react": "^6.3.2",
-    "@types/node": "^15.14.0",
+    "@types/node": "^16.0.1",
     "@types/react": "^17.0.13",
     "@types/styled-components": "^5.1.10",
     "@typescript-eslint/eslint-plugin": "^4.28.1",
