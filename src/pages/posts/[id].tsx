@@ -41,19 +41,17 @@ export default function Post({ article }: Props) {
 
   return (
     <BlogLayout title={article.title}>
-      <>
+      <div>
         <Content dangerouslySetInnerHTML={{ __html: article.content }} />
         <LinkWrapper onClick={() => router.back()}>
           <StyledLink>←Back</StyledLink>
         </LinkWrapper>
-      </>
+      </div>
     </BlogLayout>
   )
 }
 
-const LinkWrapper = styled.div`
-  display: flex;
-`
+const LinkWrapper = styled.div``
 
 const Content = styled.div``
 
