@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
 import { useTranslation, Trans } from 'react-i18next'
 
 import Title from 'src/components/atoms/title'
@@ -50,9 +49,9 @@ export default function EnginnerCareer() {
 
 const Section = styled.section`
   margin-bottom: 100px;
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     margin-bottom: 50px;
-  `}
+  }
 `
 
 const DetailWrapper = styled.div`
@@ -60,11 +59,11 @@ const DetailWrapper = styled.div`
     text-align: center;
     margin: 70px 0;
   }
-  ${media.lessThan('small')`
-    p {    
+  @media (max-width: 450px) {
+    p {
       text-align: left;
-    }   
-  `}
+    }
+  }
 `
 
 const ImageWrapper = styled.div`

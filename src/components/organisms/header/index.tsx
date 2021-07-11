@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import styled from 'styled-components'
-import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 
@@ -72,25 +71,25 @@ const Container = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  ${media.greaterThan('small')`
-     max-width: 768px;
-     margin: 0 auto;
-  `}
+  @media (min-width: 1170px) {
+    max-width: 768px;
+    margin: 0 auto;
+  }
 `
 
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-left: 15px;
+  @media (min-width: 1170px) {
+    margin-left: 0;
+  }
   button {
     width: 45px;
     line-height: 1.5;
     padding: 0 10px;
     font-size: 1rem;
   }
-  ${media.greaterThan('large')`
-    margin-left: 0;
-  `}
 `
 
 const StyledLink = styled.span`
@@ -107,7 +106,7 @@ const SharingContainer = styled.div`
   right: 0;
   margin-right: 15px;
   cursor: pointer;
-  ${media.greaterThan('large')`
+  @media (min-width: 1170px) {
     margin-right: 0;
-  `}
+  }
 `

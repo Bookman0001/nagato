@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
 import { useTranslation } from 'react-i18next'
 
 import Title from 'src/components/atoms/title'
@@ -57,9 +56,9 @@ export default function Oss() {
 
 const Section = styled.section`
   margin-bottom: 100px;
-  ${media.lessThan('small')`
-     margin-bottom: 50px;
-  `}
+  @media (max-width: 450px) {
+    margin-bottom: 50px;
+  }
 `
 
 const DetailWrapper = styled.div`
@@ -69,11 +68,11 @@ const DetailWrapper = styled.div`
   align-items: center;
   text-align: center;
   border-radius: 10px;
-  ${media.lessThan('small')`
-    display: block;
-  `}
   p {
     margin: 20px 0;
+  }
+  @media (max-width: 450px) {
+    display: block;
   }
 `
 

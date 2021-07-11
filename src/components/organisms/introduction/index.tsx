@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components'
-import media from 'styled-media-query'
 import { Trans } from 'react-i18next'
 
 import MainTitle from 'src/components/atoms/mainTitle'
@@ -32,9 +31,9 @@ const Animation = keyframes`
 
 const Section = styled.section`
   margin-bottom: 100px;
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     margin-bottom: 50px;
-  `}
+  }
 `
 
 const IntroductionWrapper = styled.div`
@@ -44,8 +43,8 @@ const IntroductionWrapper = styled.div`
   text-align: center;
   align-items: center;
   animation: ${Animation} 0.5s linear;
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     display: block;
     text-align: left;
-  `}
+  }
 `

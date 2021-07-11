@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
@@ -25,7 +24,7 @@ export default function TopLayout({ children }: Props) {
 
 const PictureContainer = styled.div`
   margin: 50px 0 70px;
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     margin: 50px 0 20px;
-  `}
+  }
 `

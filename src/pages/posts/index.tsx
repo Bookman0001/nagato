@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 import { useSearchedArticles } from 'src/hooks/search/articles'
 import SearchedLayout from 'src/components/templates/searchedLayout'
@@ -47,9 +46,9 @@ const Section = styled.section`
   min-height: calc(100vh - 50px - 60px);
   padding: 50px 0 0 0;
   margin: 0 auto;
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     padding: 50px 30px 0;
-  `}
+  }
 `
 
 const SearchWrapper = styled.div`

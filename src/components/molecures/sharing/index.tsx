@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components'
-import media from 'styled-media-query'
 import Link from 'next/link'
 import { FacebookShareButton, TwitterShareButton } from 'react-share'
 
@@ -85,9 +84,9 @@ const Container = styled.div`
     border-bottom: 20px solid ${COLOR.GRAY};
     border-left: 20px solid transparent;
   }
-  ${media.greaterThan('medium')`
+  @media (max-width: 768px) {
     right: 5px;
-  `}
+  }
 `
 
 const StyledLink = styled.span`
