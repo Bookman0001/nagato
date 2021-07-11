@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
 import { useRouter } from 'next/router'
 
 import { articlesController } from 'src/controller/articles'
@@ -62,7 +61,7 @@ const StyledLink = styled.span`
   font-size: 24px;
   font-weight: bold;
   color: ${COLOR.BLUE};
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     font-size: 1rem;
-  `}
+  }
 `

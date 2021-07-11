@@ -1,7 +1,6 @@
 import { ChangeEvent, useState, KeyboardEvent } from 'react'
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 import Title from 'src/components/atoms/title'
 import SearchInput from 'src/components/atoms/searchInput'
@@ -59,8 +58,8 @@ const DetailWrapper = styled.div`
     margin-left: 20px;
     height: 40px;
     font-size: 20px;
-    ${media.lessThan('medium')`
+    @media (max-width: 768px) {
       width: 50px;
-    `}
+    }
   }
 `

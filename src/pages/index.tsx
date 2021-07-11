@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 import { ArticleContents } from 'src/types'
 import { articlesController } from 'src/controller/articles'
@@ -42,7 +41,7 @@ const Container = styled.main`
   max-width: 768px;
   margin: 0 auto;
   padding: 30px 0;
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     padding: 30px;
-  `}
+  }
 `

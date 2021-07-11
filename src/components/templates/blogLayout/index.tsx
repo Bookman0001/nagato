@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import media from 'styled-media-query'
 
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
@@ -31,9 +30,9 @@ const Container = styled.div`
   padding: 30px;
   margin: 50px auto 150px;
   font-size: 1rem;
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     padding: 15px;
-  `}
+  }
 `
 
 const TitleWrapper = styled.div`
@@ -45,9 +44,9 @@ const Main = styled.main`
   display: flex;
   align-items: center;
   line-height: 1.5;
-  ${media.lessThan('medium')`
+  @media (max-width: 768px) {
     display: block;
-  `}
+  }
   p {
     line-height: 1.7;
   }

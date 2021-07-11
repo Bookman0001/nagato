@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import media from 'styled-media-query'
 import Link from 'next/link'
 
 import Description from 'src/components/atoms/paragraphContent'
@@ -29,10 +28,10 @@ const StyledLink = styled.span`
   :hover {
     opacity: 0.7;
   }
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     margin: 0;
     width: 100%;
-  `}
+  }
 `
 
 const PublishedWrapper = styled.div`
@@ -49,7 +48,7 @@ const SubTitle = styled.h3`
   margin-right: auto;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
-  ${media.lessThan('small')`
+  @media (max-width: 450px) {
     font-size: 20px;
-  `}
+  }
 `
