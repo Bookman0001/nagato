@@ -1,8 +1,38 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Description
+
+This app is Blog app using Next.js and microCMS service.(https://microcms.io)
+
+This is MIT License. You can freely use and customize in your responsibility.
+
+## Before Starting
+
+You start micoCMS service account.
+Then, settting for endopoint as follows.
+
+```
+endpoint name
+
+/technology-articles
+/technology-articles/${id}
+
+
+schema
+
+title - text field
+description - text field
+content - richEditor field
+
+```
+
+In Detail, Please read docs in microCMS(https://document.microcms.io)
+
 ## Getting Started
 
-First, run the development server:
+First, settting .env.local following .env.sample
+
+Secondly, run the development server:
 
 ```bash
 yarn dev
