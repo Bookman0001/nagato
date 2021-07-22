@@ -1,5 +1,12 @@
 import { Event } from 'src/types'
 
+declare global {
+  // eslint-disable-next-line
+  interface Window {
+    gtag: (type: string, action: string, obj: Object) => void
+  }
+}
+
 export const GA_ID = process.env.GA_ID || ''
 
 export const existsGaId = GA_ID !== ''
