@@ -57,7 +57,7 @@
     "@babel/core": "^7.14.8",
     "@storybook/addon-actions": "^6.3.5",
     "@storybook/addon-essentials": "^6.3.5",
-    "@storybook/addon-links": "^6.3.5",
+    "@storybook/addon-links": "^6.3.6",
     "@storybook/react": "^6.3.6",
     "@types/node": "^16.4.1",
     "@types/react": "^17.0.15",
