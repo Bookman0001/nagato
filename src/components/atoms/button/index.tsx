@@ -17,6 +17,6 @@ const ButtonItem = styled.button`
   padding: 5px 3rem;
   display: block;
   margin: 0 auto;
-  font-size: 32px;
+  font-size: 2rem;
   cursor: pointer;
 `

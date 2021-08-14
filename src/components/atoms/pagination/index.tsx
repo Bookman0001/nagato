@@ -63,7 +63,7 @@ const ButtonItem = styled.button`
   height: 30px;
   margin: 0 1rem;
   border: none;
-  font-size: 10px;
+  font-size: 0.75rem;
   cursor: pointer;
   text-align: center;
 `

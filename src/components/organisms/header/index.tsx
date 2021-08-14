@@ -63,7 +63,7 @@ const HeaderContainer = styled.header`
   border-bottom: 1px solid ${COLOR.BLACK};
   z-index: 1000;
   color: ${COLOR.BLACK};
-  font-size: 12px;
+  font-size: 0.75rem;
 `
 
 const Container = styled.div`

@@ -61,7 +61,7 @@ const LoadingContainer = styled.div`
   height: calc(100vh - 50px - 60px);
   padding-top: 50px;
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
