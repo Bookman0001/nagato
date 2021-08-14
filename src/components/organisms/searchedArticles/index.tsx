@@ -31,7 +31,7 @@ const DetailWrapper = styled.div`
 `
 
 const NoResult = styled.div`
-  font-size: 20px;
+  font-size: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;

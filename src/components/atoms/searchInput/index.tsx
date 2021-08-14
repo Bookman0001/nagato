@@ -30,7 +30,7 @@ export default function SearchInput({
 const StyledInput = styled.input`
   width: 100%;
   height: 40px;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-indent: 10px;
   border: 1px solid ${COLOR.BLACK};
   border-radius: 0.25rem;

@@ -58,7 +58,7 @@ const StyledLink = styled.span`
   display: block;
   cursor: pointer;
   width: 100%;
-  font-size: 24px;
+  font-size: 1.25rem;
   font-weight: bold;
   color: ${COLOR.BLUE};
   @media (max-width: 768px) {

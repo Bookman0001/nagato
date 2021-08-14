@@ -57,7 +57,7 @@ const DetailWrapper = styled.div`
     justify-content: center;
     margin-left: 20px;
     height: 40px;
-    font-size: 20px;
+    font-size: 1.25rem;
     @media (max-width: 768px) {
       width: 50px;
     }

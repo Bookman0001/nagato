@@ -18,12 +18,12 @@ const TitleContainer = styled.h1`
   justify-content: center;
   align-items: center;
   line-height: 1.5;
-  font-size: 32px;
+  font-size: 2rem;
   @media (max-width: 450px) {
     padding: 30px;
-    font-size: 28px;
+    font-size: 1.5rem;
     span {
-      font-size: 40px;
+      font-size: 2.5rem;
     }
   }
 `

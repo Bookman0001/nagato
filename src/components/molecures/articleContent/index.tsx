@@ -42,13 +42,13 @@ const PublishedWrapper = styled.div`
 `
 
 const SubTitle = styled.h3`
-  font-size: 20px;
+  font-size: 1.25rem;
   display: -webkit-box;
   overflow: hidden;
   margin-right: auto;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   @media (max-width: 450px) {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 `
