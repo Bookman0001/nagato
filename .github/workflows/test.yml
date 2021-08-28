@@ -14,5 +14,3 @@ jobs:
       - run: yarn run prettier
       - run: yarn run eslint
       - run: yarn run jest
-      - run: yarn run storycap
-      - run: yarn run reg-check
