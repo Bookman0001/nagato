@@ -10,6 +10,7 @@
     "prettier": "prettier --check **/**/*.{ts,tsx}",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "storycap": "storycap --serverCmd \"yarn storybook\" http://localhost:6006 --serverTimeout 600000",
     "jest": "jest --runInBand"
   },
   "simple-git-hooks": {
@@ -75,6 +76,9 @@
     "eslint-plugin-react": "^7.24.0",
     "lint-staged": "^11.1.2",
     "prettier": "^2.2.1",
+    "puppeteer": "^10.2.0",
+    "reg-suit": "^0.10.16",
+    "storycap": "^3.1.0",
     "typescript": "^4.3.5"
   }
 }
