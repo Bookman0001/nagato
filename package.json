@@ -11,6 +11,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "storycap": "storycap --serverCmd \"yarn storybook\" http://localhost:6006 --serverTimeout 600000",
+    "reg-check": "reg-cli ./__screenshots__ ./master_component_screen_shot -R ./report.html",
     "jest": "jest --runInBand"
   },
   "simple-git-hooks": {
@@ -47,6 +48,7 @@
     "react-i18next": "^11.11.4",
     "react-share": "^4.4.0",
     "react-test-renderer": "^17.0.2",
+    "reg-cli": "^0.17.1",
     "remark": "^14.0.1",
     "remark-html": "^14.0.0",
     "simple-git-hooks": "^2.6.1",

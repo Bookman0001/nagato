@@ -29,3 +29,9 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+# reg-suit
+-R/
+__screenshots__/
+reg.json
+report.html
