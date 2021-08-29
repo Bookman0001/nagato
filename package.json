@@ -11,7 +11,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "storycap": "storycap --serverCmd \"yarn storybook\" http://localhost:6006 --serverTimeout 600000",
-    "reg-check": "reg-cli ./__screenshots__ ./master_components_screen_shots -R ./report.html",
+    "reg-check": "reg-cli ./__screenshots__ ./.reg -R ./report.html",
     "jest": "jest --runInBand"
   },
   "simple-git-hooks": {
