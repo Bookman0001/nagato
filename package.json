@@ -10,6 +10,8 @@
     "prettier": "prettier --check **/**/*.{ts,tsx}",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "storycap": "storycap --serverCmd \"yarn storybook\" http://localhost:6006 --serverTimeout 600000",
+    "reg-check": "reg-cli ./__screenshots__ ./.reg -R ./report.html",
     "jest": "jest --runInBand"
   },
   "simple-git-hooks": {
@@ -18,7 +20,8 @@
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "eslint",
-      "prettier"
+      "prettier",
+      "storycap"
     ]
   },
   "dependencies": {
@@ -46,6 +49,7 @@
     "react-i18next": "^11.11.4",
     "react-share": "^4.4.0",
     "react-test-renderer": "^17.0.2",
+    "reg-cli": "^0.17.1",
     "remark": "^14.0.1",
     "remark-html": "^14.0.0",
     "simple-git-hooks": "^2.6.1",
@@ -75,6 +79,9 @@
     "eslint-plugin-react": "^7.24.0",
     "lint-staged": "^11.1.2",
     "prettier": "^2.2.1",
+    "puppeteer": "^10.2.0",
+    "reg-suit": "^0.10.16",
+    "storycap": "^3.1.0",
     "typescript": "^4.4.2"
   }
 }

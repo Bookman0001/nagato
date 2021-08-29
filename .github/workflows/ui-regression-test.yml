@@ -1,4 +1,4 @@
-name: Test
+name: UI Regression Test
 
 on: push
 
@@ -11,6 +11,4 @@ jobs:
       - run: yarn -v
       - uses: actions/checkout@v2
       - run: yarn install
-      - run: yarn run prettier
-      - run: yarn run eslint
-      - run: yarn run jest
+      - run: yarn run reg-check
