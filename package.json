@@ -20,7 +20,8 @@
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
       "eslint",
-      "prettier"
+      "prettier",
+      "storycap"
     ]
   },
   "dependencies": {
