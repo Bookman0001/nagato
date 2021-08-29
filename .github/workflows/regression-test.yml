@@ -1,18 +1,15 @@
-name: Unit Test And UI Regression Test
+name: Regression Test
 
 on: push
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
       - run: node -v
       - run: yarn -v
       - uses: actions/checkout@v2
       - run: yarn install
-      - run: yarn run prettier
-      - run: yarn run eslint
-      - run: yarn run jest
       - run: yarn run storycap
       - run: yarn run reg-check
