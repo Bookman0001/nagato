@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
 import { useSearchedArticles } from 'src/hooks/search/articles'
-import SearchedLayout from 'src/components/templates/searchedLayout'
+import BasicLayout from 'src/components/templates/basicLayout'
 import SearchedArticles from 'src/components/organisms/searchedArticles'
 import Search from 'src/components/organisms/search'
 import { SearchParams } from 'src/types'
@@ -16,29 +16,29 @@ export default function Posts() {
 
   if (error) {
     return (
-      <SearchedLayout>
+      <BasicLayout hideLangSwitch>
         <ErrorContainer>Error happened!</ErrorContainer>
-      </SearchedLayout>
+      </BasicLayout>
     )
   }
 
   if (isLoading || !articles) {
     return (
-      <SearchedLayout>
+      <BasicLayout hideLangSwitch>
         <LoadingContainer>Loading...</LoadingContainer>
-      </SearchedLayout>
+      </BasicLayout>
     )
   }
 
   return (
-    <SearchedLayout>
+    <BasicLayout hideLangSwitch>
       <Section>
         <SearchWrapper>
           <Search defaultSearchWord={searchWord} />
         </SearchWrapper>
         <SearchedArticles articles={articles} />
       </Section>
-    </SearchedLayout>
+    </BasicLayout>
   )
 }
 
