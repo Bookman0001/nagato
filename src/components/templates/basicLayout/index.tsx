@@ -4,12 +4,16 @@ import Footer from 'src/components/organisms/footer'
 
 interface Props {
   children: React.ReactChild
+  hideLangSwitch?: boolean
 }
 
-export default function SearchedLayout({ children }: Props) {
+export default function BasicLayout({
+  children,
+  hideLangSwitch = false,
+}: Props) {
   return (
     <>
-      <Header hideLangSwitch />
+      <Header hideLangSwitch={hideLangSwitch} />
       {children}
       <Footer />
     </>

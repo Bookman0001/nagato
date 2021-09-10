@@ -5,7 +5,6 @@ import { articlesController } from 'src/controller/articles'
 import Introduction from 'src/components/organisms/introduction'
 import TopLayout from 'src/components/templates/topLayout'
 import Oss from 'src/components/organisms/oss'
-import EnginnerCareer from 'src/components/organisms/enginnerCareer'
 import Articles from 'src/components/organisms/articles'
 import Search from 'src/components/organisms/search'
 
@@ -29,7 +28,6 @@ export default function Home({ articles }: Props) {
       <Container>
         <Introduction />
         <Oss />
-        <EnginnerCareer />
         <Articles articles={articles} />
         <Search defaultSearchWord={''} />
       </Container>
