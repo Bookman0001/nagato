@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { Trans } from 'react-i18next'
 
 import MainTitle from 'src/components/atoms/mainTitle'
@@ -18,17 +18,6 @@ export default function Introduction() {
   )
 }
 
-const Animation = keyframes`
-0% {
-  margin: 0;
-  opacity: 0.1;
-}
-100% {
-  margin: 10px 0;
-  opacity: 1;
-}
-`
-
 const Section = styled.section`
   margin-bottom: 100px;
   @media (max-width: 450px) {
@@ -42,7 +31,6 @@ const IntroductionWrapper = styled.div`
   justify-content: center;
   text-align: center;
   align-items: center;
-  animation: ${Animation} 0.5s linear;
   @media (max-width: 450px) {
     display: block;
     text-align: left;
