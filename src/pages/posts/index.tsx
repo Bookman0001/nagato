@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
-import { useSearchedArticles } from 'src/hooks/search/articles'
+import { useSearchedArticles } from 'src/hooks/articles'
 import BasicLayout from 'src/components/templates/basicLayout'
 import SearchedArticles from 'src/components/organisms/searchedArticles'
 import Search from 'src/components/organisms/search'
