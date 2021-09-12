@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { AppProps } from 'next/app'
+import { SWRConfig } from 'swr'
 import { useTranslation } from 'react-i18next'
 
 import * as gtag from 'src/services/gtag'
@@ -27,11 +28,11 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, [])
 
   return (
-    <>
+    <SWRConfig value={{ revalidateOnFocus: false }}>
       <GlobalStyle />
       <title>{t('title')}</title>
       <Component {...pageProps} />
-    </>
+    </SWRConfig>
   )
 }
 
