@@ -1,9 +1,12 @@
 import axios from 'axios'
+import MockDate from 'mockdate'
 
 import { fetchArticle } from 'src/repositories/article'
 
 jest.mock('axios')
 const mockedAxios = axios as jest.Mocked<typeof axios>
+
+MockDate.set('20201-01-01')
 
 const fetchedArticle = {
   id: 1,
