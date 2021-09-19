@@ -3,6 +3,7 @@ import { ArticlesApiResponse, SearchParams } from 'src/types'
 export async function fetchSearchedArticles(params: SearchParams) {
   const encodedParams: SearchParams = {
     searchWord: encodeURI(params.searchWord),
+    page: encodeURI(params.page),
   }
   const response = await window.fetch(
     `${window.location.origin}/api/articles`,

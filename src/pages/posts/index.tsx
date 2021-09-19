@@ -9,10 +9,18 @@ import { SearchParams } from 'src/types'
 
 export default function Posts() {
   const router = useRouter()
-  const { keyword } = router.query
+  const { keyword, page } = router.query
   const searchWord = (keyword as string) || ''
-  const params: SearchParams = { searchWord: searchWord }
+  const defaultPage = (page as string) || '1'
+  const params: SearchParams = { searchWord: searchWord, page: defaultPage }
   const { articles, error, isLoading } = useSearchedArticles(params)
+
+  const handleClick = (index: number) => {
+    router.push({
+      pathname: '/posts',
+      query: { keyword: keyword, page: String(index) },
+    })
+  }
 
   if (error) {
     return (
@@ -36,7 +44,11 @@ export default function Posts() {
         <SearchWrapper>
           <Search defaultSearchWord={searchWord} />
         </SearchWrapper>
-        <SearchedArticles articles={articles} />
+        <SearchedArticles
+          currentIndex={Number(defaultPage) || 1}
+          articles={articles}
+          onClick={handleClick}
+        />
       </Section>
     </BasicLayout>
   )

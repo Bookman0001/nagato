@@ -3,7 +3,7 @@
 exports[`Pagination 1`] = `
 <styled.div>
   <styled.div
-    hasSolidBorder={true}
+    hasSolidBorder={false}
     key="0"
   >
     <styled.button

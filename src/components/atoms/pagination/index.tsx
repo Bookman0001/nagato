@@ -1,20 +1,26 @@
-import { useState } from 'react'
 import styled, { css } from 'styled-components'
 
 import { COLOR } from '../../../theme/constants'
 
 interface Props {
+  currentIndex: number
   totalCount: number
   limit: number
   onClick: (clickedIndex: number) => void
 }
 
-export default function Pagination({ totalCount, limit, onClick }: Props) {
-  const [currentClikedIndex, setCurrentIndex] = useState<number>(1)
-  const paginationCount = Math.floor(totalCount / limit)
+export default function Pagination({
+  currentIndex,
+  totalCount,
+  limit,
+  onClick,
+}: Props) {
+  const paginationCount = Math.ceil(totalCount / limit)
 
   const handleClick = (clickedIndex: number) => {
-    setCurrentIndex(clickedIndex)
+    if (clickedIndex > limit) {
+      return
+    }
     onClick(clickedIndex)
   }
 
@@ -24,7 +30,7 @@ export default function Pagination({ totalCount, limit, onClick }: Props) {
         return (
           <ButtonWrapper
             key={index}
-            hasSolidBorder={currentClikedIndex === index + 1}
+            hasSolidBorder={currentIndex === index + 1}
           >
             <ButtonItem onClick={() => handleClick(index + 1)} key={index}>
               {index + 1}
