@@ -35,7 +35,7 @@ function mappingArticles(response: ArticlesApiResponse): ArticleContents {
 export function articlesController() {
   const getAllArticleIds = async () => {
     const limit = 20
-    let offset = 1
+    let offset = 0
     let articleIds: string[] = []
     let isArticlesEmpty = false
     while (!isArticlesEmpty) {
