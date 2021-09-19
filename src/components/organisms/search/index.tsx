@@ -18,7 +18,7 @@ export default function Search({ defaultSearchWord }: Props) {
     setKeyword(e.target.value)
   }
 
-  const handleKeyPress = (e: KeyboardEvent) => {
+  const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Enter') {
       router.push({ pathname: '/posts', query: { keyword: keyword } })
     }
@@ -36,7 +36,7 @@ export default function Search({ defaultSearchWord }: Props) {
           placeholder={'keyword'}
           onChange={handleChange}
           defaultValue={defaultSearchWord}
-          onKeyPress={(e) => handleKeyPress(e)}
+          onKeyDown={(e) => handleKeyDown(e)}
         />
         <Button onClick={handleClick} text={'search'} />
       </DetailWrapper>

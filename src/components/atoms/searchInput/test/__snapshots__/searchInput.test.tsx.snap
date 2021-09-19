@@ -4,6 +4,7 @@ exports[`SearchInput 1`] = `
 <styled.input
   defaultValue=""
   onChange={[Function]}
+  onKeyDown={[Function]}
   placeholder="test"
   type="search"
 />
