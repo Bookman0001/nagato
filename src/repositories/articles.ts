@@ -24,7 +24,10 @@ export async function fetchLimitedArtcles(
 export async function fetchSearchedArticles(
   params: SearchParams
 ): Promise<ArticlesApiResponse> {
+  const limit = 10
+  const page = Number(params.page) || 1
+  const offset = page > 1 ? page * limit - limit : 0
   return await get<ArticlesApiResponse>(
-    `/technology-articles?q=${params.searchWord}`
+    `/technology-articles?q=${params.searchWord}&limit=${limit}&offset=${offset}`
   )
 }

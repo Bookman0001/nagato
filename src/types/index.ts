@@ -36,6 +36,7 @@ export type Argument = {
 
 export type SearchParams = {
   searchWord: string
+  page: string
 }
 
 type ContactEvent = {

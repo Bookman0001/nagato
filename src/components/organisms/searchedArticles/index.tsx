@@ -1,13 +1,21 @@
 import styled from 'styled-components'
+
 import ArticleContent from 'src/components/molecures/articleContent'
+import Pagination from 'src/components/atoms/pagination'
 import { ArticleContents } from 'src/types'
 
 interface Props {
   articles: ArticleContents
+  currentIndex: number
+  onClick: (index: number) => void
 }
 
-export default function SearchedArticled({ articles }: Props) {
-  const { contents } = articles
+export default function SearchedArticled({
+  currentIndex,
+  articles,
+  onClick,
+}: Props) {
+  const { contents, totalCount, limit } = articles
 
   return (
     <DetailWrapper>
@@ -21,6 +29,16 @@ export default function SearchedArticled({ articles }: Props) {
         })
       ) : (
         <NoResult>No Result!</NoResult>
+      )}
+      {contents.length && (
+        <PaginationWrapper>
+          <Pagination
+            currentIndex={currentIndex}
+            totalCount={totalCount}
+            limit={limit}
+            onClick={onClick}
+          />
+        </PaginationWrapper>
       )}
     </DetailWrapper>
   )
@@ -36,4 +54,8 @@ const NoResult = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+`
+
+const PaginationWrapper = styled.div`
+  padding: 30px 0;
 `
