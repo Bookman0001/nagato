@@ -25,6 +25,7 @@
     ]
   },
   "dependencies": {
+    "@testing-library/dom": "^8.5.0",
     "@testing-library/react": "^12.1.0",
     "@types/axios": "^0.14.0",
     "@types/enzyme": "^3.10.9",
