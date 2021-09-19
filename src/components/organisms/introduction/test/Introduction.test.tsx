@@ -8,6 +8,6 @@ import Introduction from 'src/components/organisms/introduction'
 describe('introduction', () => {
   it('should be rendered correctlly', () => {
     render(<Introduction />)
-    expect(screen.getAllByText('Introduction'))
+    expect(screen.getAllByText('Introduction')).toBeDefined()
   })
 })

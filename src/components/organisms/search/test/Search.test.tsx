@@ -19,7 +19,7 @@ describe('Search', () => {
 
   it('should be rendered correctlly', () => {
     render(<Search defaultSearchWord={'Next.js'} />)
-    expect(screen.getByDisplayValue('Next.js'))
+    expect(screen.getByDisplayValue('Next.js')).toBeDefined()
   })
 
   it('should be onChange worked', async () => {
@@ -28,7 +28,7 @@ describe('Search', () => {
       target: { value: 'React Go.' },
     })
     await waitFor(() => {
-      expect(screen.getByDisplayValue('React Go.'))
+      expect(screen.getByDisplayValue('React Go.')).toBeDefined()
     })
   })
 
@@ -43,7 +43,7 @@ describe('Search', () => {
     })
   })
 
-  it('should be onKeyPress worked', async () => {
+  it('should not to be onKeyPress worked', async () => {
     render(<Search defaultSearchWord={'test'} />)
     fireEvent.keyDown(screen.getByPlaceholderText('keyword'), {
       key: 'Escape',

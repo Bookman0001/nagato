@@ -12,14 +12,14 @@ MockDate.set(dayjs('2020/01/01').format('YYYY/MM/DD'))
 const fetchedAllArticles = {
   contents: [
     {
-      id: 1,
+      id: 'a',
       publishedAt: new Date('2020/01/01'),
       title: 'test title',
       description: 'test description',
       content: '<p>test content</p>',
     },
     {
-      id: 2,
+      id: 'b',
       publishedAt: new Date('2020/01/01'),
       title: 'test title',
       description: 'test description',
@@ -34,14 +34,14 @@ const fetchedAllArticles = {
 const expectedAllArticles = {
   contents: [
     {
-      id: 1,
+      id: 'a',
       publishedAt: '2020/01/01',
       title: 'test title',
       description: 'test description',
       content: '<p>test content</p>',
     },
     {
-      id: 2,
+      id: 'b',
       publishedAt: '2020/01/01',
       title: 'test title',
       description: 'test description',
@@ -53,14 +53,16 @@ const expectedAllArticles = {
   limit: 20,
 }
 
-test('should return fetchedAllArticles', () => {
+test('should return getAllArticleIds', () => {
   const resp = { data: fetchedAllArticles }
-  mockedAxios.get.mockResolvedValue(resp)
+  mockedAxios.get
+    .mockResolvedValueOnce(resp)
+    .mockResolvedValueOnce({ data: { contents: [] } })
 
-  const { getAllArticles } = articlesController()
+  const { getAllArticleIds } = articlesController()
 
-  return getAllArticles().then((data) => {
-    expect(data).toEqual(expectedAllArticles)
+  return getAllArticleIds().then((data) => {
+    expect(data).toEqual(['a', 'b'])
   })
 })
 

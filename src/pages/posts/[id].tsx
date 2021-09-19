@@ -18,10 +18,9 @@ interface Props {
 }
 
 export async function getStaticPaths() {
-  const { getAllArticles } = articlesController()
-  const articles = await getAllArticles()
-  const { contents } = articles
-  const paths = contents.map((article) => `/posts/${article.id}`)
+  const { getAllArticleIds } = articlesController()
+  const articleIds = await getAllArticleIds()
+  const paths = articleIds.map((id) => `/posts/${id}`)
   return { paths, fallback: false }
 }
 
