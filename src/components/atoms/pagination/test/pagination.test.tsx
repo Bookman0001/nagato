@@ -7,6 +7,7 @@ test('Pagination', () => {
     <Pagination
       totalCount={10}
       limit={5}
+      currentIndex={1}
       onClick={() => console.log('clicked')}
     />
   )
