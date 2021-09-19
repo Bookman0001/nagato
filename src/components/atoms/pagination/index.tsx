@@ -18,9 +18,6 @@ export default function Pagination({
   const paginationCount = Math.ceil(totalCount / limit)
 
   const handleClick = (clickedIndex: number) => {
-    if (clickedIndex > limit) {
-      return
-    }
     onClick(clickedIndex)
   }
 
