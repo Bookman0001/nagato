@@ -33,10 +33,23 @@ function mappingArticles(response: ArticlesApiResponse): ArticleContents {
 }
 
 export function articlesController() {
-  const getAllArticles = async () => {
-    return await fetchAllArticles().then((articles: ArticlesApiResponse) => {
-      return mappingArticles(articles)
-    })
+  const getAllArticleIds = async () => {
+    const limit = 20
+    let offset = 1
+    let articleIds: string[] = []
+    let isArticlesEmpty = false
+    while (!isArticlesEmpty) {
+      const response = await fetchAllArticles({ limit: limit, offset: offset })
+      const { contents } = response
+      const fetchedIds = contents.map((contents) => contents.id)
+      if (!fetchedIds.length) {
+        isArticlesEmpty = true
+      } else {
+        articleIds = [...articleIds, ...fetchedIds]
+        offset = offset + limit
+      }
+    }
+    return articleIds
   }
 
   const getLimitedArticles = async (argument: Argument) => {
@@ -48,7 +61,7 @@ export function articlesController() {
   }
 
   return {
-    getAllArticles,
+    getAllArticleIds,
     getLimitedArticles,
   }
 }

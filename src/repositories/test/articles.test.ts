@@ -46,7 +46,7 @@ test('should return fetchedArticles', () => {
   const resp = { data: fetchedArticles }
   mockedAxios.get.mockResolvedValue(resp)
 
-  return fetchAllArticles().then((data) => {
+  return fetchAllArticles({ limit: 10, offset: 0 }).then((data) => {
     expect(data).toEqual(expectedArticles)
   })
 })
