@@ -7,12 +7,8 @@ import SearchedArticles from 'src/components/organisms/searchedArticles'
 import Search from 'src/components/organisms/search'
 
 export default function Posts() {
-  const { params, searchArticlesWithPager } = useSearchParams()
+  const { params } = useSearchParams()
   const { articles, error, isLoading } = useSearchedArticles(params)
-
-  const handleClick = (index: number) => {
-    searchArticlesWithPager(index)
-  }
 
   if (error) {
     return (
@@ -39,7 +35,6 @@ export default function Posts() {
         <SearchedArticles
           currentIndex={Number(params.page) || 1}
           articles={articles}
-          onClick={handleClick}
         />
       </Section>
     </BasicLayout>

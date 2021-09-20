@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+import { useSearchParams } from 'src/hooks/searchParams'
 import ArticleContent from 'src/components/molecures/articleContent'
 import Pagination from 'src/components/atoms/pagination'
 import { ArticleContents } from 'src/types'
@@ -7,15 +8,15 @@ import { ArticleContents } from 'src/types'
 interface Props {
   articles: ArticleContents
   currentIndex: number
-  onClick: (index: number) => void
 }
 
-export default function SearchedArticled({
-  currentIndex,
-  articles,
-  onClick,
-}: Props) {
+export default function SearchedArticled({ currentIndex, articles }: Props) {
+  const { searchArticlesWithPager } = useSearchParams()
   const { contents, totalCount, limit } = articles
+
+  const handleClick = (index: number) => {
+    searchArticlesWithPager(index)
+  }
 
   return (
     <DetailWrapper>
@@ -33,7 +34,7 @@ export default function SearchedArticled({
               currentIndex={currentIndex}
               totalCount={totalCount}
               limit={limit}
-              onClick={onClick}
+              onClick={handleClick}
             />
           </PaginationWrapper>
         </>
