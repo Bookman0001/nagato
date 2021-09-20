@@ -4,7 +4,7 @@ exports[`ArticleContent 1`] = `
 <Link
   href="/posts/1"
 >
-  <styled.span>
+  <styled.div>
     <styled.h3
       key="1"
     >
@@ -15,6 +15,6 @@ exports[`ArticleContent 1`] = `
         2021/05/03
       </ParagraphContent>
     </styled.div>
-  </styled.span>
+  </styled.div>
 </Link>
 `;
