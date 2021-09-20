@@ -26,13 +26,8 @@ const Section = styled.section`
 `
 
 const IntroductionWrapper = styled.div`
-  margin: 10px 0;
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
-  @media (max-width: 450px) {
-    display: block;
-    text-align: left;
-  }
 `

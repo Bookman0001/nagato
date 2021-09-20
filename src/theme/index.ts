@@ -25,6 +25,9 @@ export const GlobalStyle = createGlobalStyle`
       font-family: initial;
       margin: 0;
     }
+    p {
+      margin: 0;
+    }
     a {
       text-decoration: none;
       color: ${COLOR.BLUE};

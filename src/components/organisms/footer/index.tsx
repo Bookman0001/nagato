@@ -14,6 +14,9 @@ export default function Footer() {
 }
 
 const FooterContainer = styled.footer`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 60px;
   align-items: center;
