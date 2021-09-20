@@ -57,5 +57,5 @@ const NoResult = styled.div`
 `
 
 const PaginationWrapper = styled.div`
-  padding: 30px 0;
+  padding-bottom: 30px;
 `
