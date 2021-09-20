@@ -19,26 +19,26 @@ export default function SearchedArticled({
 
   return (
     <DetailWrapper>
-      {contents.length > 0 ? (
-        contents.map((article) => {
-          return (
-            <div key={article.id}>
-              <ArticleContent article={article} />
-            </div>
-          )
-        })
+      {contents.length ? (
+        <>
+          {contents.map((article) => {
+            return (
+              <div key={article.id}>
+                <ArticleContent article={article} />
+              </div>
+            )
+          })}
+          <PaginationWrapper>
+            <Pagination
+              currentIndex={currentIndex}
+              totalCount={totalCount}
+              limit={limit}
+              onClick={onClick}
+            />
+          </PaginationWrapper>
+        </>
       ) : (
         <NoResult>No Result!</NoResult>
-      )}
-      {contents.length && (
-        <PaginationWrapper>
-          <Pagination
-            currentIndex={currentIndex}
-            totalCount={totalCount}
-            limit={limit}
-            onClick={onClick}
-          />
-        </PaginationWrapper>
       )}
     </DetailWrapper>
   )
