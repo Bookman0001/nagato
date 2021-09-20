@@ -21,6 +21,10 @@ export const GlobalStyle = createGlobalStyle`
       font-family: initial;
       margin: 0;
     }
+    h3 {
+      font-family: initial;
+      margin: 0;
+    }
     a {
       text-decoration: none;
       color: ${COLOR.BLUE};

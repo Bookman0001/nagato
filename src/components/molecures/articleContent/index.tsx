@@ -21,9 +21,10 @@ export default function ArticleContent({ article }: Props) {
   )
 }
 
-const StyledLink = styled.span`
+const StyledLink = styled.div`
   cursor: pointer;
   display: flex;
+  justify-content: center;
   padding-bottom: 20px;
   :hover {
     opacity: 0.7;
@@ -42,12 +43,14 @@ const PublishedWrapper = styled.div`
 `
 
 const SubTitle = styled.h3`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.25rem;
   display: -webkit-box;
   overflow: hidden;
   margin-right: auto;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
   @media (max-width: 450px) {
     font-size: 1.25rem;
   }
