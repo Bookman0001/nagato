@@ -9,6 +9,10 @@ import Search from 'src/components/organisms/search'
 const mockPush = jest.fn()
 
 jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
+  query: {
+    keyword: 'test',
+    page: '1',
+  },
   push: mockPush,
 }))
 
@@ -18,8 +22,8 @@ describe('Search', () => {
   })
 
   it('should be rendered correctlly', () => {
-    render(<Search defaultSearchWord={'Next.js'} />)
-    expect(screen.getByDisplayValue('Next.js')).toBeDefined()
+    render(<Search defaultSearchWord={'test'} />)
+    expect(screen.getByDisplayValue('test')).toBeDefined()
   })
 
   it('should be onChange worked', async () => {

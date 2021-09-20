@@ -1,25 +1,17 @@
-import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
 import { useSearchedArticles } from 'src/hooks/articles'
+import { useSearchParams } from 'src/hooks/searchParams'
 import BasicLayout from 'src/components/templates/basicLayout'
 import SearchedArticles from 'src/components/organisms/searchedArticles'
 import Search from 'src/components/organisms/search'
-import { SearchParams } from 'src/types'
 
 export default function Posts() {
-  const router = useRouter()
-  const { keyword, page } = router.query
-  const searchWord = (keyword as string) || ''
-  const defaultPage = (page as string) || '1'
-  const params: SearchParams = { searchWord: searchWord, page: defaultPage }
+  const { params, searchArticlesWithPager } = useSearchParams()
   const { articles, error, isLoading } = useSearchedArticles(params)
 
   const handleClick = (index: number) => {
-    router.push({
-      pathname: '/posts',
-      query: { keyword: keyword, page: String(index) },
-    })
+    searchArticlesWithPager(index)
   }
 
   if (error) {
@@ -42,10 +34,10 @@ export default function Posts() {
     <BasicLayout hideLangSwitch>
       <Section>
         <SearchWrapper>
-          <Search defaultSearchWord={searchWord} />
+          <Search defaultSearchWord={params.searchWord} />
         </SearchWrapper>
         <SearchedArticles
-          currentIndex={Number(defaultPage) || 1}
+          currentIndex={Number(params.page) || 1}
           articles={articles}
           onClick={handleClick}
         />

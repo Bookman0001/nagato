@@ -1,7 +1,8 @@
 import { ChangeEvent, useState, KeyboardEvent } from 'react'
-import { useRouter } from 'next/router'
+
 import styled from 'styled-components'
 
+import { useSearchParams } from 'src/hooks/searchParams'
 import Title from 'src/components/atoms/title'
 import SearchInput from 'src/components/atoms/searchInput'
 import Button from 'src/components/atoms/button'
@@ -11,7 +12,7 @@ interface Props {
 }
 
 export default function Search({ defaultSearchWord }: Props) {
-  const router = useRouter()
+  const { searchArticlesWithKeyword } = useSearchParams()
   const [keyword, setKeyword] = useState<string>(defaultSearchWord)
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -20,12 +21,12 @@ export default function Search({ defaultSearchWord }: Props) {
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Enter') {
-      router.push({ pathname: '/posts', query: { keyword: keyword } })
+      searchArticlesWithKeyword(keyword)
     }
   }
 
   const handleClick = () => {
-    router.push({ pathname: '/posts', query: { keyword: keyword } })
+    searchArticlesWithKeyword(keyword)
   }
 
   return (
