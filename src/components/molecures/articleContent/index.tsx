@@ -25,7 +25,6 @@ const StyledLink = styled.div`
   cursor: pointer;
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
   :hover {
     opacity: 0.7;
   }
@@ -52,6 +51,6 @@ const SubTitle = styled.h3`
   margin-right: auto;
   text-overflow: ellipsis;
   @media (max-width: 450px) {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 `

@@ -23,8 +23,8 @@ export default function TopLayout({ children }: Props) {
 }
 
 const PictureContainer = styled.div`
-  margin: 50px 0 70px;
-  @media (max-width: 768px) {
-    margin: 50px 0 20px;
+  margin: 50px 0 100px;
+  @media (max-width: 450px) {
+    margin: 50px 0 50px;
   }
 `

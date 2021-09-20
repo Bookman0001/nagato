@@ -47,6 +47,9 @@ export default function Search({ defaultSearchWord }: Props) {
 
 const Section = styled.section`
   margin-bottom: 100px;
+  @media (max-width: 450px) {
+    margin-bottom: 50px;
+  }
 `
 
 const DetailWrapper = styled.div`

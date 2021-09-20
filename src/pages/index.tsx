@@ -40,6 +40,6 @@ const Container = styled.main`
   margin: 0 auto;
   padding: 30px 0;
   @media (max-width: 768px) {
-    padding: 30px;
+    padding: 0 30px;
   }
 `

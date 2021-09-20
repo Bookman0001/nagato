@@ -19,8 +19,8 @@ const TitleContainer = styled.h1`
   align-items: center;
   line-height: 1.5;
   font-size: 2rem;
+  padding-bottom: 50px;
   @media (max-width: 450px) {
-    padding: 30px;
     font-size: 1.5rem;
     span {
       font-size: 2.5rem;

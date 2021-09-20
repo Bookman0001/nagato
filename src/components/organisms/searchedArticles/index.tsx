@@ -24,9 +24,9 @@ export default function SearchedArticled({ currentIndex, articles }: Props) {
         <>
           {contents.map((article) => {
             return (
-              <div key={article.id}>
+              <Wrapper key={article.id}>
                 <ArticleContent article={article} />
-              </div>
+              </Wrapper>
             )
           })}
           <PaginationWrapper>
@@ -58,5 +58,12 @@ const NoResult = styled.div`
 `
 
 const PaginationWrapper = styled.div`
-  padding-bottom: 30px;
+  padding-bottom: 50px;
+`
+
+const Wrapper = styled.div`
+  padding-bottom: 50px;
+  :last-child {
+    padding-bottom: 0;
+  }
 `

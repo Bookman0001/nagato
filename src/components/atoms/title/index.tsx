@@ -18,7 +18,7 @@ const TitleContainer = styled.h2`
   justify-content: center;
   align-items: center;
   line-height: 1.5;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   font-size: 2rem;
   @media (max-width: 450px) {
     font-size: 1.5rem;

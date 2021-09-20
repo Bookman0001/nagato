@@ -19,9 +19,9 @@ export default function Articles({ articles }: Props) {
       <DetailWrapper>
         {contents.map((article) => {
           return (
-            <div key={article.id}>
+            <Wrapper key={article.id}>
               <ArticleContent article={article} />
-            </div>
+            </Wrapper>
           )
         })}
       </DetailWrapper>
@@ -31,8 +31,18 @@ export default function Articles({ articles }: Props) {
 
 const Section = styled.section`
   margin-bottom: 100px;
+  @media (max-width: 450px) {
+    margin-bottom: 50px;
+  }
 `
 
 const DetailWrapper = styled.div`
   margin: 0;
+`
+
+const Wrapper = styled.div`
+  padding-bottom: 50px;
+  :last-child {
+    padding-bottom: 0;
+  }
 `
