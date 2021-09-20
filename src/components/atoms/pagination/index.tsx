@@ -53,20 +53,22 @@ const ButtonWrapper = styled.div<{ hasSolidBorder: boolean }>`
     props.hasSolidBorder &&
     css`
       button {
-        border: 2px solid ${COLOR.BLACK};
+        border: 3px solid ${COLOR.BLACK};
       }
     `}
 `
 
 const ButtonItem = styled.button`
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: ${COLOR.WHITE};
   border-radius: 10%;
-  width: 30px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
   margin: 0 1rem;
   border: none;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   cursor: pointer;
   text-align: center;
 `
