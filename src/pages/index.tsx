@@ -6,7 +6,7 @@ import Introduction from 'src/components/organisms/introduction'
 import TopLayout from 'src/components/templates/topLayout'
 import Oss from 'src/components/organisms/oss'
 import Articles from 'src/components/organisms/articles'
-import Search from 'src/components/organisms/search'
+import SearchInputArea from 'src/components/organisms/searchInputArea'
 
 interface Props {
   articles: ArticleContents
@@ -29,7 +29,7 @@ export default function Home({ articles }: Props) {
         <Introduction />
         <Oss />
         <Articles articles={articles} />
-        <Search defaultSearchWord={''} />
+        <SearchInputArea defaultSearchWord={''} />
       </Container>
     </TopLayout>
   )

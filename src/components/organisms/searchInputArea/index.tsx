@@ -11,7 +11,7 @@ interface Props {
   defaultSearchWord: string
 }
 
-export default function Search({ defaultSearchWord }: Props) {
+export default function SearchInputArea({ defaultSearchWord }: Props) {
   const { searchArticlesWithKeyword } = useSearchParams()
   const [keyword, setKeyword] = useState<string>(defaultSearchWord)
 
