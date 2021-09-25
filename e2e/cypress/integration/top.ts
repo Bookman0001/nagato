@@ -9,7 +9,6 @@ it('should correctly showing header', () => {
 it('should correctly showing section', () => {
   cy.get('h1').contains('Introduction')
   cy.get('h2').contains('Oss/GitHub')
-  cy.get('h2').contains('Career')
   cy.get('h2').contains('Articles')
 })
 
