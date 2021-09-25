@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInput 1`] = `
+<styled.div>
+  <styled.select
+    defaultValue=""
+    onChange={[Function]}
+  >
+    <option>
+      Option1
+    </option>
+  </styled.select>
+</styled.div>
+`;

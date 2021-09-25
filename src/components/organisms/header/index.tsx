@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 
 import Sharing from 'src/components/molecures/sharing'
-import Button from 'src/components/atoms/button'
+import Select from 'src/components/atoms/select'
 import Image from 'src/components/atoms/picture'
 import { COLOR, DEVICE_WIDTH } from 'src/theme/constants'
+import { langs } from 'src/locale/langs'
 import 'src/locale/I18n'
 
 interface Props {
@@ -14,14 +15,11 @@ interface Props {
 }
 
 export default function Header({ hideLangSwitch = false }: Props) {
-  const [t, i18n] = useTranslation()
-  const [lang, setLang] = useState<string>('ja')
+  const { i18n } = useTranslation()
   const [showSharing, setShowSharing] = useState<boolean>(false)
 
-  const handleClick = () => {
-    const targetedLang = lang === 'en' ? 'ja' : 'en'
-    i18n.changeLanguage(targetedLang)
-    setLang(targetedLang)
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    i18n.changeLanguage(e.target.value)
   }
 
   const handleSharingClick = () => {
@@ -32,9 +30,19 @@ export default function Header({ hideLangSwitch = false }: Props) {
     <HeaderContainer>
       <Container>
         {hideLangSwitch ? null : (
-          <ButtonContainer>
-            <Button onClick={handleClick} text={t('change')} />
-          </ButtonContainer>
+          <SelectContainer>
+            <Select defaultValue={i18n.language} onChange={handleChange}>
+              <>
+                {langs.map((lang) => {
+                  return (
+                    <option value={lang.value} key={lang.value}>
+                      {lang.label}
+                    </option>
+                  )
+                })}
+              </>
+            </Select>
+          </SelectContainer>
         )}
         <Link href="/">
           <StyledLink>
@@ -77,18 +85,15 @@ const Container = styled.div`
   }
 `
 
-const ButtonContainer = styled.div`
+const SelectContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-left: 15px;
   @media (min-width: ${DEVICE_WIDTH.PC}) {
     margin-left: 0;
   }
-  button {
-    width: 45px;
-    line-height: 1.5;
-    padding: 0 10px;
-    font-size: 1rem;
+  select {
+    width: 80px;
   }
 `
 

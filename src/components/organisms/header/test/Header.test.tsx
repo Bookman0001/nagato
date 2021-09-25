@@ -8,12 +8,12 @@ import Header from 'src/components/organisms/header'
 describe('Header', () => {
   it('should be rendered correctlly in default', () => {
     render(<Header />)
-    expect(screen.getAllByText('EN'))
+    expect(screen.getAllByText('日本語'))
   })
 
   it('should be rendered correctlly in hideLangSwitch', () => {
     render(<Header hideLangSwitch />)
-    expect(screen.queryByText('EN')).toBe(null)
+    expect(screen.queryByText('日本語')).toBe(null)
   })
 
   it('should event fired on clicking sharing', () => {
