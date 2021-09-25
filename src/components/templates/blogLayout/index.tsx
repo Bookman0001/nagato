@@ -1,19 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import MetaTag from 'src/components/organisms/meta/post'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
 import MainTitle from 'src/components/atoms/mainTitle'
 import { DEVICE_WIDTH } from 'src/theme/constants'
+import { Article } from 'src/types'
 
 interface Props {
   title: string
+  article: Article
   children: React.ReactChild
 }
 
-export default function BlogLayout({ title, children }: Props) {
+export default function BlogLayout({ title, article, children }: Props) {
   return (
     <>
+      <MetaTag article={article} />
       <Header hideLangSwitch />
       <Container>
         <TitleWrapper>
