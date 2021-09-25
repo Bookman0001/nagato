@@ -38,7 +38,7 @@ export default function Post({ article }: Props) {
   const router = useRouter()
 
   return (
-    <BlogLayout title={article.title}>
+    <BlogLayout title={article.title} article={article}>
       <div>
         <Content dangerouslySetInnerHTML={{ __html: article.content }} />
         <LinkWrapper onClick={() => router.back()}>

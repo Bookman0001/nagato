@@ -26,25 +26,8 @@ export default class MyDocument extends Document<Props> {
       <Html lang="ja">
         <Head>
           <meta charSet="utf-8" />
-          <meta property="og:title" content={'k工房'} />
-          <meta
-            property="og:description"
-            content={
-              'フロントエンド周りの技術情報や思ったことを発進しています。'
-            }
-          />
-          <meta
-            name="description"
-            content={
-              'フロントエンド周りの技術情報や思ったことを発進しています。'
-            }
-          />
           <meta name="keywords" content={'engineer'} />
           <meta property="og:type" content="blog" />
-          <meta
-            property="og:image"
-            content={`https://k-puppeteer.com/assets/overview.jpg`}
-          />
           <meta property="og:site_name" content={'k-puppeteer'} />
           {this.props.styleTags}
           {existsGaId && (

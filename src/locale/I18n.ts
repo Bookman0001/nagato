@@ -5,7 +5,6 @@ const resources = {
   ja: {
     translation: {
       change: 'EN',
-      title: 'k工房',
       introduction:
         'フロントエンドをメインにエンジニアリングをしています。<0 />一貫性のあるユーザービリティの高いシステムを追求し続けています。',
       oss: '貢献しているOSS',
@@ -14,7 +13,6 @@ const resources = {
   en: {
     translation: {
       change: 'JP',
-      title: 'k-maker',
       introduction:
         'I am front-end developer.Especially, I love TypeScript and React component logic. Also, I experienced back-end enginnering including AWS management.',
       oss: 'contributed to oss as follows.',
