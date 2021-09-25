@@ -20,9 +20,7 @@ export default function BlogLayout({ title, article, children }: Props) {
       <MetaTag article={article} />
       <Header hideLangSwitch />
       <Container>
-        <TitleWrapper>
-          <MainTitle>{title}</MainTitle>
-        </TitleWrapper>
+        <MainTitle>{title}</MainTitle>
         <Main>{children}</Main>
       </Container>
       <Footer />
@@ -38,10 +36,6 @@ const Container = styled.div`
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     padding: 15px;
   }
-`
-
-const TitleWrapper = styled.div`
-  margin-bottom: 50px;
 `
 
 const Main = styled.main`
