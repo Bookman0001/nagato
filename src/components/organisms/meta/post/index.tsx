@@ -21,6 +21,10 @@ export default function MetaTag({ article }: Props) {
         content={article.description}
         key="og:description"
       />
+      <meta
+        property="og:image"
+        content={`https://k-puppeteer.com/assets/overview.jpg`}
+      />
     </Head>
   )
 }
