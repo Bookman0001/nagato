@@ -3,6 +3,7 @@ import { Trans } from 'react-i18next'
 
 import MainTitle from 'src/components/atoms/mainTitle'
 import ParagraphContent from 'src/components/atoms/paragraphContent'
+import { DEVICE_WIDTH } from 'src/theme/constants'
 import 'src/locale/I18n'
 
 export default function Introduction() {
@@ -20,7 +21,7 @@ export default function Introduction() {
 
 const Section = styled.section`
   margin-bottom: 100px;
-  @media (max-width: 450px) {
+  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     margin-bottom: 50px;
   }
 `

@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import Description from 'src/components/atoms/paragraphContent'
 import { Article } from 'src/types'
+import { DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Props {
   article: Article
@@ -28,7 +29,7 @@ const StyledLink = styled.div`
   :hover {
     opacity: 0.7;
   }
-  @media (max-width: 450px) {
+  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     margin: 0;
     width: 100%;
   }
@@ -50,7 +51,7 @@ const SubTitle = styled.h3`
   overflow: hidden;
   margin-right: auto;
   text-overflow: ellipsis;
-  @media (max-width: 450px) {
+  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     font-size: 1rem;
   }
 `

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { FacebookShareButton, TwitterShareButton } from 'react-share'
 
 import Icon from 'src/components/atoms/picture'
-import { COLOR } from 'src/theme/constants'
+import { COLOR, DEVICE_WIDTH } from 'src/theme/constants'
 
 export default function Sharing() {
   return (
@@ -84,7 +84,7 @@ const Container = styled.div`
     border-bottom: 20px solid ${COLOR.GRAY};
     border-left: 20px solid transparent;
   }
-  @media (max-width: 768px) {
+  @media (max-width: ${DEVICE_WIDTH.PC}) {
     right: 5px;
   }
 `

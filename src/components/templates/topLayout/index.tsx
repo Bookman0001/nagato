@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
 import BackGroundPicture from 'src/components/atoms/backgroundPicture'
+import { DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Props {
   children: React.ReactChild
@@ -24,7 +25,7 @@ export default function TopLayout({ children }: Props) {
 
 const PictureContainer = styled.div`
   margin: 50px 0 100px;
-  @media (max-width: 450px) {
+  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     margin: 50px 0 50px;
   }
 `

@@ -5,7 +5,7 @@ import { articlesController } from 'src/controller/articles'
 import { articleController } from 'src/controller/article'
 import BlogLayout from 'src/components/templates/blogLayout'
 import { Article } from 'src/types'
-import { COLOR } from 'src/theme/constants'
+import { COLOR, DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Params {
   params: {
@@ -60,7 +60,7 @@ const StyledLink = styled.span`
   font-size: 1.25rem;
   font-weight: bold;
   color: ${COLOR.BLUE};
-  @media (max-width: 768px) {
+  @media (max-width: ${DEVICE_WIDTH.TABLET}) {
     font-size: 1rem;
   }
 `

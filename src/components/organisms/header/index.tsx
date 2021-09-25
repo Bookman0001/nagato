@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Sharing from 'src/components/molecures/sharing'
 import Button from 'src/components/atoms/button'
 import Image from 'src/components/atoms/picture'
-import { COLOR } from 'src/theme/constants'
+import { COLOR, DEVICE_WIDTH } from 'src/theme/constants'
 import 'src/locale/I18n'
 
 interface Props {
@@ -71,7 +71,7 @@ const Container = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  @media (min-width: 1170px) {
+  @media (min-width: ${DEVICE_WIDTH.PC}) {
     max-width: 768px;
     margin: 0 auto;
   }
@@ -81,7 +81,7 @@ const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-left: 15px;
-  @media (min-width: 1170px) {
+  @media (min-width: ${DEVICE_WIDTH.PC}) {
     margin-left: 0;
   }
   button {
@@ -106,7 +106,7 @@ const SharingContainer = styled.div`
   right: 0;
   margin-right: 15px;
   cursor: pointer;
-  @media (min-width: 1170px) {
+  @media (min-width: ${DEVICE_WIDTH.PC}) {
     margin-right: 0;
   }
 `

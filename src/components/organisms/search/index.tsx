@@ -1,11 +1,11 @@
 import { ChangeEvent, useState, KeyboardEvent } from 'react'
-
 import styled from 'styled-components'
 
 import { useSearchParams } from 'src/hooks/searchParams'
 import Title from 'src/components/atoms/title'
 import SearchInput from 'src/components/atoms/searchInput'
 import Button from 'src/components/atoms/button'
+import { DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Props {
   defaultSearchWord: string
@@ -47,7 +47,7 @@ export default function Search({ defaultSearchWord }: Props) {
 
 const Section = styled.section`
   margin-bottom: 100px;
-  @media (max-width: 450px) {
+  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     margin-bottom: 50px;
   }
 `
@@ -62,7 +62,7 @@ const DetailWrapper = styled.div`
     margin-left: 20px;
     height: 40px;
     font-size: 1.25rem;
-    @media (max-width: 768px) {
+    @media (max-width: ${DEVICE_WIDTH.TABLET}) {
       width: 50px;
     }
   }
