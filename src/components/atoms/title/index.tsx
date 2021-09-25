@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { DEVICE_WIDTH } from 'src/theme/constants'
+
 interface Props {
   children: React.ReactNode
 }
@@ -20,7 +22,7 @@ const TitleContainer = styled.h2`
   line-height: 1.5;
   padding-bottom: 50px;
   font-size: 2rem;
-  @media (max-width: 450px) {
+  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     font-size: 1.5rem;
   }
 `

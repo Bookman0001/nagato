@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { ArticleContents } from 'src/types'
 import ArticleContent from 'src/components/molecures/articleContent'
 import Title from 'src/components/atoms/title'
+import { DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Props {
   articles: ArticleContents
@@ -31,7 +32,7 @@ export default function Articles({ articles }: Props) {
 
 const Section = styled.section`
   margin-bottom: 100px;
-  @media (max-width: 450px) {
+  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     margin-bottom: 50px;
   }
 `

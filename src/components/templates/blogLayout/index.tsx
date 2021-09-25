@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
 import MainTitle from 'src/components/atoms/mainTitle'
+import { DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Props {
   title: string
@@ -30,7 +31,7 @@ const Container = styled.div`
   padding: 30px;
   margin: 50px auto 150px;
   font-size: 1rem;
-  @media (max-width: 450px) {
+  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     padding: 15px;
   }
 `
@@ -44,7 +45,7 @@ const Main = styled.main`
   display: flex;
   align-items: center;
   line-height: 1.5;
-  @media (max-width: 768px) {
+  @media (max-width: ${DEVICE_WIDTH.TABLET}) {
     display: block;
   }
   p {

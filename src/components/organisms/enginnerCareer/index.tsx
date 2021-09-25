@@ -4,6 +4,7 @@ import { useTranslation, Trans } from 'react-i18next'
 import Title from 'src/components/atoms/title'
 import CirclePicture from 'src/components/atoms/picture'
 import ParagraphContent from 'src/components/atoms/paragraphContent'
+import { DEVICE_WIDTH } from 'src/theme/constants'
 import 'src/locale/I18n'
 
 export default function EnginnerCareer() {
@@ -49,7 +50,7 @@ export default function EnginnerCareer() {
 
 const Section = styled.section`
   margin-bottom: 100px;
-  @media (max-width: 450px) {
+  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     margin-bottom: 50px;
   }
 `
@@ -59,7 +60,7 @@ const DetailWrapper = styled.div`
     text-align: center;
     margin: 70px 0;
   }
-  @media (max-width: 450px) {
+  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     p {
       text-align: left;
     }

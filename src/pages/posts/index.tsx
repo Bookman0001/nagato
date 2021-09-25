@@ -5,6 +5,7 @@ import { useSearchParams } from 'src/hooks/searchParams'
 import BasicLayout from 'src/components/templates/basicLayout'
 import SearchedArticles from 'src/components/organisms/searchedArticles'
 import Search from 'src/components/organisms/search'
+import { DEVICE_WIDTH } from 'src/theme/constants'
 
 export default function Posts() {
   const { params } = useSearchParams()
@@ -46,7 +47,7 @@ const Section = styled.section`
   min-height: calc(100vh - 50px - 60px);
   padding: 50px 0 0 0;
   margin: 0 auto;
-  @media (max-width: 768px) {
+  @media (max-width: ${DEVICE_WIDTH.TABLET}) {
     padding: 50px 30px 0;
   }
 `

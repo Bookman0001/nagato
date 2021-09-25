@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import Title from 'src/components/atoms/title'
 import CirclePicture from 'src/components/atoms/picture'
 import ParagraphContent from 'src/components/atoms/paragraphContent'
+import { DEVICE_WIDTH } from 'src/theme/constants'
 import 'src/locale/I18n'
 
 export default function Oss() {
@@ -56,7 +57,7 @@ export default function Oss() {
 
 const Section = styled.section`
   margin-bottom: 100px;
-  @media (max-width: 450px) {
+  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     margin-bottom: 50px;
   }
 `
@@ -71,7 +72,7 @@ const DetailWrapper = styled.div`
   p {
     margin: 20px 0;
   }
-  @media (max-width: 450px) {
+  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     display: block;
   }
 `
