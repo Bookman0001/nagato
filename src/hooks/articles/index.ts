@@ -9,5 +9,5 @@ export function useSearchedArticles(params: SearchParams) {
     `/api/articles?${params.searchWord}${params.page}`,
     getSearchedArticles
   )
-  return { articles: data, error, isLoading: !data }
+  return { articles: data, error }
 }

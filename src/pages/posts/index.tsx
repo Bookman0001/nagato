@@ -9,7 +9,7 @@ import { DEVICE_WIDTH } from 'src/theme/constants'
 
 export default function Posts() {
   const { params } = useSearchParams()
-  const { articles, error, isLoading } = useSearchedArticles(params)
+  const { articles, error } = useSearchedArticles(params)
 
   if (error) {
     return (
@@ -19,7 +19,7 @@ export default function Posts() {
     )
   }
 
-  if (isLoading || !articles) {
+  if (!articles) {
     return (
       <BasicLayout hideLangSwitch>
         <LoadingContainer>Loading...</LoadingContainer>
