@@ -7,6 +7,7 @@ import TopLayout from 'src/components/templates/topLayout'
 import Oss from 'src/components/organisms/oss'
 import Articles from 'src/components/organisms/articles'
 import SearchInputArea from 'src/components/organisms/searchInputArea'
+import { DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Props {
   articles: ArticleContents
@@ -39,7 +40,7 @@ const Container = styled.main`
   max-width: 768px;
   margin: 0 auto;
   padding: 30px 0;
-  @media (max-width: 768px) {
+  @media (max-width: ${DEVICE_WIDTH.TABLET}) {
     padding: 0 30px;
   }
 `
