@@ -4,7 +4,7 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import { waitFor } from '@testing-library/dom'
 
-import Search from 'src/components/organisms/search'
+import SearchInputArea from 'src/components/organisms/searchInputArea'
 
 const mockPush = jest.fn()
 
@@ -22,12 +22,12 @@ describe('Search', () => {
   })
 
   it('should be rendered correctlly', () => {
-    render(<Search defaultSearchWord={'test'} />)
+    render(<SearchInputArea defaultSearchWord={'test'} />)
     expect(screen.getByDisplayValue('test')).toBeDefined()
   })
 
   it('should be onChange worked', async () => {
-    render(<Search defaultSearchWord={'test'} />)
+    render(<SearchInputArea defaultSearchWord={'test'} />)
     fireEvent.change(screen.getByPlaceholderText('keyword'), {
       target: { value: 'React Go.' },
     })
@@ -37,7 +37,7 @@ describe('Search', () => {
   })
 
   it('should be onKeyPress worked', async () => {
-    render(<Search defaultSearchWord={'test'} />)
+    render(<SearchInputArea defaultSearchWord={'test'} />)
     fireEvent.keyDown(screen.getByPlaceholderText('keyword'), {
       key: 'Enter',
       code: 13,
@@ -48,7 +48,7 @@ describe('Search', () => {
   })
 
   it('should not to be onKeyPress worked', async () => {
-    render(<Search defaultSearchWord={'test'} />)
+    render(<SearchInputArea defaultSearchWord={'test'} />)
     fireEvent.keyDown(screen.getByPlaceholderText('keyword'), {
       key: 'Escape',
       code: 27,
@@ -59,7 +59,7 @@ describe('Search', () => {
   })
 
   it('should be onClick worked', async () => {
-    render(<Search defaultSearchWord={'test'} />)
+    render(<SearchInputArea defaultSearchWord={'test'} />)
     fireEvent.click(screen.getByText('search'))
     await waitFor(() => {
       expect(mockPush).toBeCalledTimes(1)

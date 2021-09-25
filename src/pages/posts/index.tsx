@@ -3,13 +3,13 @@ import styled from 'styled-components'
 import { useSearchedArticles } from 'src/hooks/articles'
 import { useSearchParams } from 'src/hooks/searchParams'
 import BasicLayout from 'src/components/templates/basicLayout'
+import SearchInputArea from 'src/components/organisms/searchInputArea'
 import SearchedArticles from 'src/components/organisms/searchedArticles'
-import Search from 'src/components/organisms/search'
 import { DEVICE_WIDTH } from 'src/theme/constants'
 
 export default function Posts() {
   const { params } = useSearchParams()
-  const { articles, error, isLoading } = useSearchedArticles(params)
+  const { articles, error } = useSearchedArticles(params)
 
   if (error) {
     return (
@@ -19,7 +19,7 @@ export default function Posts() {
     )
   }
 
-  if (isLoading || !articles) {
+  if (!articles) {
     return (
       <BasicLayout hideLangSwitch>
         <LoadingContainer>Loading...</LoadingContainer>
@@ -30,9 +30,9 @@ export default function Posts() {
   return (
     <BasicLayout hideLangSwitch>
       <Section>
-        <SearchWrapper>
-          <Search defaultSearchWord={params.searchWord} />
-        </SearchWrapper>
+        <InputWrapper>
+          <SearchInputArea defaultSearchWord={params.searchWord} />
+        </InputWrapper>
         <SearchedArticles
           currentIndex={Number(params.page) || 1}
           articles={articles}
@@ -52,7 +52,7 @@ const Section = styled.section`
   }
 `
 
-const SearchWrapper = styled.div`
+const InputWrapper = styled.div`
   margin-top: 50px;
 `
 
