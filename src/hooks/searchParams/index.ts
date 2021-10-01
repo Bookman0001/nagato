@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+
 import { SearchParams } from 'src/types'
 
 export function useSearchParams() {
