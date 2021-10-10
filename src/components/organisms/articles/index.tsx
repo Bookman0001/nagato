@@ -65,8 +65,5 @@ const ButtonWrapper = styled.div`
     justify-content: center;
     height: 40px;
     font-size: 1.25rem;
-    @media (max-width: ${DEVICE_WIDTH.TABLET}) {
-      width: 50px;
-    }
   }
 `
