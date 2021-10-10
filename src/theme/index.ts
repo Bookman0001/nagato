@@ -4,6 +4,7 @@ import { COLOR } from './constants'
 export const GlobalStyle = createGlobalStyle`
   body {
     font-family: "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3","モリサワ 新ゴ R","メイリオ",Meiryo,"Droid Sans",sans-serif;
+    color: ${COLOR.BLACK};
     margin: 0;
     border: 0;
     padding: 0;
@@ -32,6 +33,12 @@ export const GlobalStyle = createGlobalStyle`
       text-decoration: none;
       color: ${COLOR.BLUE};
       box-shadow : initial;
+    }
+    button {
+      color: ${COLOR.BLACK};
+    }
+    select {
+      color: ${COLOR.BLACK};
     }
   }
 `
