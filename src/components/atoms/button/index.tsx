@@ -1,3 +1,4 @@
+import { MouseEvent } from 'react'
 import styled from 'styled-components'
 
 import { COLOR } from '../../../theme/constants'
@@ -8,7 +9,12 @@ interface Props {
 }
 
 export default function Button({ text, onClick }: Props) {
-  return <ButtonItem onClick={onClick}>{text}</ButtonItem>
+  const handleClick = (e: MouseEvent) => {
+    e.stopPropagation()
+    e.preventDefault()
+    onClick()
+  }
+  return <ButtonItem onClick={handleClick}>{text}</ButtonItem>
 }
 
 const ButtonItem = styled.button`
