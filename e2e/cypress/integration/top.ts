@@ -3,7 +3,7 @@ beforeEach(() => {
 })
 
 it('should correctly showing header', () => {
-  cy.get('header').contains('EN')
+  cy.get('header').contains('日本語')
 })
 
 it('should correctly showing section', () => {
@@ -12,8 +12,7 @@ it('should correctly showing section', () => {
   cy.get('h2').contains('Articles')
 })
 
-it('should searched', () => {
-  cy.get('input').type('Next.js').type('{enter}')
+it('should correctly showing search more button', () => {
+  cy.get('button').click()
   cy.location('pathname').should('eq', '/posts')
-  cy.location('search').should('eq', '?keyword=Next.js')
 })
