@@ -56,6 +56,7 @@ const Content = styled.div``
 const StyledLink = styled.span`
   display: block;
   cursor: pointer;
+  padding-top: 50px;
   width: 100%;
   font-size: 1.25rem;
   font-weight: bold;
