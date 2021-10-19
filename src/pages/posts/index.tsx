@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useSearchedArticles } from 'src/hooks/articles'
 import { useSearchParams } from 'src/hooks/searchParams'
 import BasicLayout from 'src/components/templates/basicLayout'
+import SkeletonArticles from 'src/components/organisms/searchedArticles/skeletonArticles'
 import SearchInputArea from 'src/components/organisms/searchInputArea'
 import SearchedArticles from 'src/components/organisms/searchedArticles'
 import { DEVICE_WIDTH } from 'src/theme/constants'
@@ -22,7 +23,7 @@ export default function Posts() {
   if (!articles) {
     return (
       <BasicLayout hideLangSwitch>
-        <LoadingContainer>Loading...</LoadingContainer>
+        <SkeletonArticles itemCount={10} />
       </BasicLayout>
     )
   }
@@ -56,7 +57,7 @@ const InputWrapper = styled.div`
   margin-top: 50px;
 `
 
-const LoadingContainer = styled.div`
+const ErrorContainer = styled.div`
   max-width: 768px;
   height: calc(100vh - 50px - 60px);
   padding-top: 50px;
@@ -66,5 +67,3 @@ const LoadingContainer = styled.div`
   justify-content: center;
   align-items: center;
 `
-
-const ErrorContainer = styled(LoadingContainer)``
