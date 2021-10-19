@@ -15,7 +15,8 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
+  height: 30px;
+  padding-bottom: 50px;
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     margin: 0;
     width: 100%;
@@ -24,10 +25,10 @@ const Wrapper = styled.div`
 
 const Animation = keyframes`
   0% {
-    width: 25vw;
+    width: 25%;
   }
   100% {
-    width: 50vw;
+    width: 50%;
   }
 `
 
