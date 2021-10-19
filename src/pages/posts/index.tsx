@@ -22,9 +22,12 @@ export default function Posts() {
 
   if (!articles) {
     return (
-      <BasicLayout hideLangSwitch>
+      <Section>
+        <InputWrapper>
+          <SearchInputArea defaultSearchWord={params.searchWord} />
+        </InputWrapper>
         <SkeletonArticles itemCount={10} />
-      </BasicLayout>
+      </Section>
     )
   }
 
