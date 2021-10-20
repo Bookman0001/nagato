@@ -6,11 +6,28 @@ import { waitFor } from '@testing-library/react'
 
 import { useCanonicalLink } from 'src/hooks/canonicalLink'
 
-jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
-  query: {
-    keyword: 'test',
-  },
-}))
+jest
+  .spyOn(require('next/router'), 'useRouter')
+  .mockImplementationOnce(() => ({
+    query: {
+      keyword: 'test',
+    },
+  }))
+  .mockImplementationOnce(() => ({
+    query: {
+      keyword: 'test',
+    },
+  }))
+  .mockImplementationOnce(() => ({
+    query: {
+      keyword: undefined,
+    },
+  }))
+  .mockImplementationOnce(() => ({
+    query: {
+      keyword: undefined,
+    },
+  }))
 
 describe('useCanonicalLink', () => {
   it('should be returned canonicalLink with keyword', async () => {
@@ -18,6 +35,15 @@ describe('useCanonicalLink', () => {
       const { result } = renderHook(() => useCanonicalLink())
       await waitFor(() => {
         expect(result.current.canonicalLink).toBe('/posts?keyword=test')
+      })
+    })
+  })
+
+  it('should be returned canonicalLink with default', async () => {
+    await act(async () => {
+      const { result } = renderHook(() => useCanonicalLink())
+      await waitFor(() => {
+        expect(result.current.canonicalLink).toBe('http://localhost/posts')
       })
     })
   })
