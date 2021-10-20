@@ -1,22 +1,18 @@
 import React from 'react'
 
-import MetaTag from 'src/components/organisms/meta/default'
+import MetaTag from 'src/components/organisms/meta/posts'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
 
 interface Props {
   children: React.ReactChild
-  hideLangSwitch?: boolean
 }
 
-export default function BasicLayout({
-  children,
-  hideLangSwitch = false,
-}: Props) {
+export default function SearchLayout({ children }: Props) {
   return (
     <>
       <MetaTag />
-      <Header hideLangSwitch={hideLangSwitch} />
+      <Header hideLangSwitch />
       {children}
       <Footer />
     </>
