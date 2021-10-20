@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { useSearchedArticles } from 'src/hooks/articles'
 import { useSearchParams } from 'src/hooks/searchParams'
-import BasicLayout from 'src/components/templates/basicLayout'
+import SearchLayout from 'src/components/templates/searchLayout'
 import SkeletonArticles from 'src/components/organisms/searchedArticles/skeletonArticles'
 import SearchInputArea from 'src/components/organisms/searchInputArea'
 import SearchedArticles from 'src/components/organisms/searchedArticles'
@@ -14,27 +14,27 @@ export default function Posts() {
 
   if (error) {
     return (
-      <BasicLayout hideLangSwitch>
+      <SearchLayout>
         <ErrorContainer>Error happened!</ErrorContainer>
-      </BasicLayout>
+      </SearchLayout>
     )
   }
 
   if (!articles) {
     return (
-      <BasicLayout hideLangSwitch>
+      <SearchLayout>
         <Section>
           <InputWrapper>
             <SearchInputArea defaultSearchWord={params.searchWord} />
           </InputWrapper>
           <SkeletonArticles itemCount={10} />
         </Section>
-      </BasicLayout>
+      </SearchLayout>
     )
   }
 
   return (
-    <BasicLayout hideLangSwitch>
+    <SearchLayout>
       <Section>
         <InputWrapper>
           <SearchInputArea defaultSearchWord={params.searchWord} />
@@ -44,7 +44,7 @@ export default function Posts() {
           articles={articles}
         />
       </Section>
-    </BasicLayout>
+    </SearchLayout>
   )
 }
 
