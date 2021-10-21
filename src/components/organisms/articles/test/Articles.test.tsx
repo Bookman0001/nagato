@@ -30,8 +30,8 @@ const articles: ArticleContents = {
 describe('Articles', () => {
   it('should be rendered correctlly with data', () => {
     render(<Articles articles={articles} />)
-    expect(screen.getAllByText('dummy title'))
-    expect(screen.getAllByText('2021-01-01'))
+    expect(screen.getAllByText('dummy title')).toBeDefined()
+    expect(screen.getAllByText('2021-01-01')).toBeDefined()
   })
 
   it('click event should be occured', () => {
