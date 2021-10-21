@@ -39,8 +39,8 @@ describe('SearchedArticles', () => {
       limit: 10,
     }
     render(<SearchedArticles articles={emptyArticles} currentIndex={1} />)
-    expect(screen.getAllByText('dummy title'))
-    expect(screen.getAllByText('2021-01-01'))
+    expect(screen.getAllByText('dummy title')).toBeDefined()
+    expect(screen.getAllByText('2021-01-01')).toBeDefined()
   })
 
   it('should be rendered correctlly with nothing data', () => {
@@ -51,7 +51,7 @@ describe('SearchedArticles', () => {
       limit: 0,
     }
     render(<SearchedArticles articles={emptyArticles} currentIndex={1} />)
-    expect(screen.getAllByText('No Result!'))
+    expect(screen.getAllByText('No Result!')).toBeDefined()
   })
 
   it('should be worked onClick', () => {
