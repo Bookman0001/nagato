@@ -63,5 +63,15 @@ export const GlobalStyle = createGlobalStyle`
         color: ${COLOR.WHITE};
       }
     }
+    ul {
+      @media (prefers-color-scheme: dark) {
+        color: ${COLOR.WHITE};
+      }
+    }
+    li {
+      @media (prefers-color-scheme: dark) {
+        color: ${COLOR.WHITE};
+      }
+    }
   }
 `
