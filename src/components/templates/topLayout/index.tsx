@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import MetaTag from 'src/components/organisms/meta/default'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
-import BackGroundPicture from 'src/components/atoms/backgroundPicture'
+import Picture from 'src/components/atoms/picture'
 import { DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Props {
@@ -17,7 +17,13 @@ export default function TopLayout({ children }: Props) {
       <MetaTag />
       <Header />
       <PictureContainer>
-        <BackGroundPicture src="/assets/overview.jpg" alt="overview" />
+        <Picture
+          src={'assets/overview.jpg'}
+          alt={'self-image'}
+          isCircle
+          width={150}
+          height={150}
+        />
       </PictureContainer>
       {children}
       <Footer />
@@ -26,8 +32,11 @@ export default function TopLayout({ children }: Props) {
 }
 
 const PictureContainer = styled.div`
-  margin: 50px 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 250px 0 30px;
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    margin: 50px 0 50px;
+    padding: 200px 0 30px;
   }
 `

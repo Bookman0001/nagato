@@ -41,9 +41,9 @@ export default function Articles({ articles }: Props) {
 }
 
 const Section = styled.section`
-  margin-bottom: 100px;
+  margin-bottom: 250px;
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    margin-bottom: 50px;
+    margin-bottom: 150px;
   }
 `
 
