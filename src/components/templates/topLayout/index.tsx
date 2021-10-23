@@ -18,7 +18,7 @@ export default function TopLayout({ children }: Props) {
       <Header />
       <PictureContainer>
         <Picture
-          src={'assets/overview.jpg'}
+          src={'assets/self.jpg'}
           alt={'self-image'}
           isCircle
           width={150}
