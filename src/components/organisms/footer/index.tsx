@@ -21,6 +21,6 @@ const FooterContainer = styled.footer`
   height: 60px;
   align-items: center;
   background-color: ${COLOR.WHITE};
-  border-top: 1px solid ${COLOR.BLACK};
+  border-top: 1px solid ${COLOR.GRAY};
   text-align: center;
 `

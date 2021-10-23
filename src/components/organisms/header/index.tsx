@@ -68,7 +68,7 @@ const HeaderContainer = styled.header`
   top: 0;
   width: 100%;
   background-color: ${COLOR.WHITE};
-  border-bottom: 1px solid ${COLOR.BLACK};
+  border-bottom: 1px solid ${COLOR.GRAY};
   z-index: 1000;
   color: ${COLOR.BLACK};
   font-size: 0.75rem;

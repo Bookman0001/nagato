@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
 
-import Title from 'src/components/atoms/title'
 import CirclePicture from 'src/components/atoms/picture'
 import ParagraphContent from 'src/components/atoms/paragraphContent'
 import { DEVICE_WIDTH } from 'src/theme/constants'
@@ -11,14 +10,19 @@ export default function Oss() {
   const { t } = useTranslation()
   return (
     <Section>
-      <Title>Oss/GitHub</Title>
       <ImageWrapper>
         <a
           href="https://github.com/Bookman0001"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <CirclePicture src="/assets/github.png" alt="github" isCircle />
+          <CirclePicture
+            src="/assets/github.png"
+            alt="github"
+            isCircle
+            width={150}
+            height={150}
+          />
         </a>
       </ImageWrapper>
       <AccountWrapper>
@@ -56,9 +60,9 @@ export default function Oss() {
 }
 
 const Section = styled.section`
-  margin-bottom: 100px;
+  margin-bottom: 250px;
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    margin-bottom: 50px;
+    margin-bottom: 150px;
   }
 `
 

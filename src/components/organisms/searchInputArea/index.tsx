@@ -48,7 +48,7 @@ export default function SearchInputArea({ defaultSearchWord }: Props) {
 const Section = styled.section`
   margin-bottom: 100px;
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    margin-bottom: 50px;
+    margin-bottom: 800px;
   }
 `
 
