@@ -48,12 +48,18 @@ const Container = styled.div`
 const ButtonWrapper = styled.div<{ hasSolidBorder: boolean }>`
   button {
     border: 1px solid ${COLOR.BLACK};
+    @media (prefers-color-scheme: dark) {
+      border: 1px solid ${COLOR.WHITE};
+    }
   }
   ${(props) =>
     props.hasSolidBorder &&
     css`
       button {
         border: 3px solid ${COLOR.BLACK};
+        @media (prefers-color-scheme: dark) {
+          border: 3px solid ${COLOR.WHITE};
+        }
       }
     `}
 `
@@ -71,4 +77,8 @@ const ButtonItem = styled.button`
   font-size: 1.2rem;
   cursor: pointer;
   text-align: center;
+  @media (prefers-color-scheme: dark) {
+    background-color: ${COLOR.BLACK};
+    color: ${COLOR.WHITE};
+  }
 `

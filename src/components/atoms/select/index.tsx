@@ -23,7 +23,7 @@ const Container = styled.div`
   position: relative;
   border: 1px solid ${COLOR.BLACK};
   border-radius: 2px;
-  background: #ffffff;
+  background-color: ${COLOR.WHITE};
   &::before {
     position: absolute;
     top: 0.9em;
@@ -36,6 +36,14 @@ const Container = styled.div`
     border-right: 6px solid transparent;
     border-top: 6px solid ${COLOR.BLACK};
     pointer-events: none;
+  }
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid ${COLOR.WHITE};
+    background-color: ${COLOR.BLACK};
+    color: ${COLOR.WHITE};
+    &::before {
+      border-top: 6px solid ${COLOR.WHITE};
+    }
   }
 `
 

@@ -6,7 +6,7 @@ import SearchLayout from 'src/components/templates/searchLayout'
 import SkeletonArticles from 'src/components/organisms/searchedArticles/skeletonArticles'
 import SearchInputArea from 'src/components/organisms/searchInputArea'
 import SearchedArticles from 'src/components/organisms/searchedArticles'
-import { DEVICE_WIDTH } from 'src/theme/constants'
+import { DEVICE_WIDTH, COLOR } from 'src/theme/constants'
 
 export default function Posts() {
   const { params } = useSearchParams()
@@ -71,4 +71,7 @@ const ErrorContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (prefers-color-scheme: dark) {
+    color: ${COLOR.WHITE};
+  }
 `

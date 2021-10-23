@@ -64,4 +64,7 @@ const StyledLink = styled.span`
   @media (max-width: ${DEVICE_WIDTH.TABLET}) {
     font-size: 1rem;
   }
+  @media (prefers-color-scheme: dark) {
+    color: ${COLOR.WHITE};
+  }
 `

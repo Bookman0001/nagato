@@ -23,4 +23,8 @@ const FooterContainer = styled.footer`
   background-color: ${COLOR.WHITE};
   border-top: 1px solid ${COLOR.GRAY};
   text-align: center;
+  @media (prefers-color-scheme: dark) {
+    background-color: ${COLOR.BLACK};
+    color: ${COLOR.WHITE};
+  }
 `

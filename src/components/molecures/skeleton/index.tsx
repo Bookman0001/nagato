@@ -43,6 +43,9 @@ const SubTitleSkeleton = styled.div`
   display: -webkit-box;
   overflow: hidden;
   margin-right: auto;
+  @media (prefers-color-scheme: dark) {
+    background-color: ${COLOR.WHITE};
+  }
 `
 
 const DateSkeleton = styled.div``

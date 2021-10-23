@@ -35,4 +35,9 @@ const StyledInput = styled.input`
   border: 1px solid ${COLOR.BLACK};
   border-radius: 0.25rem;
   background-color: #ffffff;
+  @media (prefers-color-scheme: dark) {
+    background-color: ${COLOR.BLACK};
+    border: 1px solid ${COLOR.WHITE};
+    color: ${COLOR.WHITE};
+  }
 `
