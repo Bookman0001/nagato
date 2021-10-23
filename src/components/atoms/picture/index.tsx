@@ -16,25 +16,20 @@ export default function CirclePicture({
   height = 100,
 }: Props) {
   return (
-    <Container>
-      <Image
-        width={width}
-        height={height}
-        src={src}
-        alt={alt}
-        isCircle={isCircle}
-      />
+    <Container width={width} height={height}>
+      <Image src={src} alt={alt} isCircle={isCircle} />
     </Container>
   )
 }
 
-const Container = styled.div`
+const Container = styled.div<{ width: number; height: number }>`
   border-radius: 100%;
+  width: ${(props) => props.width}px;
+  height: ${(props) => props.height}px;
 `
 
 const Image = styled.img<{ src: string; alt: string; isCircle: boolean }>`
-  width: ${(props) => props.width}px;
-  height: ${(props) => props.height}px;
+  width: 100%;
   src: ${(props) => props.src};
   alt: ${(props) => props.alt};
   ${(props) =>
