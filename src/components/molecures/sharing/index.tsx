@@ -29,16 +29,18 @@ export default function Sharing() {
             />
           </StyledLink>
         </TwitterShareButton>
-        <Link href="mailto:odonel51486666@gmail.com">
-          <StyledLink>
-            <Icon
-              src={'/assets/mail.png'}
-              alt={'mail'}
-              width={40}
-              height={40}
-            />
-          </StyledLink>
-        </Link>
+        <Mail>
+          <Link href="mailto:odonel51486666@gmail.com">
+            <StyledLink>
+              <Icon
+                src={'/assets/mail.png'}
+                alt={'mail'}
+                width={40}
+                height={40}
+              />
+            </StyledLink>
+          </Link>
+        </Mail>
       </Container>
     </Section>
   )
@@ -69,7 +71,7 @@ const Container = styled.div`
   padding: 20px;
   display: flex;
   border-radius: 20px;
-  img {
+  button {
     margin: 0 10px;
   }
   ::before {
@@ -91,4 +93,8 @@ const Container = styled.div`
 
 const StyledLink = styled.span`
   cursor: pointer;
+`
+
+const Mail = styled.div`
+  margin: 0 10px;
 `
