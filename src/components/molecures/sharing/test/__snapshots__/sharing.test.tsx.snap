@@ -27,18 +27,20 @@ exports[`Sharing 1`] = `
         />
       </styled.span>
     </ForwardRef(ShareButton-twitter)>
-    <Link
-      href="mailto:odonel51486666@gmail.com"
-    >
-      <styled.span>
-        <CirclePicture
-          alt="mail"
-          height={40}
-          src="/assets/mail.png"
-          width={40}
-        />
-      </styled.span>
-    </Link>
+    <styled.div>
+      <Link
+        href="mailto:odonel51486666@gmail.com"
+      >
+        <styled.span>
+          <CirclePicture
+            alt="mail"
+            height={40}
+            src="/assets/mail.png"
+            width={40}
+          />
+        </styled.span>
+      </Link>
+    </styled.div>
   </styled.div>
 </styled.section>
 `;
