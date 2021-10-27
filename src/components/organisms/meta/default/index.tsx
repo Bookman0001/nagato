@@ -17,7 +17,7 @@ export default function DefaultMetaTag() {
       />
       <meta
         property="og:image"
-        content={`https://k-puppeteer.com/assets/self.jpg`}
+        content={`https://k-puppeteer.com/assets/ogp.jpg`}
       />
     </Head>
   )
