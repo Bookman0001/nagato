@@ -57,7 +57,7 @@
     "reg-cli": "^0.17.3",
     "remark": "^14.0.1",
     "remark-html": "^15.0.0",
-    "simple-git-hooks": "^2.6.1",
+    "simple-git-hooks": "^2.7.0",
     "styled-components": "^5.3.3",
     "swr": "^1.0.1",
     "ts-jest": "^26.5.6"
