@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
 import Link from 'next/link'
 
-import Sharing from 'src/components/molecures/sharing'
 import Select from 'src/components/atoms/select'
 import Image from 'src/components/atoms/picture'
 import { COLOR, DEVICE_WIDTH } from 'src/theme/constants'
@@ -16,19 +15,19 @@ interface Props {
 
 export default function Header({ hideLangSwitch = false }: Props) {
   const { i18n } = useTranslation()
-  const [showSharing, setShowSharing] = useState<boolean>(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     i18n.changeLanguage(e.target.value)
   }
 
-  const handleSharingClick = () => {
-    setShowSharing(!showSharing)
-  }
-
   return (
     <HeaderContainer>
       <Container>
+        <Link href="/">
+          <StyledLink>
+            <Image src={'/favicon.ico'} alt={'mail'} width={30} height={30} />
+          </StyledLink>
+        </Link>
         {hideLangSwitch ? null : (
           <SelectContainer>
             <Select defaultValue={i18n.language} onChange={handleChange}>
@@ -44,20 +43,6 @@ export default function Header({ hideLangSwitch = false }: Props) {
             </Select>
           </SelectContainer>
         )}
-        <Link href="/">
-          <StyledLink>
-            <Image src={'/favicon.ico'} alt={'mail'} width={41} height={41} />
-          </StyledLink>
-        </Link>
-        <SharingContainer onClick={handleSharingClick}>
-          <Image
-            src={'/assets/share.png'}
-            alt={'share'}
-            width={25}
-            height={25}
-          />
-        </SharingContainer>
-        {showSharing ? <Sharing /> : null}
       </Container>
     </HeaderContainer>
   )
@@ -78,6 +63,7 @@ const Container = styled.div`
   height: 50px;
   position: relative;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   @media (min-width: ${DEVICE_WIDTH.PC}) {
     max-width: 768px;
@@ -88,12 +74,12 @@ const Container = styled.div`
 const SelectContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-left: 15px;
+  margin-right: 15px;
   @media (min-width: ${DEVICE_WIDTH.PC}) {
-    margin-left: 0;
+    margin-right: 0;
   }
   select {
-    width: 80px;
+    width: 55px;
   }
 `
 
@@ -102,16 +88,5 @@ const StyledLink = styled.span`
   cursor: pointer;
   position: absolute;
   left: calc(50% - 20px);
-  height: 40px;
-`
-
-const SharingContainer = styled.div`
-  display: block;
-  position: absolute;
-  right: 0;
-  margin-right: 15px;
-  cursor: pointer;
-  @media (min-width: ${DEVICE_WIDTH.PC}) {
-    margin-right: 0;
-  }
+  height: 30px;
 `

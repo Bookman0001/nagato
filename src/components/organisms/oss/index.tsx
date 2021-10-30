@@ -11,29 +11,13 @@ export default function Oss() {
   return (
     <Section>
       <ImageWrapper>
-        <a
-          href="https://github.com/Bookman0001"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <CirclePicture
-            src="/assets/github.png"
-            alt="github"
-            isCircle
-            width={150}
-            height={150}
-          />
-        </a>
+        <CirclePicture
+          src="/assets/icon.jpg"
+          alt="github"
+          width={100}
+          height={100}
+        />
       </ImageWrapper>
-      <AccountWrapper>
-        <a
-          href="https://github.com/Bookman0001"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          MyAccount
-        </a>
-      </AccountWrapper>
       <DetailWrapper>
         <ParagraphContent>
           {t('oss')}
@@ -55,6 +39,20 @@ export default function Oss() {
           </a>
         </ParagraphContent>
       </DetailWrapper>
+      <ImageWrapper>
+        <a
+          href="https://github.com/Bookman0001"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <CirclePicture
+            src="/assets/github.png"
+            alt="github"
+            width={80}
+            height={80}
+          />
+        </a>
+      </ImageWrapper>
     </Section>
   )
 }
@@ -67,7 +65,6 @@ const Section = styled.section`
 `
 
 const DetailWrapper = styled.div`
-  margin: 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,9 +81,10 @@ const DetailWrapper = styled.div`
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
-`
-
-const AccountWrapper = styled.div`
-  display: flex;
-  justify-content: center;
+  a {
+    cursor: pointer;
+    :hover {
+      opacity: 0.7;
+    }
+  }
 `

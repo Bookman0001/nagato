@@ -1,6 +1,6 @@
 export const langs = [
-  { value: 'ja', label: '日本語' },
-  { value: 'en', label: 'English' },
+  { value: 'ja', label: 'JA' },
+  { value: 'en', label: 'EN' },
 ]
 
 export const defaultLang = 'ja'
