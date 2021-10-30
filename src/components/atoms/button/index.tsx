@@ -22,8 +22,9 @@ const ButtonItem = styled.button`
   border: 2px solid ${COLOR.BLACK};
   border-radius: 8px;
   padding: 5px 3rem;
-  display: block;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 2rem;
   cursor: pointer;
 `
