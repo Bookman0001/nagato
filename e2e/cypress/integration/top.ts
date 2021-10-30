@@ -3,7 +3,7 @@ beforeEach(() => {
 })
 
 it('should correctly showing header', () => {
-  cy.get('header').contains('日本語')
+  cy.get('header').contains('JA')
 })
 
 it('should correctly showing section', () => {
