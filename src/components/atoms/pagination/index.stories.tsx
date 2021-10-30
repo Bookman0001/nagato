@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Meta } from '@storybook/react/types-6-0'
-import { action } from '@storybook/addon-actions'
 
 import Pagination from './'
 
@@ -9,16 +8,19 @@ export default {
   component: Pagination,
 } as Meta
 
-const Template: React.VFC<{}> = () => (
-  <>
-    総件数50件で10件ずつの時
-    <Pagination
-      totalCount={50}
-      limit={10}
-      onClick={action('clicked')}
-      currentIndex={1}
-    />
-  </>
-)
+const Template: React.VFC<{}> = () => {
+  const [count, setCount] = useState<number>(1)
+  return (
+    <>
+      総件数50件で10件ずつの時
+      <Pagination
+        totalCount={50}
+        limit={10}
+        onClick={(index) => setCount(index)}
+        currentIndex={count}
+      />
+    </>
+  )
+}
 
 export const Default = Template.bind({})

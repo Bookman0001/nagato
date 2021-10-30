@@ -24,6 +24,7 @@ const Container = styled.div`
   border: 1px solid ${COLOR.BLACK};
   border-radius: 2px;
   background: #ffffff;
+  line-height: 1.5;
   &::before {
     position: absolute;
     top: 0.9em;

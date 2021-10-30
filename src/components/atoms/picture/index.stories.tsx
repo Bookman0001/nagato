@@ -24,6 +24,8 @@ const CircleTemplate: React.VFC<{}> = () => (
     <Picture
       src={'https://placehold.jp/100x100.png'}
       alt="alt属性です"
+      width={100}
+      height={100}
       isCircle
     />
   </>

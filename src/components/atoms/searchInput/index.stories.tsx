@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Meta } from '@storybook/react/types-6-0'
 
 import SearchInput from './'
+import { COLOR } from 'src/theme/constants'
 
 export default {
   title: 'SearchInput',
@@ -19,13 +20,15 @@ const Template: React.VFC<{}> = () => {
         placeholder={'add place holder'}
         onChange={(e) => setText(e.target.value)}
       />
-      <Container>{text}</Container>
+      <Container>属性値:{text}</Container>
     </div>
   )
 }
 
 const Container = styled.div`
-  padding: 20px 0;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: ${COLOR.GRAY};
 `
 
 export const Default = Template.bind({})

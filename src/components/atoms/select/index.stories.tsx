@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Meta } from '@storybook/react/types-6-0'
 
 import Select from './'
+import { COLOR } from 'src/theme/constants'
 
 export default {
   title: 'Select',
@@ -22,13 +23,17 @@ const Template: React.VFC<{}> = () => {
           </>
         </Select>
       </Container>
-      選択値: {value}
+      <Value>選択値: {value}</Value>
     </div>
   )
 }
 
 const Container = styled.div`
   padding: 20px 0;
+`
+
+const Value = styled.div`
+  background-color: ${COLOR.GRAY};
 `
 
 export const Default = Template.bind({})
