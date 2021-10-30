@@ -3,7 +3,7 @@ import { COLOR } from './constants'
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    font-family: "Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3","モリサワ 新ゴ R","メイリオ",Meiryo,"Droid Sans",sans-serif;
+    font-family: system-ui, sans-serif;
     color: ${COLOR.BLACK};
     margin: 0;
     border: 0;

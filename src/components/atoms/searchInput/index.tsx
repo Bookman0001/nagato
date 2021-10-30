@@ -33,6 +33,6 @@ const StyledInput = styled.input`
   font-size: 1.25rem;
   text-indent: 10px;
   border: 1px solid ${COLOR.BLACK};
-  border-radius: 0.25rem;
+  border-radius: 8px;
   background-color: #ffffff;
 `
