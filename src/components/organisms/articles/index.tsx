@@ -60,9 +60,9 @@ const Wrapper = styled.div`
 
 const ButtonWrapper = styled.div`
   padding-top: 50px;
+  display: flex;
+  justify-content: center;
   button {
-    display: flex;
-    justify-content: center;
     height: 40px;
     font-size: 1.25rem;
   }
