@@ -20,6 +20,7 @@ export default function Button({ text, onClick }: Props) {
 const ButtonItem = styled.button`
   background-color: ${COLOR.WHITE};
   border: 2px solid ${COLOR.BLACK};
+  border-radius: 8px;
   padding: 5px 3rem;
   display: block;
   margin: 0 auto;

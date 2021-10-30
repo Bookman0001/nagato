@@ -25,10 +25,7 @@ export default function Pagination({
     <Container>
       {[...Array(paginationCount)].map((_, index) => {
         return (
-          <ButtonWrapper
-            key={index}
-            hasSolidBorder={currentIndex === index + 1}
-          >
+          <ButtonWrapper key={index} hasSelected={currentIndex === index + 1}>
             <ButtonItem onClick={() => handleClick(index + 1)} key={index}>
               {index + 1}
             </ButtonItem>
@@ -45,15 +42,16 @@ const Container = styled.div`
   align-items: center;
 `
 
-const ButtonWrapper = styled.div<{ hasSolidBorder: boolean }>`
+const ButtonWrapper = styled.div<{ hasSelected: boolean }>`
   button {
     border: 1px solid ${COLOR.BLACK};
   }
   ${(props) =>
-    props.hasSolidBorder &&
+    props.hasSelected &&
     css`
       button {
-        border: 3px solid ${COLOR.BLACK};
+        color: ${COLOR.WHITE};
+        background-color: ${COLOR.BLACK};
       }
     `}
 `
@@ -63,7 +61,7 @@ const ButtonItem = styled.button`
   justify-content: center;
   align-items: center;
   background-color: ${COLOR.WHITE};
-  border-radius: 10%;
+  border-radius: 8px;
   width: 45px;
   height: 45px;
   margin: 0 1rem;
