@@ -10,14 +10,6 @@ export default function Oss() {
   const { t } = useTranslation()
   return (
     <Section>
-      <ImageWrapper>
-        <CirclePicture
-          src="/assets/icon.jpg"
-          alt="github"
-          width={100}
-          height={100}
-        />
-      </ImageWrapper>
       <DetailWrapper>
         <ParagraphContent>
           {t('oss')}
@@ -48,8 +40,8 @@ export default function Oss() {
           <CirclePicture
             src="/assets/github.png"
             alt="github"
-            width={80}
-            height={80}
+            width={100}
+            height={100}
           />
         </a>
       </ImageWrapper>
@@ -59,6 +51,7 @@ export default function Oss() {
 
 const Section = styled.section`
   margin-bottom: 250px;
+  font-size: 1.25rem;
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     margin-bottom: 150px;
   }

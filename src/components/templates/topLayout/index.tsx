@@ -18,11 +18,10 @@ export default function TopLayout({ children }: Props) {
       <Header />
       <PictureContainer>
         <Picture
-          src={'assets/self.jpg'}
-          alt={'self-image'}
-          isCircle
-          width={150}
-          height={150}
+          src="/assets/icon.jpg"
+          alt={'my-icon'}
+          width={200}
+          height={200}
         />
       </PictureContainer>
       {children}
@@ -35,8 +34,11 @@ const PictureContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 250px 0 30px;
+  padding: 250px 0 170px;
+  div {
+    padding: 0 50px;
+  }
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    padding: 150px 0 30px;
+    padding: 195px 0 135px;
   }
 `

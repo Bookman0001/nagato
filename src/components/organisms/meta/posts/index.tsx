@@ -6,8 +6,8 @@ export default function DefaultMetaTag() {
   const { canonicalLink } = useCanonicalLink()
   return (
     <Head>
-      <title>k工房</title>
-      <meta property="og:title" content={'k工房'} key="og:title" />
+      <title>K工房</title>
+      <meta property="og:title" content={'K工房'} key="og:title" />
       <meta
         property="og:description"
         content={'フロントエンド周りの技術情報や思ったことを発進しています。'}
