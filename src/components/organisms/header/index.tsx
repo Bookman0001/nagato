@@ -63,7 +63,6 @@ const Container = styled.div`
   height: 50px;
   position: relative;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   @media (min-width: ${DEVICE_WIDTH.PC}) {
     max-width: 768px;
@@ -74,7 +73,9 @@ const Container = styled.div`
 const SelectContainer = styled.div`
   display: flex;
   justify-content: center;
+  justify-content: flex-end;
   margin-right: 15px;
+  margin-left: auto;
   @media (min-width: ${DEVICE_WIDTH.PC}) {
     margin-right: 0;
   }
@@ -83,10 +84,10 @@ const SelectContainer = styled.div`
   }
 `
 
-const StyledLink = styled.span`
-  display: block;
+const StyledLink = styled.div`
   cursor: pointer;
-  position: absolute;
-  left: calc(50% - 20px);
-  height: 30px;
+  margin-left: 15px;
+  @media (min-width: ${DEVICE_WIDTH.PC}) {
+    margin-left: 0;
+  }
 `
