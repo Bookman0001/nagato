@@ -10,7 +10,11 @@ export default function Introduction() {
   const { t } = useTranslation()
   return (
     <Section>
-      <MainTitle>Introduction</MainTitle>
+      <TitleContainer>
+        <MainTitle>
+          <span>K</span> Atlier
+        </MainTitle>
+      </TitleContainer>
       <IntroductionWrapper>
         <ParagraphContent>
           <Trans i18nKey={t('introduction')} components={[<br key={0} />]} />
@@ -27,9 +31,20 @@ const Section = styled.section`
   }
 `
 
+const TitleContainer = styled.div`
+  span {
+    font-size: 4rem;
+    padding-right: 5px;
+  }
+  h1 {
+    align-items: baseline;
+  }
+`
+
 const IntroductionWrapper = styled.div`
   display: flex;
   justify-content: center;
   text-align: center;
   align-items: center;
+  font-size: 1.25rem;
 `
