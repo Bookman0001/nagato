@@ -34,11 +34,14 @@ const PictureContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 250px 0 170px;
+  padding: 10rem 0 5rem;
   div {
     padding: 0 50px;
   }
+  @media (max-width: ${DEVICE_WIDTH.TABLET}) {
+    padding: 250px 0 170px;
+  }
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    padding: 155px 0 105px;
+    padding: 15rem 0 10rem;
   }
 `
