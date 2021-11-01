@@ -4,7 +4,6 @@ import { ArticleContents } from 'src/types'
 import { articlesController } from 'src/controller/articles'
 import Introduction from 'src/components/organisms/introduction'
 import TopLayout from 'src/components/templates/topLayout'
-import Oss from 'src/components/organisms/oss'
 import Articles from 'src/components/organisms/articles'
 import { DEVICE_WIDTH } from 'src/theme/constants'
 
@@ -27,7 +26,6 @@ export default function Home({ articles }: Props) {
     <TopLayout>
       <Container>
         <Introduction />
-        <Oss />
         <Articles articles={articles} />
       </Container>
     </TopLayout>
