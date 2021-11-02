@@ -1,13 +1,17 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import { useTranslation } from 'react-i18next'
 import { AppProps } from 'next/app'
 
 import * as gtag from 'src/services/gtag'
 import SwrConfig from 'src/services/swr'
 import { GlobalStyle } from 'src/theme'
+import 'src/locale/I18n'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()
+  const { i18n } = useTranslation()
+
   useEffect(() => {
     if (!gtag.existsGaId) {
       return
@@ -22,8 +26,12 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, [router.events])
 
   useEffect(() => {
+    i18n.changeLanguage(router.locale || 'ja')
+  }, [router.locale, i18n])
+
+  useEffect(() => {
     window.scroll(0, 0)
-  }, [])
+  }, [router])
 
   return (
     <>

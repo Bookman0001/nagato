@@ -12,7 +12,7 @@ export default function SearchLayout({ children }: Props) {
   return (
     <>
       <MetaTag />
-      <Header hideLangSwitch />
+      <Header />
       {children}
       <Footer />
     </>

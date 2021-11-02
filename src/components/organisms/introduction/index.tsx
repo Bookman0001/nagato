@@ -4,7 +4,6 @@ import { Trans, useTranslation } from 'react-i18next'
 import MainTitle from 'src/components/atoms/mainTitle'
 import ParagraphContent from 'src/components/atoms/paragraphContent'
 import { DEVICE_WIDTH } from 'src/theme/constants'
-import 'src/locale/I18n'
 
 export default function Introduction() {
   const { t } = useTranslation()

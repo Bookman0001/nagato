@@ -18,7 +18,7 @@ export default function BlogLayout({ title, article, children }: Props) {
   return (
     <>
       <MetaTag article={article} />
-      <Header hideLangSwitch />
+      <Header />
       <Container>
         <MainTitle>{title}</MainTitle>
         <Main>{children}</Main>
