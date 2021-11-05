@@ -12407,10 +12407,10 @@ reg-cli@^0.17.0, reg-cli@^0.17.3:
     x-img-diff-js "0.3.5"
     yargs-parser "^20.2.9"
 
-reg-suit-core@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/reg-suit-core/-/reg-suit-core-0.11.0.tgz#84ec996004405fa4bf9cbf36f91440b395e24774"
-  integrity sha512-D8X4U6jCQNzlpMfUfb7+RQWERy21SZMpaR9um0gL+3XfmdeDgo+2UDI6m1O5mbAO5vIwmLZEOFKOZ85XJmjIeg==
+reg-suit-core@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/reg-suit-core/-/reg-suit-core-0.11.1.tgz#e554fab4da79a6caf2c8a312fadbdc4539a1583e"
+  integrity sha512-v3U6c8Mn8f9pz44YrnvxCLCRUWDs4t86/55XfBtxt3LGB+QxN9ekK2dNRPk67UsX3OZoB1n1dSjAJONTlWpNPw==
   dependencies:
     cpx "^1.5.0"
     reg-cli "^0.17.0"
@@ -12436,15 +12436,15 @@ reg-suit-util@^0.11.0:
     mime-types "^2.1.27"
     mkdirp "^1.0.4"
 
-reg-suit@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/reg-suit/-/reg-suit-0.11.0.tgz#6f83269c95c0e9155641eba53d7dd8cac7660676"
-  integrity sha512-tZCb/Kd3Gyp2SePvAm/HKdeJQUxyKyAFmAdvNxi51EqE/E1UgSAv4hEMhBJFKiLOdtWcaPCTji5+QCvg/Z5aMg==
+reg-suit@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/reg-suit/-/reg-suit-0.11.1.tgz#2bc7180873cf793724825eb492e5396a2d95daa3"
+  integrity sha512-tGCPEoQhHcUn4oZGj5nu26yaFEpksPHUwGPoKpBxSV5ldmwS/zY13KyJZaetlZh/IV7HTxLP/i9TXBlhzc3QWw==
   dependencies:
     cp-file "9.1.0"
     ignore "5.1.8"
     inquirer "8.1.5"
-    reg-suit-core "^0.11.0"
+    reg-suit-core "^0.11.1"
     reg-suit-util "^0.11.0"
     yargs "17.0.1"
 
