@@ -13,4 +13,5 @@ jobs:
       - run: yarn install
       - run: yarn run prettier
       - run: yarn run lint
+      - run: yarn run compiler-check
       - run: yarn run jest

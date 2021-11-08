@@ -34,3 +34,6 @@ yarn-error.log*
 -R/
 reg.json
 report.html
+
+# compiler
+tsconfig.tsbuildinfo
