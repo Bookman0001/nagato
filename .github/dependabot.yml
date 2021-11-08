@@ -6,9 +6,3 @@ updates:
       interval: daily
       time: '20:00'
     open-pull-requests-limit: 10
-  - package-ecosystem: npm
-    directory: '/cypress'
-    schedule:
-      interval: daily
-      time: '20:00'
-    open-pull-requests-limit: 10

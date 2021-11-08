@@ -37,3 +37,7 @@ report.html
 
 # compiler
 tsconfig.tsbuildinfo
+
+# cypress
+cypress/screenshots
+cypress/videos

@@ -14,7 +14,9 @@
     "storycap": "storycap --serverCmd \"yarn storybook\" http://localhost:6006 --serverTimeout 600000",
     "reg-check": "reg-cli ./__screenshots__ ./.reg -R ./report.html",
     "compiler-check": "tsc --noEmit",
-    "jest": "jest --runInBand"
+    "jest": "jest --runInBand",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
@@ -69,6 +71,7 @@
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/react": "^6.3.12",
+    "@testing-library/cypress": "^8.0.1",
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.34",
     "@types/styled-components": "^5.1.15",
@@ -76,6 +79,7 @@
     "@typescript-eslint/parser": "^4.33.0",
     "babel-loader": "^8.2.3",
     "babel-plugin-styled-components": "^1.13.3",
+    "cypress": "^8.7.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "^12.0.2",
     "eslint-config-standard": "^16.0.3",
