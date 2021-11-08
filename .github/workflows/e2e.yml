@@ -23,5 +23,5 @@ jobs:
       - name: Run cypress
         uses: cypress-io/github-action@v2
         with:
-          install: false
+          install: true
           config: baseUrl=${{ github.event.deployment_status.target_url }}
