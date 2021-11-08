@@ -37,7 +37,7 @@
   },
   "overrides": [
     {
-      "files": ["e2e/cypress/integration/*.ts"],
+      "files": ["cypress/cypress/integration/*.ts"],
       "rules": {
         "jest/expect-expect": "off"
       }

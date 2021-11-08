@@ -58,7 +58,7 @@ yarn jest
 ## e2e Intgration Test
 
 ```bash
-cd e2e
+cd cypress
 yarn cypress
 ```
 
