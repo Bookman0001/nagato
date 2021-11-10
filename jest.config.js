@@ -14,8 +14,8 @@ module.exports = {
   },
   testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
-  setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
+  // snapshotSerializers: ['enzyme-to-json/serializer'],
+  // setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
   // https://github.com/zeit/next.js/issues/8663#issue-490553899
   globals: {
     // we must specify a custom tsconfig for tests because we need the typescript transform
