@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Trans, useTranslation } from 'react-i18next'
+import { Trans } from 'react-i18next'
 
 import MainTitle from 'src/components/atoms/mainTitle'
 import ParagraphContent from 'src/components/atoms/paragraphContent'
@@ -7,7 +7,6 @@ import { DEVICE_WIDTH } from 'src/theme/constants'
 import 'src/locale/I18n'
 
 export default function Introduction() {
-  const { t } = useTranslation()
   return (
     <Section>
       <TitleContainer>
@@ -17,7 +16,7 @@ export default function Introduction() {
       </TitleContainer>
       <IntroductionWrapper>
         <ParagraphContent>
-          <Trans i18nKey={t('introduction')} components={[<br key={0} />]} />
+          <Trans i18nKey={'introduction'} components={[<br key={0} />]} />
         </ParagraphContent>
       </IntroductionWrapper>
     </Section>
