@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import MetaTag from 'src/components/organisms/meta/default'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
-import Picture from 'src/components/atoms/picture'
+import MyIcon from 'src/components/atoms/myIcon'
 import { DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Props {
@@ -17,12 +17,7 @@ export default function TopLayout({ children }: Props) {
       <MetaTag />
       <Header />
       <PictureContainer>
-        <Picture
-          src="/assets/icon.jpg"
-          alt={'my-icon'}
-          width={200}
-          height={200}
-        />
+        <MyIcon size={220} />
       </PictureContainer>
       {children}
       <Footer />
