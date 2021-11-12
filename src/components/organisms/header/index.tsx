@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 
@@ -11,7 +10,12 @@ export default function Header() {
       <Container>
         <Link href="/">
           <StyledLink>
-            <Image src={'/favicon.ico'} alt={'mail'} width={30} height={30} />
+            <Image
+              src={'/favicon.ico'}
+              alt={'move to top page'}
+              width={30}
+              height={30}
+            />
           </StyledLink>
         </Link>
       </Container>

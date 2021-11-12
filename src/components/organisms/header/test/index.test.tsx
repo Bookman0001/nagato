@@ -8,6 +8,6 @@ import Header from 'src/components/organisms/header'
 describe('Header', () => {
   it('should be rendered correctlly in default', () => {
     render(<Header />)
-    expect(screen.getAllByText('JA')).toBeDefined()
+    expect(screen.getByAltText('move to top page')).toBeDefined()
   })
 })
