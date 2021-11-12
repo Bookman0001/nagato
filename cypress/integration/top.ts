@@ -3,10 +3,6 @@ describe('top', () => {
     cy.visit('/')
   })
 
-  it('should correctly showing header', () => {
-    cy.get('header').contains('JA')
-  })
-
   it('should correctly showing section', () => {
     cy.get('h2').contains('Articles')
   })
