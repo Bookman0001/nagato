@@ -10,9 +10,4 @@ describe('Header', () => {
     render(<Header />)
     expect(screen.getAllByText('JA')).toBeDefined()
   })
-
-  it('should be rendered correctlly in hideLangSwitch', () => {
-    render(<Header hideLangSwitch />)
-    expect(screen.queryByText('JA')).toBe(null)
-  })
 })
