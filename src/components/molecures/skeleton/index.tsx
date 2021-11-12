@@ -13,7 +13,7 @@ export default function Skeleton() {
 
 const Wrapper = styled.div`
   display: flex;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 `
 
 const Animation = keyframes`
