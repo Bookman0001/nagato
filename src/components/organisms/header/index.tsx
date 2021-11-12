@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 
-import Image from 'src/components/atoms/picture'
+import MyIcon from 'src/components/atoms/myIcon'
 import { COLOR, DEVICE_WIDTH } from 'src/theme/constants'
 
 export default function Header() {
@@ -10,12 +10,7 @@ export default function Header() {
       <Container>
         <Link href="/">
           <StyledLink>
-            <Image
-              src={'/favicon.ico'}
-              alt={'move to top page'}
-              width={30}
-              height={30}
-            />
+            <MyIcon size={30} />
           </StyledLink>
         </Link>
       </Container>
