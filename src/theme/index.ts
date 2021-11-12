@@ -33,9 +33,11 @@ export const GlobalStyle = createGlobalStyle`
       text-decoration: none;
       color: ${COLOR.BLUE};
       box-shadow : initial;
+      cursor: pointer;
     }
     button {
       color: ${COLOR.BLACK};
+      cursor: pointer;
     }
     select {
       color: ${COLOR.BLACK};
