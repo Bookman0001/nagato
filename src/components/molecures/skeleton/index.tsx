@@ -1,48 +1,61 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 
-import { COLOR, DEVICE_WIDTH } from 'src/theme/constants'
+import { COLOR } from 'src/theme/constants'
 
 export default function Skeleton() {
   return (
     <Wrapper>
-      <SubTitleSkeleton />
-      <DateSkeleton>..........</DateSkeleton>
+      <SubTitleSkeleton data-testid={'title'} />
+      <DateSkeleton data-testid={'date'} />
     </Wrapper>
   )
 }
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  padding-bottom: 50px;
-  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    margin: 0;
-    width: 100%;
-  }
+  padding-bottom: 20px;
 `
 
 const Animation = keyframes`
   0% {
-    width: 25%;
+    transform: translateX(-100%)
   }
   100% {
-    width: 50%;
+    transform: translateX(100%)
+  }
+`
+
+const skeleton = css`
+  height: 30px;
+  background-color: ${COLOR.GRAY};
+  position: relative;
+  overflow: hidden;
+  :before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: ${Animation} 1.2s linear infinite;
   }
 `
 
 const SubTitleSkeleton = styled.div`
-  animation: 0.4s linear 0.1s infinite forwards running ${Animation};
-  height: 2px;
-  background-color: ${COLOR.BLACK};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.25rem;
-  display: -webkit-box;
-  overflow: hidden;
+  width: 100%;
   margin-right: auto;
+  ${skeleton}
 `
 
-const DateSkeleton = styled.div``
+const DateSkeleton = styled.div`
+  width: 13rem;
+  margin-left: 2rem;
+  ${skeleton}
+`
