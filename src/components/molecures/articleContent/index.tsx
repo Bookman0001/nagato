@@ -14,9 +14,7 @@ export default function ArticleContent({ article }: Props) {
     <Link href={`/posts/${article.id}`}>
       <StyledLink>
         <SubTitle key={article.id}>{article.title}</SubTitle>
-        <PublishedWrapper>
-          <Description>{article.publishedAt}</Description>
-        </PublishedWrapper>
+        <Description>{article.publishedAt}</Description>
       </StyledLink>
     </Link>
   )
@@ -24,24 +22,17 @@ export default function ArticleContent({ article }: Props) {
 
 const StyledLink = styled.div`
   cursor: pointer;
-  display: flex;
+  text-align: center;
   line-height: 1.5;
   :hover {
     opacity: 0.7;
   }
 `
 
-const PublishedWrapper = styled.div`
-  p {
-    margin-left: auto;
-    padding-left: 10px;
-    width: 100%;
-  }
-`
-
 const SubTitle = styled.h3`
   font-size: 1.25rem;
   margin-right: auto;
+  text-decoration: underline;
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     font-size: 1rem;
   }
