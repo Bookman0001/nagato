@@ -63,7 +63,7 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   button {
-    height: 40px;
+    height: 2.5rem;
     font-size: 1.25rem;
   }
 `

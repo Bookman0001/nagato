@@ -29,7 +29,7 @@ export default function SearchInput({
 
 const StyledInput = styled.input`
   width: 100%;
-  height: 40px;
+  height: 2.5rem;
   font-size: 1.25rem;
   text-indent: 10px;
   border: 1px solid ${COLOR.BLACK};
