@@ -18,7 +18,7 @@ export default function SearchInput({
 }: Props) {
   return (
     <StyledInput
-      type={'search'}
+      type={'text'}
       defaultValue={defaultValue}
       placeholder={placeholder}
       onChange={onChange}
