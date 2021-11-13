@@ -59,12 +59,7 @@ const DetailWrapper = styled.div`
   margin: 0;
   height: 2.5rem;
   button {
-    display: flex;
-    justify-content: center;
     margin-left: 20px;
     font-size: 1.25rem;
-    @media (max-width: ${DEVICE_WIDTH.TABLET}) {
-      width: 50px;
-    }
   }
 `
