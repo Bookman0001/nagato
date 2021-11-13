@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 
-import Description from 'src/components/atoms/paragraphContent'
 import { Article } from 'src/types'
 import { DEVICE_WIDTH } from 'src/theme/constants'
 
@@ -14,7 +13,7 @@ export default function ArticleContent({ article }: Props) {
     <Link href={`/posts/${article.id}`}>
       <StyledLink>
         <SubTitle key={article.id}>{article.title}</SubTitle>
-        <Description>{article.publishedAt}</Description>
+        <DateMemo>{article.publishedAt}</DateMemo>
       </StyledLink>
     </Link>
   )
@@ -22,7 +21,6 @@ export default function ArticleContent({ article }: Props) {
 
 const StyledLink = styled.div`
   cursor: pointer;
-  text-align: center;
   line-height: 1.5;
   :hover {
     opacity: 0.7;
@@ -36,4 +34,9 @@ const SubTitle = styled.h3`
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     font-size: 1rem;
   }
+`
+
+const DateMemo = styled.div`
+  text-align: right;
+  line-height: 1.7;
 `

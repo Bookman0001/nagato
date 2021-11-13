@@ -29,7 +29,7 @@ export default function BlogLayout({ title, article, children }: Props) {
 }
 
 const Container = styled.div`
-  max-width: 768px;
+  max-width: 600px;
   padding: 30px;
   margin: 50px auto 150px;
   font-size: 1rem;

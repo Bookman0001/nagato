@@ -49,7 +49,7 @@ export default function Posts() {
 }
 
 const Section = styled.section`
-  max-width: 768px;
+  max-width: 600px;
   min-height: calc(100vh - 50px - 60px);
   padding: 50px 0 0 0;
   margin: 0 auto;
@@ -61,7 +61,7 @@ const Section = styled.section`
 const InputWrapper = styled.div``
 
 const ErrorContainer = styled.div`
-  max-width: 768px;
+  max-width: 600px;
   height: calc(100vh - 50px - 60px);
   padding-top: 50px;
   margin: 0 auto;

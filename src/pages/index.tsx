@@ -33,7 +33,7 @@ export default function Home({ articles }: Props) {
 }
 
 const Container = styled.main`
-  max-width: 768px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 30px 0;
   @media (max-width: ${DEVICE_WIDTH.TABLET}) {

@@ -34,7 +34,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   @media (min-width: ${DEVICE_WIDTH.PC}) {
-    max-width: 768px;
+    max-width: 600px;
     margin: 0 auto;
   }
 `

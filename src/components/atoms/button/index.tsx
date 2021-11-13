@@ -22,7 +22,7 @@ const ButtonItem = styled.button`
   background-color: ${COLOR.WHITE};
   border: 2px solid ${COLOR.BLACK};
   border-radius: 8px;
-  padding: 5px 3rem;
+  padding: 5px 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
