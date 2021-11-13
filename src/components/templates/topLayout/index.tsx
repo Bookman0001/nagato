@@ -37,6 +37,6 @@ const PictureContainer = styled.div`
     padding: 250px 0 170px;
   }
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    padding: calc(5rem + 50px) 0 5rem;
+    padding: 5rem 0 5rem;
   }
 `

@@ -18,6 +18,7 @@ export default function Button({ text, onClick }: Props) {
 }
 
 const ButtonItem = styled.button`
+  height: 100%;
   background-color: ${COLOR.WHITE};
   border: 2px solid ${COLOR.BLACK};
   border-radius: 8px;

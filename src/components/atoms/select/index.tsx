@@ -27,8 +27,8 @@ const Container = styled.div`
   line-height: 1.5;
   &::before {
     position: absolute;
-    top: 0.9em;
-    right: 0.9em;
+    top: 0.6em;
+    right: 0.6em;
     width: 0;
     height: 0;
     padding: 0;
@@ -42,7 +42,7 @@ const Container = styled.div`
 
 const StyledSelect = styled.select`
   width: 100%;
-  height: 28px;
+  height: 100%;
   padding: 0 1em;
   cursor: pointer;
   text-indent: 0.01px;
