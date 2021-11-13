@@ -4,7 +4,7 @@ import { AppProps } from 'next/app'
 
 import * as gtag from 'src/services/gtag'
 import SwrConfig from 'src/services/swr'
-import { GlobalStyle } from 'src/theme'
+import { GlobalStyle, DarkMode } from 'src/theme'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()
@@ -28,6 +28,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <GlobalStyle />
+      <DarkMode />
       <SwrConfig>
         <Component {...pageProps} />
       </SwrConfig>

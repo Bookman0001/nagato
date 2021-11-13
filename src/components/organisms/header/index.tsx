@@ -27,6 +27,10 @@ const HeaderContainer = styled.header`
   z-index: 1000;
   color: ${COLOR.BLACK};
   font-size: 0.75rem;
+  @media (prefers-color-scheme: dark) {
+    background-color: ${COLOR.BLACK};
+    color: ${COLOR.WHITE};
+  }
 `
 
 const Container = styled.div`

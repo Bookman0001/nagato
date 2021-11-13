@@ -27,4 +27,9 @@ const ButtonItem = styled.button`
   align-items: center;
   font-size: 2rem;
   cursor: pointer;
+  @media (prefers-color-scheme: dark) {
+    background-color: ${COLOR.BLACK};
+    border: 2px solid ${COLOR.WHITE};
+    color: ${COLOR.WHITE};
+  }
 `

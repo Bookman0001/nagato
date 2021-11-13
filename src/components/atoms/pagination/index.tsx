@@ -43,15 +43,19 @@ const Container = styled.div`
 `
 
 const ButtonWrapper = styled.div<{ hasSelected: boolean }>`
-  button {
-    border: 1px solid ${COLOR.BLACK};
-  }
   ${(props) =>
     props.hasSelected &&
     css`
       button {
         color: ${COLOR.WHITE};
         background-color: ${COLOR.BLACK};
+      }
+      @media (prefers-color-scheme: dark) {
+        button {
+          color: ${COLOR.BLACK};
+          background-color: ${COLOR.WHITE};
+          border: 3px solid ${COLOR.WHITE};
+        }
       }
     `}
 `
@@ -61,6 +65,7 @@ const ButtonItem = styled.button`
   justify-content: center;
   align-items: center;
   background-color: ${COLOR.WHITE};
+  border: 2px solid ${COLOR.BLACK};
   border-radius: 8px;
   width: 45px;
   height: 45px;
@@ -69,4 +74,9 @@ const ButtonItem = styled.button`
   font-size: 1.2rem;
   cursor: pointer;
   text-align: center;
+  @media (prefers-color-scheme: dark) {
+    background-color: ${COLOR.BLACK};
+    color: ${COLOR.WHITE};
+    border: 2px solid ${COLOR.WHITE};
+  }
 `
