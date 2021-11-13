@@ -28,6 +28,9 @@ const ButtonItem = styled.button`
   align-items: center;
   font-size: 2rem;
   cursor: pointer;
+  :hover {
+    opacity: 0.7;
+  }
   @media (prefers-color-scheme: dark) {
     background-color: ${COLOR.BLACK};
     border: 2px solid ${COLOR.WHITE};
