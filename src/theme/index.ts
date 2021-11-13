@@ -44,3 +44,12 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 `
+
+export const DarkMode = createGlobalStyle`
+  @media (prefers-color-scheme: dark) {
+  body {
+    background-color: ${COLOR.BLACK};
+    color: ${COLOR.WHITE};
+  }
+}
+`
