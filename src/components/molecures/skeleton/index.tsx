@@ -30,6 +30,9 @@ const skeleton = css`
   background-color: ${COLOR.GRAY};
   position: relative;
   overflow: hidden;
+  @media (prefers-color-scheme: dark) {
+    background-color: #696969;
+  }
   :before {
     content: '';
     display: block;
