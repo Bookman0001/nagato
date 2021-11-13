@@ -58,9 +58,7 @@ const Section = styled.section`
   }
 `
 
-const InputWrapper = styled.div`
-  margin-top: 50px;
-`
+const InputWrapper = styled.div``
 
 const ErrorContainer = styled.div`
   max-width: 768px;

@@ -57,11 +57,11 @@ const DetailWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0;
+  height: 2.5rem;
   button {
     display: flex;
     justify-content: center;
     margin-left: 20px;
-    height: 2.5rem;
     font-size: 1.25rem;
     @media (max-width: ${DEVICE_WIDTH.TABLET}) {
       width: 50px;

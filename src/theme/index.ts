@@ -42,6 +42,9 @@ export const GlobalStyle = createGlobalStyle`
     select {
       color: ${COLOR.BLACK};
     }
+    input {
+      padding: 0;
+    }
   }
 `
 

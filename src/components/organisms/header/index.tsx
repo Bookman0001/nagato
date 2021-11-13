@@ -19,8 +19,6 @@ export default function Header() {
 }
 
 const HeaderContainer = styled.header`
-  position: fixed;
-  top: 0;
   width: 100%;
   background-color: ${COLOR.WHITE};
   border-bottom: 1px solid ${COLOR.GRAY};
