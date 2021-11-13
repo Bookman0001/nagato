@@ -55,12 +55,13 @@ const Section = styled.section`
 const DetailWrapper = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0;
   button {
     display: flex;
     justify-content: center;
     margin-left: 20px;
-    height: 40px;
+    height: 2.5rem;
     font-size: 1.25rem;
     @media (max-width: ${DEVICE_WIDTH.TABLET}) {
       width: 50px;
