@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes, RefObject } from 'react'
+import { InputHTMLAttributes, RefObject } from 'react'
 import styled from 'styled-components'
 
 import { COLOR } from 'src/theme/constants'
