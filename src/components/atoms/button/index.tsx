@@ -1,20 +1,20 @@
-import { MouseEvent } from 'react'
+import React, { MouseEvent } from 'react'
 import styled from 'styled-components'
 
 import { COLOR } from '../../../theme/constants'
 
 interface Props {
-  text?: string
+  children?: React.ReactNode
   onClick: () => void
 }
 
-export default function Button({ text, onClick }: Props) {
+export default function Button({ children, onClick }: Props) {
   const handleClick = (e: MouseEvent) => {
     e.stopPropagation()
     e.preventDefault()
     onClick()
   }
-  return <ButtonItem onClick={handleClick}>{text}</ButtonItem>
+  return <ButtonItem onClick={handleClick}>{children}</ButtonItem>
 }
 
 const ButtonItem = styled.button`

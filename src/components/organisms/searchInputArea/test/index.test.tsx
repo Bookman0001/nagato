@@ -60,7 +60,7 @@ describe('Search', () => {
 
   it('should be onClick worked', async () => {
     render(<SearchInputArea defaultSearchWord={'test'} />)
-    fireEvent.click(screen.getByText('search'))
+    fireEvent.click(screen.getByRole('button'))
     await waitFor(() => {
       expect(mockPush).toBeCalledTimes(1)
     })

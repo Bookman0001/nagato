@@ -34,7 +34,7 @@ export default function Articles({ articles }: Props) {
         })}
       </DetailWrapper>
       <ButtonWrapper>
-        <Button onClick={handleClick} text={'See more'} />
+        <Button onClick={handleClick}>See More</Button>
       </ButtonWrapper>
     </Section>
   )
@@ -63,7 +63,7 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   button {
-    height: 2.5rem;
+    height: 3rem;
     font-size: 1.25rem;
   }
 `
