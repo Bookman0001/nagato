@@ -10,12 +10,12 @@ export default function DefaultMetaTag() {
       <meta property="og:title" content={'K工房'} key="og:title" />
       <meta
         property="og:description"
-        content={'フロントエンド周りの技術情報や思ったことを発進しています。'}
+        content={'フロントエンド周りの技術情報や思ったことを発信しています。'}
         key="og:description"
       />
       <meta
         name="description"
-        content={'フロントエンド周りの技術情報や思ったことを発進しています。'}
+        content={'フロントエンド周りの技術情報や思ったことを発信しています。'}
         key="description"
       />
       <meta
