@@ -12,7 +12,7 @@ describe('Button', () => {
 
   it('should be rendered', () => {
     const handleClick = jest.fn()
-    render(<Button onClick={handleClick} text={'button label'} />)
+    render(<Button onClick={handleClick}>button label</Button>)
     expect(screen.getByRole('button').textContent).toBe('button label')
     fireEvent.click(screen.getByRole('button'))
     expect(handleClick).toHaveBeenCalledTimes(1)

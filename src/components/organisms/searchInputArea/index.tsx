@@ -1,10 +1,11 @@
-import { ChangeEvent, useState, KeyboardEvent } from 'react'
+import { ChangeEvent, useState, KeyboardEvent, useRef } from 'react'
 import styled from 'styled-components'
 
 import { useSearchParams } from 'src/hooks/searchParams'
 import Title from 'src/components/atoms/title'
 import SearchInput from 'src/components/atoms/searchInput'
 import Button from 'src/components/atoms/button'
+import SearchIcon from 'src/components/atoms/searchIcon'
 import { DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Props {
@@ -14,6 +15,7 @@ interface Props {
 export default function SearchInputArea({ defaultSearchWord }: Props) {
   const { searchArticlesWithKeyword } = useSearchParams()
   const [keyword, setKeyword] = useState<string>(defaultSearchWord)
+  const input = useRef<HTMLInputElement>(null)
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setKeyword(e.target.value)
@@ -22,11 +24,17 @@ export default function SearchInputArea({ defaultSearchWord }: Props) {
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Enter') {
       searchArticlesWithKeyword(keyword)
+      if (input.current) {
+        input.current.blur()
+      }
     }
   }
 
   const handleClick = () => {
     searchArticlesWithKeyword(keyword)
+    if (input.current) {
+      input.current.blur()
+    }
   }
 
   return (
@@ -34,12 +42,15 @@ export default function SearchInputArea({ defaultSearchWord }: Props) {
       <Title>Articles Search</Title>
       <DetailWrapper>
         <SearchInput
+          inputRef={input}
           placeholder={'keyword'}
           onChange={handleChange}
           defaultValue={defaultSearchWord}
           onKeyDown={(e) => handleKeyDown(e)}
         />
-        <Button onClick={handleClick} text={'search'} />
+        <Button onClick={handleClick}>
+          <SearchIcon size={26} />
+        </Button>
       </DetailWrapper>
     </Section>
   )
@@ -57,9 +68,8 @@ const DetailWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0;
-  height: 2.5rem;
+  height: 3rem;
   button {
     margin-left: 20px;
-    font-size: 1.25rem;
   }
 `

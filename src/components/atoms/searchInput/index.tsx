@@ -1,16 +1,14 @@
-import React from 'react'
+import React, { InputHTMLAttributes, RefObject } from 'react'
 import styled from 'styled-components'
 
 import { COLOR } from 'src/theme/constants'
 
-interface Props {
-  defaultValue: string
-  placeholder: string
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-  onKeyDown?: (e: React.KeyboardEvent) => void
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
+  inputRef?: RefObject<HTMLInputElement> | null
 }
 
 export default function SearchInput({
+  inputRef = null,
   defaultValue,
   placeholder,
   onChange,
@@ -18,6 +16,7 @@ export default function SearchInput({
 }: Props) {
   return (
     <StyledInput
+      ref={inputRef}
       type={'text'}
       defaultValue={defaultValue}
       placeholder={placeholder}

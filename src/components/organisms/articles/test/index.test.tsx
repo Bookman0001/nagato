@@ -36,7 +36,7 @@ describe('Articles', () => {
 
   it('click event should be occured', () => {
     render(<Articles articles={articles} />)
-    fireEvent.click(screen.getByText('See more'))
+    fireEvent.click(screen.getByRole('button'))
     expect(mockPush).toBeCalledTimes(1)
   })
 })
