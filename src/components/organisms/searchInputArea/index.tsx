@@ -42,7 +42,7 @@ export default function SearchInputArea({ defaultSearchWord }: Props) {
           placeholder={'keyword'}
           onChange={handleChange}
           defaultValue={defaultSearchWord}
-          onKeyDown={(e) => handleKeyDown(e)}
+          onKeyDown={handleKeyDown}
         />
         <Button onClick={handleClick}>
           <SearchIcon size={26} />
