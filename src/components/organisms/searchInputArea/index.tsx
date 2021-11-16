@@ -24,17 +24,13 @@ export default function SearchInputArea({ defaultSearchWord }: Props) {
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Enter') {
       searchArticlesWithKeyword(keyword)
-      if (input.current) {
-        input.current.blur()
-      }
+      input.current?.blur()
     }
   }
 
   const handleClick = () => {
     searchArticlesWithKeyword(keyword)
-    if (input.current) {
-      input.current.blur()
-    }
+    input.current?.blur()
   }
 
   return (
@@ -46,7 +42,7 @@ export default function SearchInputArea({ defaultSearchWord }: Props) {
           placeholder={'keyword'}
           onChange={handleChange}
           defaultValue={defaultSearchWord}
-          onKeyDown={(e) => handleKeyDown(e)}
+          onKeyDown={handleKeyDown}
         />
         <Button onClick={handleClick}>
           <SearchIcon size={26} />
