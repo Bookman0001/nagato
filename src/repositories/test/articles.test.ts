@@ -1,9 +1,12 @@
 import axios from 'axios'
+import MockDate from 'mockdate'
 
 import {
   fetchAllArticles,
   fetchLimitedArtcles,
 } from 'src/repositories/articles'
+
+MockDate.set('1995-01-01')
 
 jest.mock('axios')
 const mockedAxios = axios as jest.Mocked<typeof axios>
