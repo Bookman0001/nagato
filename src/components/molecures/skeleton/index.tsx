@@ -1,7 +1,5 @@
 import styled, { css, keyframes } from 'styled-components'
 
-import { COLOR } from 'src/theme/constants'
-
 export default function Skeleton() {
   return (
     <Wrapper>
@@ -27,12 +25,9 @@ const Animation = keyframes`
 
 const skeleton = css`
   height: 30px;
-  background-color: ${COLOR.GRAY};
+  background-color: #696969;
   position: relative;
   overflow: hidden;
-  @media (prefers-color-scheme: dark) {
-    background-color: #696969;
-  }
   :before {
     content: '';
     display: block;
