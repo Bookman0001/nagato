@@ -25,9 +25,12 @@ const Animation = keyframes`
 
 const skeleton = css`
   height: 30px;
-  background-color: #696969;
+  background-color: #dcdcdc;
   position: relative;
   overflow: hidden;
+  @media (prefers-color-scheme: dark) {
+    background-color: #696969;
+  }
   :before {
     content: '';
     display: block;
