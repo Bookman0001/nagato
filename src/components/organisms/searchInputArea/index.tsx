@@ -30,7 +30,6 @@ export default function SearchInputArea({ defaultSearchWord }: Props) {
 
   const handleClick = () => {
     searchArticlesWithKeyword(keyword)
-    input.current?.blur()
   }
 
   return (
