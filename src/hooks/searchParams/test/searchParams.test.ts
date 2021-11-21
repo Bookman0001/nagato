@@ -41,7 +41,7 @@ describe('useSearchParams', () => {
     await act(async () => {
       const { result } = renderHook(() => useSearchParams())
       await waitFor(() =>
-        expect(result.current.params).toEqual({ searchWord: 'test', page: '2' })
+        expect(result.current.params).toEqual({ keyword: 'test', page: '2' })
       )
     })
   })
@@ -50,7 +50,7 @@ describe('useSearchParams', () => {
     await act(async () => {
       const { result } = renderHook(() => useSearchParams())
       await waitFor(() =>
-        expect(result.current.params).toEqual({ searchWord: '', page: '1' })
+        expect(result.current.params).toEqual({ keyword: '', page: '1' })
       )
     })
   })

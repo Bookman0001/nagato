@@ -28,6 +28,6 @@ export async function fetchSearchedArticles(
   const page = Number(params.page) || 1
   const offset = page > 1 ? page * limit - limit : 0
   return await get<ArticlesApiResponse>(
-    `/technology-articles?q=${params.searchWord}&limit=${limit}&offset=${offset}`
+    `/technology-articles?q=${params.keyword}&limit=${limit}&offset=${offset}`
   )
 }

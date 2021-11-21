@@ -25,7 +25,7 @@ export default function Posts() {
       <SearchLayout>
         <Section>
           <InputWrapper>
-            <SearchInputArea defaultSearchWord={params.searchWord} />
+            <SearchInputArea defaultKeyword={params.keyword} />
           </InputWrapper>
           <SkeletonArticles itemCount={10} />
         </Section>
@@ -37,7 +37,7 @@ export default function Posts() {
     <SearchLayout>
       <Section>
         <InputWrapper>
-          <SearchInputArea defaultSearchWord={params.searchWord} />
+          <SearchInputArea defaultKeyword={params.keyword} />
         </InputWrapper>
         <SearchedArticles
           currentIndex={Number(params.page) || 1}

@@ -29,7 +29,7 @@ const mockResponse = {
 describe('fetchSearchedArticles', () => {
   it('to be sccusessful', async () => {
     fetchMock.post('http://localhost/api/articles', mockResponse)
-    const data = await fetchSearchedArticles({ searchWord: '' } as SearchParams)
+    const data = await fetchSearchedArticles({ keyword: '' } as SearchParams)
     expect(data).toBeTruthy()
   })
 })

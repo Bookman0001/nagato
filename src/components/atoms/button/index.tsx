@@ -1,9 +1,9 @@
-import React, { MouseEvent } from 'react'
+import React, { ButtonHTMLAttributes, MouseEvent } from 'react'
 import styled from 'styled-components'
 
 import { COLOR } from '../../../theme/constants'
 
-interface Props {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode
   onClick: () => void
 }
