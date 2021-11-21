@@ -3,16 +3,13 @@ import { Trans } from 'react-i18next'
 
 import MainTitle from 'src/components/atoms/mainTitle'
 import ParagraphContent from 'src/components/atoms/paragraphContent'
-import { DEVICE_WIDTH } from 'src/theme/constants'
 import 'src/locale/I18n'
 
 export default function Introduction() {
   return (
     <Section>
       <TitleContainer>
-        <MainTitle>
-          <span>K</span> Atlier
-        </MainTitle>
+        <MainTitle>K Atlier</MainTitle>
       </TitleContainer>
       <IntroductionWrapper>
         <ParagraphContent>
@@ -24,17 +21,10 @@ export default function Introduction() {
 }
 
 const Section = styled.section`
-  margin-bottom: 250px;
-  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    margin-bottom: 150px;
-  }
+  margin-bottom: 10rem;
 `
 
 const TitleContainer = styled.div`
-  span {
-    font-size: 4rem;
-    padding-right: 5px;
-  }
   h1 {
     align-items: baseline;
   }

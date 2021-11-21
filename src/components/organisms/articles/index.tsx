@@ -5,7 +5,6 @@ import { ArticleContents } from 'src/types'
 import ArticleContent from 'src/components/molecures/articleContent'
 import Title from 'src/components/atoms/title'
 import Button from 'src/components/atoms/button'
-import { DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Props {
   articles: ArticleContents
@@ -41,10 +40,7 @@ export default function Articles({ articles }: Props) {
 }
 
 const Section = styled.section`
-  margin-bottom: 100px;
-  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    margin-bottom: 50px;
-  }
+  margin-bottom: 4rem;
 `
 
 const DetailWrapper = styled.div`
@@ -52,14 +48,14 @@ const DetailWrapper = styled.div`
 `
 
 const Wrapper = styled.div`
-  padding-bottom: 50px;
+  padding-bottom: 4rem;
   :last-child {
     padding-bottom: 0;
   }
 `
 
 const ButtonWrapper = styled.div`
-  padding-top: 50px;
+  padding-top: 4rem;
   display: flex;
   justify-content: center;
   button {
