@@ -30,24 +30,22 @@ export default function BlogLayout({ title, article, children }: Props) {
 
 const Container = styled.div`
   max-width: 600px;
-  padding: 30px;
-  margin: 50px auto 150px;
+  margin: 4rem auto 4rem;
   font-size: 1rem;
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    padding: 15px;
+    padding: 0 2rem;
   }
 `
 
 const Main = styled.main`
-  margin: 10px 0;
   display: flex;
   align-items: center;
-  line-height: 1.5;
+  line-height: 2.5;
   @media (max-width: ${DEVICE_WIDTH.TABLET}) {
     display: block;
   }
   p {
-    line-height: 1.7;
+    line-height: 2.5;
   }
   img {
     width: 100%;

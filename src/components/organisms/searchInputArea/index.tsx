@@ -6,7 +6,6 @@ import Title from 'src/components/atoms/title'
 import SearchInput from 'src/components/atoms/searchInput'
 import Button from 'src/components/atoms/button'
 import SearchIcon from 'src/components/atoms/searchIcon'
-import { DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Props {
   defaultSearchWord: string
@@ -52,10 +51,7 @@ export default function SearchInputArea({ defaultSearchWord }: Props) {
 }
 
 const Section = styled.section`
-  margin-bottom: 100px;
-  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    margin-bottom: 80px;
-  }
+  margin-bottom: 4rem;
 `
 
 const DetailWrapper = styled.div`

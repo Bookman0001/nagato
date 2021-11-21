@@ -51,10 +51,10 @@ export default function Posts() {
 const Section = styled.section`
   max-width: 600px;
   min-height: calc(100vh - 50px - 60px);
-  padding: 50px 0 0 0;
+  padding: 4rem 0 0 0;
   margin: 0 auto;
   @media (max-width: ${DEVICE_WIDTH.TABLET}) {
-    padding: 50px 30px 0;
+    padding: 4rem 2rem 0;
   }
 `
 
@@ -63,7 +63,7 @@ const InputWrapper = styled.div``
 const ErrorContainer = styled.div`
   max-width: 600px;
   height: calc(100vh - 50px - 60px);
-  padding-top: 50px;
+  padding-top: 4rem;
   margin: 0 auto;
   font-size: 1.25rem;
   display: flex;
