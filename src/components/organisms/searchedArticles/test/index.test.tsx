@@ -12,7 +12,7 @@ const mockSearch = jest.fn()
 
 jest.spyOn(useSearchParams, 'useSearchParams').mockImplementation(() => {
   return {
-    params: { searchWord: '', page: '1' },
+    params: { keyword: '', page: '1' },
     searchArticlesWithPager: mockSearch,
     searchArticlesWithKeyword: jest.fn(),
   }

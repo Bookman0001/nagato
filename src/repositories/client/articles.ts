@@ -2,7 +2,7 @@ import { ArticlesApiResponse, SearchParams } from 'src/types'
 
 export async function fetchSearchedArticles(params: SearchParams) {
   const encodedParams: SearchParams = {
-    searchWord: encodeURI(params.searchWord),
+    keyword: encodeURI(params.keyword),
     page: encodeURI(params.page),
   }
   const response = await window.fetch(

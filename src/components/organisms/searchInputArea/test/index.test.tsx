@@ -22,12 +22,12 @@ describe('Search', () => {
   })
 
   it('should be rendered correctlly', () => {
-    render(<SearchInputArea defaultSearchWord={'test'} />)
+    render(<SearchInputArea defaultKeyword={'test'} />)
     expect(screen.getByDisplayValue('test')).toBeDefined()
   })
 
   it('should be onChange worked', async () => {
-    render(<SearchInputArea defaultSearchWord={'test'} />)
+    render(<SearchInputArea defaultKeyword={'test'} />)
     fireEvent.change(screen.getByPlaceholderText('keyword'), {
       target: { value: 'React Go.' },
     })
@@ -37,7 +37,7 @@ describe('Search', () => {
   })
 
   it('should be onKeyPress worked', async () => {
-    render(<SearchInputArea defaultSearchWord={'test'} />)
+    render(<SearchInputArea defaultKeyword={'test'} />)
     fireEvent.keyDown(screen.getByPlaceholderText('keyword'), {
       key: 'Enter',
       code: 13,
@@ -48,7 +48,7 @@ describe('Search', () => {
   })
 
   it('should not to be onKeyPress worked', async () => {
-    render(<SearchInputArea defaultSearchWord={'test'} />)
+    render(<SearchInputArea defaultKeyword={'test'} />)
     fireEvent.keyDown(screen.getByPlaceholderText('keyword'), {
       key: 'Escape',
       code: 27,
@@ -59,7 +59,7 @@ describe('Search', () => {
   })
 
   it('should be onClick worked', async () => {
-    render(<SearchInputArea defaultSearchWord={'test'} />)
+    render(<SearchInputArea defaultKeyword={'test'} />)
     fireEvent.click(screen.getByRole('button'))
     await waitFor(() => {
       expect(mockPush).toBeCalledTimes(1)

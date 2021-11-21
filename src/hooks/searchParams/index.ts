@@ -5,14 +5,14 @@ import { SearchParams } from 'src/types'
 export function useSearchParams() {
   const router = useRouter()
   const { keyword, page } = router.query
-  const searchWord = (keyword as string) || ''
+  const defaultKeyword = (keyword as string) || ''
   const defaultPage = (page as string) || '1'
-  const params: SearchParams = { searchWord: searchWord, page: defaultPage }
+  const params: SearchParams = { keyword: defaultKeyword, page: defaultPage }
 
   const searchArticlesWithPager = (paginationIndex: number) => {
     router.push({
       pathname: '/posts',
-      query: { keyword: params.searchWord, page: String(paginationIndex) },
+      query: { keyword: params.keyword, page: String(paginationIndex) },
     })
   }
 

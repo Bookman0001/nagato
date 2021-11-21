@@ -35,7 +35,7 @@ export type Argument = {
 }
 
 export type SearchParams = {
-  searchWord: string
+  keyword: string
   page: string
 }
 
