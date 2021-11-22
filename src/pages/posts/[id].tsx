@@ -1,5 +1,6 @@
-import styled from 'styled-components'
 import { useRouter } from 'next/router'
+import styled from 'styled-components'
+import sanitizeHtml from 'sanitize-html'
 
 import { articlesController } from 'src/controller/articles'
 import { articleController } from 'src/controller/article'
@@ -40,7 +41,9 @@ export default function Post({ article }: Props) {
   return (
     <BlogLayout title={article.title} article={article}>
       <div>
-        <Content dangerouslySetInnerHTML={{ __html: article.content }} />
+        <Content
+          dangerouslySetInnerHTML={{ __html: sanitizeHtml(article.content) }}
+        />
         <LinkWrapper onClick={() => router.back()}>
           <StyledLink>←Back</StyledLink>
         </LinkWrapper>
