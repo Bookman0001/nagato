@@ -45,7 +45,7 @@ export default function Post({ article }: Props) {
           dangerouslySetInnerHTML={{ __html: sanitizeHtml(article.content) }}
         />
         <LinkWrapper onClick={() => router.back()}>
-          <StyledLink>←Back</StyledLink>
+          <StyledLink>Back</StyledLink>
         </LinkWrapper>
       </div>
     </BlogLayout>
