@@ -2,20 +2,17 @@
  * @jest-environment jsdom
  */
 import fetchMock from 'fetch-mock'
-import MockDate from 'mockdate'
 
 import { fetchSearchedArticles } from 'src/repositories/client/articles'
-import { ArticlesApiResponse, SearchParams } from 'src/types'
-
-MockDate.set('2021-01-01')
+import { ArticlesResponse, SearchParams } from 'src/types'
 
 const mockResponse = {
   contents: [
     {
       id: '1',
-      createdAt: new Date(),
-      updatedAt: new Date(),
-      publishedAt: new Date(),
+      createdAt: '1995-05-01',
+      updatedAt: '1995-05-01',
+      publishedAt: '1995-05-01',
       title: 'title',
       description: 'description',
       content: 'content',
@@ -24,7 +21,7 @@ const mockResponse = {
   totalCount: 1,
   offset: 1,
   limit: 1,
-} as ArticlesApiResponse
+} as ArticlesResponse
 
 describe('fetchSearchedArticles', () => {
   it('to be sccusessful', async () => {

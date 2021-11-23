@@ -1,5 +1,5 @@
 import { get } from 'src/services/axios'
-import { ArticlesApiResponse, Argument, SearchParams } from 'src/types'
+import { ArticlesResponse, Params, SearchParams } from 'src/types'
 
 export async function fetchAllArticles({
   limit,
@@ -7,27 +7,27 @@ export async function fetchAllArticles({
 }: {
   limit: number
   offset: number
-}): Promise<ArticlesApiResponse> {
-  return await get<ArticlesApiResponse>(
+}): Promise<ArticlesResponse> {
+  return await get<ArticlesResponse>(
     `/technology-articles?offset=${offset}&limit=${limit}`
   )
 }
 
 export async function fetchLimitedArtcles(
-  argument: Argument
-): Promise<ArticlesApiResponse> {
-  return await get<ArticlesApiResponse>(
-    `/technology-articles?limit=${argument.limit}`
+  params: Params
+): Promise<ArticlesResponse> {
+  return await get<ArticlesResponse>(
+    `/technology-articles?limit=${params.limit}`
   )
 }
 
 export async function fetchSearchedArticles(
   params: SearchParams
-): Promise<ArticlesApiResponse> {
+): Promise<ArticlesResponse> {
   const limit = 10
   const page = Number(params.page) || 1
   const offset = page > 1 ? page * limit - limit : 0
-  return await get<ArticlesApiResponse>(
+  return await get<ArticlesResponse>(
     `/technology-articles?q=${params.keyword}&limit=${limit}&offset=${offset}`
   )
 }

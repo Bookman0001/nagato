@@ -1,36 +1,38 @@
-export type ArticlesApiResponse = {
-  contents: Array<ArticleResponse>
-  totalCount: number
-  offset: number
-  limit: number
+/* API Response Type Definition */
+export type ArticlesResponse = {
+  readonly contents: Array<ArticleResponse>
+  readonly totalCount: number
+  readonly offset: number
+  readonly limit: number
 }
 
 export type ArticleResponse = {
-  id: string
-  createdAt: Date
-  updatedAt: Date
-  publishedAt: Date
-  title: string
-  description: string
-  content: string
+  readonly id: string
+  readonly createdAt: string
+  readonly updatedAt: string
+  readonly publishedAt: string
+  readonly title: string
+  readonly description: string
+  readonly content: string
 }
 
-export type ArticleContents = {
-  contents: Array<Article>
-  totalCount: number
-  offset: number
-  limit: number
+/* App Type Definition */
+export type ArticlesPagination = {
+  readonly contents: Array<Article>
+  readonly totalCount: number
+  readonly offset: number
+  readonly limit: number
 }
 
 export type Article = {
-  id: string
-  publishedAt: string
-  title: string
-  description: string
-  content: string
+  readonly id: string
+  readonly publishedAt: string
+  readonly title: string
+  readonly description: string
+  readonly content: string
 }
 
-export type Argument = {
+export type Params = {
   limit: number
 }
 
@@ -38,17 +40,3 @@ export type SearchParams = {
   keyword: string
   page: string
 }
-
-type ContactEvent = {
-  action: 'submit_form'
-  category: 'Contact'
-  label: string
-}
-
-type ClickEvent = {
-  action: 'click'
-  category: 'Other'
-  label: string
-}
-
-export type Event = ContactEvent | ClickEvent

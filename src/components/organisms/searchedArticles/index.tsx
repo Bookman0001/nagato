@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { useSearchParams } from 'src/hooks/searchParams'
 import ArticleContent from 'src/components/molecures/articleContent'
 import Pagination from 'src/components/atoms/pagination'
-import { ArticleContents } from 'src/types'
+import { ArticlesPagination } from 'src/types'
 
 interface Props {
-  articles: ArticleContents
+  articles: ArticlesPagination
   currentIndex: number
 }
 
