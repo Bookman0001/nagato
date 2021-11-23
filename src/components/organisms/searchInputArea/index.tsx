@@ -14,7 +14,7 @@ interface Props {
 export default function SearchInputArea({ defaultKeyword }: Props) {
   const { searchArticlesWithKeyword } = useSearchParams()
   const [keyword, setKeyword] = useState<string>(defaultKeyword)
-  const input = useRef<HTMLInputElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setKeyword(e.target.value)
@@ -23,7 +23,7 @@ export default function SearchInputArea({ defaultKeyword }: Props) {
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Enter') {
       searchArticlesWithKeyword(keyword)
-      input.current?.blur()
+      inputRef.current?.blur()
     }
   }
 
@@ -36,7 +36,7 @@ export default function SearchInputArea({ defaultKeyword }: Props) {
       <Title>Articles Search</Title>
       <DetailWrapper>
         <SearchInput
-          inputRef={input}
+          inputRef={inputRef}
           placeholder={'keyword'}
           onChange={handleChange}
           defaultValue={defaultKeyword}
