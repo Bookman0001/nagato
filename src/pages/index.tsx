@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { ArticleContents } from 'src/types'
+import { ArticlesPagination } from 'src/types'
 import { articlesController } from 'src/controller/articles'
 import Introduction from 'src/components/organisms/introduction'
 import TopLayout from 'src/components/templates/topLayout'
@@ -8,7 +8,7 @@ import Articles from 'src/components/organisms/articles'
 import { DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Props {
-  articles: ArticleContents
+  articles: ArticlesPagination
 }
 
 export async function getStaticProps() {

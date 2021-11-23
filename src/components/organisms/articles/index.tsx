@@ -1,13 +1,13 @@
 import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
-import { ArticleContents } from 'src/types'
+import { ArticlesPagination } from 'src/types'
 import ArticleContent from 'src/components/molecures/articleContent'
 import Title from 'src/components/atoms/title'
 import Button from 'src/components/atoms/button'
 
 interface Props {
-  articles: ArticleContents
+  articles: ArticlesPagination
 }
 
 export default function Articles({ articles }: Props) {

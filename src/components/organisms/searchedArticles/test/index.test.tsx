@@ -5,7 +5,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 
 import SearchedArticles from 'src/components/organisms/searchedArticles'
 import * as useSearchParams from 'src/hooks/searchParams'
-import { ArticleContents } from 'src/types'
+import { ArticlesPagination } from 'src/types'
 
 const mockedClick = jest.fn()
 const mockSearch = jest.fn()
@@ -24,7 +24,7 @@ describe('SearchedArticles', () => {
     mockSearch.mockClear()
   })
   it('should be rendered correctlly with data', () => {
-    const emptyArticles: ArticleContents = {
+    const emptyArticles: ArticlesPagination = {
       contents: [
         {
           id: 'dummy',
@@ -44,7 +44,7 @@ describe('SearchedArticles', () => {
   })
 
   it('should be rendered correctlly with nothing data', () => {
-    const emptyArticles: ArticleContents = {
+    const emptyArticles: ArticlesPagination = {
       contents: [],
       totalCount: 0,
       offset: 0,
@@ -55,7 +55,7 @@ describe('SearchedArticles', () => {
   })
 
   it('should be worked onClick', () => {
-    const emptyArticles: ArticleContents = {
+    const emptyArticles: ArticlesPagination = {
       contents: [
         {
           id: 'dummy',

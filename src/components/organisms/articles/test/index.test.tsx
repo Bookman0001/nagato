@@ -4,7 +4,7 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 
 import Articles from 'src/components/organisms/articles'
-import { ArticleContents } from 'src/types'
+import { ArticlesPagination } from 'src/types'
 
 const mockPush = jest.fn()
 
@@ -12,7 +12,7 @@ jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
   push: mockPush,
 }))
 
-const articles: ArticleContents = {
+const articles: ArticlesPagination = {
   contents: [
     {
       id: 'dummy',

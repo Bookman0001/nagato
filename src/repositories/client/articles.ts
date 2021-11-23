@@ -1,4 +1,4 @@
-import { ArticlesApiResponse, SearchParams } from 'src/types'
+import { ArticlesResponse, SearchParams } from 'src/types'
 
 export async function fetchSearchedArticles(params: SearchParams) {
   const encodedParams: SearchParams = {
@@ -13,6 +13,6 @@ export async function fetchSearchedArticles(params: SearchParams) {
       body: JSON.stringify(encodedParams),
     }
   )
-  const data: ArticlesApiResponse = await response.json()
+  const data: ArticlesResponse = await response.json()
   return data
 }
