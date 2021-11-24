@@ -51,7 +51,7 @@ export default function SearchInputArea({ defaultKeyword }: Props) {
 }
 
 const Section = styled.section`
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
 `
 
 const DetailWrapper = styled.div`

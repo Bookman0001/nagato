@@ -8,11 +8,7 @@ interface Props {
 }
 
 export default function MainTitle({ children }: Props) {
-  return (
-    <TitleContainer>
-      <>{children}</>
-    </TitleContainer>
-  )
+  return <TitleContainer>{children}</TitleContainer>
 }
 
 const TitleContainer = styled.h1`
@@ -24,8 +20,5 @@ const TitleContainer = styled.h1`
   padding-bottom: 50px;
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     font-size: 1.5rem;
-    span {
-      font-size: 2.5rem;
-    }
   }
 `

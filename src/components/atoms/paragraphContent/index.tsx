@@ -6,14 +6,8 @@ interface Props {
 }
 
 export default function ParagraphContent({ children }: Props) {
-  return (
-    <Container>
-      <Paragraph>{children}</Paragraph>
-    </Container>
-  )
+  return <Paragraph>{children}</Paragraph>
 }
-
-const Container = styled.div``
 
 const Paragraph = styled.p`
   line-height: 1.7;
