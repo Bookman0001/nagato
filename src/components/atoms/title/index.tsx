@@ -8,11 +8,7 @@ interface Props {
 }
 
 export default function Title({ children }: Props) {
-  return (
-    <TitleContainer>
-      <>{children}</>
-    </TitleContainer>
-  )
+  return <TitleContainer>{children}</TitleContainer>
 }
 
 const TitleContainer = styled.h2`

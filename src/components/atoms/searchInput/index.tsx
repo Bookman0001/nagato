@@ -30,11 +30,12 @@ const StyledInput = styled.input`
   width: 100%;
   flex: 1;
   height: 100%;
+  min-height: 40px;
   font-size: 1.25rem;
   text-indent: 10px;
   border: 1px solid ${COLOR.BLACK};
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: ${COLOR.WHITE};
   @media (prefers-color-scheme: dark) {
     background-color: ${COLOR.BLACK};
     color: ${COLOR.WHITE};

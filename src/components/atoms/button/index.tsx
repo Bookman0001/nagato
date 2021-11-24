@@ -17,16 +17,17 @@ export default function Button({ children, onClick }: Props) {
   return <ButtonItem onClick={handleClick}>{children}</ButtonItem>
 }
 
-const ButtonItem = styled.button`
+const ButtonItem = styled.button<{ width?: string }>`
+  min-height: 40px;
   height: 100%;
   background-color: ${COLOR.WHITE};
   border: 2px solid ${COLOR.BLACK};
   border-radius: 8px;
-  padding: 5px 1rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   :hover {
     opacity: 0.7;

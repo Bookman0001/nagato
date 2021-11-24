@@ -11,11 +11,10 @@ export default {
 
 const Template: Story = (args) => (
   <>
-    <Button onClick={action('clicked')} {...args} />
+    <Button onClick={action('clicked')} {...args}>
+      ボタン
+    </Button>
   </>
 )
 
 export const Default = Template.bind({})
-Default.args = {
-  text: 'ボタン',
-}
