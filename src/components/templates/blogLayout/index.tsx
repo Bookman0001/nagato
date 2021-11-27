@@ -31,7 +31,7 @@ export default function BlogLayout({ title, article, children }: Props) {
 const Container = styled.div`
   max-width: 600px;
   margin: 4rem auto 4rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     padding: 0 2rem;
   }
