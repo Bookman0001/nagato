@@ -1,9 +1,9 @@
-import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import sanitizeHtml from 'sanitize-html'
 
 import { articlesController } from 'src/controller/articles'
 import { articleController } from 'src/controller/article'
+import { useBackToPage } from 'src/hooks/router/backToPage'
 import BlogLayout from 'src/components/templates/blogLayout'
 import { Article } from 'src/types'
 import { COLOR, DEVICE_WIDTH } from 'src/theme/constants'
@@ -36,7 +36,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export default function Post({ article }: Props) {
-  const router = useRouter()
+  const { backToTop } = useBackToPage()
 
   return (
     <BlogLayout title={article.title} article={article}>
@@ -44,8 +44,8 @@ export default function Post({ article }: Props) {
         <Content
           dangerouslySetInnerHTML={{ __html: sanitizeHtml(article.content) }}
         />
-        <LinkWrapper onClick={() => router.back()}>
-          <StyledLink>Back</StyledLink>
+        <LinkWrapper onClick={backToTop}>
+          <StyledLink>Back To Top</StyledLink>
         </LinkWrapper>
       </div>
     </BlogLayout>

@@ -1,7 +1,7 @@
 import { ChangeEvent, useState, KeyboardEvent, useRef } from 'react'
 import styled from 'styled-components'
 
-import { useSearchParams } from 'src/hooks/searchParams'
+import { useSearchParams } from 'src/hooks/router/searchParams'
 import Title from 'src/components/atoms/title'
 import SearchInput from 'src/components/atoms/searchInput'
 import Button from 'src/components/atoms/button'

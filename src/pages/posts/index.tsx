@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { useSearchedArticles } from 'src/hooks/articles'
-import { useSearchParams } from 'src/hooks/searchParams'
+import { useSearchParams } from 'src/hooks/router/searchParams'
 import SearchLayout from 'src/components/templates/searchLayout'
 import SkeletonArticles from 'src/components/organisms/searchedArticles/skeletonArticles'
 import SearchInputArea from 'src/components/organisms/searchInputArea'
