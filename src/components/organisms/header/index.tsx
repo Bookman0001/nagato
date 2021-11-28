@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 
+import HeaderIcon from 'src/components/atoms/icon/header'
 import { COLOR, DEVICE_WIDTH } from 'src/theme/constants'
 
 export default function Header() {
@@ -8,7 +9,9 @@ export default function Header() {
     <HeaderContainer>
       <Container>
         <Link href="/">
-          <LogoText> K Atlier</LogoText>
+          <LogoText>
+            <HeaderIcon />
+          </LogoText>
         </Link>
       </Container>
     </HeaderContainer>
@@ -40,14 +43,13 @@ const Container = styled.div`
 `
 
 const LogoText = styled.div`
+  width: 100%;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  left: 50%;
-  margin-left: -1.6rem;
-  font-size: 1rem;
+  margin: 0 auto;
   cursor: pointer;
   :hover {
     opacity: 0.7;

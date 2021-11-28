@@ -2,7 +2,7 @@ interface Props {
   size: number
 }
 
-export default function MyIcon({ size }: Props) {
+export default function Logo({ size }: Props) {
   return (
     <svg
       data-testid={'my-icon'}

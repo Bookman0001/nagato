@@ -9,7 +9,7 @@ export default function Introduction() {
   return (
     <Section>
       <TitleContainer>
-        <MainTitle>K Atlier</MainTitle>
+        <MainTitle>Introduction</MainTitle>
       </TitleContainer>
       <IntroductionWrapper>
         <ParagraphContent>

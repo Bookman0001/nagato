@@ -6,7 +6,7 @@ interface Props {
   size: number
 }
 
-export default function SearchIcon({ size }: Props) {
+export default function Search({ size }: Props) {
   const height = size + 5
   return (
     <Svg

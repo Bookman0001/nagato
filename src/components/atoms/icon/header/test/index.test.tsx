@@ -3,11 +3,11 @@
  */
 import { render, screen } from '@testing-library/react'
 
-import Header from 'src/components/organisms/header'
+import HeaderIcon from 'src/components/atoms/icon/header'
 
-describe('Header', () => {
-  it('should be rendered correctlly in default', () => {
-    render(<Header />)
+describe('HeaderIcon', () => {
+  it('should be rendered', () => {
+    render(<HeaderIcon />)
     expect(screen.getByTestId('header-icon')).toBeDefined()
   })
 })

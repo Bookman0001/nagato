@@ -4,7 +4,7 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 
 import SearchedArticles from 'src/components/organisms/searchedArticles'
-import * as useSearchParams from 'src/hooks/searchParams'
+import * as useSearchParams from 'src/hooks/router/searchParams'
 import { ArticlesPagination } from 'src/types'
 
 const mockedClick = jest.fn()
