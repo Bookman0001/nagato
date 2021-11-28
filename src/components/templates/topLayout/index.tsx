@@ -17,7 +17,7 @@ export default function TopLayout({ children }: Props) {
       <MetaTag />
       <Header />
       <PictureContainer>
-        <MyIcon size={220} />
+        <MyIcon size={100} />
       </PictureContainer>
       {children}
       <Footer />
@@ -29,12 +29,9 @@ const PictureContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10rem 0 5rem;
+  padding: 5rem 0 5rem;
   div {
     padding: 0 50px;
-  }
-  @media (max-width: ${DEVICE_WIDTH.TABLET}) {
-    padding: 7rem 0 7rem;
   }
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
     padding: 4rem 0 4rem;
