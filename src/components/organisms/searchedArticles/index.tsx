@@ -62,7 +62,7 @@ const PaginationWrapper = styled.div`
 `
 
 const Wrapper = styled.div`
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
   :last-child {
     padding-bottom: 0;
   }

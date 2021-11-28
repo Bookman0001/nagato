@@ -17,14 +17,22 @@ export const GlobalStyle = createGlobalStyle`
     h1 {
       font-family: initial;
       margin: 0;
+      padding: 0;
     }
     h2 {
       font-family: initial;
       margin: 0;
+      padding: 0;
     }
     h3 {
       font-family: initial;
       margin: 0;
+      padding: 0;
+    }
+    h4 {
+      font-family: initial;
+      margin: 0;
+      padding: 0;
     }
     p {
       margin: 0;

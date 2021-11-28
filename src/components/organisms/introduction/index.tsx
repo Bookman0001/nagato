@@ -21,7 +21,7 @@ export default function Introduction() {
 }
 
 const Section = styled.section`
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
 `
 
 const TitleContainer = styled.div`
@@ -35,5 +35,5 @@ const IntroductionWrapper = styled.div`
   justify-content: center;
   text-align: center;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 1rem;
 `
