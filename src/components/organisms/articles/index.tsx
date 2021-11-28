@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import { ArticlesPagination } from 'src/types'
 import ArticleContent from 'src/components/molecures/articleContent'
-import Title from 'src/components/atoms/title'
 import Button from 'src/components/atoms/button'
 
 interface Props {
@@ -22,7 +21,6 @@ export default function Articles({ articles }: Props) {
 
   return (
     <Section>
-      <Title>Articles</Title>
       <DetailWrapper>
         {contents.map((article) => {
           return (
@@ -48,7 +46,7 @@ const DetailWrapper = styled.div`
 `
 
 const Wrapper = styled.div`
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
   :last-child {
     padding-bottom: 0;
   }
