@@ -4,7 +4,7 @@ import { Meta } from '@storybook/react/types-6-0'
 import SearchIcon from './'
 
 export default {
-  title: 'SearchIcon',
+  title: 'icon/SearchIcon',
   component: SearchIcon,
 } as Meta
 

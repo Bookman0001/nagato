@@ -3,7 +3,7 @@
  */
 import { render, screen } from '@testing-library/react'
 
-import MyIcon from 'src/components/atoms/myIcon'
+import MyIcon from 'src/components/atoms/icon/logo'
 
 describe('Title', () => {
   it('should be rendered', () => {

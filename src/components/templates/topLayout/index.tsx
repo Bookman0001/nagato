@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import MetaTag from 'src/components/organisms/meta/default'
 import Header from 'src/components/organisms/header'
 import Footer from 'src/components/organisms/footer'
-import MyIcon from 'src/components/atoms/myIcon'
+import MyIcon from 'src/components/atoms/icon/logo'
 import { DEVICE_WIDTH } from 'src/theme/constants'
 
 interface Props {

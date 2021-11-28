@@ -3,7 +3,7 @@
  */
 import { render, screen } from '@testing-library/react'
 
-import SearchIcon from 'src/components/atoms/searchIcon'
+import SearchIcon from 'src/components/atoms/icon/search'
 
 describe('SearchIcon', () => {
   it('should be rendered', () => {

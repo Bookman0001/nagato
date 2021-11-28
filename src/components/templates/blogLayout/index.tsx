@@ -40,12 +40,12 @@ const Container = styled.div`
 const Main = styled.main`
   display: flex;
   align-items: center;
-  line-height: 2.5;
+  line-height: 2;
   @media (max-width: ${DEVICE_WIDTH.TABLET}) {
     display: block;
   }
   p {
-    line-height: 2.5;
+    line-height: 2;
   }
   img {
     width: 100%;

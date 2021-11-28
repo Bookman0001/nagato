@@ -1,13 +1,13 @@
 import React from 'react'
 import { Meta } from '@storybook/react/types-6-0'
 
-import MyIcon from './'
+import Header from './'
 
 export default {
-  title: 'MyIcon',
-  component: MyIcon,
+  title: 'icon/Header',
+  component: Header,
 } as Meta
 
-const Template: React.VFC<{}> = () => <MyIcon size={50} />
+const Template: React.VFC<{}> = () => <Header />
 
 export const Default = Template.bind({})
