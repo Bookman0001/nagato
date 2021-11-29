@@ -1,10 +1,14 @@
+import styled from 'styled-components'
+
+import { COLOR } from 'src/theme/constants'
+
 interface Props {
   size: number
 }
 
 export default function Mail({ size }: Props) {
   return (
-    <svg
+    <Svg
       data-testid={'mail-icon'}
       width={size}
       height={size}
@@ -18,8 +22,8 @@ export default function Mail({ size }: Props) {
         width="235"
         height="170"
         rx="16"
-        fill="#21A2B8"
-        stroke="black"
+        fill={COLOR.WHITE}
+        stroke={COLOR.BLACK}
         strokeWidth="8"
       />
       <line
@@ -27,7 +31,7 @@ export default function Mail({ size }: Props) {
         y1="122.122"
         x2="234.222"
         y2="10.1224"
-        stroke="black"
+        stroke={COLOR.BLACK}
         strokeWidth="8"
       />
       <line
@@ -35,9 +39,21 @@ export default function Mail({ size }: Props) {
         y1="10.1467"
         x2="123.803"
         y2="122.147"
-        stroke="black"
+        stroke={COLOR.BLACK}
         strokeWidth="8"
       />
-    </svg>
+    </Svg>
   )
 }
+
+const Svg = styled.svg`
+  @media (prefers-color-scheme: dark) {
+    rect {
+      fill: ${COLOR.BLACK};
+      stroke: ${COLOR.WHITE};
+    }
+    line {
+      stroke: ${COLOR.WHITE};
+    }
+  }
+`
