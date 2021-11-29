@@ -13,7 +13,7 @@ interface Props {
 
 export async function getStaticProps() {
   const { getLimitedArticles } = articlesController()
-  const articles = await getLimitedArticles({ limit: 6 })
+  const articles = await getLimitedArticles({ limit: 5 })
   return {
     props: {
       articles: articles,
