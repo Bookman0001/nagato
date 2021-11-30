@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Meta } from '@storybook/react/types-6-0'
 
-import SearchInput from './'
+import Input from './'
 import { COLOR } from 'src/theme/constants'
 
 export default {
-  title: 'SearchInput',
-  component: SearchInput,
+  title: 'form/Input',
+  component: Input,
 } as Meta
 
 const Template: React.VFC<{}> = () => {
@@ -15,13 +15,29 @@ const Template: React.VFC<{}> = () => {
 
   return (
     <div>
-      <SearchInput
+      <Input
         defaultValue={''}
         placeholder={'add place holder'}
         onChange={(e) => setText(e.target.value)}
       />
       <Container>属性値:{text}</Container>
     </div>
+  )
+}
+
+const Error: React.VFC<{}> = () => {
+  const [text, setText] = useState<string>('')
+
+  return (
+    <>
+      <Input
+        hasError
+        defaultValue={''}
+        placeholder={'add place holder'}
+        onChange={(e) => setText(e.target.value)}
+      />
+      <Container>属性値:{text}</Container>
+    </>
   )
 }
 
@@ -32,3 +48,5 @@ const Container = styled.div`
 `
 
 export const Default = Template.bind({})
+
+export const ErrorStatus = Error.bind({})

@@ -5,14 +5,16 @@ import { COLOR } from '../../../theme/constants'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode
-  onClick: () => void
+  onClick?: () => void
 }
 
 export default function Button({ children, onClick }: Props) {
   const handleClick = (e: MouseEvent) => {
-    e.stopPropagation()
-    e.preventDefault()
-    onClick()
+    if (onClick) {
+      e.stopPropagation()
+      e.preventDefault()
+      onClick()
+    }
   }
   return <ButtonItem onClick={handleClick}>{children}</ButtonItem>
 }

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 
 import Description from 'src/components/atoms/paragraphContent'
@@ -25,9 +26,11 @@ export default function Footer() {
           />
         </a>
       </PictureContainer>
-      <MailContainer href="mailto:odonel51486666@gmail.com">
-        <MailIcon size={30} />
-      </MailContainer>
+      <Link href={'/reception'}>
+        <MailContainer>
+          <MailIcon size={30} />
+        </MailContainer>
+      </Link>
     </FooterContainer>
   )
 }
@@ -53,7 +56,7 @@ const PictureContainer = styled.div`
   margin-left: 1rem;
 `
 
-const MailContainer = styled.a`
+const MailContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-left: 1rem;
