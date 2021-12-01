@@ -60,4 +60,5 @@ const MailContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-left: 1rem;
+  cursor: pointer;
 `

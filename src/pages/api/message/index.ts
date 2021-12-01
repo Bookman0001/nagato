@@ -1,18 +1,22 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
-import { fetchSearchedArticles } from 'src/repositories/articles'
-import { SearchParams } from 'src/types'
+import { validateFormParams } from 'src/util/api'
+import { sendMessageViaSendGrid } from 'src/services/sendGrid'
+import { FormParams } from 'src/types'
 
-async function getSearchedArticles(req: NextApiRequest, res: NextApiResponse) {
-  const reqBody = req.body as SearchParams
-  const articlesResponse = await fetchSearchedArticles(reqBody)
-    .then((articles) => {
-      return articles
+async function sendMessage(req: NextApiRequest, res: NextApiResponse) {
+  const reqBody = req.body as FormParams | undefined
+
+  if (!reqBody || !validateFormParams(reqBody)) {
+    return res.status(400).json('bad request')
+  }
+  sendMessageViaSendGrid(reqBody)
+    .then(() => {
+      return res.status(200).json('success')
     })
     .catch(() => {
-      return null
+      return res.status(500).json('SendGrid Error')
     })
-  return res.status(200).json(articlesResponse)
 }
 
-export default getSearchedArticles
+export default sendMessage

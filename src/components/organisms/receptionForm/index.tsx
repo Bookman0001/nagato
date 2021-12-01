@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import { useForm, useFormState } from 'react-hook-form'
 
@@ -16,6 +17,7 @@ type FormInput = {
 }
 
 export default function ReceptionForm() {
+  const router = useRouter()
   const { register, handleSubmit, control } = useForm<FormInput>()
   const { errors } = useFormState({ control })
   const { isLoading, error, createMessage } = useCreateMessage()
@@ -24,7 +26,7 @@ export default function ReceptionForm() {
   const onSubmit = async (inputData: FormInput) => {
     const completed = await createMessage(inputData)
     if (completed) {
-      console.log('成功')
+      router.push({ pathname: '/thanks' })
     }
   }
 
@@ -80,6 +82,7 @@ export default function ReceptionForm() {
             </LabelContent>
           }
           placeholder={'Hello.'}
+          rows={6}
           hasError={!!errors.content}
           {...register('content', { required: true })}
         />
@@ -90,7 +93,7 @@ export default function ReceptionForm() {
         )}
       </Container>
       <ButtonContainer>
-        <Button disabled={isLoading}>送信</Button>
+        <Button disabled={isLoading}>{isLoading ? '送信中' : '送信'}</Button>
       </ButtonContainer>
       {error && (
         <ApiErrorContent>サーバーでエラーが発生しました</ApiErrorContent>
@@ -100,7 +103,7 @@ export default function ReceptionForm() {
 }
 
 const Container = styled.div`
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
 `
 
 const ButtonContainer = styled(Container)`
