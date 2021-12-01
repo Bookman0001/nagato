@@ -5,14 +5,13 @@ import { SearchParams } from 'src/types'
 
 async function getSearchedArticles(req: NextApiRequest, res: NextApiResponse) {
   const reqBody = req.body as SearchParams
-  const articlesResponse = await fetchSearchedArticles(reqBody)
+  return await fetchSearchedArticles(reqBody)
     .then((articles) => {
-      return articles
+      return res.status(200).json(articles)
     })
     .catch(() => {
-      return null
+      return res.status(500).json({ message: 'search error' })
     })
-  return res.status(200).json(articlesResponse)
 }
 
 export default getSearchedArticles

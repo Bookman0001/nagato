@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { useSearchParams } from 'src/hooks/router/searchParams'
 import Title from 'src/components/atoms/title'
-import SearchInput from 'src/components/atoms/searchInput'
+import SearchInput from 'src/components/atoms/form/input'
 import Button from 'src/components/atoms/button'
 import SearchIcon from 'src/components/atoms/icon/search'
 
@@ -36,7 +36,7 @@ export default function SearchInputArea({ defaultKeyword }: Props) {
       <Title>Articles Search</Title>
       <DetailWrapper>
         <SearchInput
-          inputRef={inputRef}
+          ref={inputRef}
           placeholder={'keyword'}
           onChange={handleChange}
           defaultValue={defaultKeyword}

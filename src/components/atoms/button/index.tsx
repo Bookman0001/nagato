@@ -4,17 +4,24 @@ import styled from 'styled-components'
 import { COLOR } from '../../../theme/constants'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
+  disabled?: boolean
   children?: React.ReactNode
-  onClick: () => void
+  onClick?: () => void
 }
 
-export default function Button({ children, onClick }: Props) {
+export default function Button({ disabled, children, onClick }: Props) {
   const handleClick = (e: MouseEvent) => {
-    e.stopPropagation()
-    e.preventDefault()
-    onClick()
+    if (onClick) {
+      e.stopPropagation()
+      e.preventDefault()
+      onClick()
+    }
   }
-  return <ButtonItem onClick={handleClick}>{children}</ButtonItem>
+  return (
+    <ButtonItem onClick={handleClick} disabled={disabled}>
+      {children}
+    </ButtonItem>
+  )
 }
 
 const ButtonItem = styled.button<{ width?: string }>`
@@ -30,6 +37,9 @@ const ButtonItem = styled.button<{ width?: string }>`
   font-size: 1.5rem;
   cursor: pointer;
   :hover {
+    opacity: 0.7;
+  }
+  :disabled {
     opacity: 0.7;
   }
   @media (prefers-color-scheme: dark) {

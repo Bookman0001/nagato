@@ -6,7 +6,7 @@ import Select from './'
 import { COLOR } from 'src/theme/constants'
 
 export default {
-  title: 'Select',
+  title: 'form/Select',
   component: Select,
 } as Meta
 

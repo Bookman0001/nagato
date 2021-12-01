@@ -3,9 +3,9 @@
  */
 import { render, screen, fireEvent } from '@testing-library/react'
 
-import SearchInput from 'src/components/atoms/searchInput'
+import TextArea from 'src/components/atoms/form/textArea'
 
-describe('SearchInput', () => {
+describe('TextArea', () => {
   beforeEach(() => {
     jest.clearAllMocks()
   })
@@ -13,7 +13,7 @@ describe('SearchInput', () => {
   it('should be rendered with onChange', () => {
     const handleChange = jest.fn()
     render(
-      <SearchInput
+      <TextArea
         defaultValue={'default value'}
         placeholder={'dummy place holder'}
         onChange={handleChange}
@@ -26,26 +26,21 @@ describe('SearchInput', () => {
     expect(handleChange).toHaveBeenCalledTimes(1)
   })
 
-  it('should be rendered with onKeyDown', () => {
+  it('should be rendered with labelEl', () => {
     const handleChange = jest.fn()
-    const handleKeyDown = jest.fn()
     render(
-      <SearchInput
+      <TextArea
+        labelEl={<span>ラベル要素</span>}
         defaultValue={'default value'}
         placeholder={'dummy place holder'}
         onChange={handleChange}
-        onKeyDown={handleKeyDown}
       />
     )
     expect(screen.getByPlaceholderText('dummy place holder')).toBeDefined()
+    expect(screen.getByText('ラベル要素')).toBeDefined()
     fireEvent.change(screen.getByPlaceholderText('dummy place holder'), {
       target: { value: 'React Go.' },
     })
-    fireEvent.keyDown(screen.getByPlaceholderText('dummy place holder'), {
-      key: 'Enter',
-      code: 13,
-    })
     expect(handleChange).toHaveBeenCalledTimes(1)
-    expect(handleKeyDown).toHaveBeenCalledTimes(1)
   })
 })

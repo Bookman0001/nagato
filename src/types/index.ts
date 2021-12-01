@@ -40,3 +40,9 @@ export type SearchParams = {
   keyword: string
   page: string
 }
+
+export type FormParams = {
+  readonly email: string
+  readonly name: string
+  readonly content: string
+}

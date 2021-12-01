@@ -3,6 +3,7 @@ export const COLOR = {
   WHITE: '#ffffff',
   BLACK: '#303030',
   GRAY: '#f5f5f5',
+  WARNING: '#db235c',
 }
 
 export const DEVICE_WIDTH = {
