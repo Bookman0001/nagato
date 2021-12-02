@@ -1,13 +1,13 @@
 import React from 'react'
 import { Meta } from '@storybook/react/types-6-0'
 
-import Star from './'
+import Circle from './'
 
 export default {
-  title: 'icon/Star',
-  component: Star,
+  title: 'icon/Circle',
+  component: Circle,
 } as Meta
 
-const Template: React.VFC<{}> = () => <Star size={30} />
+const Template: React.VFC<{}> = () => <Circle size={12} />
 
 export const Default = Template.bind({})

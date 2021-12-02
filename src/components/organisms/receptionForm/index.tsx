@@ -6,7 +6,7 @@ import { useCreateMessage } from 'src/hooks/message'
 import Input from 'src/components/atoms/form/input'
 import TextArea from 'src/components/atoms/form/textArea'
 import Button from 'src/components/atoms/button'
-import Star from 'src/components/atoms/icon/star'
+import Circle from 'src/components/atoms/icon/circle'
 import { regExp } from 'src/util'
 import { COLOR } from 'src/theme/constants'
 
@@ -37,7 +37,7 @@ export default function ReceptionForm() {
           labelEl={
             <LabelContent>
               メールアドレス
-              <Star size={12} />
+              <Circle size={6} />
             </LabelContent>
           }
           type={'email'}
@@ -60,7 +60,7 @@ export default function ReceptionForm() {
           labelEl={
             <LabelContent>
               名前
-              <Star size={12} />
+              <Circle size={6} />
             </LabelContent>
           }
           placeholder={'John Doe'}
@@ -78,7 +78,7 @@ export default function ReceptionForm() {
           labelEl={
             <LabelContent>
               メッセージ内容
-              <Star size={12} />
+              <Circle size={6} />
             </LabelContent>
           }
           placeholder={'Hello.'}
@@ -127,4 +127,7 @@ const LabelContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  svg {
+    margin-left: 5px;
+  }
 `

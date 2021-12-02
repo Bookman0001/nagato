@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 
 import { validateFormParams } from 'src/util/api'
 import { postMessage } from 'src/repositories/message'
-import { sendMailViaSendGrid } from 'src/services/sendGrid'
+import { sendMail } from 'src/services/sendGrid'
 import { FormParams } from 'src/types'
 
 async function sendMessage(req: NextApiRequest, res: NextApiResponse) {
@@ -14,7 +14,7 @@ async function sendMessage(req: NextApiRequest, res: NextApiResponse) {
 
   postMessage(reqBody)
     .then(() => {
-      sendMailViaSendGrid(reqBody)
+      sendMail(reqBody)
         .then(() => {
           return res.status(200).json('success')
         })
