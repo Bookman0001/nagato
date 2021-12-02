@@ -1,6 +1,7 @@
+import { useState } from 'react'
+
 import { postMessage } from 'src/repositories/client/message'
 import { FormParams } from 'src/types'
-import { useState } from 'react'
 
 export function useCreateMessage() {
   const [isLoading, setIsLoading] = useState<boolean>(false)

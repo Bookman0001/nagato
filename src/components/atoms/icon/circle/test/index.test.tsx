@@ -3,11 +3,11 @@
  */
 import { render, screen } from '@testing-library/react'
 
-import StarIcon from 'src/components/atoms/icon/star'
+import Circle from 'src/components/atoms/icon/circle'
 
 describe('SearchIcon', () => {
   it('should be rendered', () => {
-    render(<StarIcon size={30} />)
-    expect(screen.getByTestId('star-icon')).toBeDefined()
+    render(<Circle size={30} />)
+    expect(screen.getByTestId('circle-icon')).toBeDefined()
   })
 })
