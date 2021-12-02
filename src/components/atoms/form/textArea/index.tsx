@@ -41,7 +41,6 @@ const StyledTextArea = styled.textarea<{ hasError: boolean }>`
   flex: 1;
   width: calc(100% - 20px);
   font-size: 1.25rem;
-  text-indent: 5px;
   padding: 10px;
   border: 1px solid ${COLOR.BLACK};
   border-radius: 8px;

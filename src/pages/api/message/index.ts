@@ -1,7 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
 import { validateFormParams } from 'src/util/api'
-import { sendMessageViaSendGrid } from 'src/services/sendGrid'
+import { postMessage } from 'src/repositories/message'
+import { sendMailViaSendGrid } from 'src/services/sendGrid'
 import { FormParams } from 'src/types'
 
 async function sendMessage(req: NextApiRequest, res: NextApiResponse) {
@@ -10,12 +11,19 @@ async function sendMessage(req: NextApiRequest, res: NextApiResponse) {
   if (!reqBody || !validateFormParams(reqBody)) {
     return res.status(400).json('bad request')
   }
-  sendMessageViaSendGrid(reqBody)
+
+  postMessage(reqBody)
     .then(() => {
-      return res.status(200).json('success')
+      sendMailViaSendGrid(reqBody)
+        .then(() => {
+          return res.status(200).json('success')
+        })
+        .catch(() => {
+          return res.status(500).json('Send Grid Error')
+        })
     })
     .catch(() => {
-      return res.status(500).json('SendGrid Error')
+      return res.status(500).json('Server Internal Error')
     })
 }
 

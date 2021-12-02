@@ -36,7 +36,7 @@ jest
     return {
       createMessage: createMessage,
       isLoading: true,
-      error: { status: 500 },
+      error: { name: '', message: 'error happened' },
     }
   })
   .mockImplementationOnce(() => {

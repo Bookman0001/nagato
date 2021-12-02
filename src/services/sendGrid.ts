@@ -12,7 +12,7 @@ type SgMessage = {
 const SEND_GRID_KEY: string = process.env.SEND_GRID_KEY || ''
 const ADMIN_EMAIL: string = process.env.SEND_GRID_ADMIN_EMAIL || ''
 
-export async function sendMessageViaSendGrid(params: FormParams) {
+export async function sendMailViaSendGrid(params: FormParams) {
   sgMail.setApiKey(SEND_GRID_KEY)
   const msg: SgMessage = {
     to: params.email,
@@ -20,9 +20,7 @@ export async function sendMessageViaSendGrid(params: FormParams) {
     subject: 'Thanks!🥳',
     text: `${params.name}様のメッセージを受け付けました。\n${params.content}`,
   }
-  try {
-    await sgMail.send(msg)
-  } catch (e) {
-    console.error(e)
-  }
+  return await sgMail.send(msg).catch((e) => {
+    throw e
+  })
 }
