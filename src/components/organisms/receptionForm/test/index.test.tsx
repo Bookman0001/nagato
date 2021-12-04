@@ -1,7 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 
 import ReceptionForm from 'src/components/organisms/receptionForm'
 import * as useCreateMessage from 'src/hooks/message'
@@ -29,6 +29,27 @@ jest
     return {
       createMessage: createMessage,
       isLoading: true,
+      error: { status: 500, name: 'error', message: '' },
+    }
+  })
+  .mockImplementationOnce(() => {
+    return {
+      createMessage: createMessage,
+      isLoading: true,
+      error: null,
+    }
+  })
+  .mockImplementationOnce(() => {
+    return {
+      createMessage: createMessage,
+      isLoading: false,
+      error: null,
+    }
+  })
+  .mockImplementationOnce(() => {
+    return {
+      createMessage: createMessage,
+      isLoading: false,
       error: null,
     }
   })
@@ -36,13 +57,6 @@ jest
     return {
       createMessage: createMessage,
       isLoading: true,
-      error: { name: '', message: 'error happened' },
-    }
-  })
-  .mockImplementationOnce(() => {
-    return {
-      createMessage: createMessage,
-      isLoading: false,
       error: null,
     }
   })
@@ -60,13 +74,30 @@ describe('ReceptionForm', () => {
     expect(screen.getByRole('button')).toBeDefined()
   })
 
+  it('to be rendered correctly with api error status', () => {
+    render(<ReceptionForm />)
+    expect(screen.getByText('サーバーでエラーが発生しました')).toBeDefined()
+  })
+
   it('to be rendered correctly with loading', () => {
     render(<ReceptionForm />)
     expect(screen.getByRole('button').textContent).toBe('送信中')
   })
 
-  it('to be rendered correctly with api error', () => {
+  it('to be fired onSubmit with success status', async () => {
     render(<ReceptionForm />)
-    expect(screen.getByText('サーバーでエラーが発生しました')).toBeDefined()
+    fireEvent.change(screen.getByPlaceholderText('sample@example.com'), {
+      target: { value: 'sample@example.com' },
+    })
+    fireEvent.change(screen.getByPlaceholderText('John Doe'), {
+      target: { value: 'John Doe' },
+    })
+    fireEvent.change(screen.getByPlaceholderText('Hello.'), {
+      target: { value: 'Hello.' },
+    })
+    fireEvent.click(screen.getByRole('button'))
+    await waitFor(() => {
+      expect(mockPush).toBeCalledTimes(1)
+    })
   })
 })
