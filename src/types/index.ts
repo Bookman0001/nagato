@@ -33,12 +33,12 @@ export type Article = {
 }
 
 export type Params = {
-  limit: number
+  readonly limit: number
 }
 
 export type SearchParams = {
-  keyword: string
-  page: string
+  readonly keyword: string
+  readonly page: string
 }
 
 export type FormParams = {
