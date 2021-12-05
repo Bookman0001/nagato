@@ -8,7 +8,7 @@ describe('regExp', () => {
     expect(regExp.email.test('_>@hoc.jp')).toBe(false)
   })
 
-  it('should return truewith balid mail', () => {
+  it('should return truewith valid mail', () => {
     expect(regExp.email.test('sample@example.com')).toBe(true)
   })
 })
