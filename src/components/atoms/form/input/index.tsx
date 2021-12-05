@@ -9,25 +9,12 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const Input = React.forwardRef<HTMLInputElement, Props>((props: Props, ref) => {
-  return (
-    <>
-      {props.labelEl && <Label>{props.labelEl}</Label>}
-      <StyledInput ref={ref} hasError={props.hasError || false} {...props} />
-    </>
-  )
+  return <StyledInput ref={ref} hasError={props.hasError || false} {...props} />
 })
 
 Input.displayName = 'Input'
 
 export default Input
-
-const Label = styled.label`
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  padding-bottom: 1rem;
-  font-weight: bold;
-`
 
 const StyledInput = styled.input<{ hasError: boolean }>`
   width: 100%;

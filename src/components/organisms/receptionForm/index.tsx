@@ -3,10 +3,12 @@ import styled from 'styled-components'
 import { useForm, useFormState } from 'react-hook-form'
 
 import { useCreateMessage } from 'src/hooks/message'
+import Label from 'src/components/atoms/form/label'
 import Input from 'src/components/atoms/form/input'
 import TextArea from 'src/components/atoms/form/textArea'
 import Button from 'src/components/atoms/button'
 import Circle from 'src/components/atoms/icon/circle'
+import ErrorMessage from './ErrorMessage'
 import { regExp } from 'src/util'
 import { COLOR } from 'src/theme/constants'
 
@@ -21,7 +23,7 @@ export default function ReceptionForm() {
   const { register, handleSubmit, control } = useForm<FormInput>()
   const { errors } = useFormState({ control })
   const { isLoading, error, createMessage } = useCreateMessage()
-  const { emailExp } = regExp
+  const { email } = regExp
 
   const onSubmit = async (inputData: FormInput) => {
     const completed = await createMessage(inputData)
@@ -33,63 +35,49 @@ export default function ReceptionForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Container>
+        <Label>
+          <LabelContent>
+            メールアドレス
+            <Circle size={6} />
+          </LabelContent>
+        </Label>
         <Input
-          labelEl={
-            <LabelContent>
-              メールアドレス
-              <Circle size={6} />
-            </LabelContent>
-          }
           type={'email'}
           placeholder={'sample@example.com'}
           hasError={!!errors.email}
-          {...register('email', { required: true, pattern: emailExp })}
+          {...register('email', { required: true, pattern: email })}
         />
-        {errors.email && (
-          <ErrorContent>
-            {errors.email.type === 'required'
-              ? '必須です'
-              : errors.email.type === 'pattern'
-              ? 'メールアドレスの形式が不正です'
-              : ''}
-          </ErrorContent>
-        )}
+        {errors.email && <ErrorMessage name={'email'} error={errors.email} />}
       </Container>
       <Container>
+        <Label>
+          <LabelContent>
+            名前
+            <Circle size={6} />
+          </LabelContent>
+        </Label>
         <Input
-          labelEl={
-            <LabelContent>
-              名前
-              <Circle size={6} />
-            </LabelContent>
-          }
           placeholder={'John Doe'}
           hasError={!!errors.name}
           {...register('name', { required: true })}
         />
-        {errors.name && (
-          <ErrorContent>
-            {errors.name.type === 'required' ? '必須です' : ''}
-          </ErrorContent>
-        )}
+        {errors.name && <ErrorMessage name={'name'} error={errors.name} />}
       </Container>
       <Container>
+        <Label>
+          <LabelContent>
+            メッセージ内容
+            <Circle size={6} />
+          </LabelContent>
+        </Label>
         <TextArea
-          labelEl={
-            <LabelContent>
-              メッセージ内容
-              <Circle size={6} />
-            </LabelContent>
-          }
           placeholder={'Hello.'}
           rows={6}
           hasError={!!errors.content}
           {...register('content', { required: true })}
         />
         {errors.content && (
-          <ErrorContent>
-            {errors.content.type === 'required' ? '必須です' : ''}
-          </ErrorContent>
+          <ErrorMessage name={'content'} error={errors.content} />
         )}
       </Container>
       <ButtonContainer>

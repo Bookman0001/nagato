@@ -3,9 +3,9 @@
  */
 import { render, screen, fireEvent } from '@testing-library/react'
 
-import SearchInput from 'src/components/atoms/form/input'
+import Input from 'src/components/atoms/form/input'
 
-describe('SearchInput', () => {
+describe('Input', () => {
   beforeEach(() => {
     jest.clearAllMocks()
   })
@@ -13,7 +13,7 @@ describe('SearchInput', () => {
   it('should be rendered with onChange', () => {
     const handleChange = jest.fn()
     render(
-      <SearchInput
+      <Input
         defaultValue={'default value'}
         placeholder={'dummy place holder'}
         onChange={handleChange}
@@ -30,7 +30,7 @@ describe('SearchInput', () => {
     const handleChange = jest.fn()
     const handleKeyDown = jest.fn()
     render(
-      <SearchInput
+      <Input
         defaultValue={'default value'}
         placeholder={'dummy place holder'}
         onChange={handleChange}
@@ -47,23 +47,5 @@ describe('SearchInput', () => {
     })
     expect(handleChange).toHaveBeenCalledTimes(1)
     expect(handleKeyDown).toHaveBeenCalledTimes(1)
-  })
-
-  it('should be rendered with label', () => {
-    const handleChange = jest.fn()
-    render(
-      <SearchInput
-        labelEl={<span>ラベル要素</span>}
-        defaultValue={'default value'}
-        placeholder={'dummy place holder'}
-        onChange={handleChange}
-      />
-    )
-    expect(screen.getByPlaceholderText('dummy place holder')).toBeDefined()
-    expect(screen.getByText('ラベル要素')).toBeDefined()
-    fireEvent.change(screen.getByPlaceholderText('dummy place holder'), {
-      target: { value: 'React Go.' },
-    })
-    expect(handleChange).toHaveBeenCalledTimes(1)
   })
 })
