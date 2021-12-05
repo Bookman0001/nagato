@@ -25,22 +25,6 @@ const Template: React.VFC<{}> = () => {
   )
 }
 
-const TemplateWithLabel: React.VFC<{}> = () => {
-  const [text, setText] = useState<string>('')
-
-  return (
-    <>
-      <TextArea
-        labelEl={<>ラベルテキスト</>}
-        defaultValue={''}
-        placeholder={'add place holder'}
-        onChange={(e) => setText(e.target.value)}
-      />
-      <Container>属性値:{text}</Container>
-    </>
-  )
-}
-
 const Error: React.VFC<{}> = () => {
   const [text, setText] = useState<string>('')
 
@@ -64,7 +48,5 @@ const Container = styled.div`
 `
 
 export const Default = Template.bind({})
-
-export const Labeling = TemplateWithLabel.bind({})
 
 export const ErrorStatus = Error.bind({})

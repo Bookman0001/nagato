@@ -25,22 +25,4 @@ describe('TextArea', () => {
     })
     expect(handleChange).toHaveBeenCalledTimes(1)
   })
-
-  it('should be rendered with labelEl', () => {
-    const handleChange = jest.fn()
-    render(
-      <TextArea
-        labelEl={<span>ラベル要素</span>}
-        defaultValue={'default value'}
-        placeholder={'dummy place holder'}
-        onChange={handleChange}
-      />
-    )
-    expect(screen.getByPlaceholderText('dummy place holder')).toBeDefined()
-    expect(screen.getByText('ラベル要素')).toBeDefined()
-    fireEvent.change(screen.getByPlaceholderText('dummy place holder'), {
-      target: { value: 'React Go.' },
-    })
-    expect(handleChange).toHaveBeenCalledTimes(1)
-  })
 })

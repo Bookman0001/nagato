@@ -1,17 +1,18 @@
 import styled, { keyframes } from 'styled-components'
 
 import ThanksLayout from 'src/components/templates/thanksLayout'
-import { useBackToPage } from 'src/hooks/router/backToPage'
+import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import { DEVICE_WIDTH, COLOR } from 'src/theme/constants'
 
 export default function Thanks() {
-  const { backToTop } = useBackToPage()
+  const { transitionToTop } = useTransitionPage()
+
   return (
     <ThanksLayout>
       <Section>
         <Container>
           <Description>Thank you!🥳</Description>
-          <LinkWrapper onClick={backToTop}>
+          <LinkWrapper onClick={transitionToTop}>
             <StyledLink>Back To Top</StyledLink>
           </LinkWrapper>
         </Container>

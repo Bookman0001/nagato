@@ -3,7 +3,7 @@ import sanitizeHtml from 'sanitize-html'
 
 import { articlesController } from 'src/controller/articles'
 import { articleController } from 'src/controller/article'
-import { useBackToPage } from 'src/hooks/router/backToPage'
+import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import BlogLayout from 'src/components/templates/blogLayout'
 import { Article } from 'src/types'
 import { COLOR, DEVICE_WIDTH } from 'src/theme/constants'
@@ -36,7 +36,7 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export default function Post({ article }: Props) {
-  const { backToTop } = useBackToPage()
+  const { transitionToTop } = useTransitionPage()
 
   return (
     <BlogLayout title={article.title} article={article}>
@@ -44,7 +44,7 @@ export default function Post({ article }: Props) {
         <Content
           dangerouslySetInnerHTML={{ __html: sanitizeHtml(article.content) }}
         />
-        <LinkWrapper onClick={backToTop}>
+        <LinkWrapper onClick={transitionToTop}>
           <StyledLink>Back To Top</StyledLink>
         </LinkWrapper>
       </div>
