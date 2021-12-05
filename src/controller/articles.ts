@@ -7,7 +7,7 @@ import {
 import { fetchSearchedArticles } from 'src/repositories/client/articles'
 import {
   ArticlesResponse,
-  Params,
+  PaginationParams,
   ArticlesPagination,
   SearchParams,
 } from 'src/types'
@@ -52,7 +52,7 @@ export function articlesController() {
     return articleIds
   }
 
-  const getLimitedArticles = async (params: Params) => {
+  const getLimitedArticles = async (params: PaginationParams) => {
     return await fetchLimitedArtcles(params).then((articles) => {
       return mappingArticles(articles)
     })
