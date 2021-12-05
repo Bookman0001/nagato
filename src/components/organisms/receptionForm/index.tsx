@@ -1,8 +1,8 @@
-import { useRouter } from 'next/router'
 import styled from 'styled-components'
 import { useForm, useFormState } from 'react-hook-form'
 
 import { useCreateMessage } from 'src/hooks/message'
+import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import Label from 'src/components/atoms/form/label'
 import Input from 'src/components/atoms/form/input'
 import TextArea from 'src/components/atoms/form/textArea'
@@ -19,16 +19,16 @@ type FormInput = {
 }
 
 export default function ReceptionForm() {
-  const router = useRouter()
   const { register, handleSubmit, control } = useForm<FormInput>()
   const { errors } = useFormState({ control })
   const { isLoading, error, createMessage } = useCreateMessage()
+  const { transitionToThanks } = useTransitionPage()
   const { email } = regExp
 
   const onSubmit = async (inputData: FormInput) => {
     const completed = await createMessage(inputData)
     if (completed) {
-      router.push({ pathname: '/thanks' })
+      transitionToThanks()
     }
   }
 
@@ -99,16 +99,12 @@ const ButtonContainer = styled(Container)`
   justify-content: center;
 `
 
-const ErrorContent = styled.p`
-  margin-top: 10px;
-  color: ${COLOR.WARNING};
-`
-
-const ApiErrorContent = styled(ErrorContent)`
+const ApiErrorContent = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0 1rem;
+  margin: 10px 0 1rem;
+  color: ${COLOR.WARNING};
 `
 
 const LabelContent = styled.div`
