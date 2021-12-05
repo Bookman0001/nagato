@@ -1,5 +1,5 @@
 import { get } from 'src/services/axios'
-import { ArticlesResponse, Params, SearchParams } from 'src/types'
+import { ArticlesResponse, PaginationParams, SearchParams } from 'src/types'
 
 export async function fetchAllArticles({
   limit,
@@ -14,7 +14,7 @@ export async function fetchAllArticles({
 }
 
 export async function fetchLimitedArtcles(
-  params: Params
+  params: PaginationParams
 ): Promise<ArticlesResponse> {
   return await get<ArticlesResponse>(
     `/technology-articles?limit=${params.limit}`
