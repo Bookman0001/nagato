@@ -6,7 +6,7 @@ import { articleController } from 'src/controller/article'
 import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import BlogLayout from 'src/components/templates/blogLayout'
 import { Article } from 'src/types'
-import { COLOR, DEVICE_WIDTH } from 'src/theme/constants'
+import { COLOR, DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 
 interface Params {
   params: {
@@ -61,10 +61,10 @@ const StyledLink = styled.span`
   cursor: pointer;
   padding-top: 50px;
   width: 100%;
-  font-size: 1.25rem;
+  font-size: ${FONT_SIZE.S};
   font-weight: bold;
   color: ${COLOR.BLUE};
   @media (max-width: ${DEVICE_WIDTH.TABLET}) {
-    font-size: 1rem;
+    font-size: ${FONT_SIZE.XS};
   }
 `

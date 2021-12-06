@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-import { COLOR } from '../../../theme/constants'
+import { BORDER_RADIUS, COLOR, FONT_SIZE } from 'src/theme/constants'
 
 interface Props {
   currentIndex: number
@@ -66,12 +66,12 @@ const ButtonItem = styled.button`
   align-items: center;
   background-color: ${COLOR.WHITE};
   border: 2px solid ${COLOR.BLACK};
-  border-radius: 8px;
+  border-radius: ${BORDER_RADIUS.DEFAULT};
   width: 45px;
   height: 45px;
   margin: 0 1rem;
   border: none;
-  font-size: 1.2rem;
+  font-size: ${FONT_SIZE.S};
   cursor: pointer;
   text-align: center;
   @media (prefers-color-scheme: dark) {

@@ -6,7 +6,7 @@ import SearchLayout from 'src/components/templates/searchLayout'
 import SkeletonArticles from 'src/components/organisms/searchedArticles/skeletonArticles'
 import SearchInputArea from 'src/components/organisms/searchInputArea'
 import SearchedArticles from 'src/components/organisms/searchedArticles'
-import { DEVICE_WIDTH } from 'src/theme/constants'
+import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 
 export default function Posts() {
   const { params } = useSearchParams()
@@ -65,7 +65,7 @@ const ErrorContainer = styled.div`
   height: calc(100vh - 50px - 60px);
   padding-top: 4rem;
   margin: 0 auto;
-  font-size: 1.25rem;
+  font-size: ${FONT_SIZE.S};
   display: flex;
   justify-content: center;
   align-items: center;

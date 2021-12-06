@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { COLOR } from 'src/theme/constants'
+import { BORDER_RADIUS, COLOR } from 'src/theme/constants'
 
 interface Props {
   defaultValue: string
@@ -22,7 +22,7 @@ export default function Select({ defaultValue, children, onChange }: Props) {
 const Container = styled.div`
   position: relative;
   border: 1px solid ${COLOR.BLACK};
-  border-radius: 2px;
+  border-radius: ${BORDER_RADIUS.SMALL};
   background: #ffffff;
   line-height: 1.5;
   &::before {

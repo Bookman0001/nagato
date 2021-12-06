@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes, MouseEvent } from 'react'
 import styled from 'styled-components'
 
-import { COLOR } from '../../../theme/constants'
+import { BORDER_RADIUS, COLOR, FONT_SIZE } from 'src/theme/constants'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean
@@ -29,12 +29,12 @@ const ButtonItem = styled.button<{ width?: string }>`
   height: 100%;
   background-color: ${COLOR.WHITE};
   border: 2px solid ${COLOR.BLACK};
-  border-radius: 8px;
+  border-radius: ${BORDER_RADIUS.DEFAULT};
   padding: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: ${FONT_SIZE.M};
   cursor: pointer;
   :hover {
     opacity: 0.7;

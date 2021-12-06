@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 import HeaderIcon from 'src/components/atoms/icon/header'
-import { COLOR, DEVICE_WIDTH } from 'src/theme/constants'
+import { COLOR, DEVICE_WIDTH, FONT_SIZE, Z_INDEX } from 'src/theme/constants'
 
 export default function Header() {
   return (
@@ -22,9 +22,9 @@ const HeaderContainer = styled.header`
   width: 100%;
   background-color: ${COLOR.WHITE};
   border-bottom: 1px solid ${COLOR.GRAY};
-  z-index: 1000;
+  z-index: ${Z_INDEX.TOP_MOST};
   color: ${COLOR.BLACK};
-  font-size: 0.75rem;
+  font-size: ${FONT_SIZE.XXS};
   @media (prefers-color-scheme: dark) {
     background-color: ${COLOR.BLACK};
     color: ${COLOR.WHITE};

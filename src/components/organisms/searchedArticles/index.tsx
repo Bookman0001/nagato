@@ -4,6 +4,7 @@ import { useSearchParams } from 'src/hooks/router/searchParams'
 import ArticleContent from 'src/components/molecures/articleContent'
 import Pagination from 'src/components/atoms/pagination'
 import { ArticlesPagination } from 'src/types'
+import { FONT_SIZE } from 'src/theme/constants'
 
 interface Props {
   articles: ArticlesPagination
@@ -50,7 +51,7 @@ const DetailWrapper = styled.div`
 `
 
 const NoResult = styled.div`
-  font-size: 1.25rem;
+  font-size: ${FONT_SIZE.S};
   display: flex;
   justify-content: center;
   align-items: center;

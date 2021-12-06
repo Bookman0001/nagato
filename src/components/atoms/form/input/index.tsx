@@ -1,7 +1,7 @@
 import React, { InputHTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
 
-import { COLOR } from 'src/theme/constants'
+import { BORDER_RADIUS, COLOR, FONT_SIZE } from 'src/theme/constants'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   labelEl?: React.ReactChild
@@ -21,10 +21,10 @@ const StyledInput = styled.input<{ hasError: boolean }>`
   flex: 1;
   height: 100%;
   min-height: 40px;
-  font-size: 1.25rem;
+  font-size: ${FONT_SIZE.S};
   text-indent: 10px;
   border: 1px solid ${COLOR.BLACK};
-  border-radius: 8px;
+  border-radius: ${BORDER_RADIUS.DEFAULT};
   background-color: ${COLOR.WHITE};
   @media (prefers-color-scheme: dark) {
     background-color: ${COLOR.BLACK};
