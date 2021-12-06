@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { ArticlesPagination } from 'src/types'
 import ArticleContent from 'src/components/molecures/articleContent'
 import Button from 'src/components/atoms/button'
+import { FONT_SIZE } from 'src/theme/constants'
 
 interface Props {
   articles: ArticlesPagination
@@ -58,6 +59,6 @@ const ButtonWrapper = styled.div`
   justify-content: center;
   button {
     height: 3rem;
-    font-size: 1.25rem;
+    font-size: ${FONT_SIZE.S};
   }
 `

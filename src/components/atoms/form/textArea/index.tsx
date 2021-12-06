@@ -1,7 +1,7 @@
 import React, { InputHTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
 
-import { COLOR } from 'src/theme/constants'
+import { BORDER_RADIUS, COLOR, FONT_SIZE } from 'src/theme/constants'
 
 interface Props extends InputHTMLAttributes<HTMLTextAreaElement> {
   rows?: number
@@ -28,10 +28,10 @@ export default TextArea
 const StyledTextArea = styled.textarea<{ hasError: boolean }>`
   flex: 1;
   width: calc(100% - 20px);
-  font-size: 1.25rem;
+  font-size: ${FONT_SIZE.S};
   padding: 10px;
   border: 1px solid ${COLOR.BLACK};
-  border-radius: 8px;
+  border-radius: ${BORDER_RADIUS.DEFAULT};
   background-color: ${COLOR.WHITE};
   @media (prefers-color-scheme: dark) {
     background-color: ${COLOR.BLACK};

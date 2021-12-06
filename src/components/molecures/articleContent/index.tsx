@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 import { Article } from 'src/types'
-import { DEVICE_WIDTH } from 'src/theme/constants'
+import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 
 interface Props {
   article: Article
@@ -28,11 +28,11 @@ const StyledLink = styled.div`
 `
 
 const SubTitle = styled.h3`
-  font-size: 1.25rem;
+  font-size: ${FONT_SIZE.S};
   margin-right: auto;
   text-decoration: underline;
   @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    font-size: 1rem;
+    font-size: ${FONT_SIZE.XS};
   }
 `
 
