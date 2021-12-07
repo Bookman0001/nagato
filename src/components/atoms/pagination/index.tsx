@@ -70,7 +70,6 @@ const ButtonItem = styled.button`
   width: 45px;
   height: 45px;
   margin: 0 1rem;
-  border: none;
   font-size: ${FONT_SIZE.S};
   cursor: pointer;
   text-align: center;

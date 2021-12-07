@@ -51,7 +51,7 @@ export default function Posts() {
 const Section = styled.section`
   max-width: 600px;
   min-height: calc(100vh - 50px - 60px);
-  padding: 4rem 0 0 0;
+  padding: 4rem 0 0;
   margin: 0 auto;
   @media (max-width: ${DEVICE_WIDTH.TABLET}) {
     padding: 4rem 2rem 0;

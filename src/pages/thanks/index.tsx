@@ -29,7 +29,7 @@ const Section = styled.section`
   min-height: calc(100vh - 110px);
   margin: 0 auto;
   @media (max-width: ${DEVICE_WIDTH.TABLET}) {
-    padding: 0 2rem 0;
+    padding: 0 2rem;
   }
 `
 

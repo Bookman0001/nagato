@@ -23,7 +23,7 @@ const Container = styled.div`
   position: relative;
   border: 1px solid ${COLOR.BLACK};
   border-radius: ${BORDER_RADIUS.SMALL};
-  background: #ffffff;
+  background: ${COLOR.WHITE};
   line-height: 1.5;
   &::before {
     position: absolute;
