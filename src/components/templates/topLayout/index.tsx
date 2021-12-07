@@ -28,7 +28,7 @@ const PictureContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 0 3rem;
+  padding: 3rem 0;
   div {
     padding: 0 50px;
   }

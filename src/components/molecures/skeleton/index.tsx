@@ -16,10 +16,10 @@ const Wrapper = styled.div`
 
 const Animation = keyframes`
   0% {
-    transform: translateX(-100%)
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(100%)
+    transform: translateX(100%);
   }
 `
 
@@ -31,7 +31,7 @@ const skeleton = css`
   @media (prefers-color-scheme: dark) {
     background-color: #696969;
   }
-  :before {
+  ::before {
     content: '';
     display: block;
     height: 100%;

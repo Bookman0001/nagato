@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 
     div {
       .tl-edges {
-        overflow-x : initial;
+        overflow-x: initial;
       }
     }
     h1 {
@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     a {
       color: ${COLOR.BLUE};
-      box-shadow : initial;
+      box-shadow: initial;
       cursor: pointer;
     }
     button {
