@@ -41,7 +41,7 @@
     "react-test-renderer": "^17.0.2",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1",
-    "sanitize-html": "^2.6.0",
+    "sanitize-html": "^2.6.1",
     "styled-components": "^5.3.3",
     "swr": "^1.1.0"
   },
