@@ -8063,7 +8063,7 @@ html-entities@^2.1.0:
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-2.3.2.tgz#760b404685cb1d794e4f4b744332e3b00dcfe488"
   integrity sha512-c3Ab/url5ksaT0WyleslpBEthOzWhrjQbg75y7XUsfSzi3Dgzt0l8w5e7DylRn15MTlMMD58dTfzddNS2kcAjQ==
 
-html-escaper@^2.0.0:
+html-escaper@^2.0.0, html-escaper@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/html-escaper/-/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
   integrity sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==
@@ -12050,12 +12050,13 @@ react-hook-form@^7.21.0:
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.21.0.tgz#f6f0311295b83ca768873ca9f2a787ff1525f591"
   integrity sha512-aekCf+dedYFIg+7nCK2acMvZ+s6Ohw2I7UNQ+zNIadBl1SoXow2Tl6c3F49xF8GFCdn5jeK43JHH26rmtdRyLQ==
 
-react-i18next@^11.14.2:
-  version "11.14.2"
-  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-11.14.2.tgz#2ff28f6a0ddf06eaf79435ed6c70c441d709cf34"
-  integrity sha512-fmDhwNA0zDmSEL3BBT5qwNMvxrKu25oXDDAZyHprfB0AHZmWXfBmRLf8MX8i1iBd2I2C2vsA2D9wxYBIwzooEQ==
+react-i18next@^11.15.0:
+  version "11.15.0"
+  resolved "https://registry.yarnpkg.com/react-i18next/-/react-i18next-11.15.0.tgz#66c6304547518a8df8e29d367e2445fa11c8a1b2"
+  integrity sha512-7JOIO7KkKSxB7Ycof6ilx9aQ/tviInTqN2sqHyKrjd5MKHyFyKyXVkYrb7KmG/ISFPA4ugWwor5Qsq8IVyQ/Cg==
   dependencies:
     "@babel/runtime" "^7.14.5"
+    html-escaper "^2.0.2"
     html-parse-stringify "^3.0.1"
 
 react-inspector@^5.1.0:
