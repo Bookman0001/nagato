@@ -34,22 +34,26 @@ function mappingArticles(response: ArticlesResponse): ArticlesPagination {
 
 export function articlesController() {
   const getAllArticleIds = async () => {
-    const limit = 20
-    let offset = 0
-    let articleIds: string[] = []
+    const pager: { readonly limit: 20; offset: number } = {
+      limit: 20,
+      offset: 0,
+    }
+    let totalArticleIds: string[] = []
     let isArticlesEmpty = false
+
     while (!isArticlesEmpty) {
-      const response = await fetchAllArticles({ limit: limit, offset: offset })
-      const { contents } = response
-      const fetchedIds = contents.map((contents) => contents.id)
+      const fetchedIds = (
+        await fetchAllArticles({ limit: pager.limit, offset: pager.offset })
+      ).contents.map((contents) => contents.id)
+
       if (!fetchedIds.length) {
         isArticlesEmpty = true
       } else {
-        articleIds = [...articleIds, ...fetchedIds]
-        offset = offset + limit
+        totalArticleIds = [...totalArticleIds, ...fetchedIds]
+        pager.offset = pager.offset + pager.limit
       }
     }
-    return articleIds
+    return totalArticleIds
   }
 
   const getLimitedArticles = async (params: PaginationParams) => {
