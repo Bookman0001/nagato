@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import { render, screen } from '@testing-library/react'
 
 import Label from 'src/components/atoms/form/label'

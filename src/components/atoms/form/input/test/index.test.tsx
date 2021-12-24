@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import { render, screen, fireEvent } from '@testing-library/react'
 
 import Input from 'src/components/atoms/form/input'

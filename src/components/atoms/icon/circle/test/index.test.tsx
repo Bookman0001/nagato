@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import { render, screen } from '@testing-library/react'
 
 import Circle from 'src/components/atoms/icon/circle'

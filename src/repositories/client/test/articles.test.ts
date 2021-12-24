@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import fetchMock from 'fetch-mock'
 
 import { fetchSearchedArticles } from 'src/repositories/client/articles'

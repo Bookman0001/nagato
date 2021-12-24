@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import { render, screen } from '@testing-library/react'
 
 import ErrorMessage from 'src/components/organisms/receptionForm/ErrorMessage'
