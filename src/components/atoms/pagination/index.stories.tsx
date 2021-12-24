@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState, VFC } from 'react'
 import { Meta } from '@storybook/react/types-6-0'
 
 import Pagination from './'
@@ -8,7 +8,7 @@ export default {
   component: Pagination,
 } as Meta
 
-const Template: React.VFC<{}> = () => {
+const Template: VFC = () => {
   const [count, setCount] = useState<number>(1)
   return (
     <>

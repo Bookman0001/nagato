@@ -1,4 +1,4 @@
-import React from 'react'
+import { VFC } from 'react'
 import { Meta } from '@storybook/react/types-6-0'
 
 import Picture from './'
@@ -8,7 +8,7 @@ export default {
   component: Picture,
 } as Meta
 
-const Template: React.VFC<{}> = () => (
+const Template: VFC = () => (
   <>
     <Picture
       src={'https://placehold.jp/100x100.png'}
@@ -19,7 +19,7 @@ const Template: React.VFC<{}> = () => (
   </>
 )
 
-const CircleTemplate: React.VFC<{}> = () => (
+const CircleTemplate: VFC = () => (
   <>
     <Picture
       src={'https://placehold.jp/100x100.png'}

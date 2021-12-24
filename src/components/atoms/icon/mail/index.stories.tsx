@@ -1,4 +1,4 @@
-import React from 'react'
+import { VFC } from 'react'
 import { Meta } from '@storybook/react/types-6-0'
 
 import MailIcon from './'
@@ -8,6 +8,6 @@ export default {
   component: MailIcon,
 } as Meta
 
-const Template: React.VFC<{}> = () => <MailIcon size={50} />
+const Template: VFC = () => <MailIcon size={50} />
 
 export const Default = Template.bind({})

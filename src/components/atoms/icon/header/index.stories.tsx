@@ -1,4 +1,4 @@
-import React from 'react'
+import { VFC } from 'react'
 import { Meta } from '@storybook/react/types-6-0'
 
 import Header from './'
@@ -8,6 +8,6 @@ export default {
   component: Header,
 } as Meta
 
-const Template: React.VFC<{}> = () => <Header />
+const Template: VFC = () => <Header />
 
 export const Default = Template.bind({})

@@ -1,4 +1,4 @@
-import React from 'react'
+import { VFC } from 'react'
 import { Meta } from '@storybook/react/types-6-0'
 
 import Title from './'
@@ -8,6 +8,6 @@ export default {
   component: Title,
 } as Meta
 
-const Template: React.VFC<{}> = () => <Title>タイトルをここに入れます</Title>
+const Template: VFC = () => <Title>タイトルをここに入れます</Title>
 
 export const Default = Template.bind({})
