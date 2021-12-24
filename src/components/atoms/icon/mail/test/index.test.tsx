@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import { render, screen } from '@testing-library/react'
 
 import MailIcon from 'src/components/atoms/icon/mail'

@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import { renderHook, act } from '@testing-library/react-hooks'
 import { waitFor } from '@testing-library/react'
 

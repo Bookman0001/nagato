@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 
 import ReceptionForm from 'src/components/organisms/receptionForm'

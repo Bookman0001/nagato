@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import { render, screen } from '@testing-library/react'
 
 import Rectangle from 'src/components/atoms/icon/rectangle'
