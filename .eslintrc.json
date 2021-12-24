@@ -6,6 +6,7 @@
   },
   "extends": [
     "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:jest/recommended",
     "standard",
@@ -19,7 +20,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "jest"],
+  "plugins": ["react", "react-hooks", "jsx-a11y", "@typescript-eslint", "jest"],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-var-requires": "off",
