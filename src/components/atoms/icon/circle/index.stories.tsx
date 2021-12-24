@@ -1,4 +1,4 @@
-import React from 'react'
+import { VFC } from 'react'
 import { Meta } from '@storybook/react/types-6-0'
 
 import Circle from './'
@@ -8,6 +8,6 @@ export default {
   component: Circle,
 } as Meta
 
-const Template: React.VFC<{}> = () => <Circle size={12} />
+const Template: VFC = () => <Circle size={12} />
 
 export const Default = Template.bind({})

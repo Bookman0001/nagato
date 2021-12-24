@@ -1,4 +1,4 @@
-import React from 'react'
+import { VFC } from 'react'
 import { Meta } from '@storybook/react/types-6-0'
 
 import MyIcon from './'
@@ -8,6 +8,6 @@ export default {
   component: MyIcon,
 } as Meta
 
-const Template: React.VFC<{}> = () => <MyIcon size={50} />
+const Template: VFC = () => <MyIcon size={50} />
 
 export const Default = Template.bind({})

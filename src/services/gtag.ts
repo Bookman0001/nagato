@@ -1,7 +1,6 @@
 declare global {
-  // eslint-disable-next-line
   interface Window {
-    gtag: (type: string, action: string, obj: Object) => void
+    gtag: (type: string, action: string, obj: unknown) => void
   }
 }
 
