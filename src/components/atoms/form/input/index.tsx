@@ -4,15 +4,15 @@ import styled, { css } from 'styled-components'
 import { BORDER_RADIUS, COLOR, FONT_SIZE } from 'src/theme/constants'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
-  labelEl?: React.ReactChild
   hasError?: boolean
 }
 
-const Input = React.forwardRef<HTMLInputElement, Props>((props: Props, ref) => {
-  return <StyledInput ref={ref} hasError={props.hasError || false} {...props} />
+const Input = React.forwardRef<HTMLInputElement, Props>(function Element(
+  { hasError = false, ...props }: Props,
+  ref
+) {
+  return <StyledInput ref={ref} hasError={hasError} {...props} />
 })
-
-Input.displayName = 'Input'
 
 export default Input
 

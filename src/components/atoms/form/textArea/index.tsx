@@ -8,20 +8,12 @@ interface Props extends InputHTMLAttributes<HTMLTextAreaElement> {
   hasError?: boolean
 }
 
-const TextArea = React.forwardRef<HTMLTextAreaElement, Props>(
-  (props: Props, ref) => {
-    return (
-      <StyledTextArea
-        ref={ref}
-        hasError={props.hasError || false}
-        rows={props.rows || 6}
-        {...props}
-      />
-    )
-  }
-)
-
-TextArea.displayName = 'TextArea'
+const TextArea = React.forwardRef<HTMLTextAreaElement, Props>(function Element(
+  { rows = 6, hasError = false, ...props }: Props,
+  ref
+) {
+  return <StyledTextArea ref={ref} rows={rows} hasError={hasError} {...props} />
+})
 
 export default TextArea
 
