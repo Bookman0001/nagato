@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components'
 import { BORDER_RADIUS, COLOR, FONT_SIZE } from 'src/theme/constants'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
-  labelEl?: React.ReactChild
   hasError?: boolean
 }
 
