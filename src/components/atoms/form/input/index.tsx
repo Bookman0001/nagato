@@ -7,9 +7,11 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   hasError?: boolean
 }
 
-const Input = React.forwardRef<HTMLInputElement, Props>((props: Props, ref) => {
-  return <StyledInput ref={ref} hasError={props.hasError || false} {...props} />
-})
+const Input = React.forwardRef<HTMLInputElement, Props>(
+  ({ hasError = false, ...props }: Props, ref) => {
+    return <StyledInput ref={ref} hasError={hasError} {...props} />
+  }
+)
 
 Input.displayName = 'Input'
 
