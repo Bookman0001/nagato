@@ -1,7 +1,7 @@
-import { useRouter } from 'next/router'
 import styled from 'styled-components'
 
 import { ArticlesPagination } from 'src/types'
+import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import ArticleContent from 'src/components/molecures/articleContent'
 import Button from 'src/components/atoms/button'
 import { FONT_SIZE } from 'src/theme/constants'
@@ -11,13 +11,13 @@ interface Props {
 }
 
 export default function Articles({ articles }: Props) {
-  const router = useRouter()
+  const { transitionToSearch } = useTransitionPage()
   const { contents } = articles
 
   if (!contents.length) return null
 
   const handleClick = () => {
-    router.push({ pathname: '/posts' })
+    transitionToSearch()
   }
 
   return (

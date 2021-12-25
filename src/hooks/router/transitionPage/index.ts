@@ -7,12 +7,17 @@ export function useTransitionPage() {
     router.push({ pathname: '/' })
   }
 
+  const transitionToSearch = () => {
+    router.push({ pathname: '/posts' })
+  }
+
   const transitionToThanks = () => {
     router.push({ pathname: '/thanks' })
   }
 
   return {
     transitionToTop,
+    transitionToSearch,
     transitionToThanks,
   }
 }
