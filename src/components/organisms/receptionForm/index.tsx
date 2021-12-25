@@ -72,7 +72,6 @@ export default function ReceptionForm() {
         </Label>
         <TextArea
           placeholder={'Hello.'}
-          rows={6}
           hasError={!!errors.content}
           {...register('content', { required: true })}
         />
