@@ -1,4 +1,4 @@
-import { validateFormParams } from 'src/util/api'
+import { validateFormParams } from 'src/utils/api'
 
 describe('validateFormParams', () => {
   it('should return false with undefined data', () => {

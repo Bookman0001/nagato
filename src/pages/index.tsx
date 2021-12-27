@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 import { ArticlesPagination } from 'src/types'
-import { articlesController } from 'src/controller/articles'
+import { articlesController } from 'src/controllers/articles'
 import Introduction from 'src/components/organisms/introduction'
 import TopLayout from 'src/components/templates/topLayout'
 import Articles from 'src/components/organisms/articles'

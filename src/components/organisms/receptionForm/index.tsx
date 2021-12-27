@@ -9,7 +9,7 @@ import TextArea from 'src/components/atoms/form/textArea'
 import Button from 'src/components/atoms/button'
 import Circle from 'src/components/atoms/icon/circle'
 import ErrorMessage from './ErrorMessage'
-import { regExp } from 'src/util'
+import { regExp } from 'src/utils'
 import { COLOR } from 'src/theme/constants'
 
 type FormInput = {

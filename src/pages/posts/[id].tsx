@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import sanitizeHtml from 'sanitize-html'
 
-import { articlesController } from 'src/controller/articles'
-import { articleController } from 'src/controller/article'
+import { articlesController } from 'src/controllers/articles'
+import { articleController } from 'src/controllers/article'
 import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import BlogLayout from 'src/components/templates/blogLayout'
 import { Article } from 'src/types'

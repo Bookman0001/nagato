@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
-import { validateFormParams } from 'src/util/api'
+import { validateFormParams } from 'src/utils/api'
 import { postMessage } from 'src/repositories/message'
 import { sendMail } from 'src/services/sendGrid'
 import { FormParams } from 'src/types'
