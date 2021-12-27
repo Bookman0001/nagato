@@ -1,6 +1,6 @@
 import useSWR from 'swr'
 
-import { articlesClientController } from 'src/controller/articles'
+import { articlesClientController } from 'src/controllers/articles'
 import { SearchParams } from 'src/types'
 
 export function useSearchedArticles(params: SearchParams) {

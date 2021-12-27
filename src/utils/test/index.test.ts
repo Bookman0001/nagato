@@ -1,4 +1,4 @@
-import { regExp } from 'src/util'
+import { regExp } from 'src/utils'
 
 describe('regExp', () => {
   it('should return false with invalid mail', () => {

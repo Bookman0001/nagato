@@ -2,7 +2,7 @@ import axios from 'axios'
 import dayjs from 'dayjs'
 import MockDate from 'mockdate'
 
-import { articlesController } from 'src/controller/articles'
+import { articlesController } from 'src/controllers/articles'
 
 jest.mock('axios')
 const mockedAxios = axios as jest.Mocked<typeof axios>
