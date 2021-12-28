@@ -25,8 +25,8 @@ export default function ReceptionForm() {
   const { transitionToThanks } = useTransitionPage()
   const { email } = regExp
 
-  const onSubmit = async (inputData: FormInput) => {
-    const completed = await createMessage(inputData)
+  const onSubmit = async (formInput: FormInput) => {
+    const completed = await createMessage(formInput)
     if (completed) {
       transitionToThanks()
     }
