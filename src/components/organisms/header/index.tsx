@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <HeaderContainer>
       <Container>
-        <Link href="/">
+        <Link href="/" passHref>
           <LogoText>
             <HeaderIcon />
           </LogoText>

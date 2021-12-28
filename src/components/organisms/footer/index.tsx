@@ -26,7 +26,7 @@ export default function Footer() {
           />
         </a>
       </PictureContainer>
-      <Link href={'/reception'}>
+      <Link href={'/reception'} passHref>
         <MailContainer>
           <MailIcon size={30} />
         </MailContainer>
