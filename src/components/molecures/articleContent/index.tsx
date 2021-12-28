@@ -10,7 +10,7 @@ interface Props {
 
 export default function ArticleContent({ article }: Props) {
   return (
-    <Link href={`/posts/${article.id}`}>
+    <Link href={`/posts/${article.id}`} passHref>
       <StyledLink>
         <SubTitle key={article.id}>{article.title}</SubTitle>
         <DateMemo>{article.publishedAt}</DateMemo>
