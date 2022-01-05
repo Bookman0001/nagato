@@ -73,7 +73,7 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "6.0.0",
     "fetch-mock": "9.11.0",
-    "jest": "27.4.5",
+    "jest": "27.4.6",
     "lint-staged": "12.1.5",
     "mockdate": "3.0.5",
     "postcss-jsx": "0.36.4",
