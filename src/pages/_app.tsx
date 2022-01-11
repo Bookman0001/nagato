@@ -6,6 +6,11 @@ import * as gtag from 'src/services/gtag'
 import SwrConfig from 'src/services/swr'
 import { GlobalStyle, DarkMode } from 'src/theme'
 
+if (process.env.NODE_ENV === 'development') {
+  const MockServer = () => import('src/mocks/worker')
+  MockServer()
+}
+
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()
   useEffect(() => {

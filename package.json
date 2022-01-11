@@ -76,6 +76,7 @@
     "jest": "27.4.7",
     "lint-staged": "12.1.7",
     "mockdate": "3.0.5",
+    "msw": "^0.36.4",
     "postcss-jsx": "0.36.4",
     "postcss-syntax": "0.36.2",
     "prettier": "2.5.1",
@@ -88,5 +89,8 @@
     "ts-jest": "27.1.2",
     "ts-node": "10.4.0",
     "typescript": "4.5.4"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import { useSearchedArticles } from 'src/hooks/articles'
+import { useMockedRes } from 'src/hooks/sample'
 import { useSearchParams } from 'src/hooks/router/searchParams'
 import SearchLayout from 'src/components/templates/searchLayout'
 import SkeletonArticles from 'src/components/organisms/searchedArticles/skeletonArticles'
@@ -11,6 +12,9 @@ import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 export default function Posts() {
   const { params } = useSearchParams()
   const { articles, error } = useSearchedArticles(params)
+  const { data } = useMockedRes()
+
+  console.log(data)
 
   if (error) {
     return (
