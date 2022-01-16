@@ -11,7 +11,9 @@ const Input = React.forwardRef<HTMLInputElement, Props>(function Element(
   { hasError = false, ...props }: Props,
   ref
 ) {
-  return <StyledInput ref={ref} hasError={hasError} {...props} />
+  return (
+    <StyledInput ref={ref} hasError={hasError} role={'textbox'} {...props} />
+  )
 })
 
 export default Input

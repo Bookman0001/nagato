@@ -12,7 +12,15 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, Props>(function Element(
   { rows = 6, hasError = false, ...props }: Props,
   ref
 ) {
-  return <StyledTextArea ref={ref} rows={rows} hasError={hasError} {...props} />
+  return (
+    <StyledTextArea
+      ref={ref}
+      rows={rows}
+      hasError={hasError}
+      role={'textbox'}
+      {...props}
+    />
+  )
 })
 
 export default TextArea
