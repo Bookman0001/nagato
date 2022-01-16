@@ -26,7 +26,11 @@ export default function Pagination({
       {[...Array(paginationCount)].map((_, index) => {
         return (
           <ButtonWrapper key={index} hasSelected={currentIndex === index + 1}>
-            <ButtonItem onClick={() => handleClick(index + 1)} key={index}>
+            <ButtonItem
+              onClick={() => handleClick(index + 1)}
+              key={index}
+              role={'button'}
+            >
               {index + 1}
             </ButtonItem>
           </ButtonWrapper>

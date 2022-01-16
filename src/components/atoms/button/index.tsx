@@ -18,7 +18,7 @@ export default function Button({ disabled, children, onClick }: Props) {
     }
   }
   return (
-    <ButtonItem onClick={handleClick} disabled={disabled}>
+    <ButtonItem onClick={handleClick} disabled={disabled} role={'button'}>
       {children}
     </ButtonItem>
   )

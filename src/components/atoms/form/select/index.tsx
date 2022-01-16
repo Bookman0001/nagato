@@ -1,19 +1,21 @@
-import React from 'react'
+import React, { SelectHTMLAttributes } from 'react'
 import styled from 'styled-components'
 
 import { BORDER_RADIUS, COLOR } from 'src/theme/constants'
 
-interface Props {
-  defaultValue: string
+interface Props extends SelectHTMLAttributes<HTMLSelectElement> {
   children: React.ReactChild
-  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void
 }
 
-export default function Select({ defaultValue, children, onChange }: Props) {
+export default function Select({
+  onChange = () => null,
+  defaultValue = '',
+  ...props
+}: Props) {
   return (
     <Container>
-      <StyledSelect defaultValue={defaultValue} onChange={onChange}>
-        <>{children}</>
+      <StyledSelect defaultValue={defaultValue} onChange={onChange} {...props}>
+        <>{props.children}</>
       </StyledSelect>
     </Container>
   )
@@ -22,7 +24,7 @@ export default function Select({ defaultValue, children, onChange }: Props) {
 const Container = styled.div`
   position: relative;
   border: 1px solid ${COLOR.BLACK};
-  border-radius: ${BORDER_RADIUS.SMALL};
+  border-radius: ${BORDER_RADIUS.DEFAULT};
   background: ${COLOR.WHITE};
   line-height: 1.5;
   &::before {
