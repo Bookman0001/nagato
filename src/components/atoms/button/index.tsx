@@ -9,14 +9,17 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void
 }
 
-export default function Button({ disabled, children, onClick }: Props) {
+export default function Button({
+  disabled,
+  children,
+  onClick = () => null,
+}: Props) {
   const handleClick = (e: MouseEvent) => {
-    if (onClick) {
-      e.stopPropagation()
-      e.preventDefault()
-      onClick()
-    }
+    e.stopPropagation()
+    e.preventDefault()
+    onClick()
   }
+
   return (
     <ButtonItem onClick={handleClick} disabled={disabled} role={'button'}>
       {children}
