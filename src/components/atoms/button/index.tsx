@@ -2,14 +2,21 @@ import React, { ButtonHTMLAttributes, MouseEvent } from 'react'
 import styled from 'styled-components'
 
 import { BORDER_RADIUS, COLOR, FONT_SIZE } from 'src/theme/constants'
+import { ThemeColor } from 'src/types/theme'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean
   children?: React.ReactNode
+  bgColor?: ThemeColor
   onClick?: () => void
 }
 
-export default function Button({ disabled, children, onClick }: Props) {
+export default function Button({
+  disabled,
+  children,
+  bgColor = COLOR.WHITE,
+  onClick,
+}: Props) {
   const handleClick = (e: MouseEvent) => {
     if (onClick) {
       e.stopPropagation()
@@ -18,16 +25,21 @@ export default function Button({ disabled, children, onClick }: Props) {
     }
   }
   return (
-    <ButtonItem onClick={handleClick} disabled={disabled} role={'button'}>
+    <ButtonItem
+      onClick={handleClick}
+      disabled={disabled}
+      role={'button'}
+      bgColor={bgColor}
+    >
       {children}
     </ButtonItem>
   )
 }
 
-const ButtonItem = styled.button<{ width?: string }>`
+const ButtonItem = styled.button<{ width?: string; bgColor: ThemeColor }>`
   min-height: 40px;
   height: 100%;
-  background-color: ${COLOR.WHITE};
+  background-color: ${(props) => props.bgColor};
   border: 2px solid ${COLOR.BLACK};
   border-radius: ${BORDER_RADIUS.DEFAULT};
   padding: 0 1rem;
