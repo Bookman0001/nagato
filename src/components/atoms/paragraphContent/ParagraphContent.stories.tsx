@@ -1,17 +1,17 @@
 import { VFC } from 'react'
 import { Meta } from '@storybook/react/types-6-0'
 
-import ParagraphContents from './'
+import { ParagraphContent } from './'
 
 export default {
   title: 'ParagraphContents',
-  component: ParagraphContents,
+  component: ParagraphContent,
 } as Meta
 
 const Template: VFC = () => (
-  <ParagraphContents>
+  <ParagraphContent>
     ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。ここに文章が入ります。
-  </ParagraphContents>
+  </ParagraphContent>
 )
 
 export const Default = Template.bind({})

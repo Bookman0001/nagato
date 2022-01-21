@@ -2,7 +2,7 @@ import { useState, VFC } from 'react'
 import styled from 'styled-components'
 import { Meta } from '@storybook/react/types-6-0'
 
-import TextArea from './'
+import { TextArea } from './'
 import { COLOR } from 'src/theme/constants'
 
 export default {
