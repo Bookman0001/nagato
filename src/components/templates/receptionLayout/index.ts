@@ -1,0 +1,1 @@
+export { ReceptionLayout } from './ReceptionLayout'

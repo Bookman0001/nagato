@@ -1,0 +1,1 @@
+export { ThanksLayout } from './ThanksLayout'
