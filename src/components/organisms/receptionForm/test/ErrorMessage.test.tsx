@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import ErrorMessage from 'src/components/organisms/receptionForm/ErrorMessage'
+import { ErrorMessage } from 'src/components/organisms/receptionForm/ErrorMessage'
 
 describe('ErrorMessage', () => {
   it('to be rendered correctly with email required error', () => {

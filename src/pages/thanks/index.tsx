@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 
-import ThanksLayout from 'src/components/templates/thanksLayout'
+import { ThanksLayout } from 'src/components/templates/thanksLayout'
 import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import { DEVICE_WIDTH, COLOR, FONT_SIZE } from 'src/theme/constants'
 

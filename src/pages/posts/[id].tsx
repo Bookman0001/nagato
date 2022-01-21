@@ -4,7 +4,7 @@ import sanitizeHtml from 'sanitize-html'
 import { articlesController } from 'src/controllers/articles'
 import { articleController } from 'src/controllers/article'
 import { useTransitionPage } from 'src/hooks/router/transitionPage'
-import BlogLayout from 'src/components/templates/blogLayout'
+import { BlogLayout } from 'src/components/templates/blogLayout'
 import { Article } from 'src/types'
 import { COLOR, DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 

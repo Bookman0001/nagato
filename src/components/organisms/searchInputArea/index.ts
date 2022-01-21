@@ -1,0 +1,1 @@
+export { SearchInputArea } from './SearchInputArea'

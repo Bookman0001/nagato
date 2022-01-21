@@ -8,7 +8,7 @@ interface Props {
   error: FieldError
 }
 
-export default function ErrorMessage({ name, error }: Props) {
+export function ErrorMessage({ name, error }: Props) {
   return (
     <ErrorContent>
       {name === 'email' && (

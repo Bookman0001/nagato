@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
-import ReceptionLayout from 'src/components/templates/receptionLayout'
-import Form from 'src/components/organisms/receptionForm'
+import { ReceptionLayout } from 'src/components/templates/receptionLayout'
+import { ReceptionForm } from 'src/components/organisms/receptionForm'
 import { DEVICE_WIDTH } from 'src/theme/constants'
 
 export default function Reception() {
   return (
     <ReceptionLayout>
       <Section>
-        <Form />
+        <ReceptionForm />
       </Section>
     </ReceptionLayout>
   )

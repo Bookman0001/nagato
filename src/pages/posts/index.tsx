@@ -2,10 +2,12 @@ import styled from 'styled-components'
 
 import { useSearchedArticles } from 'src/hooks/articles'
 import { useSearchParams } from 'src/hooks/router/searchParams'
-import SearchLayout from 'src/components/templates/searchLayout'
-import SkeletonArticles from 'src/components/organisms/searchedArticles/skeletonArticles'
-import SearchInputArea from 'src/components/organisms/searchInputArea'
-import SearchedArticles from 'src/components/organisms/searchedArticles'
+import { SearchLayout } from 'src/components/templates/searchLayout'
+import {
+  SearchedArticles,
+  SkeletonArticles,
+} from 'src/components/organisms/searchedArticles'
+import { SearchInputArea } from 'src/components/organisms/searchInputArea'
 import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 
 export default function Posts() {
