@@ -6692,10 +6692,10 @@ eslint-config-standard@^16.0.3:
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-16.0.3.tgz#6c8761e544e96c531ff92642eeb87842b8488516"
   integrity sha512-x4fmJL5hGqNJKGHSjnLdgA6U6h1YW/G2dW9fA+cyVur4SK6lyue8+UgNKWlZtUDTXvgKDD/Oa3GQjmB5kjtVvg==
 
-eslint-config-tenryu@1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/eslint-config-tenryu/-/eslint-config-tenryu-1.1.6.tgz#39f06364814fdd6676d5b44ea3713917bb89a99a"
-  integrity sha512-/4l96XeIbUpVohZ11gQLAB2RnxhE03dMBDjOoxhIJBjoPopOeyJ6wdMeq4F0INNgMrJOHnv9rUfsTID87Qymdg==
+eslint-config-tenryu@1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/eslint-config-tenryu/-/eslint-config-tenryu-1.1.7.tgz#90ab83dd600596e7d0ae3571e653cb5ef2e26ac8"
+  integrity sha512-uYOTIoQJfMgA4n4N4Uku9gTcLTYvG9VD1+9aM1LR5cdenaRXcfcQFUQuYPdXqJGYnQdwW3PoQi0y8yoAWcPfbw==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^5.8.0"
     "@typescript-eslint/parser" "^5.8.0"
