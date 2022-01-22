@@ -54,5 +54,8 @@ export const GlobalStyle = createGlobalStyle`
       padding: 0;
       color: ${COLOR.WHITE};
     }
+    textarea {
+      color: ${COLOR.WHITE};
+    }
   }
 `
