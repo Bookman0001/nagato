@@ -36,6 +36,6 @@ const Container = styled.main`
   max-width: 600px;
   margin: 0 auto;
   @media (max-width: ${DEVICE_WIDTH.TABLET}) {
-    padding: 0 30px;
+    padding: 0 2rem;
   }
 `
