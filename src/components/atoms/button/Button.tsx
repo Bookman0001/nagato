@@ -39,24 +39,19 @@ export function Button({
 const ButtonItem = styled.button<{ width?: string; bgColor: ThemeColor }>`
   min-height: 40px;
   height: 100%;
-  background-color: ${(props) => props.bgColor};
-  border: 2px solid ${COLOR.BLACK};
   border-radius: ${BORDER_RADIUS.DEFAULT};
   padding: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: ${FONT_SIZE.M};
+  background-color: ${COLOR.BLACK};
+  border: 2px solid ${COLOR.WHITE};
   cursor: pointer;
   :hover {
     opacity: 0.7;
   }
   :disabled {
     opacity: 0.7;
-  }
-  @media (prefers-color-scheme: dark) {
-    background-color: ${COLOR.BLACK};
-    border: 2px solid ${COLOR.WHITE};
-    color: ${COLOR.WHITE};
   }
 `

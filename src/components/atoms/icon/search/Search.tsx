@@ -32,12 +32,10 @@ export function Search({ size }: Props) {
 }
 
 const Svg = styled.svg`
-  @media (prefers-color-scheme: dark) {
-    circle {
-      stroke: ${COLOR.WHITE};
-    }
-    line {
-      stroke: ${COLOR.WHITE};
-    }
+  circle {
+    stroke: ${COLOR.WHITE};
+  }
+  line {
+    stroke: ${COLOR.WHITE};
   }
 `

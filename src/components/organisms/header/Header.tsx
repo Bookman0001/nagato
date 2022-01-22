@@ -20,15 +20,10 @@ export function Header() {
 
 const HeaderContainer = styled.header`
   width: 100%;
-  background-color: ${COLOR.WHITE};
   border-bottom: 1px solid ${COLOR.GRAY};
   z-index: ${Z_INDEX.TOP_MOST};
-  color: ${COLOR.BLACK};
   font-size: ${FONT_SIZE.XXS};
-  @media (prefers-color-scheme: dark) {
-    background-color: ${COLOR.BLACK};
-    color: ${COLOR.WHITE};
-  }
+  background-color: ${COLOR.BLACK};
 `
 
 const Container = styled.div`

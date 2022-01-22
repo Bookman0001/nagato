@@ -51,15 +51,9 @@ const ButtonWrapper = styled.div<{ hasSelected: boolean }>`
     props.hasSelected &&
     css`
       button {
-        color: ${COLOR.WHITE};
-        background-color: ${COLOR.BLACK};
-      }
-      @media (prefers-color-scheme: dark) {
-        button {
-          color: ${COLOR.BLACK};
-          background-color: ${COLOR.WHITE};
-          border: 3px solid ${COLOR.WHITE};
-        }
+        color: ${COLOR.BLACK};
+        background-color: ${COLOR.WHITE};
+        border: 3px solid ${COLOR.WHITE};
       }
     `}
 `
@@ -68,8 +62,8 @@ const ButtonItem = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${COLOR.WHITE};
-  border: 2px solid ${COLOR.BLACK};
+  background-color: ${COLOR.BLACK};
+  border: 2px solid ${COLOR.WHITE};
   border-radius: ${BORDER_RADIUS.DEFAULT};
   width: 45px;
   height: 45px;
@@ -77,9 +71,4 @@ const ButtonItem = styled.button`
   font-size: ${FONT_SIZE.S};
   cursor: pointer;
   text-align: center;
-  @media (prefers-color-scheme: dark) {
-    background-color: ${COLOR.BLACK};
-    color: ${COLOR.WHITE};
-    border: 2px solid ${COLOR.WHITE};
-  }
 `
