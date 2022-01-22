@@ -4,7 +4,8 @@ import { COLOR } from './constants'
 export const GlobalStyle = createGlobalStyle`
   body {
     font-family: system-ui, sans-serif;
-    color: ${COLOR.BLACK};
+    color: ${COLOR.WHITE};
+    background-color: ${COLOR.BLACK};
     margin: 0;
     border: 0;
     padding: 0;
@@ -43,22 +44,14 @@ export const GlobalStyle = createGlobalStyle`
       cursor: pointer;
     }
     button {
-      color: ${COLOR.BLACK};
+      color: ${COLOR.WHITE};
       cursor: pointer;
     }
     select {
-      color: ${COLOR.BLACK};
+      color: ${COLOR.WHITE};
     }
     input {
       padding: 0;
-    }
-  }
-`
-
-export const DarkMode = createGlobalStyle`
-  @media (prefers-color-scheme: dark) {
-    body {
-      background-color: ${COLOR.BLACK};
       color: ${COLOR.WHITE};
     }
   }

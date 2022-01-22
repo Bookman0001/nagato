@@ -23,20 +23,12 @@ const StyledInput = styled.input<{ hasError: boolean }>`
   min-height: 40px;
   font-size: ${FONT_SIZE.S};
   text-indent: 10px;
-  border: 1px solid ${COLOR.BLACK};
+  background-color: ${COLOR.BLACK};
+  border: 1px solid ${COLOR.WHITE};
   border-radius: ${BORDER_RADIUS.DEFAULT};
-  background-color: ${COLOR.WHITE};
-  @media (prefers-color-scheme: dark) {
-    background-color: ${COLOR.BLACK};
-    color: ${COLOR.WHITE};
-    border: 1px solid ${COLOR.WHITE};
-  }
   ${({ hasError }) =>
     hasError &&
     css`
       border: 2px solid ${COLOR.WARNING};
-      @media (prefers-color-scheme: dark) {
-        border: 2px solid ${COLOR.WARNING};
-      }
     `}
 `

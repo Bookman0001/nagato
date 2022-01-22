@@ -47,13 +47,11 @@ export function Mail({ size }: Props) {
 }
 
 const Svg = styled.svg`
-  @media (prefers-color-scheme: dark) {
-    rect {
-      fill: ${COLOR.BLACK};
-      stroke: ${COLOR.WHITE};
-    }
-    line {
-      stroke: ${COLOR.WHITE};
-    }
+  rect {
+    fill: ${COLOR.BLACK};
+    stroke: ${COLOR.WHITE};
+  }
+  line {
+    stroke: ${COLOR.WHITE};
   }
 `

@@ -42,13 +42,9 @@ const FooterContainer = styled.footer`
   flex: 1;
   width: 100%;
   height: 60px;
-  background-color: ${COLOR.WHITE};
   border-top: 1px solid ${COLOR.GRAY};
   text-align: center;
-  @media (prefers-color-scheme: dark) {
-    background-color: ${COLOR.BLACK};
-    color: ${COLOR.WHITE};
-  }
+  background-color: ${COLOR.BLACK};
 `
 
 const PictureContainer = styled.div`
