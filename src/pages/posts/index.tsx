@@ -10,6 +10,11 @@ import {
 import { SearchInputArea } from 'src/components/organisms/searchInputArea'
 import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 
+export type OptionalQuery = {
+  keyword?: string
+  page?: string
+}
+
 export default function Posts() {
   const { params } = useSearchParams()
   const { articles, error } = useSearchedArticles(params)

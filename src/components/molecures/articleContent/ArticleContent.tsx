@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 
+import { pagesPath } from 'src/utils/$path'
 import { Article } from 'src/types'
 import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 
@@ -10,7 +11,7 @@ interface Props {
 
 export function ArticleContent({ article }: Props) {
   return (
-    <Link href={`/posts/${article.id}`} passHref>
+    <Link href={pagesPath.posts._id(article.id).$url()} passHref>
       <StyledLink>
         <SubTitle key={article.id}>{article.title}</SubTitle>
         <DateMemo>{article.publishedAt}</DateMemo>
