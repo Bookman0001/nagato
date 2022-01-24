@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Link from 'next/link'
 
+import { pagesPath } from 'src/utils/$path'
 import { Header as Icon } from 'src/components/atoms/icon/header'
 import { COLOR, DEVICE_WIDTH, FONT_SIZE, Z_INDEX } from 'src/theme/constants'
 
@@ -8,7 +9,7 @@ export function Header() {
   return (
     <HeaderContainer>
       <Container>
-        <Link href="/" passHref>
+        <Link href={pagesPath.$url()} passHref>
           <LogoText>
             <Icon />
           </LogoText>

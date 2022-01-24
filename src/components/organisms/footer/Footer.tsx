@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
+import { pagesPath } from 'src/utils/$path'
 import { ParagraphContent } from 'src/components/atoms/paragraphContent'
 import { CirclePicture } from 'src/components/atoms/picture'
 import { Mail } from 'src/components/atoms/icon/mail'
@@ -26,7 +27,7 @@ export function Footer() {
           />
         </a>
       </PictureContainer>
-      <Link href={'/reception'} passHref>
+      <Link href={pagesPath.reception.$url()} passHref>
         <MailContainer>
           <Mail size={30} />
         </MailContainer>

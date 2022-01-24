@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 
+import { pagesPath } from 'src/utils/$path'
 import { SearchParams } from 'src/types'
 
 export function useSearchParams() {
@@ -10,14 +11,19 @@ export function useSearchParams() {
   const params: SearchParams = { keyword: defaultKeyword, page: defaultPage }
 
   const searchArticlesWithPager = (paginationIndex: number) => {
-    router.push({
-      pathname: '/posts',
-      query: { keyword: params.keyword, page: String(paginationIndex) },
-    })
+    router.push(
+      pagesPath.posts.$url({
+        query: { keyword: params.keyword, page: String(paginationIndex) },
+      })
+    )
   }
 
   const searchArticlesWithKeyword = (keyword: string) => {
-    router.push({ pathname: '/posts', query: { keyword: keyword } })
+    router.push(
+      pagesPath.posts.$url({
+        query: { keyword: keyword },
+      })
+    )
   }
 
   return {

@@ -1,18 +1,20 @@
 import { useRouter } from 'next/router'
 
+import { pagesPath } from 'src/utils/$path'
+
 export function useTransitionPage() {
   const router = useRouter()
 
   const transitionToTop = () => {
-    router.push({ pathname: '/' })
+    router.push(pagesPath.$url())
   }
 
   const transitionToSearch = () => {
-    router.push({ pathname: '/posts' })
+    router.push(pagesPath.posts.$url())
   }
 
   const transitionToThanks = () => {
-    router.push({ pathname: '/thanks' })
+    router.push(pagesPath.thanks.$url())
   }
 
   return {
