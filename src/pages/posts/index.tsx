@@ -3,10 +3,7 @@ import styled from 'styled-components'
 import { useSearchedArticles } from 'src/hooks/articles'
 import { useSearchParams } from 'src/hooks/router/searchParams'
 import { SearchLayout } from 'src/components/templates/searchLayout'
-import {
-  SearchedArticles,
-  SkeletonArticles,
-} from 'src/components/organisms/searchedArticles'
+import { Articles, Skeletons } from 'src/components/organisms/searchedArticles'
 import { SearchInputArea } from 'src/components/organisms/searchInputArea'
 import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 
@@ -34,7 +31,7 @@ export default function Posts() {
           <InputWrapper>
             <SearchInputArea defaultKeyword={params.keyword} />
           </InputWrapper>
-          <SkeletonArticles itemCount={10} />
+          <Skeletons itemCount={10} />
         </Section>
       </SearchLayout>
     )
@@ -46,10 +43,7 @@ export default function Posts() {
         <InputWrapper>
           <SearchInputArea defaultKeyword={params.keyword} />
         </InputWrapper>
-        <SearchedArticles
-          currentIndex={Number(params.page) || 1}
-          articles={articles}
-        />
+        <Articles currentIndex={Number(params.page) || 1} articles={articles} />
       </Section>
     </SearchLayout>
   )
