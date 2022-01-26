@@ -11,7 +11,7 @@ interface Props {
   currentIndex: number
 }
 
-export function SearchedArticles({ currentIndex, articles }: Props) {
+export function Articles({ currentIndex, articles }: Props) {
   const { searchArticlesWithPager } = useSearchParams()
   const { contents, totalCount, limit } = articles
 

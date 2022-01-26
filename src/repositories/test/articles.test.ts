@@ -1,64 +1,53 @@
-import axios from 'axios'
-import MockDate from 'mockdate'
-
+/**
+ * @jest-environment node
+ */
 import {
   fetchAllArticles,
   fetchLimitedArtcles,
 } from 'src/repositories/articles'
 
-MockDate.set('1995-01-01')
-
-jest.mock('axios')
-const mockedAxios = axios as jest.Mocked<typeof axios>
-
-const fetchedArticles = [
-  {
-    id: 1,
-    publishedAt: new Date(),
-    title: 'test title',
-    description: 'test description',
-    content: '<p>test content</p>',
-  },
-  {
-    id: 2,
-    publishedAt: new Date(),
-    title: 'test title',
-    description: 'test description',
-    content: '<p>test content</p>',
-  },
-]
-
-const expectedArticles = [
-  {
-    id: 1,
-    publishedAt: new Date(),
-    title: 'test title',
-    description: 'test description',
-    content: '<p>test content</p>',
-  },
-  {
-    id: 2,
-    publishedAt: new Date(),
-    title: 'test title',
-    description: 'test description',
-    content: '<p>test content</p>',
-  },
-]
-
-test('should return fetchedArticles', () => {
-  const resp = { data: fetchedArticles }
-  mockedAxios.get.mockResolvedValue(resp)
-
-  return fetchAllArticles({ limit: 10, offset: 0 }).then((data) => {
-    expect(data).toEqual(expectedArticles)
+describe('fetchAllArticles', () => {
+  it('to be fetched correctly', () => {
+    return fetchAllArticles({ limit: 10, offset: 0 }).then((data) => {
+      expect(data).toEqual([
+        {
+          id: '1',
+          publishedAt: '1991-01-01',
+          title: 'test title',
+          description: 'test description',
+          content: '<p>test content</p>',
+        },
+        {
+          id: '2',
+          publishedAt: '1991-01-01',
+          title: 'test title',
+          description: 'test description',
+          content: '<p>test content</p>',
+        },
+      ])
+    })
   })
 })
 
-test('should return fetchedLimitedArticles', () => {
-  const resp = { data: fetchedArticles }
-  mockedAxios.get.mockResolvedValue(resp)
-
-  return fetchLimitedArtcles({ limit: 2 }).then((data) => {
-    expect(data).toEqual(expectedArticles)
+describe('fetchLimitedArticles', () => {
+  it('to be fetched correctly', () => {
+    return fetchLimitedArtcles({ limit: 10 }).then((data) => {
+      expect(data).toEqual([
+        {
+          id: '1',
+          publishedAt: '1991-01-01',
+          title: 'test title',
+          description: 'test description',
+          content: '<p>test content</p>',
+        },
+        {
+          id: '2',
+          publishedAt: '1991-01-01',
+          title: 'test title',
+          description: 'test description',
+          content: '<p>test content</p>',
+        },
+      ])
+    })
   })
 })

@@ -24,6 +24,7 @@ const config: Config.InitialOptions = {
       tsconfig: '<rootDir>/test/tsconfig.jest.json',
     },
   },
+  setupFilesAfterEnv: ['./jest.setup.ts'],
 }
 
 export default config

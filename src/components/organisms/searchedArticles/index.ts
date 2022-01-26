@@ -1,2 +1,2 @@
-export { SearchedArticles } from './SearchedArticles'
-export { SkeletonArticles } from './SkeletonArticles'
+export { Articles } from './Articles'
+export { Skeletons } from './Skeletons'

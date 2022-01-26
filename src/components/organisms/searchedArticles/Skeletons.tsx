@@ -6,7 +6,7 @@ interface Props {
   itemCount: number
 }
 
-export function SkeletonArticles({ itemCount }: Props) {
+export function Skeletons({ itemCount }: Props) {
   return (
     <Container>
       {[...Array(itemCount)].map((_, i) => {
