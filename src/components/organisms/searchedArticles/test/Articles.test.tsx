@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 
-import { SearchedArticles } from 'src/components/organisms/searchedArticles'
+import { Articles } from 'src/components/organisms/searchedArticles'
 import * as useSearchParams from 'src/hooks/router/searchParams'
 import { ArticlesPagination } from 'src/types'
 
@@ -35,7 +35,7 @@ describe('SearchedArticles', () => {
       offset: 0,
       limit: 10,
     }
-    render(<SearchedArticles articles={emptyArticles} currentIndex={1} />)
+    render(<Articles articles={emptyArticles} currentIndex={1} />)
     expect(screen.getAllByText('dummy title')).toBeDefined()
     expect(screen.getAllByText('2021-01-01')).toBeDefined()
   })
@@ -47,7 +47,7 @@ describe('SearchedArticles', () => {
       offset: 0,
       limit: 0,
     }
-    render(<SearchedArticles articles={emptyArticles} currentIndex={1} />)
+    render(<Articles articles={emptyArticles} currentIndex={1} />)
     expect(screen.getAllByText('No Result!')).toBeDefined()
   })
 
@@ -66,7 +66,7 @@ describe('SearchedArticles', () => {
       offset: 0,
       limit: 10,
     }
-    render(<SearchedArticles articles={emptyArticles} currentIndex={1} />)
+    render(<Articles articles={emptyArticles} currentIndex={1} />)
     fireEvent.click(screen.getByText('1'))
     expect(mockSearch).toBeCalledTimes(1)
   })
