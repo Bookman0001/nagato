@@ -43,6 +43,7 @@ const Container = styled.div`
 `
 
 const StyledSelect = styled.select`
+  color: ${COLOR.BLACK};
   width: 100%;
   height: 100%;
   padding: 0 1em;

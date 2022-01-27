@@ -33,6 +33,7 @@ const Container = styled.div`
 `
 
 const Value = styled.div`
+  color: ${COLOR.BLACK};
   background-color: ${COLOR.GRAY};
 `
 

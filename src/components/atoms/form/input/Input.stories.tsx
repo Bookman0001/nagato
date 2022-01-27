@@ -42,6 +42,7 @@ const Error: VFC = () => {
 }
 
 const Container = styled.div`
+  color: ${COLOR.BLACK};
   margin-top: 20px;
   padding: 20px;
   background-color: ${COLOR.GRAY};
