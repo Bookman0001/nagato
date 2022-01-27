@@ -58,9 +58,9 @@ yarn jest
 ## e2e Intgration Test
 
 ```bash
-cd cypress
-yarn cypress
+yarn cy:run
 ```
+Caution: M1 Mac(https://www.cypress.io/blog/2021/01/20/running-cypress-on-the-apple-m1-silicon-arm-architecture-using-rosetta-2/)
 
 ## Learn More
 
