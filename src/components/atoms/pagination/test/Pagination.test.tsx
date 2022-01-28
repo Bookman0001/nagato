@@ -21,4 +21,17 @@ describe('Pagination', () => {
     fireEvent.click(screen.getAllByRole('button')[0])
     expect(handleClick).toHaveBeenCalledTimes(1)
   })
+
+  it('should not to be rendered', () => {
+    const handleClick = jest.fn()
+    const { container } = render(
+      <Pagination
+        currentIndex={1}
+        totalCount={0}
+        limit={2}
+        onClick={handleClick}
+      />
+    )
+    expect(container.firstChild).toBe(null)
+  })
 })

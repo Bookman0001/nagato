@@ -12,9 +12,9 @@ const Template: VFC = () => {
   const [count, setCount] = useState<number>(1)
   return (
     <>
-      総件数50件で10件ずつの時
+      総件数100件で10件ずつの時
       <Pagination
-        totalCount={50}
+        totalCount={100}
         limit={10}
         onClick={(index) => setCount(index)}
         currentIndex={count}
