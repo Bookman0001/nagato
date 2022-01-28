@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import { BORDER_RADIUS, COLOR, FONT_SIZE } from 'src/theme/constants'
+import { usePagination } from './usePagination'
 
 interface Props {
   currentIndex: number
@@ -15,7 +16,15 @@ export function Pagination({
   limit,
   onClick,
 }: Props) {
-  const paginationCount = Math.ceil(totalCount / limit)
+  const { getDisplayPaginations } = usePagination({
+    currentIndex,
+    totalCount,
+    limit,
+  })
+
+  if (!totalCount) return null
+
+  const displayPaginations = getDisplayPaginations()
 
   const handleClick = (clickedIndex: number) => {
     onClick(clickedIndex)
@@ -23,15 +32,15 @@ export function Pagination({
 
   return (
     <Container>
-      {[...Array(paginationCount)].map((_, index) => {
+      {displayPaginations.map((num, index) => {
         return (
-          <ButtonWrapper key={index} hasSelected={currentIndex === index + 1}>
+          <ButtonWrapper key={index} hasSelected={currentIndex === num}>
             <ButtonItem
-              onClick={() => handleClick(index + 1)}
+              onClick={() => handleClick(num)}
               key={index}
               role={'button'}
             >
-              {index + 1}
+              {num}
             </ButtonItem>
           </ButtonWrapper>
         )
