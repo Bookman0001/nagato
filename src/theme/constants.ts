@@ -6,6 +6,12 @@ export const COLOR = {
   WARNING: '#db235c',
 } as const
 
+export const BUTTON_BG_COLOR = {
+  BLUE: '#00afcc',
+  BLACK: '#303030',
+  WARNING: '#db235c',
+} as const
+
 export const FONT_SIZE = {
   XXS: '0.75rem',
   XS: '1rem',
