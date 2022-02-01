@@ -14,12 +14,4 @@ const Template: Story = (args) => (
   </Button>
 )
 
-const DisabledButton: Story = (args) => (
-  <Button onClick={action('clicked')} disabled {...args}>
-    ボタン
-  </Button>
-)
-
 export const Default = Template.bind({})
-
-export const Disabled = DisabledButton.bind({})
