@@ -36,7 +36,7 @@ export function Button({
   )
 }
 
-const ButtonItem = styled.button<{ width?: string; bgColor: ThemeColor }>`
+const ButtonItem = styled.button<{ bgColor: ThemeColor }>`
   min-height: 40px;
   height: 100%;
   border-radius: ${BORDER_RADIUS.DEFAULT};
@@ -47,6 +47,7 @@ const ButtonItem = styled.button<{ width?: string; bgColor: ThemeColor }>`
   font-size: ${FONT_SIZE.M};
   background-color: ${COLOR.BLACK};
   border: 2px solid ${COLOR.WHITE};
+  line-height: 1;
   cursor: pointer;
   :hover {
     opacity: 0.7;
