@@ -6643,7 +6643,7 @@ eslint-config-standard@^16.0.3:
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-16.0.3.tgz#6c8761e544e96c531ff92642eeb87842b8488516"
   integrity sha512-x4fmJL5hGqNJKGHSjnLdgA6U6h1YW/G2dW9fA+cyVur4SK6lyue8+UgNKWlZtUDTXvgKDD/Oa3GQjmB5kjtVvg==
 
-eslint-config-tenryu@^1.1.9:
+eslint-config-tenryu@1.1.9:
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/eslint-config-tenryu/-/eslint-config-tenryu-1.1.9.tgz#e5e030939e672f68d85ca2edac74026a506c523e"
   integrity sha512-BJ4WDRyI6gO/edc6/ca3qPyQvjewSxo15/zC3ftlNL0a6MwFBumyooIQ3mkpxgaEodMrT0b0Rlcc9kTD5SIo8Q==
