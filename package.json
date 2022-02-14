@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@sendgrid/mail": "7.6.0",
-    "axios": "0.25.0",
+    "axios": "0.26.0",
     "dayjs": "1.10.7",
     "gray-matter": "4.0.3",
     "i18next": "21.6.10",
