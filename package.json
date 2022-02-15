@@ -29,7 +29,7 @@
     "*": "stylelint ./**/*.{ts,tsx}"
   },
   "dependencies": {
-    "@sendgrid/mail": "7.6.0",
+    "@sendgrid/mail": "7.6.1",
     "axios": "0.26.0",
     "dayjs": "1.10.7",
     "gray-matter": "4.0.3",
