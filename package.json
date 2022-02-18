@@ -63,7 +63,7 @@
     "@types/react": "17.0.39",
     "@types/react-test-renderer": "17.0.1",
     "@types/sanitize-html": "2.6.2",
-    "@types/styled-components": "5.1.22",
+    "@types/styled-components": "5.1.23",
     "babel-loader": "8.2.3",
     "babel-plugin-styled-components": "2.0.2",
     "cypress": "9.5.0",
