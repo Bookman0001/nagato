@@ -1,6 +1,3 @@
-/**
- * @jest-environment node
- */
 import { articleController } from 'src/controllers/article'
 
 describe('articleController', () => {

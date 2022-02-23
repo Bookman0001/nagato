@@ -1,6 +1,3 @@
-/**
- * @jest-environment node
- */
 import { postMessage } from 'src/repositories/message'
 import { FormParams } from 'src/types'
 
