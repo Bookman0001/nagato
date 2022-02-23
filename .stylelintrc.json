@@ -35,6 +35,7 @@
     "alpha-value-notation": "number",
     "color-function-notation": "legacy",
     "selector-class-pattern": null,
-    "property-no-vendor-prefix": null
+    "property-no-vendor-prefix": null,
+    "function-no-unknown": null
   }
 }
