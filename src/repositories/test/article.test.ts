@@ -1,6 +1,3 @@
-/**
- * @jest-environment node
- */
 import { fetchArticle } from 'src/repositories/article'
 
 describe('fetchArticle', () => {
