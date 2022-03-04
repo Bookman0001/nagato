@@ -20,7 +20,7 @@ export function Footer() {
           rel="noopener noreferrer"
         >
           <CirclePicture
-            alt={'guthub'}
+            alt={'githubへのリンク'}
             src={'/assets/github.png'}
             width={30}
             height={30}
