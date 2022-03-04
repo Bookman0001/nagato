@@ -42,7 +42,7 @@ export function SearchInputArea({ defaultKeyword }: Props) {
           defaultValue={defaultKeyword}
           onKeyDown={handleKeyDown}
         />
-        <Button onClick={handleClick}>
+        <Button aria-label="検索" onClick={handleClick}>
           <Search size={26} />
         </Button>
       </DetailWrapper>

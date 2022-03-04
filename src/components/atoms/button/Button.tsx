@@ -5,17 +5,16 @@ import { BORDER_RADIUS, COLOR, FONT_SIZE } from 'src/theme/constants'
 import { ButtonBgColor } from 'src/types/theme'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  disabled?: boolean
   children?: React.ReactNode
   bgColor?: ButtonBgColor
   onClick?: () => void
 }
 
 export function Button({
-  disabled,
   children,
   bgColor = COLOR.BLACK,
   onClick,
+  ...props
 }: Props) {
   const handleClick = (e: MouseEvent) => {
     if (onClick) {
@@ -25,12 +24,7 @@ export function Button({
     }
   }
   return (
-    <ButtonItem
-      onClick={handleClick}
-      disabled={disabled}
-      role={'button'}
-      bgColor={bgColor}
-    >
+    <ButtonItem onClick={handleClick} bgColor={bgColor} {...props}>
       {children}
     </ButtonItem>
   )
@@ -47,7 +41,6 @@ const ButtonItem = styled.button<{ bgColor: ButtonBgColor }>`
   font-size: ${FONT_SIZE.M};
   background-color: ${({ bgColor }) => bgColor};
   border: 2px solid ${COLOR.WHITE};
-  line-height: 1;
   cursor: pointer;
   :hover {
     opacity: 0.9;

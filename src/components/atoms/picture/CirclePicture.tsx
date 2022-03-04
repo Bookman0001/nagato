@@ -17,7 +17,7 @@ export function CirclePicture({
 }: Props) {
   return (
     <Container width={width} height={height}>
-      <Image src={src} alt={alt} isCircle={isCircle} role={'img'} />
+      <Image src={src} alt={alt} isCircle={isCircle} />
     </Container>
   )
 }
