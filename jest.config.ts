@@ -1,30 +1,16 @@
+import nextJest from 'next/jest'
 import { Config } from '@jest/types'
 
-const config: Config.InitialOptions = {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  roots: ['<rootDir>/src'],
-  testMatch: ['**/?(*.)+(spec|test).+(ts|tsx)'],
-  transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-  },
+const createJestConfig = nextJest({
+  dir: './',
+})
+
+const customJestConfig: Config.InitialOptions = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
     '^src/(.*)$': '<rootDir>/src/$1',
   },
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  // snapshotSerializers: ['enzyme-to-json/serializer'],
-  // setupFilesAfterEnv: ['<rootDir>/test/setupTests.ts'],
-  // https://github.com/zeit/next.js/issues/8663#issue-490553899
-  globals: {
-    // we must specify a custom tsconfig for tests because we need the typescript transform
-    // to transform jsx into js rather than leaving it jsx such as the next build requires. you
-    // can see this setting in tsconfig.jest.json -> "jsx": "react"
-    'ts-jest': {
-      tsconfig: '<rootDir>/test/tsconfig.jest.json',
-    },
-  },
-  setupFilesAfterEnv: ['./jest.setup.ts'],
+  testEnvironment: 'jest-environment-jsdom',
 }
 
-export default config
+module.exports = createJestConfig(customJestConfig)
