@@ -11,11 +11,6 @@ const customJestConfig: Config.InitialOptions = {
     '^src/(.*)$': '<rootDir>/src/$1',
   },
   testEnvironment: 'jest-environment-jsdom',
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/test/tsconfig.jest.json',
-    },
-  },
 }
 
 module.exports = createJestConfig(customJestConfig)
