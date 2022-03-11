@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 import { MainTitle } from 'src/components/atoms/mainTitle'
-import 'src/locale/I18n'
 
 export function Introduction() {
   return (
