@@ -5,7 +5,8 @@
     "cypress/no-unnecessary-waiting": "error",
     "cypress/assertion-before-screenshot": "warn",
     "cypress/no-force": "warn",
-    "cypress/no-async-tests": "error"
+    "cypress/no-async-tests": "error",
+    "jest/expect-expect": "off"
   },
   "env": {
     "cypress/globals": true
