@@ -1,5 +1,5 @@
 {
-  "extends": ["tenryu"],
+  "extends": ["tenryu", "plugin:@next/next/recommended"],
   "overrides": [
     {
       "files": ["cypress/cypress/integration/*.ts"],
