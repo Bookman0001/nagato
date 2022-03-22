@@ -63,7 +63,7 @@
     "@types/react-test-renderer": "17.0.1",
     "@types/sanitize-html": "2.6.2",
     "@types/styled-components": "5.1.24",
-    "babel-loader": "8.2.3",
+    "babel-loader": "8.2.4",
     "babel-plugin-styled-components": "2.0.6",
     "cypress": "9.5.2",
     "eslint": "8.11.0",
