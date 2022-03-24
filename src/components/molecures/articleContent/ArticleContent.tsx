@@ -1,9 +1,9 @@
-import styled from 'styled-components'
 import Link from 'next/link'
+import styled from 'styled-components'
 
-import { pagesPath } from 'src/utils/$path'
-import { Article } from 'src/types'
 import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
+import { Article } from 'src/types'
+import { pagesPath } from 'src/utils/$path'
 
 interface Props {
   article: Article

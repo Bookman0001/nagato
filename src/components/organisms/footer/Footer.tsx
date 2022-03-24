@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
-import { pagesPath } from 'src/utils/$path'
+import { Mail } from 'src/components/atoms/icon/mail'
 import { ParagraphContent } from 'src/components/atoms/paragraphContent'
 import { CirclePicture } from 'src/components/atoms/picture'
-import { Mail } from 'src/components/atoms/icon/mail'
 import { COLOR } from 'src/theme/constants'
+import { pagesPath } from 'src/utils/$path'
 
 export function Footer() {
   return (

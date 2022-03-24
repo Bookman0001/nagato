@@ -1,5 +1,5 @@
-import { useState, VFC } from 'react'
 import { Meta } from '@storybook/react/types-6-0'
+import { useState, VFC } from 'react'
 
 import { Pagination } from './'
 

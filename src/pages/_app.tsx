@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
 import { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 import * as gtag from 'src/services/gtag'
 import SwrConfig from 'src/services/swr'

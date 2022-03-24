@@ -1,8 +1,9 @@
-import { VFC } from 'react'
 import { Meta } from '@storybook/react/types-6-0'
+import { VFC } from 'react'
+
+import { Label } from './'
 
 import { Mail } from 'src/components/atoms/icon/mail'
-import { Label } from './'
 
 export default {
   title: 'form/Label',
