@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-import { ArticlesPagination } from 'src/types'
-import { articlesController } from 'src/controllers/articles'
+import { Articles } from 'src/components/organisms/articles'
 import { Introduction } from 'src/components/organisms/introduction'
 import { TopLayout } from 'src/components/templates/topLayout'
-import { Articles } from 'src/components/organisms/articles'
+import { articlesController } from 'src/controllers/articles'
 import { DEVICE_WIDTH } from 'src/theme/constants'
+import { ArticlesPagination } from 'src/types'
 
 interface Props {
   articles: ArticlesPagination

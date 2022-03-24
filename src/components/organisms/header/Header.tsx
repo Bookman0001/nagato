@@ -1,9 +1,9 @@
-import styled from 'styled-components'
 import Link from 'next/link'
+import styled from 'styled-components'
 
-import { pagesPath } from 'src/utils/$path'
 import { Header as Icon } from 'src/components/atoms/icon/header'
 import { COLOR, DEVICE_WIDTH, FONT_SIZE, Z_INDEX } from 'src/theme/constants'
+import { pagesPath } from 'src/utils/$path'
 
 export function Header() {
   return (

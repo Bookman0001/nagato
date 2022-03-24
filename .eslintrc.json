@@ -1,10 +1,49 @@
 {
   "extends": ["tenryu", "plugin:@next/next/recommended"],
+  "plugins": ["import"],
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
   "overrides": [
     {
       "files": ["cypress/cypress/integration/*.ts"],
       "rules": {
-        "jest/expect-expect": "off"
+        "jest/expect-expect": "off",
+        "import/no-unresolved": "error"
+      }
+    },
+    {
+      "files": ["src/**/*.{ts,tsx}"],
+      "rules": {
+        "import/order": [
+          "error",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "parent",
+              "sibling",
+              "index",
+              "object",
+              "type"
+            ],
+            "pathGroups": [
+              {
+                "pattern": "@alias/**",
+                "group": "parent",
+                "position": "before"
+              }
+            ],
+            "alphabetize": {
+              "order": "asc"
+            },
+            "newlines-between": "always"
+          }
+        ]
       }
     }
   ]

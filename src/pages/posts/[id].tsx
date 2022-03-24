@@ -1,12 +1,12 @@
-import styled from 'styled-components'
 import sanitizeHtml from 'sanitize-html'
+import styled from 'styled-components'
 
-import { articlesController } from 'src/controllers/articles'
-import { articleController } from 'src/controllers/article'
-import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import { BlogLayout } from 'src/components/templates/blogLayout'
-import { Article } from 'src/types'
+import { articleController } from 'src/controllers/article'
+import { articlesController } from 'src/controllers/articles'
+import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import { COLOR, DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
+import { Article } from 'src/types'
 
 interface Params {
   params: {

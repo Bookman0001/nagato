@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-import { useSearchParams } from 'src/hooks/router/searchParams'
-import { ArticleContent } from 'src/components/molecures/articleContent'
 import { Pagination } from 'src/components/atoms/pagination'
-import { ArticlesPagination } from 'src/types'
+import { ArticleContent } from 'src/components/molecures/articleContent'
+import { useSearchParams } from 'src/hooks/router/searchParams'
 import { FONT_SIZE } from 'src/theme/constants'
+import { ArticlesPagination } from 'src/types'
 
 interface Props {
   articles: ArticlesPagination

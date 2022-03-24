@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import { ReceptionLayout } from 'src/components/templates/receptionLayout'
 import { ReceptionForm } from 'src/components/organisms/receptionForm'
+import { ReceptionLayout } from 'src/components/templates/receptionLayout'
 import { DEVICE_WIDTH } from 'src/theme/constants'
 
 export default function Reception() {

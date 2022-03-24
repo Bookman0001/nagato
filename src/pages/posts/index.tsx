@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
+import { SearchInputArea } from 'src/components/organisms/searchInputArea'
+import { Articles, Skeletons } from 'src/components/organisms/searchedArticles'
+import { SearchLayout } from 'src/components/templates/searchLayout'
 import { useSearchedArticles } from 'src/hooks/articles'
 import { useSearchParams } from 'src/hooks/router/searchParams'
-import { SearchLayout } from 'src/components/templates/searchLayout'
-import { Articles, Skeletons } from 'src/components/organisms/searchedArticles'
-import { SearchInputArea } from 'src/components/organisms/searchInputArea'
 import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 
 export type OptionalQuery = {

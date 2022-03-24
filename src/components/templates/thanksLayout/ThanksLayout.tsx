@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Default } from 'src/components/organisms/meta/default'
-import { Header } from 'src/components/organisms/header'
 import { Footer } from 'src/components/organisms/footer'
+import { Header } from 'src/components/organisms/header'
+import { Default } from 'src/components/organisms/meta/default'
 
 interface Props {
   children: React.ReactChild

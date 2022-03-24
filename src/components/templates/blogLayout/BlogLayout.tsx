@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Post } from 'src/components/organisms/meta/post'
-import { Header } from 'src/components/organisms/header'
-import { Footer } from 'src/components/organisms/footer'
 import { MainTitle } from 'src/components/atoms/mainTitle'
+import { Footer } from 'src/components/organisms/footer'
+import { Header } from 'src/components/organisms/header'
+import { Post } from 'src/components/organisms/meta/post'
 import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 import { Article } from 'src/types'
 
