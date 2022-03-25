@@ -85,7 +85,7 @@
     "prettier": "2.6.1",
     "puppeteer": "13.5.1",
     "simple-git-hooks": "2.7.0",
-    "stylelint": "14.6.0",
+    "stylelint": "14.6.1",
     "stylelint-config-prettier": "9.0.3",
     "stylelint-config-standard": "25.0.0",
     "stylelint-config-styled-components": "0.1.1",
