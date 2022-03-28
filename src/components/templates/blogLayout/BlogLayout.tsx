@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import type { Article } from 'src/types'
+
 import { MainTitle } from 'src/components/atoms/mainTitle'
 import { Footer } from 'src/components/organisms/footer'
 import { Header } from 'src/components/organisms/header'
 import { Post } from 'src/components/organisms/meta/post'
 import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
-import { Article } from 'src/types'
 
 interface Props {
   title: string

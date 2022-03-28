@@ -1,4 +1,4 @@
-import { FormParams } from 'src/types'
+import type { FormParams } from 'src/types'
 
 export function validateFormParams(params: FormParams | undefined) {
   if (!params?.email) {

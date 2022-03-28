@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
+import type { ArticlesPagination } from 'src/types'
+
 import { Button } from 'src/components/atoms/button'
 import { ArticleContent } from 'src/components/molecures/articleContent'
 import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import { FONT_SIZE } from 'src/theme/constants'
-import { ArticlesPagination } from 'src/types'
 
 interface Props {
   articles: ArticlesPagination
