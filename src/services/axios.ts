@@ -1,7 +1,7 @@
 import axios, { AxiosError } from 'axios'
 
-const X_API_BASE_URL = process.env.X_API_BASE_URL || ''
-const X_API_KEY = process.env.X_API_KEY || ''
+const X_API_BASE_URL = process.env.X_API_BASE_URL ?? ''
+const X_API_KEY = process.env.X_API_KEY ?? ''
 
 axios.defaults.baseURL = X_API_BASE_URL
 axios.defaults.headers.common['Content-type'] = 'application/json'

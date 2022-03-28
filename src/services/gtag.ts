@@ -16,7 +16,7 @@ interface ClickEvent {
   label: string
 }
 
-export const GA_ID = process.env.GA_ID || ''
+export const GA_ID = process.env.GA_ID ?? ''
 export const existsGaId = GA_ID !== ''
 
 export const pageview = (path: string) => {
