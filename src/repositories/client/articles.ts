@@ -1,4 +1,4 @@
-import { ArticlesResponse, SearchParams } from 'src/types'
+import type { ArticlesResponse, SearchParams } from 'src/types'
 
 export async function fetchSearchedArticles(params: SearchParams) {
   const encodedParams: SearchParams = {

@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 
-import { SearchParams } from 'src/types'
+import type { SearchParams } from 'src/types'
+
 import { pagesPath } from 'src/utils/$path'
 
 export function useSearchParams() {

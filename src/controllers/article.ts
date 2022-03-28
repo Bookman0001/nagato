@@ -1,7 +1,8 @@
 import dayjs from 'dayjs'
 
+import type { ArticleResponse, Article } from 'src/types'
+
 import { fetchArticle } from 'src/repositories/article'
-import { ArticleResponse, Article } from 'src/types'
 
 function mappingArticle(article: ArticleResponse): Article {
   const { id, publishedAt, title, description, content } = article

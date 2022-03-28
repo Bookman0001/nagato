@@ -1,6 +1,6 @@
 import sgMail from '@sendgrid/mail'
 
-import { FormParams } from 'src/types'
+import type { FormParams } from 'src/types'
 
 type SgMessage = {
   to: string

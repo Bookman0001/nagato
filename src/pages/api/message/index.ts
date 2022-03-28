@@ -1,8 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
+import type { FormParams } from 'src/types'
+
 import { postMessage } from 'src/repositories/message'
 import { sendMail } from 'src/services/sendGrid'
-import { FormParams } from 'src/types'
 import { validateFormParams } from 'src/utils/api'
 
 async function sendMessage(req: NextApiRequest, res: NextApiResponse) {

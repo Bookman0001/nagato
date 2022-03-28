@@ -3,7 +3,7 @@ import React from 'react'
 
 import { ArticleContent } from './'
 
-import { Article } from 'src/types'
+import type { Article } from 'src/types'
 
 export default {
   title: 'ArticleContent',

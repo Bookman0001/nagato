@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { Article } from 'src/types'
+import type { Article } from 'src/types'
 
 interface Props {
   article: Article

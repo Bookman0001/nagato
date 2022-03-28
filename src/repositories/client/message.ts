@@ -1,4 +1,4 @@
-import { FormParams } from 'src/types'
+import type { FormParams } from 'src/types'
 
 export async function postMessage(params: FormParams) {
   const requestParams: FormParams = {

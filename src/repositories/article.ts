@@ -1,5 +1,6 @@
+import type { ArticleResponse } from 'src/types'
+
 import { get } from 'src/services/axios'
-import { ArticleResponse } from 'src/types'
 
 export async function fetchArticle(
   articleId: string

@@ -1,7 +1,8 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 
+import type { ArticlesPagination } from 'src/types'
+
 import { Articles } from 'src/components/organisms/articles'
-import { ArticlesPagination } from 'src/types'
 
 const mockPush = jest.fn()
 

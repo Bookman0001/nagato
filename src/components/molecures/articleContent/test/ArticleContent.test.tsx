@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/react'
 
+import type { Article } from 'src/types'
+
 import { ArticleContent } from 'src/components/molecures/articleContent'
-import { Article } from 'src/types'
 
 describe('ArticleContent', () => {
   it('should be rendered with onChange', () => {
