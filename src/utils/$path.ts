@@ -1,8 +1,5 @@
-/* eslint-disable */
-// prettier-ignore
-import { OptionalQuery as OptionalQuery0 } from '../pages/posts'
+import type { OptionalQuery as OptionalQuery0 } from '../pages/posts'
 
-// prettier-ignore
 export const pagesPath = {
   posts: {
     _id: (id: string | number) => ({
@@ -19,5 +16,4 @@ export const pagesPath = {
   $url: (url?: { hash?: string }) => ({ pathname: '/' as const, hash: url?.hash })
 }
 
-// prettier-ignore
 export type PagesPath = typeof pagesPath
