@@ -1,8 +1,13 @@
 import dayjs from 'dayjs'
 
-import type { ArticleResponse, Article } from 'src/types'
+import type {
+  ArticleResponse,
+  Article,
+  DraftParams,
+  DraftArticleResponse,
+} from 'src/types'
 
-import { fetchArticle } from 'src/repositories/article'
+import { fetchArticle, fetchDraftArticle } from 'src/repositories/article'
 
 function mappingArticle(article: ArticleResponse): Article {
   const { id, publishedAt, title, description, content } = article
@@ -24,5 +29,30 @@ export function articleController() {
 
   return {
     getArticle,
+  }
+}
+
+function mappingDraftArticle(article: DraftArticleResponse): Article {
+  const { id, title, description, content } = article
+  return {
+    id,
+    publishedAt: '',
+    title,
+    description,
+    content,
+  }
+}
+
+export function draftArticleController() {
+  const getDraftArticle = async (draftParams: DraftParams) => {
+    return await fetchDraftArticle(draftParams).then(
+      (draftArticle: DraftArticleResponse) => {
+        return mappingDraftArticle(draftArticle)
+      }
+    )
+  }
+
+  return {
+    getDraftArticle,
   }
 }

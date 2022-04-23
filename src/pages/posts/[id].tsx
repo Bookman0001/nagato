@@ -1,13 +1,10 @@
 import sanitizeHtml from 'sanitize-html'
-import styled from 'styled-components'
 
 import type { Article } from 'src/types'
 
 import { BlogLayout } from 'src/components/templates/blogLayout'
 import { articleController } from 'src/controllers/article'
 import { articlesController } from 'src/controllers/articles'
-import { useTransitionPage } from 'src/hooks/router/transitionPage'
-import { COLOR, DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 
 interface Params {
   params: {
@@ -39,35 +36,11 @@ export async function getStaticProps({ params }: Params) {
 }
 
 export default function Post({ article }: Props) {
-  const { transitionToTop } = useTransitionPage()
-
   return (
     <BlogLayout title={article.title} article={article}>
-      <div>
-        <Content
-          dangerouslySetInnerHTML={{ __html: sanitizeHtml(article.content) }}
-        />
-        <LinkWrapper onClick={transitionToTop}>
-          <StyledLink>Back To Top</StyledLink>
-        </LinkWrapper>
-      </div>
+      <div
+        dangerouslySetInnerHTML={{ __html: sanitizeHtml(article.content) }}
+      />
     </BlogLayout>
   )
 }
-
-const LinkWrapper = styled.div``
-
-const Content = styled.div``
-
-const StyledLink = styled.span`
-  display: block;
-  cursor: pointer;
-  padding-top: 50px;
-  width: 100%;
-  font-size: ${FONT_SIZE.S};
-  font-weight: bold;
-  color: ${COLOR.BLUE};
-  @media (max-width: ${DEVICE_WIDTH.TABLET}) {
-    font-size: ${FONT_SIZE.XS};
-  }
-`

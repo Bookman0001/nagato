@@ -7,7 +7,8 @@ import { MainTitle } from 'src/components/atoms/mainTitle'
 import { Footer } from 'src/components/organisms/footer'
 import { Header } from 'src/components/organisms/header'
 import { Post } from 'src/components/organisms/meta/post'
-import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
+import { useTransitionPage } from 'src/hooks/router/transitionPage'
+import { COLOR, DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 
 interface Props {
   title: string
@@ -16,6 +17,8 @@ interface Props {
 }
 
 export function BlogLayout({ title, article, children }: Props) {
+  const { transitionToTop } = useTransitionPage()
+
   return (
     <>
       <Post article={article} />
@@ -23,6 +26,9 @@ export function BlogLayout({ title, article, children }: Props) {
       <Container>
         <MainTitle>{title}</MainTitle>
         <Main>{children}</Main>
+        <LinkWrapper onClick={transitionToTop}>
+          <StyledLink>Back To Top</StyledLink>
+        </LinkWrapper>
       </Container>
       <Footer />
     </>
@@ -50,5 +56,20 @@ const Main = styled.main`
   }
   img {
     width: 100%;
+  }
+`
+
+const LinkWrapper = styled.div``
+
+const StyledLink = styled.span`
+  display: block;
+  cursor: pointer;
+  padding-top: 50px;
+  width: 100%;
+  font-size: ${FONT_SIZE.S};
+  font-weight: bold;
+  color: ${COLOR.BLUE};
+  @media (max-width: ${DEVICE_WIDTH.TABLET}) {
+    font-size: ${FONT_SIZE.XS};
   }
 `
