@@ -34,6 +34,17 @@ export const handlers = [
       })
     )
   }),
+  rest.get('http://localhost/technology-articles/draft', (_, res, ctx) => {
+    return res(
+      ctx.status(200),
+      ctx.json({
+        id: '1',
+        title: 'test title',
+        description: 'test description',
+        content: '<p>test content</p>',
+      })
+    )
+  }),
   rest.post('http://localhost/messages', (_, res, ctx) => {
     return res(
       ctx.status(200),

@@ -1,4 +1,7 @@
-import { articleController } from 'src/controllers/article'
+import {
+  articleController,
+  draftArticleController,
+} from 'src/controllers/article'
 
 describe('articleController', () => {
   it('should be fetched correctly', () => {
@@ -14,5 +17,20 @@ describe('articleController', () => {
         content: '<p>test content</p>',
       })
     })
+  })
+
+  it('should be fetched correctly in draft', () => {
+    const { getDraftArticle } = draftArticleController()
+    return getDraftArticle({ id: 'draft', draftKey: 'testKey' }).then(
+      (data) => {
+        expect(data).toEqual({
+          id: '1',
+          publishedAt: '',
+          title: 'test title',
+          description: 'test description',
+          content: '<p>test content</p>',
+        })
+      }
+    )
   })
 })

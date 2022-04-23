@@ -16,6 +16,8 @@ export type ArticlesResponse = {
   readonly limit: number
 }
 
+export type DraftArticleResponse = Omit<ArticleResponse, 'publishedAt'>
+
 /* App Type Definition */
 export type Article = {
   readonly id: string
@@ -45,4 +47,9 @@ export type FormParams = {
   readonly email: string
   readonly name: string
   readonly content: string
+}
+
+export type DraftParams = {
+  readonly id: string
+  readonly draftKey: string
 }

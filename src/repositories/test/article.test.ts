@@ -1,4 +1,4 @@
-import { fetchArticle } from 'src/repositories/article'
+import { fetchArticle, fetchDraftArticle } from 'src/repositories/article'
 
 describe('fetchArticle', () => {
   it('to be fetched correctly', async () => {
@@ -11,5 +11,18 @@ describe('fetchArticle', () => {
         content: '<p>test content</p>',
       })
     })
+  })
+
+  it('to be fetched correctly in draft', async () => {
+    return fetchDraftArticle({ id: 'draft', draftKey: 'testKey' }).then(
+      (data) => {
+        expect(data).toEqual({
+          id: '1',
+          title: 'test title',
+          description: 'test description',
+          content: '<p>test content</p>',
+        })
+      }
+    )
   })
 })
