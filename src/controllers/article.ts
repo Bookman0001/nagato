@@ -1,4 +1,3 @@
-import { AxiosError } from 'axios'
 import dayjs from 'dayjs'
 
 import type {
