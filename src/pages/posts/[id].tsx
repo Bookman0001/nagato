@@ -1,3 +1,6 @@
+import { ParsedUrlQuery } from 'node:querystring'
+
+import { GetStaticPaths, GetStaticProps } from 'next'
 import sanitizeHtml from 'sanitize-html'
 
 import type { Article } from 'src/types'
@@ -6,17 +9,15 @@ import { BlogLayout } from 'src/components/templates/blogLayout'
 import { articleController } from 'src/controllers/article'
 import { articlesController } from 'src/controllers/articles'
 
-interface Params {
-  params: {
-    id: string
-  }
+interface Params extends ParsedUrlQuery {
+  id: string
 }
 
 interface Props {
   article: Article
 }
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths<Params> = async () => {
   const { getAllArticleIds } = articlesController()
   const articleIds = await getAllArticleIds()
   const paths = articleIds.map((id) => {
@@ -25,9 +26,11 @@ export async function getStaticPaths() {
   return { paths, fallback: false }
 }
 
-export async function getStaticProps({ params }: Params) {
+export const getStaticProps: GetStaticProps<Props, Params> = async ({
+  params,
+}) => {
   const { getArticle } = articleController()
-  const article = await getArticle(params.id)
+  const article = await getArticle(params?.id ?? '')
   return {
     props: {
       article: article,
