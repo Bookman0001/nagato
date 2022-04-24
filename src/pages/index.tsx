@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next'
 import styled from 'styled-components'
 
 import type { ArticlesPagination } from 'src/types'
@@ -12,7 +13,7 @@ interface Props {
   articles: ArticlesPagination
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const { getLimitedArticles } = articlesController()
   const articles = await getLimitedArticles({ limit: 5 })
   return {

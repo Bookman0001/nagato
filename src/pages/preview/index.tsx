@@ -17,7 +17,7 @@ interface Props {
   errorMessage: string
 }
 
-export async function getServerSideProps(context: Context) {
+export const getServerSideProps = async (context: Context) => {
   const { getDraftArticle } = draftArticleController()
   /* eslint-disable camelcase */
   const { content_id, draft_key } = context.query
