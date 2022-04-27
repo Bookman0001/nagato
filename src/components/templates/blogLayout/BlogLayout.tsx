@@ -11,12 +11,11 @@ import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import { COLOR, DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
 
 interface Props {
-  title: string
   article: Article
   children: React.ReactChild
 }
 
-export function BlogLayout({ title, article, children }: Props) {
+export function BlogLayout({ article, children }: Props) {
   const { transitionToTop } = useTransitionPage()
 
   return (
@@ -24,7 +23,7 @@ export function BlogLayout({ title, article, children }: Props) {
       <Post article={article} />
       <Header />
       <Container>
-        <MainTitle>{title}</MainTitle>
+        <MainTitle>{article.title}</MainTitle>
         <Main>{children}</Main>
         <LinkWrapper onClick={transitionToTop}>
           <StyledLink>Back To Top</StyledLink>
