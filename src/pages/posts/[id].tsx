@@ -40,7 +40,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 
 export default function Post({ article }: Props) {
   return (
-    <BlogLayout title={article.title} article={article}>
+    <BlogLayout article={article}>
       <div
         dangerouslySetInnerHTML={{ __html: sanitizeHtml(article.content) }}
       />
