@@ -47,7 +47,7 @@ export default function Preview({ article, errorMessage }: Props) {
   }
 
   return (
-    <BlogLayout title={article.title} article={article}>
+    <BlogLayout article={article}>
       <div
         dangerouslySetInnerHTML={{ __html: sanitizeHtml(article.content) }}
       />
