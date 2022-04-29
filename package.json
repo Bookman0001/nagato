@@ -74,7 +74,7 @@
     "eslint-plugin-import": "2.26.0",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "6.0.0",
-    "jest": "28.0.2",
+    "jest": "28.0.3",
     "jest-environment-jsdom": "28.0.2",
     "lint-staged": "12.4.1",
     "mockdate": "3.0.5",
