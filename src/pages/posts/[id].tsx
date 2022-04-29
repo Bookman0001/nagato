@@ -29,8 +29,9 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
 export const getStaticProps: GetStaticProps<Props, Params> = async ({
   params,
 }) => {
+  if (!params) throw new Error('undefined params')
   const { getArticle } = articleController()
-  const article = await getArticle(params?.id ?? '')
+  const article = await getArticle(params.id)
   return {
     props: {
       article: article,
