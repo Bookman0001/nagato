@@ -1,55 +1,55 @@
 /* API Response Type Definition */
-export type ArticleResponse = {
-  readonly id: string
-  readonly createdAt: string
-  readonly updatedAt: string
-  readonly publishedAt: string
-  readonly title: string
-  readonly description: string
-  readonly content: string
-}
+export type ArticleResponse = Readonly<{
+  id: string
+  createdAt: string
+  updatedAt: string
+  publishedAt: string
+  title: string
+  description: string
+  content: string
+}>
 
-export type ArticlesResponse = {
-  readonly contents: Array<ArticleResponse>
-  readonly totalCount: number
-  readonly offset: number
-  readonly limit: number
-}
+export type ArticlesResponse = Readonly<{
+  contents: Array<ArticleResponse>
+  totalCount: number
+  offset: number
+  limit: number
+}>
 
 export type DraftArticleResponse = Omit<ArticleResponse, 'publishedAt'>
 
 /* App Type Definition */
-export type Article = {
-  readonly id: string
-  readonly publishedAt: string
-  readonly title: string
-  readonly description: string
-  readonly content: string
-}
+export type Article = Readonly<{
+  id: string
+  publishedAt: string
+  title: string
+  description: string
+  content: string
+}>
 
-export type ArticlesPagination = {
-  readonly contents: Array<Article>
-  readonly totalCount: number
-  readonly offset: number
-  readonly limit: number
-}
+export type ArticlesPagination = Readonly<{
+  contents: Array<Article>
+  totalCount: number
+  offset: number
+  limit: number
+}>
 
-export type PaginationParams = {
-  readonly limit: number
-}
+export type PaginationParams = Readonly<{
+  limit: number
+}>
 
-export type SearchParams = {
-  readonly keyword: string
-  readonly page: string
-}
+export type SearchParams = Readonly<{
+  keyword: string
+  page: string
+}>
 
-export type FormParams = {
-  readonly email: string
-  readonly name: string
-  readonly content: string
-}
+export type FormParams = Readonly<{
+  email: string
+  name: string
+  content: string
+}>
 
-export type DraftParams = {
-  readonly id: string
-  readonly draftKey: string
-}
+export type DraftParams = Readonly<{
+  id: string
+  draftKey: string
+}>
