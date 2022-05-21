@@ -84,7 +84,7 @@
     "postcss-jsx": "0.36.4",
     "postcss-syntax": "0.36.2",
     "prettier": "2.6.2",
-    "puppeteer": "13.7.0",
+    "puppeteer": "14.1.1",
     "simple-git-hooks": "2.7.0",
     "stylelint": "14.8.2",
     "stylelint-config-prettier": "9.0.3",
