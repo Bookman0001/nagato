@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
+import { render, screen, fireEvent, waitFor, act } from '@testing-library/react'
 
 import { ReceptionForm } from 'src/components/organisms/receptionForm'
 import * as useCreateMessage from 'src/hooks/message'
@@ -9,13 +9,9 @@ jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
   push: mockPush,
 }))
 
-const createMessage = jest.fn().mockImplementation(() => {
-  return Promise.resolve(true)
-})
-
 jest.spyOn(useCreateMessage, 'useCreateMessage').mockImplementation(() => {
   return {
-    createMessage: createMessage,
+    createMessage: () => Promise.resolve(true),
     isLoading: false,
     error: null,
   }
@@ -24,30 +20,70 @@ jest.spyOn(useCreateMessage, 'useCreateMessage').mockImplementation(() => {
 describe('ReceptionForm', () => {
   beforeEach(() => {
     jest.clearAllMocks()
+    render(<ReceptionForm />)
   })
 
-  it('to be rendered correctly', () => {
-    render(<ReceptionForm />)
-    expect(screen.getByPlaceholderText('sample@example.com')).toBeDefined()
-    expect(screen.getByPlaceholderText('John Doe')).toBeDefined()
-    expect(screen.getByPlaceholderText('Hello.')).toBeDefined()
-    expect(screen.getByRole('button')).toBeDefined()
+  it('to be valid validation in empty input', async () => {
+    await act(() => {
+      fireEvent.click(screen.getByRole('button'))
+    })
+    await waitFor(() => {
+      expect(screen.getAllByText('必須です')).toBeDefined()
+    })
+  })
+
+  it('to be valid validation in email', async () => {
+    await act(() => {
+      fireEvent.change(screen.getByPlaceholderText('sample@example.com'), {
+        target: { value: 'test@test' },
+      })
+      fireEvent.click(screen.getByRole('button'))
+    })
+    await waitFor(() => {
+      expect(screen.getByText('メールアドレスの形式が不正です')).toBeDefined()
+    })
   })
 
   it('to be fired onSubmit with success status', async () => {
-    render(<ReceptionForm />)
-    fireEvent.change(screen.getByPlaceholderText('sample@example.com'), {
-      target: { value: 'sample@example.com' },
+    await act(() => {
+      fireEvent.change(screen.getByPlaceholderText('sample@example.com'), {
+        target: { value: 'sample@example.com' },
+      })
+      fireEvent.change(screen.getByPlaceholderText('John Doe'), {
+        target: { value: 'John Doe' },
+      })
+      fireEvent.change(screen.getByPlaceholderText('Hello.'), {
+        target: { value: 'Hello.' },
+      })
+      fireEvent.click(screen.getByRole('button'))
     })
-    fireEvent.change(screen.getByPlaceholderText('John Doe'), {
-      target: { value: 'John Doe' },
-    })
-    fireEvent.change(screen.getByPlaceholderText('Hello.'), {
-      target: { value: 'Hello.' },
-    })
-    fireEvent.click(screen.getByRole('button'))
     await waitFor(() => {
       expect(mockPush).toBeCalledTimes(1)
+    })
+  })
+
+  it('to be fired onSubmit with failed status', async () => {
+    jest.spyOn(useCreateMessage, 'useCreateMessage').mockImplementation(() => {
+      return {
+        createMessage: () => Promise.resolve(false),
+        isLoading: false,
+        error: { name: '', message: '' },
+      }
+    })
+    await act(() => {
+      fireEvent.change(screen.getByPlaceholderText('sample@example.com'), {
+        target: { value: 'sample@example.com' },
+      })
+      fireEvent.change(screen.getByPlaceholderText('John Doe'), {
+        target: { value: 'John Doe' },
+      })
+      fireEvent.change(screen.getByPlaceholderText('Hello.'), {
+        target: { value: 'Hello.' },
+      })
+      fireEvent.click(screen.getByRole('button'))
+    })
+    await waitFor(() => {
+      expect(screen.getByText('サーバーでエラーが発生しました')).toBeDefined()
     })
   })
 })
