@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks'
 
-import { usePagination } from '../usePagination'
+import { usePagination } from 'src/components/atoms/pagination/usePagination'
 
 describe('usePagination', () => {
   it('to be returned array in total count is 1', () => {
