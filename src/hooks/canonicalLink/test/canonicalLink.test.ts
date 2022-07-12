@@ -3,31 +3,17 @@ import { renderHook, act } from '@testing-library/react-hooks'
 
 import { useCanonicalLink } from 'src/hooks/canonicalLink'
 
-jest
-  .spyOn(require('next/router'), 'useRouter')
-  .mockImplementationOnce(() => ({
-    query: {
-      keyword: 'test',
-    },
-  }))
-  .mockImplementationOnce(() => ({
-    query: {
-      keyword: 'test',
-    },
-  }))
-  .mockImplementationOnce(() => ({
-    query: {
-      keyword: undefined,
-    },
-  }))
-  .mockImplementationOnce(() => ({
-    query: {
-      keyword: undefined,
-    },
-  }))
-
 describe('useCanonicalLink', () => {
+  beforeEach(() => {
+    jest.clearAllMocks()
+  })
+
   it('should be returned canonicalLink with keyword', async () => {
+    jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
+      query: {
+        keyword: 'test',
+      },
+    }))
     await act(async () => {
       const { result } = renderHook(() => useCanonicalLink())
       await waitFor(() => {
@@ -37,6 +23,11 @@ describe('useCanonicalLink', () => {
   })
 
   it('should be returned canonicalLink with default', async () => {
+    jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
+      query: {
+        keyword: undefined,
+      },
+    }))
     await act(async () => {
       const { result } = renderHook(() => useCanonicalLink())
       await waitFor(() => {
