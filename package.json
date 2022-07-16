@@ -67,7 +67,7 @@
     "babel-loader": "8.2.5",
     "babel-plugin-styled-components": "2.0.7",
     "cypress": "9.7.0",
-    "eslint": "8.19.0",
+    "eslint": "8.20.0",
     "eslint-config-next": "12.2.2",
     "eslint-config-tenryu": "1.2.6",
     "eslint-import-resolver-typescript": "3.2.6",
