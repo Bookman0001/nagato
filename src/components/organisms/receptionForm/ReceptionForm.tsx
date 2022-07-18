@@ -1,13 +1,12 @@
 import { useForm, useFormState } from 'react-hook-form'
 import styled from 'styled-components'
 
-import { ErrorMessage } from './ErrorMessage'
-
 import { Button } from 'src/components/atoms/button'
 import { Input } from 'src/components/atoms/form/input'
 import { Label } from 'src/components/atoms/form/label'
 import { TextArea } from 'src/components/atoms/form/textArea'
 import { Circle } from 'src/components/atoms/icon/circle'
+import { ErrorMessage } from 'src/components/organisms/receptionForm/ErrorMessage'
 import { useCreateMessage } from 'src/hooks/message'
 import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import { COLOR } from 'src/theme/constants'
