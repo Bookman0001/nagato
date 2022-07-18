@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 
 import * as gtag from 'src/services/gtag'
 import SwrConfig from 'src/services/swr'
-import { GlobalStyle } from 'src/theme'
+import 'src/theme/global.css'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()
@@ -26,12 +26,9 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, [])
 
   return (
-    <>
-      <GlobalStyle />
-      <SwrConfig>
-        <Component {...pageProps} />
-      </SwrConfig>
-    </>
+    <SwrConfig>
+      <Component {...pageProps} />
+    </SwrConfig>
   )
 }
 
