@@ -1,0 +1,53 @@
+body {
+  font-family: system-ui, sans-serif;
+  color: #ffffff;
+  background-color: #303030;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+.tl-edges {
+  overflow-x: initial;
+}
+h1 {
+  font-family: initial;
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-family: initial;
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  font-family: initial;
+  margin: 0;
+  padding: 0;
+}
+h4 {
+  font-family: initial;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+}
+a {
+  color: #00afcc;
+  box-shadow: initial;
+  cursor: pointer;
+}
+button {
+  color: #ffffff;
+  cursor: pointer;
+}
+select {
+  color: #ffffff;
+}
+input {
+  padding: 0;
+  color: #ffffff;
+}
+textarea {
+  color: #ffffff;
+}
