@@ -12,11 +12,11 @@ import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import { COLOR } from 'src/theme/constants'
 import { regExp } from 'src/utils'
 
-type FormInput = {
+type FormInput = Readonly<{
   email: string
   name: string
   content: string
-}
+}>
 
 export function ReceptionForm() {
   const { register, handleSubmit, control } = useForm<FormInput>()
