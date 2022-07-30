@@ -2,12 +2,12 @@ import sgMail from '@sendgrid/mail'
 
 import type { FormParams } from 'src/types'
 
-type SgMessage = {
+type SgMessage = Readonly<{
   to: string
   from: string
   subject: string
   text: string
-}
+}>
 
 const SEND_GRID_KEY: string = process.env.SEND_GRID_KEY ?? ''
 const ADMIN_EMAIL: string = process.env.SEND_GRID_ADMIN_EMAIL ?? ''
