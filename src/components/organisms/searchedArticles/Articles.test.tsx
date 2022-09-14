@@ -3,18 +3,20 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import type { ArticlesPagination } from 'src/types'
 
 import { Articles } from 'src/components/organisms/searchedArticles'
-import * as useSearchParams from 'src/hooks/router/searchParams'
 
 const mockedClick = jest.fn()
 const mockSearch = jest.fn()
 
-jest.spyOn(useSearchParams, 'useSearchParams').mockImplementation(() => {
-  return {
-    params: { keyword: '', page: '1' },
-    searchArticlesWithPager: mockSearch,
-    searchArticlesWithKeyword: jest.fn(),
-  }
-})
+jest.mock('src/hooks/router/searchParams', () => ({
+  ...jest.requireActual('src/hooks/router/searchParams'),
+  useSearchParams: () => {
+    return {
+      params: { keyword: '', page: '1' },
+      searchArticlesWithPager: mockSearch,
+      searchArticlesWithKeyword: jest.fn(),
+    }
+  },
+}))
 
 describe('SearchedArticles', () => {
   beforeEach(() => {
