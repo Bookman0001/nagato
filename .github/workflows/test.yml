@@ -1,0 +1,29 @@
+name: Test
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'yarn'
+      - name: install dependency
+        run: yarn install
+      - name: test format
+        run: yarn run prettier
+      - name: test linter
+        run: yarn run lint
+      - name: test compiler
+        run: yarn run compiler-check
+      - name: test style lint
+        run: yarn run lint-style
+      - name: test storybook
+        run: yarn run build-storybook
+      - name: test unit-testing and integration-testing
+        run: yarn run jest
