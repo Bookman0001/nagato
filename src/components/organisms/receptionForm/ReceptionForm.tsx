@@ -20,10 +20,11 @@ type FormInput = Readonly<{
 
 export function ReceptionForm() {
   const { register, handleSubmit, control } = useForm<FormInput>()
-  const { errors } = useFormState({ control })
+  const { errors, isSubmitSuccessful } = useFormState({ control })
   const { isLoading, error, createMessage } = useCreateMessage()
   const { transitionToThanks } = useTransitionPage()
   const { email } = regExp
+  const submitDisabled = isLoading || isSubmitSuccessful
 
   const onSubmit = async (formInput: FormInput) => {
     const completed = await createMessage(formInput)
@@ -80,7 +81,9 @@ export function ReceptionForm() {
         )}
       </Container>
       <ButtonContainer>
-        <Button disabled={isLoading}>{isLoading ? '送信中' : '送信'}</Button>
+        <Button disabled={submitDisabled}>
+          {submitDisabled ? '送信中' : '送信'}
+        </Button>
       </ButtonContainer>
       {error && (
         <ApiErrorContent>サーバーでエラーが発生しました</ApiErrorContent>
