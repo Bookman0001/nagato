@@ -1,13 +1,12 @@
 import { GetStaticProps } from 'next'
 import styled from 'styled-components'
 
-import type { ArticlesPagination } from 'src/types'
-
 import { Articles } from 'src/components/organisms/articles'
 import { Introduction } from 'src/components/organisms/introduction'
 import { TopLayout } from 'src/components/templates/topLayout'
 import { articlesController } from 'src/controllers/articles'
 import { DEVICE_WIDTH } from 'src/theme/constants'
+import type { ArticlesPagination } from 'src/types'
 
 interface Props {
   articles: ArticlesPagination

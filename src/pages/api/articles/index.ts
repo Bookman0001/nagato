@@ -1,8 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
-import type { SearchParams } from 'src/types'
-
 import { fetchSearchedArticles } from 'src/repositories/articles'
+import type { SearchParams } from 'src/types'
 
 async function getSearchedArticles(req: NextApiRequest, res: NextApiResponse) {
   const reqBody = req.body as SearchParams

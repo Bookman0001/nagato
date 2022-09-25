@@ -1,10 +1,9 @@
+import { get } from 'src/services/axios'
 import type {
   ArticleResponse,
   DraftArticleResponse,
   DraftParams,
 } from 'src/types'
-
-import { get } from 'src/services/axios'
 
 export async function fetchArticle(
   articleId: string
