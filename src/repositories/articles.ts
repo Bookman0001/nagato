@@ -1,10 +1,9 @@
+import { get } from 'src/services/axios'
 import type {
   ArticlesResponse,
   PaginationParams,
   SearchParams,
 } from 'src/types'
-
-import { get } from 'src/services/axios'
 
 export async function fetchAllArticles({
   limit,

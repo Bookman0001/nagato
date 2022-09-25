@@ -1,9 +1,8 @@
 import React, { ButtonHTMLAttributes, MouseEvent } from 'react'
 import styled from 'styled-components'
 
-import type { ButtonBgColor } from 'src/types/theme'
-
 import { BORDER_RADIUS, COLOR, FONT_SIZE } from 'src/theme/constants'
+import type { ButtonBgColor } from 'src/types/theme'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode

@@ -1,6 +1,5 @@
-import type { FormParams } from 'src/types'
-
 import { postMessage } from 'src/repositories/message'
+import type { FormParams } from 'src/types'
 
 const params: FormParams = {
   email: 'test@example.com',

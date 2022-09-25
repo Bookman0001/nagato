@@ -1,8 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 
-import type { ArticlesPagination } from 'src/types'
-
 import { Articles } from 'src/components/organisms/searchedArticles'
+import type { ArticlesPagination } from 'src/types'
 
 const mockedClick = jest.fn()
 const mockSearch = jest.fn()
