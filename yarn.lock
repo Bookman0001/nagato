@@ -3925,10 +3925,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.12.tgz#ac7fb693ac587ee182c3780c26eb65546a1a3c10"
   integrity sha512-+2Iggwg7PxoO5Kyhvsq9VarmPbIelXP070HMImEpbtGCoyWNINQj4wzjbQCXzdHTRXnqufutJb5KAURZANNBAw==
 
-"@types/node@16.11.61":
-  version "16.11.61"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.61.tgz#e8c7d3fa131ac5637fa39cca800130b85ebb2f18"
-  integrity sha512-HSz3rzeislhVDZvmu65QZaEquYLQT52qcaDCMIX/SdOR8e+XgKbP7D8f8X36qEJBjlJvB1vURE4MGIi6Wnj5LA==
+"@types/node@16.11.62":
+  version "16.11.62"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.62.tgz#bab2e6208531321d147eda20c38e389548cd5ffc"
+  integrity sha512-K/ggecSdwAAy2NUW4WKmF4Rc03GKbsfP+k326UWgckoS+Rzd2PaWbjk76dSmqdLQvLTJAO9axiTUJ6488mFsYQ==
 
 "@types/node@^14.0.10 || ^16.0.0", "@types/node@^14.14.20 || ^16.0.0":
   version "16.11.36"
