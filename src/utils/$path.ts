@@ -20,3 +20,13 @@ export const pagesPath = {
 }
 
 export type PagesPath = typeof pagesPath
+
+export const staticPath = {
+  assets: {
+    github_png: '/assets/github.png',
+    ogp_jpg: '/assets/ogp.jpg'
+  },
+  favicon_ico: '/favicon.ico'
+} as const
+
+export type StaticPath = typeof staticPath

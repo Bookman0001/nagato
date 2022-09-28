@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/react/types-6-0'
-import { useState, VFC } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 
 import { Select } from './'
@@ -11,7 +11,7 @@ export default {
   component: Select,
 } as Meta
 
-const Template: VFC = () => {
+const Template = () => {
   const [value, setValue] = useState<string>('option1')
 
   return (
