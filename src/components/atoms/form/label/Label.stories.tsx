@@ -1,5 +1,4 @@
 import { Meta } from '@storybook/react/types-6-0'
-import { VFC } from 'react'
 
 import { Label } from './'
 
@@ -10,7 +9,7 @@ export default {
   component: Label,
 } as Meta
 
-const Template: VFC = () => {
+const Template = () => {
   return (
     <div>
       <Label>フォーム要素上部に表示するラベル要素</Label>
@@ -18,7 +17,7 @@ const Template: VFC = () => {
   )
 }
 
-const IconChildren: VFC = () => {
+const IconChildren = () => {
   return (
     <div>
       <Label>

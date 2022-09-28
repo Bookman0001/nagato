@@ -5,7 +5,7 @@ import { Mail } from 'src/components/atoms/icon/mail'
 import { ParagraphContent } from 'src/components/atoms/paragraphContent'
 import { CirclePicture } from 'src/components/atoms/picture'
 import { COLOR } from 'src/theme/constants'
-import { pagesPath } from 'src/utils/$path'
+import { pagesPath, staticPath } from 'src/utils/$path'
 
 export function Footer() {
   return (
@@ -21,7 +21,7 @@ export function Footer() {
         >
           <CirclePicture
             alt={'githubへのリンク'}
-            src={'/assets/github.png'}
+            src={staticPath.assets.github_png}
             width={30}
             height={30}
           />

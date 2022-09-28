@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/react/types-6-0'
-import { useState, VFC } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 
 import { Input } from './'
@@ -11,7 +11,7 @@ export default {
   component: Input,
 } as Meta
 
-const Template: VFC = () => {
+const Template = () => {
   const [text, setText] = useState<string>('')
 
   return (
@@ -26,7 +26,7 @@ const Template: VFC = () => {
   )
 }
 
-const Error: VFC = () => {
+const Error = () => {
   const [text, setText] = useState<string>('')
 
   return (

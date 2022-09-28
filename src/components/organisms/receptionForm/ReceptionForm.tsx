@@ -6,6 +6,7 @@ import { Input } from 'src/components/atoms/form/input'
 import { Label } from 'src/components/atoms/form/label'
 import { TextArea } from 'src/components/atoms/form/textArea'
 import { Circle } from 'src/components/atoms/icon/circle'
+import { Spinner } from 'src/components/atoms/icon/spinner'
 import { ErrorMessage } from 'src/components/organisms/receptionForm/ErrorMessage'
 import { useCreateMessage } from 'src/hooks/message'
 import { useTransitionPage } from 'src/hooks/router/transitionPage'
@@ -82,7 +83,13 @@ export function ReceptionForm() {
       </Container>
       <ButtonContainer>
         <Button disabled={submitDisabled}>
-          {submitDisabled ? '送信中' : '送信'}
+          {submitDisabled ? (
+            <LoadingContainer>
+              <Spinner />
+            </LoadingContainer>
+          ) : (
+            <>送信</>
+          )}
         </Button>
       </ButtonContainer>
       {error && (
@@ -99,6 +106,9 @@ const Container = styled.div`
 const ButtonContainer = styled(Container)`
   display: flex;
   justify-content: center;
+  button {
+    min-width: 7rem;
+  }
 `
 
 const ApiErrorContent = styled.p`
@@ -116,4 +126,10 @@ const LabelContent = styled.div`
   svg {
     margin-left: 5px;
   }
+`
+
+const LoadingContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `

@@ -1,5 +1,4 @@
 import { Meta } from '@storybook/react/types-6-0'
-import { VFC } from 'react'
 
 import { Search } from './'
 
@@ -8,6 +7,6 @@ export default {
   component: Search,
 } as Meta
 
-const Template: VFC = () => <Search size={50} />
+const Template = () => <Search size={50} />
 
 export const Default = Template.bind({})

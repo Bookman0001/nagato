@@ -1,12 +1,12 @@
 import { Meta } from '@storybook/react/types-6-0'
 
-import { Logo } from './'
+import { Spinner } from './'
 
 export default {
-  title: 'icon/Logo',
-  component: Logo,
+  title: 'icon/Spinner',
+  component: Spinner,
 } as Meta
 
-const Template = () => <Logo size={50} />
+const Template = () => <Spinner />
 
 export const Default = Template.bind({})
