@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 
-import { Select } from 'src/components/atoms/form/select'
+import { Select } from 'src/components/atoms/form'
 
 describe('Select', () => {
   beforeEach(() => {

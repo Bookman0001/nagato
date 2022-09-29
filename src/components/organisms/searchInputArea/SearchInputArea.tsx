@@ -2,8 +2,8 @@ import { ChangeEvent, useState, KeyboardEvent, useRef } from 'react'
 import styled from 'styled-components'
 
 import { Button } from 'src/components/atoms/button'
-import { Input } from 'src/components/atoms/form/input'
-import { Search } from 'src/components/atoms/icon/search'
+import { Input } from 'src/components/atoms/form'
+import { Search } from 'src/components/atoms/icon'
 import { Title } from 'src/components/atoms/title'
 import { useSearchParams } from 'src/hooks/router/searchParams'
 

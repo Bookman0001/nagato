@@ -2,7 +2,7 @@ import { Meta } from '@storybook/react/types-6-0'
 
 import { Label } from './'
 
-import { Mail } from 'src/components/atoms/icon/mail'
+import { Mail } from 'src/components/atoms/icon'
 
 export default {
   title: 'form/Label',

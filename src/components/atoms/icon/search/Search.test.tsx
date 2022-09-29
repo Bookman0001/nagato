@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Search } from 'src/components/atoms/icon/search'
+import { Search } from 'src/components/atoms/icon'
 
 describe('Search', () => {
   it('should be rendered', () => {

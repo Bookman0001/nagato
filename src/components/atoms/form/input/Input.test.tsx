@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 
-import { Input } from 'src/components/atoms/form/input'
+import { Input } from 'src/components/atoms/form'
 
 describe('Input', () => {
   beforeEach(() => {
