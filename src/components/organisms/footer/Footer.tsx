@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
-import { Mail } from 'src/components/atoms/icon/mail'
+import { Mail } from 'src/components/atoms/icon'
 import { ParagraphContent } from 'src/components/atoms/paragraphContent'
 import { CirclePicture } from 'src/components/atoms/picture'
 import { COLOR } from 'src/theme/constants'

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Logo } from 'src/components/atoms/icon/logo'
+import { Logo } from 'src/components/atoms/icon'
 
 describe('Logo', () => {
   it('should be rendered', () => {

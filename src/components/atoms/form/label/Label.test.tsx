@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Label } from 'src/components/atoms/form/label'
+import { Label } from 'src/components/atoms/form'
 
 describe('Label', () => {
   it('to be rendered correctly', () => {

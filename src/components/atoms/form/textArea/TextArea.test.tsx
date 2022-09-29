@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 
-import { TextArea } from 'src/components/atoms/form/textArea'
+import { TextArea } from 'src/components/atoms/form'
 
 describe('TextArea', () => {
   beforeEach(() => {

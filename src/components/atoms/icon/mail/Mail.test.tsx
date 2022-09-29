@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Mail } from 'src/components/atoms/icon/mail'
+import { Mail } from 'src/components/atoms/icon'
 
 describe('Mail', () => {
   it('should be rendered', () => {

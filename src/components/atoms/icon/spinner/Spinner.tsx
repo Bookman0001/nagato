@@ -4,7 +4,7 @@ import { COLOR } from 'src/theme/constants'
 
 export function Spinner() {
   return (
-    <SpinnerDesgin role={'status'}>
+    <SpinnerDesign role={'status'}>
       <svg viewBox="0 0 30 30">
         <circle
           className="path"
@@ -15,7 +15,7 @@ export function Spinner() {
           strokeWidth="5"
         ></circle>
       </svg>
-    </SpinnerDesgin>
+    </SpinnerDesign>
   )
 }
 
@@ -40,7 +40,7 @@ const dash = keyframes`
   }
 `
 
-const SpinnerDesgin = styled.div`
+const SpinnerDesign = styled.div`
   animation: ${rotate} 2s linear infinite;
   z-index: 2;
   position: absolute;

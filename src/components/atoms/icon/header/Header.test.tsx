@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import { Header } from 'src/components/atoms/icon/header'
+import { Header } from 'src/components/atoms/icon'
 
 describe('Header', () => {
   it('should be rendered', () => {
