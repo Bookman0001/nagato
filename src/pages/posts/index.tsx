@@ -5,7 +5,7 @@ import { Articles, Skeletons } from 'src/components/organisms/searchedArticles'
 import { SearchLayout } from 'src/components/templates/searchLayout'
 import { useSearchedArticles } from 'src/hooks/articles'
 import { useSearchParams } from 'src/hooks/router/searchParams'
-import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
+import { deviceWidth, fontSize } from 'src/theme/constants'
 
 export type OptionalQuery = {
   keyword?: string
@@ -54,7 +54,7 @@ const Section = styled.section`
   min-height: calc(100vh - 50px - 60px);
   padding: 4rem 0 0;
   margin: 0 auto;
-  @media (max-width: ${DEVICE_WIDTH.TABLET}) {
+  @media (max-width: ${deviceWidth.TABLET}) {
     padding: 4rem 2rem 0;
   }
 `
@@ -66,7 +66,7 @@ const ErrorContainer = styled.div`
   height: calc(100vh - 50px - 60px);
   padding-top: 4rem;
   margin: 0 auto;
-  font-size: ${FONT_SIZE.S};
+  font-size: ${fontSize.S};
   display: flex;
   justify-content: center;
   align-items: center;

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Mail } from 'src/components/atoms/icon'
 import { ParagraphContent } from 'src/components/atoms/paragraphContent'
 import { CirclePicture } from 'src/components/atoms/picture'
-import { COLOR } from 'src/theme/constants'
+import { color } from 'src/theme/constants'
 import { pagesPath, staticPath } from 'src/utils/$path'
 
 export function Footer() {
@@ -43,9 +43,9 @@ const FooterContainer = styled.footer`
   flex: 1;
   width: 100%;
   height: 60px;
-  border-top: 1px solid ${COLOR.GRAY};
+  border-top: 1px solid ${color.GRAY};
   text-align: center;
-  background-color: ${COLOR.BLACK};
+  background-color: ${color.BLACK};
 `
 
 const PictureContainer = styled.div`

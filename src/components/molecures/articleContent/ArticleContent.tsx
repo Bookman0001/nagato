@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
-import { DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
+import { deviceWidth, fontSize } from 'src/theme/constants'
 import type { Article } from 'src/types'
 import { pagesPath } from 'src/utils/$path'
 
@@ -29,11 +29,11 @@ const StyledLink = styled.div`
 `
 
 const SubTitle = styled.h3`
-  font-size: ${FONT_SIZE.S};
+  font-size: ${fontSize.S};
   margin-right: auto;
   text-decoration: underline;
-  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
-    font-size: ${FONT_SIZE.XS};
+  @media (max-width: ${deviceWidth.PHONE}) {
+    font-size: ${fontSize.XS};
   }
 `
 

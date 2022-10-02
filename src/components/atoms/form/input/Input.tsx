@@ -1,7 +1,7 @@
 import React, { InputHTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
 
-import { BORDER_RADIUS, COLOR, FONT_SIZE } from 'src/theme/constants'
+import { borderRadius, color, fontSize } from 'src/theme/constants'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   hasError?: boolean
@@ -21,14 +21,14 @@ const StyledInput = styled.input<{ hasError: boolean }>`
   flex: 1;
   height: 100%;
   min-height: 40px;
-  font-size: ${FONT_SIZE.S};
+  font-size: ${fontSize.S};
   text-indent: 10px;
-  background-color: ${COLOR.BLACK};
-  border: 1px solid ${COLOR.WHITE};
-  border-radius: ${BORDER_RADIUS.DEFAULT};
+  background-color: ${color.BLACK};
+  border: 1px solid ${color.WHITE};
+  border-radius: ${borderRadius.DEFAULT};
   ${({ hasError }) =>
     hasError &&
     css`
-      border: 2px solid ${COLOR.WARNING};
+      border: 2px solid ${color.WARNING};
     `}
 `

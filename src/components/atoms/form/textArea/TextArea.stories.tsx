@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import { TextArea } from './'
 
-import { COLOR } from 'src/theme/constants'
+import { color } from 'src/theme/constants'
 
 export default {
   title: 'form/TextArea',
@@ -43,10 +43,10 @@ const Error = () => {
 }
 
 const Container = styled.div`
-  color: ${COLOR.BLACK};
+  color: ${color.BLACK};
   margin-top: 20px;
   padding: 20px;
-  background-color: ${COLOR.GRAY};
+  background-color: ${color.GRAY};
 `
 
 export const Default = Template.bind({})

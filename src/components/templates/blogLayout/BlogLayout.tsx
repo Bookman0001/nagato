@@ -6,12 +6,12 @@ import { Footer } from 'src/components/organisms/footer'
 import { Header } from 'src/components/organisms/header'
 import { Post } from 'src/components/organisms/meta/post'
 import { useTransitionPage } from 'src/hooks/router/transitionPage'
-import { COLOR, DEVICE_WIDTH, FONT_SIZE } from 'src/theme/constants'
+import { color, deviceWidth, fontSize } from 'src/theme/constants'
 import type { Article } from 'src/types'
 
 interface Props {
   article: Article
-  children: React.ReactChild
+  children: React.ReactNode
 }
 
 export function BlogLayout({ article, children }: Props) {
@@ -36,8 +36,8 @@ export function BlogLayout({ article, children }: Props) {
 const Container = styled.div`
   max-width: 600px;
   margin: 4rem auto;
-  font-size: ${FONT_SIZE.S};
-  @media (max-width: ${DEVICE_WIDTH.PHONE}) {
+  font-size: ${fontSize.S};
+  @media (max-width: ${deviceWidth.PHONE}) {
     padding: 0 2rem;
   }
 `
@@ -46,7 +46,7 @@ const Main = styled.main`
   display: flex;
   align-items: center;
   line-height: 2;
-  @media (max-width: ${DEVICE_WIDTH.TABLET}) {
+  @media (max-width: ${deviceWidth.TABLET}) {
     display: block;
   }
   p {
@@ -64,10 +64,10 @@ const StyledLink = styled.span`
   cursor: pointer;
   padding-top: 50px;
   width: 100%;
-  font-size: ${FONT_SIZE.S};
+  font-size: ${fontSize.S};
   font-weight: bold;
-  color: ${COLOR.BLUE};
-  @media (max-width: ${DEVICE_WIDTH.TABLET}) {
-    font-size: ${FONT_SIZE.XS};
+  color: ${color.BLUE};
+  @media (max-width: ${deviceWidth.TABLET}) {
+    font-size: ${fontSize.XS};
   }
 `

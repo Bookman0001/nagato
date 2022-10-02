@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import { Select } from './'
 
-import { COLOR } from 'src/theme/constants'
+import { color } from 'src/theme/constants'
 
 export default {
   title: 'form/Select',
@@ -34,8 +34,8 @@ const Container = styled.div`
 `
 
 const Value = styled.div`
-  color: ${COLOR.BLACK};
-  background-color: ${COLOR.GRAY};
+  color: ${color.BLACK};
+  background-color: ${color.GRAY};
 `
 
 export const Default = Template.bind({})

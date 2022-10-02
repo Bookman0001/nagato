@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { COLOR } from 'src/theme/constants'
+import { color } from 'src/theme/constants'
 
 interface Props {
   size: number
@@ -22,8 +22,8 @@ export function Mail({ size }: Props) {
         width="235"
         height="170"
         rx="16"
-        fill={COLOR.WHITE}
-        stroke={COLOR.BLACK}
+        fill={color.WHITE}
+        stroke={color.BLACK}
         strokeWidth="8"
       />
       <line
@@ -31,7 +31,7 @@ export function Mail({ size }: Props) {
         y1="122.122"
         x2="234.222"
         y2="10.1224"
-        stroke={COLOR.BLACK}
+        stroke={color.BLACK}
         strokeWidth="8"
       />
       <line
@@ -39,7 +39,7 @@ export function Mail({ size }: Props) {
         y1="10.1467"
         x2="123.803"
         y2="122.147"
-        stroke={COLOR.BLACK}
+        stroke={color.BLACK}
         strokeWidth="8"
       />
     </Svg>
@@ -48,10 +48,10 @@ export function Mail({ size }: Props) {
 
 const Svg = styled.svg`
   rect {
-    fill: ${COLOR.BLACK};
-    stroke: ${COLOR.WHITE};
+    fill: ${color.BLACK};
+    stroke: ${color.WHITE};
   }
   line {
-    stroke: ${COLOR.WHITE};
+    stroke: ${color.WHITE};
   }
 `

@@ -7,7 +7,7 @@ import { Circle, Spinner } from 'src/components/atoms/icon'
 import { ErrorMessage } from 'src/components/organisms/receptionForm/ErrorMessage'
 import { useCreateMessage } from 'src/hooks/message'
 import { useTransitionPage } from 'src/hooks/router/transitionPage'
-import { COLOR } from 'src/theme/constants'
+import { color } from 'src/theme/constants'
 import { regExp } from 'src/utils'
 
 type FormInput = Readonly<{
@@ -113,7 +113,7 @@ const ApiErrorContent = styled.p`
   justify-content: center;
   align-items: center;
   margin: 10px 0 1rem;
-  color: ${COLOR.WARNING};
+  color: ${color.WARNING};
 `
 
 const LabelContent = styled.div`
