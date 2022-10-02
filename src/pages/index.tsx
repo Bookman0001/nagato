@@ -5,7 +5,7 @@ import { Articles } from 'src/components/organisms/articles'
 import { Introduction } from 'src/components/organisms/introduction'
 import { TopLayout } from 'src/components/templates/topLayout'
 import { articlesController } from 'src/controllers/articles'
-import { DEVICE_WIDTH } from 'src/theme/constants'
+import { deviceWidth } from 'src/theme/constants'
 import type { ArticlesPagination } from 'src/types'
 
 interface Props {
@@ -36,7 +36,7 @@ export default function Home({ articles }: Props) {
 const Container = styled.main`
   max-width: 600px;
   margin: 0 auto;
-  @media (max-width: ${DEVICE_WIDTH.TABLET}) {
+  @media (max-width: ${deviceWidth.TABLET}) {
     padding: 0 2rem;
   }
 `

@@ -1,7 +1,7 @@
 import React, { SelectHTMLAttributes } from 'react'
 import styled from 'styled-components'
 
-import { BORDER_RADIUS, COLOR } from 'src/theme/constants'
+import { borderRadius, color } from 'src/theme/constants'
 
 interface Props extends SelectHTMLAttributes<HTMLSelectElement> {
   children: React.ReactChild
@@ -23,9 +23,9 @@ export function Select({
 
 const Container = styled.div`
   position: relative;
-  border: 1px solid ${COLOR.BLACK};
-  border-radius: ${BORDER_RADIUS.DEFAULT};
-  background: ${COLOR.WHITE};
+  border: 1px solid ${color.BLACK};
+  border-radius: ${borderRadius.DEFAULT};
+  background: ${color.WHITE};
   line-height: 1.5;
   &::before {
     position: absolute;
@@ -37,13 +37,13 @@ const Container = styled.div`
     content: '';
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 6px solid ${COLOR.BLACK};
+    border-top: 6px solid ${color.BLACK};
     pointer-events: none;
   }
 `
 
 const StyledSelect = styled.select`
-  color: ${COLOR.BLACK};
+  color: ${color.BLACK};
   width: 100%;
   height: 100%;
   padding: 0 1em;

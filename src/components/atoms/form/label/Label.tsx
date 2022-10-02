@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { FONT_SIZE } from 'src/theme/constants'
+import { fontSize } from 'src/theme/constants'
 
 interface Props {
   children: React.ReactChild
@@ -14,7 +14,7 @@ export function Label({ children }: Props) {
 const LabelItem = styled.label`
   display: flex;
   align-items: center;
-  font-size: ${FONT_SIZE.XS};
+  font-size: ${fontSize.XS};
   padding-bottom: 1rem;
   font-weight: bold;
 `

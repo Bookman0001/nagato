@@ -1,7 +1,7 @@
 import { FieldError } from 'react-hook-form'
 import styled from 'styled-components'
 
-import { COLOR } from 'src/theme/constants'
+import { color } from 'src/theme/constants'
 
 interface Props {
   name: 'email' | 'name' | 'content'
@@ -28,5 +28,5 @@ export function ErrorMessage({ name, error }: Props) {
 
 const ErrorContent = styled.p`
   margin-top: 10px;
-  color: ${COLOR.WARNING};
+  color: ${color.WARNING};
 `

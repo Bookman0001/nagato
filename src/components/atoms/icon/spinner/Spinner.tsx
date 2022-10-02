@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components'
 
-import { COLOR } from 'src/theme/constants'
+import { color } from 'src/theme/constants'
 
 export function Spinner() {
   return (
@@ -47,7 +47,7 @@ const SpinnerDesign = styled.div`
   width: 30px;
   height: 30px;
   circle {
-    stroke: ${COLOR.WHITE};
+    stroke: ${color.WHITE};
     stroke-linecap: round;
     animation: ${dash} 1.5s ease-in-out infinite;
   }

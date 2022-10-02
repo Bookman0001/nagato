@@ -2,7 +2,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 import { Header as Icon } from 'src/components/atoms/icon'
-import { COLOR, DEVICE_WIDTH, FONT_SIZE, Z_INDEX } from 'src/theme/constants'
+import { color, deviceWidth, fontSize, zIndex } from 'src/theme/constants'
 import { pagesPath } from 'src/utils/$path'
 
 export function Header() {
@@ -21,10 +21,10 @@ export function Header() {
 
 const HeaderContainer = styled.header`
   width: 100%;
-  border-bottom: 1px solid ${COLOR.GRAY};
-  z-index: ${Z_INDEX.TOP_MOST};
-  font-size: ${FONT_SIZE.XXS};
-  background-color: ${COLOR.BLACK};
+  border-bottom: 1px solid ${color.GRAY};
+  z-index: ${zIndex.TOP_MOST};
+  font-size: ${fontSize.XXS};
+  background-color: ${color.BLACK};
 `
 
 const Container = styled.div`
@@ -32,7 +32,7 @@ const Container = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  @media (min-width: ${DEVICE_WIDTH.PC}) {
+  @media (min-width: ${deviceWidth.PC}) {
     max-width: 600px;
     margin: 0 auto;
   }

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { COLOR } from 'src/theme/constants'
+import { color } from 'src/theme/constants'
 
 interface Props {
   size: number
@@ -22,20 +22,20 @@ export function Search({ size }: Props) {
         y1="117.804"
         x2="82.8037"
         y2="88.0683"
-        stroke={COLOR.BLACK}
+        stroke={color.BLACK}
         strokeWidth="10"
         strokeLinecap="round"
       />
-      <circle cx="50" cy="50" r="44" stroke={COLOR.BLACK} strokeWidth="12" />
+      <circle cx="50" cy="50" r="44" stroke={color.BLACK} strokeWidth="12" />
     </Svg>
   )
 }
 
 const Svg = styled.svg`
   circle {
-    stroke: ${COLOR.WHITE};
+    stroke: ${color.WHITE};
   }
   line {
-    stroke: ${COLOR.WHITE};
+    stroke: ${color.WHITE};
   }
 `

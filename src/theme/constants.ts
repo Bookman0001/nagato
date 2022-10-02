@@ -1,4 +1,4 @@
-export const COLOR = {
+export const color = {
   BLUE: '#00afcc',
   WHITE: '#ffffff',
   BLACK: '#303030',
@@ -6,13 +6,13 @@ export const COLOR = {
   WARNING: '#db235c',
 } as const
 
-export const BUTTON_BG_COLOR = {
+export const buttopnBgColor = {
   BLUE: '#00afcc',
   BLACK: '#303030',
   WARNING: '#db235c',
 } as const
 
-export const FONT_SIZE = {
+export const fontSize = {
   XXS: '0.75rem',
   XS: '1rem',
   S: '1.25rem',
@@ -21,16 +21,16 @@ export const FONT_SIZE = {
   LL: '3rem',
 } as const
 
-export const BORDER_RADIUS = {
+export const borderRadius = {
   SMALL: '2px',
   DEFAULT: '8px',
 } as const
 
-export const Z_INDEX = {
+export const zIndex = {
   TOP_MOST: 1000,
 } as const
 
-export const DEVICE_WIDTH = {
+export const deviceWidth = {
   PC: '1170px',
   TABLET: '768px',
   PHONE: '450px',

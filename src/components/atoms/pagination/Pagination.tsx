@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 import { usePagination } from './usePagination'
 
-import { BORDER_RADIUS, COLOR, FONT_SIZE } from 'src/theme/constants'
+import { borderRadius, color, fontSize } from 'src/theme/constants'
 
 interface Props {
   currentIndex: number
@@ -61,9 +61,9 @@ const ButtonWrapper = styled.div<{ hasSelected: boolean }>`
     props.hasSelected &&
     css`
       button {
-        color: ${COLOR.BLACK};
-        background-color: ${COLOR.WHITE};
-        border: 3px solid ${COLOR.WHITE};
+        color: ${color.BLACK};
+        background-color: ${color.WHITE};
+        border: 3px solid ${color.WHITE};
       }
     `}
 `
@@ -72,13 +72,13 @@ const ButtonItem = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${COLOR.BLACK};
-  border: 2px solid ${COLOR.WHITE};
-  border-radius: ${BORDER_RADIUS.DEFAULT};
+  background-color: ${color.BLACK};
+  border: 2px solid ${color.WHITE};
+  border-radius: ${borderRadius.DEFAULT};
   width: 45px;
   height: 45px;
   margin: 0 1rem;
-  font-size: ${FONT_SIZE.S};
+  font-size: ${fontSize.S};
   cursor: pointer;
   text-align: center;
 `
