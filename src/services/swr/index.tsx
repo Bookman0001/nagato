@@ -2,7 +2,7 @@ import React from 'react'
 import { SWRConfig } from 'swr'
 
 interface Props {
-  children: React.ReactChild
+  children: React.ReactNode
 }
 
 export default function SwrConfig({ children }: Props) {

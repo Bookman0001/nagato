@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { borderRadius, color } from 'src/theme/constants'
 
 interface Props extends SelectHTMLAttributes<HTMLSelectElement> {
-  children: React.ReactChild
+  children: React.ReactNode
 }
 
 export function Select({
@@ -14,7 +14,7 @@ export function Select({
 }: Props) {
   return (
     <Container>
-      <StyledSelect defaultValue={defaultValue} onChange={onChange} {...props}>
+      <StyledSelect {...props} defaultValue={defaultValue} onChange={onChange}>
         <>{props.children}</>
       </StyledSelect>
     </Container>

@@ -12,11 +12,11 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, Props>(
   function Element({ rows = 6, hasError = false, ...props }: Props, ref) {
     return (
       <StyledTextArea
+        {...props}
+        role={'textbox'}
         ref={ref}
         rows={rows}
         hasError={hasError}
-        role={'textbox'}
-        {...props}
       />
     )
   }

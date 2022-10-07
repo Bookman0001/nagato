@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { fontSize } from 'src/theme/constants'
 
 interface Props {
-  children: React.ReactChild
+  children: React.ReactNode
 }
 
 export function Label({ children }: Props) {

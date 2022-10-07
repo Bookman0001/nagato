@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, MouseEvent } from 'react'
+import React, { ButtonHTMLAttributes } from 'react'
 import styled from 'styled-components'
 
 import { borderRadius, color, fontSize } from 'src/theme/constants'
@@ -7,24 +7,11 @@ import type { ButtonBgColor } from 'src/types/theme'
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode
   bgColor?: ButtonBgColor
-  onClick?: () => void
 }
 
-export function Button({
-  children,
-  bgColor = color.BLACK,
-  onClick,
-  ...props
-}: Props) {
-  const handleClick = (e: MouseEvent) => {
-    if (onClick) {
-      e.stopPropagation()
-      e.preventDefault()
-      onClick()
-    }
-  }
+export function Button({ children, bgColor = color.BLACK, ...props }: Props) {
   return (
-    <ButtonItem onClick={handleClick} bgColor={bgColor} {...props}>
+    <ButtonItem {...props} bgColor={bgColor}>
       {children}
     </ButtonItem>
   )
