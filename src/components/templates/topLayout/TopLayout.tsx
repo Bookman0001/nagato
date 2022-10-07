@@ -7,7 +7,7 @@ import { Header } from 'src/components/organisms/header'
 import { Default } from 'src/components/organisms/meta/default'
 
 interface Props {
-  children: React.ReactChild
+  children: React.ReactNode
 }
 
 export function TopLayout({ children }: Props) {

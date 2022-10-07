@@ -5,7 +5,7 @@ import { Header } from 'src/components/organisms/header'
 import { Posts } from 'src/components/organisms/meta/posts'
 
 interface Props {
-  children: React.ReactChild
+  children: React.ReactNode
 }
 
 export function SearchLayout({ children }: Props) {

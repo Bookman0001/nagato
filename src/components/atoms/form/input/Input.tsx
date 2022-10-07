@@ -5,14 +5,21 @@ import { borderRadius, color, fontSize } from 'src/theme/constants'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   hasError?: boolean
+  type?: 'email' | 'text'
 }
 
 export const Input = React.forwardRef<HTMLInputElement, Props>(function Element(
-  { hasError = false, ...props }: Props,
+  { hasError = false, type = 'text', ...props }: Props,
   ref
 ) {
   return (
-    <StyledInput ref={ref} hasError={hasError} role={'textbox'} {...props} />
+    <StyledInput
+      {...props}
+      type={type}
+      role={'textbox'}
+      ref={ref}
+      hasError={hasError}
+    />
   )
 })
 
