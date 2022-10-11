@@ -1,29 +1,13 @@
-import { FieldError } from 'react-hook-form'
 import styled from 'styled-components'
 
 import { color } from 'src/theme/constants'
 
 interface Props {
-  name: 'email' | 'name' | 'content'
-  error: FieldError
+  errorMessage: string
 }
 
-export function ErrorMessage({ name, error }: Props) {
-  return (
-    <ErrorContent>
-      {name === 'email' && (
-        <>
-          {error.type === 'required'
-            ? '必須です'
-            : error.type === 'pattern'
-            ? 'メールアドレスの形式が不正です'
-            : ''}{' '}
-        </>
-      )}
-      {name === 'name' && <>{error.type === 'required' ? '必須です' : ''}</>}
-      {name === 'content' && <>{error.type === 'required' ? '必須です' : ''}</>}
-    </ErrorContent>
-  )
+export function ErrorMessage({ errorMessage }: Props) {
+  return <ErrorContent>{errorMessage}</ErrorContent>
 }
 
 const ErrorContent = styled.p`

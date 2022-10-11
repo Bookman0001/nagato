@@ -1,7 +1,7 @@
-import type { FormParams } from 'src/types'
+import type { FormInput } from 'src/utils/zod/receptionForm'
 
-export async function postMessage(params: FormParams) {
-  const requestParams: FormParams = {
+export async function postMessage(params: FormInput) {
+  const requestParams: FormInput = {
     email: params.email,
     name: params.name,
     content: params.content,

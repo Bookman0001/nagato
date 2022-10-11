@@ -46,6 +46,21 @@ describe('ReceptionForm', () => {
     })
   })
 
+  it('to be valid validation in name', async () => {
+    await act(() => {
+      fireEvent.change(screen.getByPlaceholderText('John Doe'), {
+        target: {
+          value:
+            'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+        },
+      })
+      fireEvent.click(screen.getByRole('button'))
+    })
+    await waitFor(() => {
+      expect(screen.getByText('最大文字数は100文字です')).toBeDefined()
+    })
+  })
+
   it('to be fired onSubmit with success status', async () => {
     await act(() => {
       fireEvent.change(screen.getByPlaceholderText('sample@example.com'), {
