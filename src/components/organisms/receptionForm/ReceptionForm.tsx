@@ -1,3 +1,4 @@
+import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, useFormState } from 'react-hook-form'
 import styled from 'styled-components'
 
@@ -8,21 +9,16 @@ import { ErrorMessage } from 'src/components/organisms/receptionForm/ErrorMessag
 import { useCreateMessage } from 'src/hooks/message'
 import { useTransitionPage } from 'src/hooks/router/transitionPage'
 import { color } from 'src/theme/constants'
-import { regExp } from 'src/utils'
-
-type FormInput = Readonly<{
-  email: string
-  name: string
-  content: string
-}>
+import { schema, FormInput } from 'src/utils/zod/receptionForm'
 
 export function ReceptionForm() {
-  const { register, handleSubmit, control } = useForm<FormInput>()
-  const { errors, isSubmitSuccessful } = useFormState({ control })
+  const { register, handleSubmit, control } = useForm<FormInput>({
+    resolver: zodResolver(schema),
+  })
+  const { errors, isSubmitting } = useFormState({ control })
   const { isLoading, error, createMessage } = useCreateMessage()
   const { transitionToThanks } = useTransitionPage()
-  const { email } = regExp
-  const submitDisabled = isLoading || isSubmitSuccessful
+  const submitDisabled = isLoading || isSubmitting
 
   const onSubmit = async (formInput: FormInput) => {
     const completed = await createMessage(formInput)
@@ -44,9 +40,11 @@ export function ReceptionForm() {
           type={'email'}
           placeholder={'sample@example.com'}
           hasError={!!errors.email}
-          {...register('email', { required: true, pattern: email })}
+          {...register('email')}
         />
-        {errors.email && <ErrorMessage name={'email'} error={errors.email} />}
+        {errors.email?.message && (
+          <ErrorMessage errorMessage={errors.email.message} />
+        )}
       </Container>
       <Container>
         <Label>
@@ -58,9 +56,11 @@ export function ReceptionForm() {
         <Input
           placeholder={'John Doe'}
           hasError={!!errors.name}
-          {...register('name', { required: true })}
+          {...register('name')}
         />
-        {errors.name && <ErrorMessage name={'name'} error={errors.name} />}
+        {errors.name?.message && (
+          <ErrorMessage errorMessage={errors.name.message} />
+        )}
       </Container>
       <Container>
         <Label>
@@ -72,10 +72,10 @@ export function ReceptionForm() {
         <TextArea
           placeholder={'Hello.'}
           hasError={!!errors.content}
-          {...register('content', { required: true })}
+          {...register('content')}
         />
-        {errors.content && (
-          <ErrorMessage name={'content'} error={errors.content} />
+        {errors.content?.message && (
+          <ErrorMessage errorMessage={errors.content.message} />
         )}
       </Container>
       <ButtonContainer>

@@ -2,28 +2,26 @@ import { NextApiRequest, NextApiResponse } from 'next'
 
 import { postMessage } from 'src/repositories/message'
 import { sendMail } from 'src/services/sendGrid'
-import type { FormParams } from 'src/types'
-import { validateFormParams } from 'src/utils/api'
+import { parseSchema } from 'src/utils/zod/receptionForm'
 
 async function sendMessage(req: NextApiRequest, res: NextApiResponse) {
-  const reqBody = req.body as FormParams | undefined
-
-  if (!reqBody || !validateFormParams(reqBody)) {
-    return res.status(400).json('bad request')
+  const reqBody = req.body as unknown
+  const validationResult = parseSchema(reqBody)
+  if (!validationResult.success) {
+    return res.status(400).json(validationResult.error)
   }
-
-  postMessage(reqBody)
+  postMessage(validationResult.data)
     .then(() => {
-      sendMail(reqBody)
+      sendMail(validationResult.data)
         .then(() => {
-          return res.status(200).json('success')
+          return res.status(200).json({ message: 'success' })
         })
         .catch(() => {
-          return res.status(500).json('Send Grid Error')
+          return res.status(500).json({ message: 'sendgrid error' })
         })
     })
     .catch(() => {
-      return res.status(500).json('Server Internal Error')
+      return res.status(500).json({ message: 'internal server error' })
     })
 }
 
