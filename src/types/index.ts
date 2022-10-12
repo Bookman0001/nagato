@@ -43,12 +43,6 @@ export type SearchParams = Readonly<{
   page: string
 }>
 
-export type FormParams = Readonly<{
-  email: string
-  name: string
-  content: string
-}>
-
 export type DraftParams = Readonly<{
   id: string
   draftKey: string

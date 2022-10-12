@@ -1,7 +1,7 @@
 import { postMessage } from 'src/repositories/message'
-import type { FormParams } from 'src/types'
+import type { FormInput } from 'src/utils/zod/receptionForm'
 
-const params: FormParams = {
+const params: FormInput = {
   email: 'test@example.com',
   name: 'name',
   content: 'content',

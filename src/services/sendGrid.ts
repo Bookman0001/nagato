@@ -1,6 +1,6 @@
 import sgMail from '@sendgrid/mail'
 
-import type { FormParams } from 'src/types'
+import type { FormInput } from 'src/utils/zod/receptionForm'
 
 type SgMessage = Readonly<{
   to: string
@@ -12,7 +12,7 @@ type SgMessage = Readonly<{
 const SEND_GRID_KEY: string = process.env.SEND_GRID_KEY ?? ''
 const ADMIN_EMAIL: string = process.env.SEND_GRID_ADMIN_EMAIL ?? ''
 
-export async function sendMail(params: FormParams) {
+export async function sendMail(params: FormInput) {
   sgMail.setApiKey(SEND_GRID_KEY)
   const msg: SgMessage = {
     to: params.email,
