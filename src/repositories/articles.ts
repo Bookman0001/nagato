@@ -1,9 +1,6 @@
 import { get } from 'src/services/axios'
-import type {
-  ArticlesResponse,
-  PaginationParams,
-  SearchParams,
-} from 'src/types'
+import type { ArticlesResponse, PaginationParams } from 'src/types'
+import type { SearchParams } from 'src/utils/zod/searchParams'
 
 export async function fetchAllArticles({
   limit,

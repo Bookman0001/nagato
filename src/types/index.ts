@@ -38,11 +38,6 @@ export type PaginationParams = Readonly<{
   limit: number
 }>
 
-export type SearchParams = Readonly<{
-  keyword: string
-  page: string
-}>
-
 export type DraftParams = Readonly<{
   id: string
   draftKey: string
