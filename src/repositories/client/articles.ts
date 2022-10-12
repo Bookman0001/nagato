@@ -1,4 +1,5 @@
-import type { ArticlesResponse, SearchParams } from 'src/types'
+import type { ArticlesResponse } from 'src/types'
+import type { SearchParams } from 'src/utils/zod/searchParams'
 
 export async function fetchSearchedArticles(params: SearchParams) {
   const encodedParams: SearchParams = {

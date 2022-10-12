@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 
-import type { SearchParams } from 'src/types'
 import { pagesPath } from 'src/utils/$path'
+import type { SearchParams } from 'src/utils/zod/searchParams'
 
 export function useSearchParams() {
   const router = useRouter()

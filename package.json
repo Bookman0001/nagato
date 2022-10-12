@@ -35,6 +35,7 @@
     "dayjs": "1.11.5",
     "gray-matter": "4.0.3",
     "next": "12.3.1",
+    "next-test-api-route-handler": "^3.1.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.37.0",
