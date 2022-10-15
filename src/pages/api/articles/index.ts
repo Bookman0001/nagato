@@ -6,7 +6,7 @@ import { parseSchema } from 'src/utils/zod/searchParams'
 
 async function getSearchedArticles(req: NextApiRequest, res: NextApiResponse) {
   if (!isValidMethod({ req })) {
-    return res.status(405).json({ message: 'Not Allowed Method' })
+    return res.status(405).json({ message: 'not allowed method' })
   }
 
   const reqBody = req.body as unknown
