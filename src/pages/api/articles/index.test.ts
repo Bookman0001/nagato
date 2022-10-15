@@ -25,6 +25,23 @@ jest.mock('src/repositories/articles', () => ({
 }))
 
 describe('getSearchedArticles', () => {
+  it('to be return error in 405 status', async () => {
+    expect.hasAssertions()
+    await testApiHandler({
+      requestPatcher: (req) => (req.url = '/api/articles'),
+      handler,
+      test: async ({ fetch }) => {
+        const res = await fetch({
+          method: 'PUT',
+          body: JSON.stringify({ dummy: '1' }),
+        })
+        expect(await res.json()).toStrictEqual({
+          message: 'not allowed method',
+        })
+      },
+    })
+  })
+
   it('to be return error in 400 status', async () => {
     expect.hasAssertions()
     await testApiHandler({
