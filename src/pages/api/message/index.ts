@@ -2,14 +2,20 @@ import { NextApiRequest, NextApiResponse } from 'next'
 
 import { postMessage } from 'src/repositories/message'
 import { sendMail } from 'src/services/sendGrid'
+import { isValidMethod } from 'src/utils/api/postMethod'
 import { parseSchema } from 'src/utils/zod/receptionForm'
 
 async function sendMessage(req: NextApiRequest, res: NextApiResponse) {
+  if (!isValidMethod({ req })) {
+    return res.status(405).json({ message: 'Not Allowed Method' })
+  }
+
   const reqBody = req.body as unknown
   const validationResult = parseSchema(reqBody)
   if (!validationResult.success) {
     return res.status(400).json(validationResult.error)
   }
+
   postMessage(validationResult.data)
     .then(() => {
       sendMail(validationResult.data)
