@@ -16,18 +16,18 @@ async function sendMessage(req: NextApiRequest, res: NextApiResponse) {
     return res.status(400).json(validationResult.error)
   }
 
-  postMessage(validationResult.data)
-    .then(() => {
-      sendMail(validationResult.data)
+  return await postMessage(validationResult.data)
+    .then(async () => {
+      await sendMail(validationResult.data)
         .then(() => {
-          return res.status(200).json({ message: 'success' })
+          return res.status(200).json({ message: 'request is successful' })
         })
         .catch(() => {
-          return res.status(500).json({ message: 'sendgrid error' })
+          return res.status(500).json({ message: 'failed handler of SendGrid' })
         })
     })
     .catch(() => {
-      return res.status(500).json({ message: 'internal server error' })
+      return res.status(500).json({ message: 'failed handler of microCMS' })
     })
 }
 
