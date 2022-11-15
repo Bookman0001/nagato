@@ -69,7 +69,7 @@
     "@types/styled-components": "5.1.26",
     "babel-loader": "9.1.0",
     "babel-plugin-styled-components": "2.0.7",
-    "cypress": "11.0.1",
+    "cypress": "11.1.0",
     "eslint": "8.27.0",
     "eslint-config-next": "12.3.3",
     "eslint-config-tenryu": "1.2.6",
