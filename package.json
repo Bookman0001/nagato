@@ -48,7 +48,7 @@
     "zod": "3.19.1"
   },
   "devDependencies": {
-    "@babel/core": "7.20.2",
+    "@babel/core": "7.20.5",
     "@next/eslint-plugin-next": "12.3.4",
     "@storybook/addon-a11y": "6.5.13",
     "@storybook/addon-actions": "6.5.13",
