@@ -32,7 +32,7 @@
     "@hookform/resolvers": "2.9.10",
     "@sendgrid/mail": "7.7.0",
     "axios": "1.2.1",
-    "dayjs": "1.11.6",
+    "dayjs": "1.11.7",
     "gray-matter": "4.0.3",
     "next": "12.3.4",
     "next-test-api-route-handler": "3.1.7",
