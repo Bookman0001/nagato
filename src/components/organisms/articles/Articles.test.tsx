@@ -1,13 +1,10 @@
 import { render, screen, fireEvent } from '@testing-library/react'
+import singletonRouter from 'next/router'
 
 import { Articles } from 'src/components/organisms/articles'
 import type { ArticlesPagination } from 'src/types'
 
-const mockPush = jest.fn()
-
-jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
-  push: mockPush,
-}))
+jest.mock('next/router', () => require('next-router-mock'))
 
 const articles: ArticlesPagination = {
   contents: [
@@ -34,6 +31,6 @@ describe('Articles', () => {
   it('click event should be occured', () => {
     render(<Articles articles={articles} />)
     fireEvent.click(screen.getByRole('button'))
-    expect(mockPush).toBeCalledTimes(1)
+    expect(singletonRouter.asPath).toBe('/posts')
   })
 })

@@ -1,12 +1,9 @@
 import { render, screen, fireEvent, waitFor, act } from '@testing-library/react'
+import singletonRouter from 'next/router'
 
 import { ReceptionForm } from 'src/components/organisms/receptionForm'
 
-const mockPush = jest.fn()
-
-jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
-  push: mockPush,
-}))
+jest.mock('next/router', () => require('next-router-mock'))
 
 jest.mock('src/hooks/message', () => ({
   ...jest.requireActual('src/hooks/message'),
@@ -75,7 +72,7 @@ describe('ReceptionForm', () => {
       fireEvent.click(screen.getByRole('button'))
     })
     await waitFor(() => {
-      expect(mockPush).toBeCalledTimes(1)
+      expect(singletonRouter.asPath).toBe('/thanks')
     })
   })
 })

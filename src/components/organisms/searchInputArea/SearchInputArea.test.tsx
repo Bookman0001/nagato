@@ -1,21 +1,14 @@
 import { waitFor } from '@testing-library/dom'
 import { render, screen, fireEvent } from '@testing-library/react'
+import singletonRouter from 'next/router'
 
 import { SearchInputArea } from 'src/components/organisms/searchInputArea'
 
-const mockPush = jest.fn()
-
-jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
-  query: {
-    keyword: 'test',
-    page: '1',
-  },
-  push: mockPush,
-}))
+jest.mock('next/router', () => require('next-router-mock'))
 
 describe('Search', () => {
   beforeEach(() => {
-    mockPush.mockClear()
+    jest.clearAllMocks()
   })
 
   it('should be rendered correctlly', () => {
@@ -40,7 +33,7 @@ describe('Search', () => {
       code: 13,
     })
     await waitFor(() => {
-      expect(mockPush).toBeCalledTimes(1)
+      expect(singletonRouter.asPath).toBe('/posts?keyword=test')
     })
   })
 
@@ -51,7 +44,7 @@ describe('Search', () => {
       code: 27,
     })
     await waitFor(() => {
-      expect(mockPush).toBeCalledTimes(0)
+      expect(singletonRouter.asPath).toBe('/posts?keyword=test')
     })
   })
 
@@ -59,7 +52,7 @@ describe('Search', () => {
     render(<SearchInputArea defaultKeyword={'test'} />)
     fireEvent.click(screen.getByRole('button'))
     await waitFor(() => {
-      expect(mockPush).toBeCalledTimes(1)
+      expect(singletonRouter.asPath).toBe('/posts?keyword=test')
     })
   })
 })
