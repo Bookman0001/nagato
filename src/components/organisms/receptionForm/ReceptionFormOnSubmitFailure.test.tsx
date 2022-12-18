@@ -2,6 +2,8 @@ import { render, screen, fireEvent, waitFor, act } from '@testing-library/react'
 
 import { ReceptionForm } from 'src/components/organisms/receptionForm'
 
+jest.mock('next/router', () => require('next-router-mock'))
+
 jest.mock('src/hooks/message', () => ({
   ...jest.requireActual('src/hooks/message'),
   useCreateMessage: () => {

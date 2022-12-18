@@ -29,9 +29,14 @@ const HeaderContainer = styled.header`
 
 const Container = styled.div`
   height: 50px;
-  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   @media (min-width: ${deviceWidth.PC}) {
     max-width: 600px;
     margin: 0 auto;
@@ -40,12 +45,11 @@ const Container = styled.div`
 
 const LogoText = styled.div`
   width: 100%;
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 50%;
   cursor: pointer;
   :hover {
     opacity: 0.7;

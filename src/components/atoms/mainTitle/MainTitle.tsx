@@ -17,7 +17,7 @@ const TitleContainer = styled.h1`
   align-items: center;
   line-height: 1.5;
   font-size: ${fontSize.L};
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   @media (max-width: ${deviceWidth.PHONE}) {
     font-size: ${fontSize.M};
   }

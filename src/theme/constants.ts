@@ -33,5 +33,5 @@ export const zIndex = {
 export const deviceWidth = {
   PC: '1170px',
   TABLET: '768px',
-  PHONE: '450px',
+  PHONE: '600px',
 } as const
