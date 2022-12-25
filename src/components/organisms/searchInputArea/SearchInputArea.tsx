@@ -21,7 +21,7 @@ export function SearchInputArea({ defaultKeyword }: Props) {
   }
 
   const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === 'Enter') {
+    if (e.key === 'Enter' && !e.nativeEvent.isComposing) {
       searchArticlesWithKeyword(keyword)
       inputRef.current?.blur()
     }

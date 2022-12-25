@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import styled, { css } from 'styled-components'
 
 import { usePagination } from './usePagination'
@@ -23,9 +24,12 @@ export function Pagination({
     limit,
   })
 
-  if (!totalCount) return null
+  const displayPaginations = useMemo(
+    () => getDisplayPaginations(),
+    [getDisplayPaginations]
+  )
 
-  const displayPaginations = getDisplayPaginations()
+  if (!totalCount) return null
 
   const handleClick = (clickedIndex: number) => {
     onClick(clickedIndex)
