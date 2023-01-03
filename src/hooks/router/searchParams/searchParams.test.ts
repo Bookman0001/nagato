@@ -57,7 +57,7 @@ describe('useSearchParams', () => {
       const { result } = renderHook(() => useSearchParams())
       await waitFor(() => {
         result.current.searchArticlesWithPager(paginationIndex)
-        expect(mockPush).toBeCalledTimes(1)
+        expect(mockPush).toHaveBeenCalledTimes(1)
       })
     })
   })
@@ -75,7 +75,7 @@ describe('useSearchParams', () => {
       const { result } = renderHook(() => useSearchParams())
       await waitFor(() => {
         result.current.searchArticlesWithKeyword(keyword)
-        expect(mockPush).toBeCalledTimes(1)
+        expect(mockPush).toHaveBeenCalledTimes(1)
       })
     })
   })

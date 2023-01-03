@@ -16,14 +16,14 @@ describe('useTransitionPage', () => {
   it('should return to top page', () => {
     const { result } = renderHook(() => useTransitionPage())
     result.current.transitionToTop()
-    expect(mockPush).toBeCalledTimes(1)
-    expect(mockPush).toBeCalledWith({ pathname: '/' })
+    expect(mockPush).toHaveBeenCalledTimes(1)
+    expect(mockPush).toHaveBeenCalledWith({ pathname: '/' })
   })
 
   it('should return to thanks page', () => {
     const { result } = renderHook(() => useTransitionPage())
     result.current.transitionToThanks()
-    expect(mockPush).toBeCalledTimes(1)
-    expect(mockPush).toBeCalledWith({ pathname: '/thanks' })
+    expect(mockPush).toHaveBeenCalledTimes(1)
+    expect(mockPush).toHaveBeenCalledWith({ pathname: '/thanks' })
   })
 })

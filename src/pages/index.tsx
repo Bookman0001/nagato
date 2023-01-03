@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const articles = await getLimitedArticles({ limit: 5 })
   return {
     props: {
-      articles: articles,
+      articles,
     },
   }
 }

@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
   const article = await getArticle(params.id)
   return {
     props: {
-      article: article,
+      article,
     },
   }
 }
