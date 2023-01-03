@@ -21,7 +21,7 @@ export function useSearchParams() {
   const searchArticlesWithKeyword = (keyword: string) => {
     router.push(
       pagesPath.posts.$url({
-        query: { keyword: keyword },
+        query: { keyword },
       })
     )
   }

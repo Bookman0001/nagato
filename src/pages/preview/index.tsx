@@ -29,7 +29,7 @@ export const getServerSideProps = async (context: Context) => {
     })
     return {
       props: {
-        article: article,
+        article,
       },
     }
   } catch (e) {
