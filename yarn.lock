@@ -12228,10 +12228,10 @@ next-router-mock@^0.8.0:
   resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.8.0.tgz#e4400b166941d2e8f2617c9b5f4091bbd916d943"
   integrity sha512-aw/QnDFRqGDIkC3y4mCL5HQCNK94IzIfrEYy2c17WVp6Q4V5GUarFx751Sccf8fUPdkzD2/RsldyScvNZGA8lw==
 
-next-test-api-route-handler@3.1.7:
-  version "3.1.7"
-  resolved "https://registry.yarnpkg.com/next-test-api-route-handler/-/next-test-api-route-handler-3.1.7.tgz#bdb91d9981942f0bf73f201ddc24c1dfd732fd27"
-  integrity sha512-ds4VH7TOMRY8iT0vAnOi88uXsIGk9r6Yf/VrZPGHuG1ceRuTHIN3pyzKaPtQO2MisHH4z9ZDXmGrh3NJgq56ag==
+next-test-api-route-handler@3.1.8:
+  version "3.1.8"
+  resolved "https://registry.yarnpkg.com/next-test-api-route-handler/-/next-test-api-route-handler-3.1.8.tgz#a883a765670e939e9c625b8d11e680539a0ab89b"
+  integrity sha512-8o+TjtlQdvLv7YmR5NOl+AQCM/tEZqB1mvqBeGFQscuGtL+42fOrOsDFv2QsFUWieUMKv7j7NqOmYMpJRPu3/w==
   dependencies:
     cookie "^0.5.0"
     node-fetch "^2.6.7"
