@@ -1,0 +1,1 @@
+export { useCanonicalLink } from './useCanonicalLink'

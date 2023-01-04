@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Pagination } from 'src/components/atoms/pagination'
 import { ArticleContent } from 'src/components/molecures/articleContent'
-import { useSearchParams } from 'src/hooks/router/searchParams'
+import { useSearchParams } from 'src/hooks/router/useSearchParams'
 import { fontSize } from 'src/theme/constants'
 import type { ArticlesPagination } from 'src/types'
 

@@ -1,7 +1,7 @@
 import { waitFor } from '@testing-library/react'
 import { renderHook, act } from '@testing-library/react-hooks'
 
-import { useSearchParams } from 'src/hooks/router/searchParams'
+import { useSearchParams } from 'src/hooks/router/useSearchParams'
 
 const mockPush = jest.fn()
 

@@ -1,0 +1,1 @@
+export { fetchSearchedArticles } from './articles'

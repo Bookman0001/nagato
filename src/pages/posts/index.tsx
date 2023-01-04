@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import { SearchInputArea } from 'src/components/organisms/searchInputArea'
 import { Articles, Skeletons } from 'src/components/organisms/searchedArticles'
 import { SearchLayout } from 'src/components/templates/searchLayout'
-import { useSearchedArticles } from 'src/hooks/articles'
-import { useSearchParams } from 'src/hooks/router/searchParams'
+import { useSearchedArticles } from 'src/hooks/articles/useSearchedArticles'
+import { useSearchParams } from 'src/hooks/router/useSearchParams'
 import { deviceWidth, fontSize } from 'src/theme/constants'
 
 export type OptionalQuery = {

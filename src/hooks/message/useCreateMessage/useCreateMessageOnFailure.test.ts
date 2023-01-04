@@ -1,11 +1,11 @@
 import { waitFor } from '@testing-library/react'
 import { renderHook, act } from '@testing-library/react-hooks'
 
-import { useCreateMessage } from 'src/hooks/message'
+import { useCreateMessage } from 'src/hooks/message/useCreateMessage'
 
 jest.mock('src/repositories/client/message', () => ({
   ...jest.requireActual('src/repositories/client/message'),
-  postMessage: () => Promise.resolve(),
+  postMessage: () => Promise.reject(new TypeError('something error happened')),
 }))
 
 describe('useCreateMessage', () => {
@@ -13,7 +13,7 @@ describe('useCreateMessage', () => {
     jest.clearAllMocks()
   })
 
-  it('to be submitted with true status', async () => {
+  it('to be submitted with false status', async () => {
     await act(async () => {
       const { result } = renderHook(() => useCreateMessage())
       await waitFor(async () => {
@@ -22,9 +22,9 @@ describe('useCreateMessage', () => {
           name: '',
           content: 'test message',
         })
-        expect(result.current.error).toBe(null)
+        expect(result.current.error).not.toBe(null)
         expect(result.current.isLoading).toBe(false)
-        expect(success).toBe(true)
+        expect(success).toBe(false)
       })
     })
   })

@@ -1,7 +1,7 @@
 import { waitFor } from '@testing-library/react'
 import { renderHook, act } from '@testing-library/react-hooks'
 
-import { useCanonicalLink } from 'src/hooks/canonicalLink'
+import { useCanonicalLink } from 'src/hooks/seo/useCanonicalLink'
 
 describe('useCanonicalLink', () => {
   beforeEach(() => {

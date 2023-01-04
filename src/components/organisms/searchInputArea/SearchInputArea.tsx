@@ -5,7 +5,7 @@ import { Button } from 'src/components/atoms/button'
 import { Input } from 'src/components/atoms/form'
 import { Search } from 'src/components/atoms/icon'
 import { Title } from 'src/components/atoms/title'
-import { useSearchParams } from 'src/hooks/router/searchParams'
+import { useSearchParams } from 'src/hooks/router/useSearchParams'
 
 interface Props {
   defaultKeyword: string

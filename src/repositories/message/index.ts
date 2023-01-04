@@ -1,0 +1,1 @@
+export { postMessage } from './message'

@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 
 import { ThanksLayout } from 'src/components/templates/thanksLayout'
-import { useTransitionPage } from 'src/hooks/router/transitionPage'
+import { useTransitionPage } from 'src/hooks/router/useTransitionPage'
 import { color, deviceWidth, fontSize } from 'src/theme/constants'
 
 export default function Thanks() {

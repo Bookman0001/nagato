@@ -1,0 +1,1 @@
+export { useTransitionPage } from './useTransitionPage'

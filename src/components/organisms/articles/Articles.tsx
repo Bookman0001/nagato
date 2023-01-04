@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Button } from 'src/components/atoms/button'
 import { ArticleContent } from 'src/components/molecures/articleContent'
-import { useTransitionPage } from 'src/hooks/router/transitionPage'
+import { useTransitionPage } from 'src/hooks/router/useTransitionPage'
 import { fontSize } from 'src/theme/constants'
 import type { ArticlesPagination } from 'src/types'
 

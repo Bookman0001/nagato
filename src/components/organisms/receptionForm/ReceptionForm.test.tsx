@@ -5,8 +5,8 @@ import { ReceptionForm } from 'src/components/organisms/receptionForm'
 
 jest.mock('next/router', () => require('next-router-mock'))
 
-jest.mock('src/hooks/message', () => ({
-  ...jest.requireActual('src/hooks/message'),
+jest.mock('src/hooks/message/useCreateMessage', () => ({
+  ...jest.requireActual('src/hooks/message/useCreateMessage'),
   useCreateMessage: () => {
     return {
       createMessage: () => Promise.resolve(true),

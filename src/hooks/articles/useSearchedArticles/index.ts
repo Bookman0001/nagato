@@ -1,0 +1,1 @@
+export { useSearchedArticles } from './useSearchedArticles'
