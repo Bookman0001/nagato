@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks'
 
-import { useTransitionPage } from 'src/hooks/router/transitionPage'
+import { useTransitionPage } from 'src/hooks/router/useTransitionPage'
 
 const mockPush = jest.fn()
 

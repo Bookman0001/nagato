@@ -1,0 +1,1 @@
+export { isValidMethod } from './postMethod'

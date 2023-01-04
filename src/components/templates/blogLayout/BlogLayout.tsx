@@ -5,7 +5,7 @@ import { MainTitle } from 'src/components/atoms/mainTitle'
 import { Footer } from 'src/components/organisms/footer'
 import { Header } from 'src/components/organisms/header'
 import { Post } from 'src/components/organisms/meta/post'
-import { useTransitionPage } from 'src/hooks/router/transitionPage'
+import { useTransitionPage } from 'src/hooks/router/useTransitionPage'
 import { color, deviceWidth, fontSize } from 'src/theme/constants'
 import type { Article } from 'src/types'
 

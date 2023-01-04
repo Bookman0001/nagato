@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
 import * as gtag from 'src/services/gtag'
-import SwrConfig from 'src/services/swr'
+import SwrConfig from 'src/services/swr/SwrConfig'
 import 'src/theme/global.css'
 
 const App = ({ Component, pageProps }: AppProps) => {

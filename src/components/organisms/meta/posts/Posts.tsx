@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { useCanonicalLink } from 'src/hooks/canonicalLink'
+import { useCanonicalLink } from 'src/hooks/seo/useCanonicalLink'
 
 export function Posts() {
   const { canonicalLink } = useCanonicalLink()
