@@ -5,6 +5,6 @@ import { Introduction } from 'src/components/organisms/introduction'
 describe('introduction', () => {
   it('should be rendered correctlly', () => {
     render(<Introduction />)
-    expect(screen.getAllByText('My Blog')).toBeDefined()
+    expect(screen.getByText('My Blog')).toBeDefined()
   })
 })
