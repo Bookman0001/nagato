@@ -30,13 +30,14 @@ export function ReceptionForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Container>
-        <Label>
+        <Label htmlFor={'email'}>
           <LabelContent>
             メールアドレス
             <Circle size={6} />
           </LabelContent>
         </Label>
         <Input
+          id={'email'}
           type={'email'}
           placeholder={'sample@example.com'}
           hasError={!!errors.email}
@@ -47,13 +48,14 @@ export function ReceptionForm() {
         )}
       </Container>
       <Container>
-        <Label>
+        <Label htmlFor={'name'}>
           <LabelContent>
             名前
             <Circle size={6} />
           </LabelContent>
         </Label>
         <Input
+          id={'name'}
           placeholder={'John Doe'}
           hasError={!!errors.name}
           {...register('name')}
@@ -63,13 +65,14 @@ export function ReceptionForm() {
         )}
       </Container>
       <Container>
-        <Label>
+        <Label htmlFor={'content'}>
           <LabelContent>
             メッセージ内容
             <Circle size={6} />
           </LabelContent>
         </Label>
         <TextArea
+          id={'content'}
           placeholder={'Hello.'}
           hasError={!!errors.content}
           {...register('content')}

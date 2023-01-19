@@ -18,7 +18,7 @@ describe('Search', () => {
 
   it('should be onChange worked', async () => {
     render(<SearchInputArea defaultKeyword={'test'} />)
-    fireEvent.change(screen.getByPlaceholderText('keyword'), {
+    fireEvent.change(screen.getByRole('textbox'), {
       target: { value: 'React Go.' },
     })
     await waitFor(() => {
@@ -28,7 +28,7 @@ describe('Search', () => {
 
   it('should be onKeyPress worked', async () => {
     render(<SearchInputArea defaultKeyword={'test'} />)
-    fireEvent.keyDown(screen.getByPlaceholderText('keyword'), {
+    fireEvent.keyDown(screen.getByRole('textbox'), {
       key: 'Enter',
       code: 13,
     })
@@ -39,7 +39,7 @@ describe('Search', () => {
 
   it('should not to be onKeyPress worked', async () => {
     render(<SearchInputArea defaultKeyword={'test'} />)
-    fireEvent.keyDown(screen.getByPlaceholderText('keyword'), {
+    fireEvent.keyDown(screen.getByRole('textbox'), {
       key: 'Escape',
       code: 27,
     })

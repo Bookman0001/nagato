@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor, act } from '@testing-library/react'
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import singletonRouter from 'next/router'
 
 import { ReceptionForm } from 'src/components/organisms/receptionForm'
@@ -23,54 +23,65 @@ describe('ReceptionForm', () => {
   })
 
   it('to be valid validation in empty input', async () => {
-    await act(() => {
-      fireEvent.click(screen.getByRole('button'))
-    })
+    fireEvent.click(screen.getByRole('button'))
     await waitFor(() => {
       expect(screen.getAllByText('必須です')).toBeDefined()
     })
   })
 
   it('to be valid validation in email', async () => {
-    await act(() => {
-      fireEvent.change(screen.getByPlaceholderText('sample@example.com'), {
-        target: { value: 'test@test' },
-      })
-      fireEvent.click(screen.getByRole('button'))
+    fireEvent.change(screen.getByLabelText('メールアドレス'), {
+      target: { value: 'test@test' },
     })
+    fireEvent.click(screen.getByRole('button'))
     await waitFor(() => {
       expect(screen.getByText('メールアドレスの形式が不正です')).toBeDefined()
     })
   })
 
   it('to be valid validation in name', async () => {
-    await act(() => {
-      fireEvent.change(screen.getByPlaceholderText('John Doe'), {
-        target: {
-          value:
-            'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-        },
-      })
-      fireEvent.click(screen.getByRole('button'))
+    fireEvent.change(screen.getByLabelText('名前'), {
+      target: {
+        value:
+          'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+      },
     })
+    fireEvent.click(screen.getByRole('button'))
     await waitFor(() => {
       expect(screen.getByText('最大文字数は100文字です')).toBeDefined()
     })
   })
 
-  it('to be fired onSubmit with success status', async () => {
-    await act(() => {
-      fireEvent.change(screen.getByPlaceholderText('sample@example.com'), {
-        target: { value: 'sample@example.com' },
-      })
-      fireEvent.change(screen.getByPlaceholderText('John Doe'), {
-        target: { value: 'John Doe' },
-      })
-      fireEvent.change(screen.getByPlaceholderText('Hello.'), {
-        target: { value: 'Hello.' },
-      })
-      fireEvent.click(screen.getByRole('button'))
+  it('to be recovered error status', async () => {
+    fireEvent.click(screen.getByRole('button'))
+    await waitFor(() => {
+      expect(screen.getAllByText('必須です')).toBeDefined()
     })
+    fireEvent.change(screen.getByLabelText('メールアドレス'), {
+      target: { value: 'sample@example.com' },
+    })
+    fireEvent.change(screen.getByLabelText('名前'), {
+      target: { value: 'John Doe' },
+    })
+    fireEvent.change(screen.getByLabelText('メッセージ内容'), {
+      target: { value: 'Hello.' },
+    })
+    await waitFor(() => {
+      expect(screen.queryByText('必須です')).toBe(null)
+    })
+  })
+
+  it('to be fired onSubmit with success status', async () => {
+    fireEvent.change(screen.getByLabelText('メールアドレス'), {
+      target: { value: 'sample@example.com' },
+    })
+    fireEvent.change(screen.getByLabelText('名前'), {
+      target: { value: 'John Doe' },
+    })
+    fireEvent.change(screen.getByLabelText('メッセージ内容'), {
+      target: { value: 'Hello.' },
+    })
+    fireEvent.click(screen.getByRole('button'))
     await waitFor(() => {
       expect(singletonRouter.asPath).toBe('/thanks')
     })

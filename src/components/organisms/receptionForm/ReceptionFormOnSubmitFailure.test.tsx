@@ -23,13 +23,13 @@ describe('ReceptionForm', () => {
 
   it('to be fired onSubmit with failed status', async () => {
     await act(() => {
-      fireEvent.change(screen.getByPlaceholderText('sample@example.com'), {
+      fireEvent.change(screen.getByLabelText('メールアドレス'), {
         target: { value: 'sample@example.com' },
       })
-      fireEvent.change(screen.getByPlaceholderText('John Doe'), {
+      fireEvent.change(screen.getByLabelText('名前'), {
         target: { value: 'John Doe' },
       })
-      fireEvent.change(screen.getByPlaceholderText('Hello.'), {
+      fireEvent.change(screen.getByLabelText('メッセージ内容'), {
         target: { value: 'Hello.' },
       })
       fireEvent.click(screen.getByRole('button'))
