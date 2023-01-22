@@ -2,6 +2,7 @@ import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 
+import ErrorBoundary from 'src/components/error/ErrorBoundry'
 import * as gtag from 'src/services/gtag'
 import SwrConfig from 'src/services/swr/SwrConfig'
 import 'src/theme/global.css'
@@ -26,9 +27,11 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, [])
 
   return (
-    <SwrConfig>
-      <Component {...pageProps} />
-    </SwrConfig>
+    <ErrorBoundary>
+      <SwrConfig>
+        <Component {...pageProps} />
+      </SwrConfig>
+    </ErrorBoundary>
   )
 }
 

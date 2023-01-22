@@ -5,7 +5,7 @@ import { Articles, Skeletons } from 'src/components/organisms/searchedArticles'
 import { SearchLayout } from 'src/components/templates/searchLayout'
 import { useSearchedArticles } from 'src/hooks/articles/useSearchedArticles'
 import { useSearchParams } from 'src/hooks/router/useSearchParams'
-import { deviceWidth, fontSize } from 'src/theme/constants'
+import { deviceWidth } from 'src/theme/constants'
 
 export type OptionalQuery = {
   keyword?: string
@@ -14,15 +14,7 @@ export type OptionalQuery = {
 
 export default function Posts() {
   const { params } = useSearchParams()
-  const { articles, error } = useSearchedArticles(params)
-
-  if (error) {
-    return (
-      <SearchLayout>
-        <ErrorContainer>Error happened!</ErrorContainer>
-      </SearchLayout>
-    )
-  }
+  const { articles } = useSearchedArticles(params)
 
   if (!articles) {
     return (
@@ -60,14 +52,3 @@ const Section = styled.section`
 `
 
 const InputWrapper = styled.div``
-
-const ErrorContainer = styled.div`
-  max-width: 600px;
-  height: calc(100vh - 50px - 60px);
-  padding-top: 4rem;
-  margin: 0 auto;
-  font-size: ${fontSize.S};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
