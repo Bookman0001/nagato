@@ -37,7 +37,8 @@ describe('getSearchedArticles', () => {
           body: JSON.stringify({ dummy: '1' }),
         })
         await expect(res.json()).resolves.toStrictEqual({
-          message: 'not allowed method',
+          errorCode: 'ERR405',
+          issues: [{ message: 'not alloed method' }],
         })
       },
     })
@@ -55,23 +56,17 @@ describe('getSearchedArticles', () => {
           body: JSON.stringify({ dummy: '1' }),
         })
         await expect(res.json()).resolves.toStrictEqual({
+          errorCode: 'ERR400',
           issues: [
             {
-              code: 'invalid_type',
-              expected: 'string',
+              fieldName: 'keyword',
               message: 'Required',
-              path: ['keyword'],
-              received: 'undefined',
             },
             {
-              code: 'invalid_type',
-              expected: 'string',
+              fieldName: 'page',
               message: 'Required',
-              path: ['page'],
-              received: 'undefined',
             },
           ],
-          name: 'ZodError',
         })
       },
     })
