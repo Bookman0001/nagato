@@ -1,8 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
 import { fetchSearchedArticles } from 'src/repositories/articles'
-import { errorHandler } from 'src/utils/api/error'
-import { isValidMethod } from 'src/utils/api/postMethod'
+import { errorHandler, isValidMethod } from 'src/utils/api'
 import { parseSchema } from 'src/utils/zod/searchParams'
 
 async function getSearchedArticles(req: NextApiRequest, res: NextApiResponse) {

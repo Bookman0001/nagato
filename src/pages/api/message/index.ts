@@ -2,8 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 
 import { postMessage } from 'src/repositories/message'
 import { sendMail } from 'src/services/sendGrid'
-import { errorHandler } from 'src/utils/api/error'
-import { isValidMethod } from 'src/utils/api/postMethod'
+import { errorHandler, isValidMethod } from 'src/utils/api'
 import { parseSchema } from 'src/utils/zod/receptionForm'
 
 async function sendMessage(req: NextApiRequest, res: NextApiResponse) {
