@@ -21,7 +21,10 @@ describe('getSearchedArticles', () => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ keyword: '', page: '1' }),
         })
-        expect(await res.json()).toStrictEqual({ message: 'search error' })
+        expect(await res.json()).toStrictEqual({
+          errorCode: 'ERR500',
+          issues: [{ message: 'internal server error happened' }],
+        })
       },
     })
   })

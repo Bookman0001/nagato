@@ -18,6 +18,15 @@ export type ArticlesResponse = Readonly<{
 
 export type DraftArticleResponse = Omit<ArticleResponse, 'publishedAt'>
 
+type ErrorCode = 'ERR400' | 'ERR405' | 'ERR500'
+
+type Issues = Array<{ fieldName?: string; message: string }>
+
+export type Error = Readonly<{
+  errorCode: ErrorCode
+  issues: Issues
+}>
+
 /* App Type Definition */
 export type Article = Readonly<{
   id: string

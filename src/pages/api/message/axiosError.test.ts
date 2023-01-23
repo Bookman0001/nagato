@@ -26,7 +26,8 @@ describe('getSearchedArticles', () => {
           }),
         })
         await expect(res.json()).resolves.toStrictEqual({
-          message: 'failed handler of microCMS',
+          errorCode: 'ERR500',
+          issues: [{ message: 'internal server error happened' }],
         })
       },
     })
