@@ -5,6 +5,6 @@ import { Header } from 'src/components/atoms/icon'
 describe('Header', () => {
   it('should be rendered', () => {
     render(<Header />)
-    expect(screen.getByTestId('header-icon')).toBeDefined()
+    expect(screen.getByTestId('header-icon')).toBeInTheDocument()
   })
 })

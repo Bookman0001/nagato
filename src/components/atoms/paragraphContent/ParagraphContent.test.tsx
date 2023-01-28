@@ -5,6 +5,6 @@ import { ParagraphContent } from 'src/components/atoms/paragraphContent'
 describe('ParagraphContent', () => {
   it('should be rendered', () => {
     render(<ParagraphContent>{'test description'}</ParagraphContent>)
-    expect(screen.getByText('test description')).toBeDefined()
+    expect(screen.getByText('test description')).toBeInTheDocument()
   })
 })
