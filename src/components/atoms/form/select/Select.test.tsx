@@ -1,4 +1,5 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 import { Select } from 'src/components/atoms/form'
 
@@ -7,8 +8,9 @@ describe('Select', () => {
     jest.clearAllMocks()
   })
 
-  it('should be rendered with onChange', () => {
+  it('should be rendered with onChange', async () => {
     const handleChange = jest.fn()
+    const user = userEvent.setup()
     render(
       <Select defaultValue={'default value'} onChange={handleChange}>
         <>
@@ -18,8 +20,7 @@ describe('Select', () => {
         </>
       </Select>
     )
-    expect(screen.getByRole('combobox')).toBeDefined()
-    fireEvent.change(screen.getByRole('combobox'), { target: { value: 2 } })
+    await user.selectOptions(screen.getByRole('combobox'), '2')
     expect(handleChange).toHaveBeenCalledTimes(1)
   })
 })

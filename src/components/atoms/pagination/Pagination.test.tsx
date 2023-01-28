@@ -1,4 +1,5 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 import { Pagination } from 'src/components/atoms/pagination'
 
@@ -7,8 +8,9 @@ describe('Pagination', () => {
     jest.clearAllMocks()
   })
 
-  it('should be rendered', () => {
+  it('should be rendered', async () => {
     const handleClick = jest.fn()
+    const user = userEvent.setup()
     render(
       <Pagination
         currentIndex={1}
@@ -18,7 +20,7 @@ describe('Pagination', () => {
       />
     )
     expect(screen.getAllByRole('button')).toBeDefined()
-    fireEvent.click(screen.getAllByRole('button')[0])
+    await user.click(screen.getByRole('button', { name: '1' }))
     expect(handleClick).toHaveBeenCalledTimes(1)
   })
 

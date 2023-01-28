@@ -1,4 +1,5 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 import { TextArea } from 'src/components/atoms/form'
 
@@ -7,8 +8,9 @@ describe('TextArea', () => {
     jest.clearAllMocks()
   })
 
-  it('should be rendered with onChange', () => {
+  it('should be rendered with onChange', async () => {
     const handleChange = jest.fn()
+    const user = userEvent.setup()
     render(
       <TextArea
         defaultValue={'default value'}
@@ -16,10 +18,8 @@ describe('TextArea', () => {
         onChange={handleChange}
       />
     )
-    expect(screen.getByPlaceholderText('dummy place holder')).toBeDefined()
-    fireEvent.change(screen.getByPlaceholderText('dummy place holder'), {
-      target: { value: 'React Go.' },
-    })
-    expect(handleChange).toHaveBeenCalledTimes(1)
+    await user.click(screen.getByPlaceholderText('dummy place holder'))
+    await user.keyboard('React Go.{enter}')
+    expect(handleChange).toHaveBeenCalledTimes(10)
   })
 })

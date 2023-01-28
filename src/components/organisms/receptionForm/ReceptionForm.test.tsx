@@ -35,7 +35,9 @@ describe('ReceptionForm', () => {
     })
     fireEvent.click(screen.getByRole('button'))
     await waitFor(() => {
-      expect(screen.getByText('メールアドレスの形式が不正です')).toBeDefined()
+      expect(
+        screen.getByText('メールアドレスの形式が不正です')
+      ).toBeInTheDocument()
     })
   })
 
@@ -48,7 +50,7 @@ describe('ReceptionForm', () => {
     })
     fireEvent.click(screen.getByRole('button'))
     await waitFor(() => {
-      expect(screen.getByText('最大文字数は100文字です')).toBeDefined()
+      expect(screen.getByText('最大文字数は100文字です')).toBeInTheDocument()
     })
   })
 

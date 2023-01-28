@@ -35,7 +35,9 @@ describe('ReceptionForm', () => {
       fireEvent.click(screen.getByRole('button'))
     })
     await waitFor(() => {
-      expect(screen.getByText('サーバーでエラーが発生しました')).toBeDefined()
+      expect(
+        screen.getByText('サーバーでエラーが発生しました')
+      ).toBeInTheDocument()
     })
   })
 })

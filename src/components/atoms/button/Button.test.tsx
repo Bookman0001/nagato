@@ -1,4 +1,5 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 import { Button } from 'src/components/atoms/button'
 
@@ -7,11 +8,13 @@ describe('Button', () => {
     jest.clearAllMocks()
   })
 
-  it('should be rendered', () => {
+  it('should be rendered', async () => {
+    const user = userEvent.setup()
     const handleClick = jest.fn()
     render(<Button onClick={handleClick}>button label</Button>)
-    expect(screen.getByRole('button').textContent).toBe('button label')
-    fireEvent.click(screen.getByRole('button'))
+    const buttonElement = screen.getByRole('button', { name: 'button label' })
+    expect(buttonElement).toBeInTheDocument()
+    await user.click(buttonElement)
     expect(handleClick).toHaveBeenCalledTimes(1)
   })
 })
