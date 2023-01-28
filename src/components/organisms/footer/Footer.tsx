@@ -27,7 +27,11 @@ export function Footer() {
           />
         </a>
       </PictureContainer>
-      <Link href={pagesPath.reception.$url()} passHref>
+      <Link
+        href={pagesPath.reception.$url()}
+        passHref
+        aria-label={'問い合わせページに進む'}
+      >
         <MailContainer>
           <Mail size={30} />
         </MailContainer>

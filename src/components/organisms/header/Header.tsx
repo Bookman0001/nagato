@@ -9,7 +9,7 @@ export function Header() {
   return (
     <HeaderContainer>
       <Container>
-        <Link href={pagesPath.$url()} passHref>
+        <Link href={pagesPath.$url()} passHref aria-label={'TOPページに戻る'}>
           <LogoText>
             <Icon />
           </LogoText>
