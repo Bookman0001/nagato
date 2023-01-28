@@ -26,4 +26,4 @@ jobs:
       - name: test storybook
         run: yarn run build-storybook
       - name: test unit-testing and integration-testing
-        run: yarn run jest
+        run: yarn run jest --ci
