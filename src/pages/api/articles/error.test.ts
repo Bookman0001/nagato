@@ -2,6 +2,8 @@ import { testApiHandler } from 'next-test-api-route-handler'
 
 import handler from './'
 
+import { errorCode } from 'src/types/error'
+
 jest.mock('src/repositories/articles', () => ({
   ...jest.requireActual('src/repositories/articles'),
   fetchSearchedArticles: async () => {
@@ -22,7 +24,7 @@ describe('getSearchedArticles', () => {
           body: JSON.stringify({ keyword: '', page: '1' }),
         })
         expect(await res.json()).toStrictEqual({
-          errorCode: 'ERR500',
+          errorCode: errorCode.internalServerError,
           issues: [{ message: 'internal server error happened' }],
         })
       },
