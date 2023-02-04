@@ -1,10 +1,10 @@
 import { ZodIssue } from 'zod'
 
-import { Error } from 'src/types'
+import { Error, errorCode } from 'src/types/error'
 
 const handleBadRequest = ({ zodIssues }: { zodIssues: ZodIssue[] }): Error => {
   return {
-    errorCode: 'ERR400',
+    errorCode: errorCode.badRequest,
     issues: zodIssues.map((issue) => {
       return {
         fieldName: String(issue.path[0]),
@@ -16,14 +16,14 @@ const handleBadRequest = ({ zodIssues }: { zodIssues: ZodIssue[] }): Error => {
 
 const handleWrongMethodRequest = (): Error => {
   return {
-    errorCode: 'ERR405',
+    errorCode: errorCode.wrongMethodRequest,
     issues: [{ message: 'not alloed method' }],
   }
 }
 
 const handleGeneralError = (): Error => {
   return {
-    errorCode: 'ERR500',
+    errorCode: errorCode.internalServerError,
     issues: [{ message: 'internal server error happened' }],
   }
 }

@@ -2,6 +2,8 @@ import { testApiHandler } from 'next-test-api-route-handler'
 
 import handler from './'
 
+import { errorCode } from 'src/types/error'
+
 jest.mock('src/repositories/message', () => ({
   ...jest.requireActual('src/repositories/message'),
   postMessage: async () => {
@@ -10,7 +12,7 @@ jest.mock('src/repositories/message', () => ({
 }))
 
 describe('getSearchedArticles', () => {
-  it('to be return success object in 200 status', async () => {
+  it('to be return success object in 500 status', async () => {
     expect.hasAssertions()
     await testApiHandler({
       requestPatcher: (req) => (req.url = '/api/message'),
@@ -26,7 +28,7 @@ describe('getSearchedArticles', () => {
           }),
         })
         await expect(res.json()).resolves.toStrictEqual({
-          errorCode: 'ERR500',
+          errorCode: errorCode.internalServerError,
           issues: [{ message: 'internal server error happened' }],
         })
       },

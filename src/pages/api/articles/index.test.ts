@@ -2,6 +2,8 @@ import { testApiHandler } from 'next-test-api-route-handler'
 
 import handler from './'
 
+import { errorCode } from 'src/types/error'
+
 jest.mock('src/repositories/articles', () => ({
   ...jest.requireActual('src/repositories/articles'),
   fetchSearchedArticles: async () => {
@@ -37,7 +39,7 @@ describe('getSearchedArticles', () => {
           body: JSON.stringify({ dummy: '1' }),
         })
         await expect(res.json()).resolves.toStrictEqual({
-          errorCode: 'ERR405',
+          errorCode: errorCode.wrongMethodRequest,
           issues: [{ message: 'not alloed method' }],
         })
       },
@@ -56,7 +58,7 @@ describe('getSearchedArticles', () => {
           body: JSON.stringify({ dummy: '1' }),
         })
         await expect(res.json()).resolves.toStrictEqual({
-          errorCode: 'ERR400',
+          errorCode: errorCode.badRequest,
           issues: [
             {
               fieldName: 'keyword',
