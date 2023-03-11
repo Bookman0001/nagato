@@ -4,13 +4,16 @@ import { fetchSearchedArticles } from 'src/repositories/articles'
 import { errorHandler, isValidMethod } from 'src/utils/api'
 import { parseSchema } from 'src/utils/zod/searchParams'
 
-async function getSearchedArticles(req: NextApiRequest, res: NextApiResponse) {
+interface _NextApiRequest extends NextApiRequest {
+  body: unknown
+}
+
+async function getSearchedArticles(req: _NextApiRequest, res: NextApiResponse) {
   if (!isValidMethod({ req })) {
     return res.status(405).json(errorHandler.handleWrongMethodRequest())
   }
 
-  const reqBody = req.body as unknown
-  const validationResult = parseSchema(reqBody)
+  const validationResult = parseSchema(req.body)
   if (!validationResult.success) {
     const zodIssues = validationResult.error.errors
     return res.status(400).json(errorHandler.handleBadRequest({ zodIssues }))
