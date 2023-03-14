@@ -39,7 +39,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "7.43.5",
     "sanitize-html": "2.10.0",
-    "styled-components": "5.3.8",
+    "styled-components": "5.3.9",
     "swr": "2.1.0",
     "zod": "3.21.4"
   },
