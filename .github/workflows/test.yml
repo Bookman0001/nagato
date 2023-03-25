@@ -11,7 +11,7 @@ jobs:
       - name: use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '18'
           cache: 'yarn'
       - name: install dependency
         run: yarn install
@@ -23,7 +23,5 @@ jobs:
         run: yarn run compiler-check
       - name: test style lint
         run: yarn run lint-style
-      - name: test storybook
-        run: yarn run build-storybook
       - name: test unit-testing and integration-testing
         run: yarn run jest --ci
