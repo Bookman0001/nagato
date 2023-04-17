@@ -2,11 +2,11 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 import { color, deviceWidth, fontSize } from 'src/theme/constants'
-import type { Article } from 'src/types'
+import type { ContentInArticles } from 'src/types'
 import { pagesPath } from 'src/utils/$path'
 
 interface Props {
-  article: Article
+  article: ContentInArticles
 }
 
 export function ArticleContent({ article }: Props) {
