@@ -15,13 +15,12 @@ import type { SearchParams } from 'src/utils/zod/searchParams'
 function mappingArticles(response: ArticlesResponse): ArticlesPagination {
   const { contents, totalCount, offset, limit } = response
   const mappedContents = contents.map((article) => {
-    const { id, publishedAt, title, description, content } = article
+    const { id, publishedAt, title, description } = article
     return {
       id,
       publishedAt: dayjs(publishedAt).format('YYYY/MM/DD'),
       title,
       description,
-      content,
     }
   })
   return {

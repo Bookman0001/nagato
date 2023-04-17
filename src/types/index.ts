@@ -9,8 +9,17 @@ export type ArticleResponse = Readonly<{
   content: string
 }>
 
+type ContentResponseInArticles = {
+  id: string
+  createdAt: string
+  updatedAt: string
+  publishedAt: string
+  title: string
+  description: string
+}
+
 export type ArticlesResponse = Readonly<{
-  contents: Array<ArticleResponse>
+  contents: Array<ContentResponseInArticles>
   totalCount: number
   offset: number
   limit: number
@@ -27,8 +36,15 @@ export type Article = Readonly<{
   content: string
 }>
 
+export type ContentInArticles = {
+  id: string
+  publishedAt: string
+  title: string
+  description: string
+}
+
 export type ArticlesPagination = Readonly<{
-  contents: Array<Article>
+  contents: Array<ContentInArticles>
   totalCount: number
   offset: number
   limit: number
