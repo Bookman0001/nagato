@@ -6609,10 +6609,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-next-router-mock@0.9.5:
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.9.5.tgz#1088769efbd8c2cab28cbf129da8d7db02c88a6b"
-  integrity sha512-LntF4m1KQvOH+SRQDwzhKhNbwsjZVjbbFUlexS8BimVWrHIxB/eKaV1ACW48lgDQslOI8ZJA1C0zvA5JBmEekQ==
+next-router-mock@0.9.6:
+  version "0.9.6"
+  resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.9.6.tgz#3f0c0ba574f4c43c4e412e66ac47de63d729d672"
+  integrity sha512-ezX+4ZlnVPi63/wjvJ5Cnf+0k/H6VdjAitRs+UX+6rzOfuRLC6q72clAa43xIwBkAV3uHxWqzE9CK5S8h1c7tg==
 
 next-test-api-route-handler@3.1.8:
   version "3.1.8"
