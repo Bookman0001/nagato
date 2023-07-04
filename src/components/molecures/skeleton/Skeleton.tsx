@@ -28,7 +28,7 @@ const skeleton = css`
   background-color: #696969;
   position: relative;
   overflow: hidden;
-  ::before {
+  &::before {
     content: '';
     display: block;
     height: 100%;

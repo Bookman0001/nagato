@@ -18,12 +18,12 @@ export const Input = React.forwardRef<HTMLInputElement, Props>(function Element(
       type={type}
       role={'textbox'}
       ref={ref}
-      hasError={hasError}
+      $hasError={hasError}
     />
   )
 })
 
-const StyledInput = styled.input<{ hasError: boolean }>`
+const StyledInput = styled.input<{ $hasError: boolean }>`
   width: 100%;
   flex: 1;
   height: 100%;
@@ -33,8 +33,8 @@ const StyledInput = styled.input<{ hasError: boolean }>`
   background-color: ${color.BLACK};
   border: 1px solid ${color.WHITE};
   border-radius: ${borderRadius.DEFAULT};
-  ${({ hasError }) =>
-    hasError &&
+  ${({ $hasError }) =>
+    $hasError &&
     css`
       border: 2px solid ${color.WARNING};
     `}

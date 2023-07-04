@@ -39,7 +39,7 @@ export function Pagination({
     <Container>
       {displayPaginations.map((num, index) => {
         return (
-          <ButtonWrapper key={index} hasSelected={currentIndex === num}>
+          <ButtonWrapper key={index} $selected={currentIndex === num}>
             <ButtonItem
               onClick={() => handleClick(num)}
               key={index}
@@ -60,9 +60,9 @@ const Container = styled.div`
   align-items: center;
 `
 
-const ButtonWrapper = styled.div<{ hasSelected: boolean }>`
+const ButtonWrapper = styled.div<{ $selected: boolean }>`
   ${(props) =>
-    props.hasSelected &&
+    props.$selected &&
     css`
       button {
         color: ${color.BLACK};

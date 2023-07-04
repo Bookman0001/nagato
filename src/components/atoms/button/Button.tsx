@@ -11,13 +11,13 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 export function Button({ children, bgColor = color.BLACK, ...props }: Props) {
   return (
-    <ButtonItem {...props} bgColor={bgColor}>
+    <ButtonItem {...props} $bgColor={bgColor}>
       {children}
     </ButtonItem>
   )
 }
 
-const ButtonItem = styled.button<{ bgColor: ButtonBgColor }>`
+const ButtonItem = styled.button<{ $bgColor: ButtonBgColor }>`
   min-height: 40px;
   height: 100%;
   border-radius: ${borderRadius.DEFAULT};
@@ -26,7 +26,7 @@ const ButtonItem = styled.button<{ bgColor: ButtonBgColor }>`
   justify-content: center;
   align-items: center;
   font-size: ${fontSize.M};
-  background-color: ${({ bgColor }) => bgColor};
+  background-color: ${({ $bgColor }) => $bgColor};
   border: 2px solid ${color.WHITE};
   cursor: pointer;
   :hover {

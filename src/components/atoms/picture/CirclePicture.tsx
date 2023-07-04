@@ -1,23 +1,16 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 interface Props {
   src: string
   alt: string
-  isCircle?: boolean
   width?: number
   height?: number
 }
 
-export function CirclePicture({
-  src,
-  alt,
-  isCircle = false,
-  width = 100,
-  height = 100,
-}: Props) {
+export function CirclePicture({ src, alt, width = 100, height = 100 }: Props) {
   return (
     <Container width={width} height={height}>
-      <Image src={src} alt={alt} isCircle={isCircle} />
+      <Image src={src} alt={alt} />
     </Container>
   )
 }
@@ -28,13 +21,8 @@ const Container = styled.div<{ width: number; height: number }>`
   height: ${(props) => props.height}px;
 `
 
-const Image = styled.img<{ src: string; alt: string; isCircle: boolean }>`
+const Image = styled.img<{ src: string; alt: string }>`
   width: 100%;
   src: ${(props) => props.src};
   alt: ${(props) => props.alt};
-  ${(props) =>
-    props.isCircle &&
-    css`
-      border-radius: 100%;
-    `}
 `
