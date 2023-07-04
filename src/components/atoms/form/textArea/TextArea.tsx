@@ -16,13 +16,13 @@ export const TextArea = React.forwardRef<HTMLTextAreaElement, Props>(
         role={'textbox'}
         ref={ref}
         rows={rows}
-        hasError={hasError}
+        $hasError={hasError}
       />
     )
   }
 )
 
-const StyledTextArea = styled.textarea<{ hasError: boolean }>`
+const StyledTextArea = styled.textarea<{ $hasError: boolean }>`
   flex: 1;
   width: calc(100% - 20px);
   font-size: ${fontSize.S};
@@ -30,8 +30,8 @@ const StyledTextArea = styled.textarea<{ hasError: boolean }>`
   background-color: ${color.BLACK};
   border: 1px solid ${color.WHITE};
   border-radius: ${borderRadius.DEFAULT};
-  ${({ hasError }) =>
-    hasError &&
+  ${({ $hasError }) =>
+    $hasError &&
     css`
       border: 2px solid ${color.WARNING};
     `}
