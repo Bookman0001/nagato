@@ -10,6 +10,7 @@
     "property-no-vendor-prefix": null,
     "function-no-unknown": null,
     "at-rule-empty-line-before": null,
-    "no-empty-source": null
+    "no-empty-source": null,
+    "media-query-no-invalid": null
   }
 }
