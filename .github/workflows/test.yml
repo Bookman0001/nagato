@@ -20,9 +20,11 @@ jobs:
         run: yarn run prettier
       - name: test linter
         run: yarn run lint
-      - name: test compiler
-        run: yarn run compiler-check
       - name: test style lint
         run: yarn run lint-style
+      - name: test compiler
+        run: yarn run compiler-check
+      - name: auto code review via knip
+        run: yarn run knip
       - name: test unit-testing and integration-testing
         run: yarn run jest --ci

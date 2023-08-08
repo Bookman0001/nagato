@@ -1,0 +1,5 @@
+{
+  "ignore": ["**/*.d.ts"],
+  "ignoreDependencies": ["hidden-package"],
+  "ignoreWorkspaces": ["src/utils/$path.ts"]
+}

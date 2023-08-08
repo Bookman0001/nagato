@@ -13,6 +13,7 @@
     "prettier": "prettier --check ./**/*.{ts,tsx}",
     "format": "prettier --write ./**/*.{ts,tsx}",
     "compiler-check": "tsc --noEmit",
+    "knip": "knip --config knip.json --exclude devDependencies,unlisted",
     "jest": "jest --runInBand",
     "cy:open": "cypress open",
     "cy:run": "cypress run"
@@ -79,6 +80,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "29.6.2",
     "jest-environment-jsdom": "29.6.2",
+    "knip": "^2.19.1",
     "lint-staged": "13.2.3",
     "mockdate": "3.0.5",
     "msw": "1.2.3",
