@@ -5728,9 +5728,9 @@ kleur@^3.0.3:
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
 knip@^2.19.1:
-  version "2.19.2"
-  resolved "https://registry.yarnpkg.com/knip/-/knip-2.19.2.tgz#60d3392f861604b21cc2bb98d19fad1226a139f4"
-  integrity sha512-C/+fmhYlQbFTZYU2PHDwqIhYpxgYeDQbFTVXqqRQFMTX+0bgAzmxOdmPLde6b1DueEfrVapLTd76q9OUB0xH5Q==
+  version "2.19.3"
+  resolved "https://registry.yarnpkg.com/knip/-/knip-2.19.3.tgz#48075f96c1bf8b7dc7f7f1767233816a940f817b"
+  integrity sha512-Z94wFtmmh7jamijbcSrMwWwGNeuEcE0VFORmeQmM2Kf0+woND++lLp+AOb8FoaJZhREP5m9L0vHT2LT84q+9dw==
   dependencies:
     "@ericcornelissen/bash-parser" "^0.5.2"
     "@npmcli/map-workspaces" "^3.0.4"
@@ -5943,9 +5943,9 @@ lru-cache@^6.0.0:
     yallist "^4.0.0"
 
 "lru-cache@^9.1.1 || ^10.0.0":
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.0.0.tgz#b9e2a6a72a129d81ab317202d93c7691df727e61"
-  integrity sha512-svTf/fzsKHffP42sujkO/Rjs37BCIsQVRCeNYIm9WN8rgT7ffoUnRtZCqU+6BqcSBdv8gwJeTz8knJpgACeQMw==
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.0.1.tgz#0a3be479df549cca0e5d693ac402ff19537a6b7a"
+  integrity sha512-IJ4uwUTi2qCccrioU6g9g/5rvvVl13bsdczUUcqbciD9iLr095yj8DQKdObriEvuNSx325N1rV1O0sJFszx75g==
 
 lz-string@^1.5.0:
   version "1.5.0"
