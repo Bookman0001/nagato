@@ -5728,10 +5728,10 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-knip@2.19.9:
-  version "2.19.9"
-  resolved "https://registry.yarnpkg.com/knip/-/knip-2.19.9.tgz#85920c6c015bbe813675e3a1685328a7146f447b"
-  integrity sha512-Ip1kdmJe3QLrv0luQnv1KvuEdcZGgOuOnQ8XWzJ1/rdkKOrH+GWXYwosL7t0DD2ITmCbkDpyeuTk4grHhX4O4Q==
+knip@2.19.10:
+  version "2.19.10"
+  resolved "https://registry.yarnpkg.com/knip/-/knip-2.19.10.tgz#76575f24591ced03c741bd1f02ddbed99295537e"
+  integrity sha512-1/83ouftrP/XYbfd8KpFa/6apaZlPYYb2LrpgQPxdmaFCMDi3kp6WF7882unfWB1J0AZiEMS6ItNphBCRX39Lg==
   dependencies:
     "@npmcli/map-workspaces" "^3.0.4"
     "@snyk/github-codeowners" "^1.1.0"
