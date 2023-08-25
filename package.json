@@ -83,7 +83,7 @@
     "knip": "2.19.11",
     "lint-staged": "14.0.1",
     "mockdate": "3.0.5",
-    "msw": "1.2.3",
+    "msw": "1.2.4",
     "next-router-mock": "0.9.9",
     "next-test-api-route-handler": "3.1.8",
     "npm-run-all": "4.1.5",
