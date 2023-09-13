@@ -25,6 +25,4 @@ jobs:
       - name: Create Release Pull Request
         if: ${{ steps.check_pr.outputs.count == 0 }}
         run: |
-          gh pr create \
-            -B master \
-            -t 'Deploying resource to production ${{ steps.check_pr.outputs.message }}' \
+          gh pr create -B master -t 'Deploying resource to production ${{ steps.check_pr.outputs.message }}' -b 'release'
