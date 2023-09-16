@@ -43,7 +43,7 @@
     "zod": "3.22.2"
   },
   "devDependencies": {
-    "@babel/core": "7.22.19",
+    "@babel/core": "7.22.20",
     "@next/eslint-plugin-next": "13.4.19",
     "@stylelint/postcss-css-in-js": "^0.38.0",
     "@testing-library/cypress": "10.0.1",
