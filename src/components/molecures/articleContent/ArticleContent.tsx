@@ -46,6 +46,10 @@ const SubTitle = styled.h3`
 `
 
 const DateMemo = styled.div`
+  font-size: ${fontSize.XS};
   text-align: right;
   line-height: 1.7;
+  @media (max-width: ${deviceWidth.PHONE}) {
+    font-size: ${fontSize.XXS};
+  }
 `

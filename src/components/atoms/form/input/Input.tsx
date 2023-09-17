@@ -27,9 +27,9 @@ const StyledInput = styled.input<{ $hasError: boolean }>`
   width: 100%;
   flex: 1;
   height: 100%;
-  min-height: 40px;
+  height: 40px;
   font-size: ${fontSize.S};
-  text-indent: 10px;
+  text-indent: 5px;
   background-color: ${color.BLACK};
   border: 1px solid ${color.WHITE};
   border-radius: ${borderRadius.DEFAULT};

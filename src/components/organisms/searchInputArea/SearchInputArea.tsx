@@ -43,7 +43,7 @@ export function SearchInputArea({ defaultKeyword }: Props) {
           onKeyDown={handleKeyDown}
         />
         <Button aria-label="検索" onClick={handleClick}>
-          <Search size={26} />
+          <Search size={20} />
         </Button>
       </DetailWrapper>
     </Section>
@@ -51,7 +51,7 @@ export function SearchInputArea({ defaultKeyword }: Props) {
 }
 
 const Section = styled.section`
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 `
 
 const DetailWrapper = styled.div`

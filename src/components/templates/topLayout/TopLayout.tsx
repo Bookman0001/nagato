@@ -16,7 +16,7 @@ export function TopLayout({ children }: Props) {
       <Default />
       <Header />
       <PictureContainer>
-        <Rectangle size={200} />
+        <Rectangle size={180} />
       </PictureContainer>
       {children}
       <Footer />
@@ -28,7 +28,7 @@ const PictureContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 0;
+  padding: 2rem 0;
   div {
     padding: 0 50px;
   }
