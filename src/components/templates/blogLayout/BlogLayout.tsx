@@ -35,9 +35,10 @@ export function BlogLayout({ article, children }: Props) {
 
 const Container = styled.div`
   max-width: 600px;
-  margin: 4rem auto;
+  margin: 3rem auto;
   font-size: ${fontSize.S};
   @media (max-width: ${deviceWidth.PHONE}) {
+    font-size: ${fontSize.XS};
     padding: 0 2rem;
   }
 `

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Button } from 'src/components/atoms/button'
 import { ArticleContent } from 'src/components/molecures/articleContent'
 import { useTransitionPage } from 'src/hooks/router/useTransitionPage'
-import { fontSize } from 'src/theme/constants'
+import { deviceWidth } from 'src/theme/constants'
 import type { ArticlesPagination } from 'src/types'
 
 interface Props {
@@ -39,7 +39,7 @@ export function Articles({ articles }: Props) {
 }
 
 const Section = styled.section`
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 `
 
 const DetailWrapper = styled.div`
@@ -47,18 +47,21 @@ const DetailWrapper = styled.div`
 `
 
 const Wrapper = styled.div`
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   :last-child {
     padding-bottom: 0;
   }
 `
 
 const ButtonWrapper = styled.div`
-  padding-top: 4rem;
   display: flex;
   justify-content: center;
   button {
     height: 3rem;
-    font-size: ${fontSize.S};
+  }
+  @media (max-width: ${deviceWidth.PHONE}) {
+    button {
+      height: 2.5rem;
+    }
   }
 `
