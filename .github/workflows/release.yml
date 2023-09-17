@@ -3,7 +3,7 @@ name: Cron job for release
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 10 * * 3'
+  - cron: '0 10 * * 3'
 
 jobs:
   create-release-pr:
