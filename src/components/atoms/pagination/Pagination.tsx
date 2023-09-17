@@ -79,10 +79,10 @@ const ButtonItem = styled.button`
   background-color: ${color.BLACK};
   border: 2px solid ${color.WHITE};
   border-radius: ${borderRadius.DEFAULT};
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   margin: 0 1rem;
-  font-size: ${fontSize.S};
+  font-size: ${fontSize.XS};
   cursor: pointer;
   text-align: center;
 `

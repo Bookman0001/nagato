@@ -16,7 +16,7 @@ export function ReceptionLayout({ children }: Props) {
       <Default />
       <Header />
       <Container>
-        <Rectangle size={200} />
+        <Rectangle size={180} />
       </Container>
       {children}
       <Footer />

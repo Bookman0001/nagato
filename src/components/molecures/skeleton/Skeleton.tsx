@@ -11,7 +11,7 @@ export function Skeleton() {
 
 const Wrapper = styled.div`
   display: flex;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 `
 
 const Animation = keyframes`
@@ -24,7 +24,7 @@ const Animation = keyframes`
 `
 
 const skeleton = css`
-  height: 30px;
+  height: 26px;
   background-color: #696969;
   position: relative;
   overflow: hidden;
