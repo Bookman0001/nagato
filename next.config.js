@@ -5,7 +5,4 @@ module.exports = {
       ssr: true,
     },
   },
-  experimental: {
-    appDir: false,
-  },
 }
