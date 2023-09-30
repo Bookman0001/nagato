@@ -1,1 +1,1 @@
-export { GA_ID, existsGaId, pageview, event } from './gtag'
+export { GA_ID, existsGaId, pageview } from './gtag'

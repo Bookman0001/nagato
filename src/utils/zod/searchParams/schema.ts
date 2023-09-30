@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-export const schema = z.object({
+const schema = z.object({
   keyword: z.string(),
   page: z.string(),
 })

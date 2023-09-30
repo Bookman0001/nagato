@@ -9,6 +9,7 @@ import 'src/theme/global.css'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()
+
   useEffect(() => {
     if (!gtag.existsGaId) {
       return
