@@ -4,10 +4,11 @@ import { color } from 'src/theme/constants'
 
 interface Props {
   errorMessage: string
+  id: string
 }
 
-export function ErrorMessage({ errorMessage }: Props) {
-  return <ErrorContent>{errorMessage}</ErrorContent>
+export function ErrorMessage({ errorMessage, id }: Props) {
+  return <ErrorContent id={id}>{errorMessage}</ErrorContent>
 }
 
 const ErrorContent = styled.p`

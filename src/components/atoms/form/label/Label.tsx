@@ -12,8 +12,7 @@ export function Label({ children, ...rest }: Props) {
 }
 
 const LabelItem = styled.label`
-  display: flex;
-  align-items: center;
+  display: block;
   font-size: ${fontSize.XS};
   padding-bottom: 1rem;
   font-weight: bold;
