@@ -1,4 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useId } from 'react'
 import { useForm, useFormState } from 'react-hook-form'
 import styled from 'styled-components'
 
@@ -18,6 +19,7 @@ export function ReceptionForm() {
   const { errors, isSubmitting } = useFormState({ control })
   const { isLoading, error, createMessage } = useCreateMessage()
   const { transitionToThanks } = useTransitionPage()
+  const accessibleId = useId()
   const submitDisabled = isLoading || isSubmitting
 
   const onSubmit = async (formInput: FormInput) => {
@@ -30,55 +32,64 @@ export function ReceptionForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Container>
-        <Label htmlFor={'email'}>
+        <Label>
           <LabelContent>
             メールアドレス
             <Circle size={6} />
           </LabelContent>
+          <Input
+            aria-describedby={`${accessibleId}-email-hint`}
+            type={'email'}
+            placeholder={'sample@example.com'}
+            hasError={!!errors.email}
+            {...register('email')}
+          />
         </Label>
-        <Input
-          id={'email'}
-          type={'email'}
-          placeholder={'sample@example.com'}
-          hasError={!!errors.email}
-          {...register('email')}
-        />
         {errors.email?.message && (
-          <ErrorMessage errorMessage={errors.email.message} />
+          <ErrorMessage
+            errorMessage={errors.email.message}
+            id={`${accessibleId}-email-hint`}
+          />
         )}
       </Container>
       <Container>
-        <Label htmlFor={'name'}>
+        <Label>
           <LabelContent>
             名前
             <Circle size={6} />
           </LabelContent>
+          <Input
+            aria-describedby={`${accessibleId}-name-hint`}
+            placeholder={'John Doe'}
+            hasError={!!errors.name}
+            {...register('name')}
+          />
         </Label>
-        <Input
-          id={'name'}
-          placeholder={'John Doe'}
-          hasError={!!errors.name}
-          {...register('name')}
-        />
         {errors.name?.message && (
-          <ErrorMessage errorMessage={errors.name.message} />
+          <ErrorMessage
+            errorMessage={errors.name.message}
+            id={`${accessibleId}-name-hint`}
+          />
         )}
       </Container>
       <Container>
-        <Label htmlFor={'content'}>
+        <Label>
           <LabelContent>
             メッセージ内容
             <Circle size={6} />
           </LabelContent>
+          <TextArea
+            aria-describedby={`${accessibleId}-content-hint`}
+            placeholder={'Hello.'}
+            hasError={!!errors.content}
+            {...register('content')}
+          />
         </Label>
-        <TextArea
-          id={'content'}
-          placeholder={'Hello.'}
-          hasError={!!errors.content}
-          {...register('content')}
-        />
         {errors.content?.message && (
-          <ErrorMessage errorMessage={errors.content.message} />
+          <ErrorMessage
+            errorMessage={errors.content.message}
+            id={`${accessibleId}-content-hint`}
+          />
         )}
       </Container>
       <ButtonContainer>
@@ -121,8 +132,9 @@ const ApiErrorContent = styled.p`
 
 const LabelContent = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  padding-bottom: 0.75rem;
   svg {
     margin-left: 5px;
   }
