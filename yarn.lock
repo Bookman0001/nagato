@@ -2634,6 +2634,11 @@ cookie@^0.5.0:
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
   integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
 
+core-js@^3.33.2:
+  version "3.33.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.33.2.tgz#312bbf6996a3a517c04c99b9909cdd27138d1ceb"
+  integrity sha512-XeBzWI6QL3nJQiHmdzbAOiMYqjrb7hwU7A39Qhvd/POSa/t9E1AeZyEZx3fNvp/vtM8zXwhoL0FsiS0hD0pruQ==
+
 core-util-is@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
@@ -6017,12 +6022,13 @@ next-router-mock@0.9.10:
   resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.9.10.tgz#c651ff556ad66cbcda30d4ebeadf575516fe42a3"
   integrity sha512-bK6sRb/xGNFgHVUZuvuApn6KJBAKTPiP36A7a9mO77U4xQO5ukJx9WHlU67Tv8AuySd09pk0+Hu8qMVIAmLO6A==
 
-next-test-api-route-handler@3.1.9:
-  version "3.1.9"
-  resolved "https://registry.yarnpkg.com/next-test-api-route-handler/-/next-test-api-route-handler-3.1.9.tgz#cf4b8d226aa9cfdb68d7643a604838971d05ca57"
-  integrity sha512-ujvxhPa+H37Cl4Cf0MqqyhIUFutQ5G8576xcjiBeQOlQsG07n+L70vDaRrvJloK9cHoWwX7kWD4qET3dTtfPEQ==
+next-test-api-route-handler@3.1.10:
+  version "3.1.10"
+  resolved "https://registry.yarnpkg.com/next-test-api-route-handler/-/next-test-api-route-handler-3.1.10.tgz#657c04f0320cf2ac2afc2ed006793b81f644cceb"
+  integrity sha512-Xg14+hTOI8pD61rwprpMhi9ARo6wC/mMFs0lrDbtgQoQMt9TAeRzwLfCi2Q9o3IOWoiyi62S13xjI/89d9SZRg==
   dependencies:
     cookie "^0.5.0"
+    core-js "^3.33.2"
     node-fetch "^2.6.7"
 
 next@14.0.1:
