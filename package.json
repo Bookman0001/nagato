@@ -57,7 +57,7 @@
     "@types/node": "20.9.3",
     "@types/react": "18.2.38",
     "@types/react-test-renderer": "18.0.6",
-    "@types/sanitize-html": "2.9.4",
+    "@types/sanitize-html": "2.9.5",
     "@types/styled-components": "5.1.30",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
