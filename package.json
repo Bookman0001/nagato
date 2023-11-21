@@ -54,7 +54,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/axios": "0.14.0",
     "@types/jest": "29.5.9",
-    "@types/node": "20.9.2",
+    "@types/node": "20.9.3",
     "@types/react": "18.2.37",
     "@types/react-test-renderer": "18.0.6",
     "@types/sanitize-html": "2.9.4",
