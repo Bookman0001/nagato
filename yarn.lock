@@ -1184,7 +1184,7 @@
   resolved "https://registry.yarnpkg.com/@pnpm/types/-/types-9.4.0.tgz#243b62eea4beab0bb65f1ecec1dfb6f739bba9bd"
   integrity sha512-IRDuIuNobLRQe0UyY2gbrrTzYS46tTNvOEfL6fOf0Qa8NyxUzeXz946v7fQuQE3LSBf8ENBC5SXhRmDl+mBEqA==
 
-"@pnpm/workspace.pkgs-graph@^2.0.10":
+"@pnpm/workspace.pkgs-graph@^2.0.11":
   version "2.0.11"
   resolved "https://registry.yarnpkg.com/@pnpm/workspace.pkgs-graph/-/workspace.pkgs-graph-2.0.11.tgz#37ae4e0e470c3df8252e9d91076bf7ec62e7b250"
   integrity sha512-VRX7E7pX92C0akCMYGzsTqJoOwQS7/8R40pAPK7smgaEpKeEgVThqnIXt+wPdseD5CzS7OzMaIWlT3WXr3O5rQ==
@@ -2453,7 +2453,7 @@ caseless@~0.12.0:
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha512-4tYFyifaFfGacoiObjJegolkwSU4xQNGbVgUiNYVUxbQ2x2lUsFvY4hVgVzGiIe6WLOPqycWXA40l+PWsxthUw==
 
-chalk@5.3.0, chalk@^5.2.0:
+chalk@5.3.0, chalk@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.3.0.tgz#67c20a7ebef70e7f3970a01f90fa210cb6860385"
   integrity sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==
@@ -5639,18 +5639,18 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-knip@3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/knip/-/knip-3.5.1.tgz#354e1b2dc2adf9c6e28a5dab9b3a2badaeba6592"
-  integrity sha512-wf3QS3mTx3WimgvwgfWv53MDyPl17bn4Irjqal4Hz7k+tT9iV1EOxB1ahgyAmxxwo0jfsoyUkj3S2pB3GsIu5A==
+knip@3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/knip/-/knip-3.6.0.tgz#e80f14201dc5f8755334f5d5d01d81db4ce95c88"
+  integrity sha512-EVSFy1gfj4pMNmBAVZPer8dv/nVInLftAZDpXrd/vaLEDcWVT/TaqsmiVfkHjvsMvtCwsLerh6defsYH1It6kQ==
   dependencies:
     "@ericcornelissen/bash-parser" "0.5.2"
     "@npmcli/map-workspaces" "3.0.4"
     "@pkgjs/parseargs" "0.11.0"
     "@pnpm/logger" "5.0.0"
-    "@pnpm/workspace.pkgs-graph" "^2.0.10"
+    "@pnpm/workspace.pkgs-graph" "^2.0.11"
     "@snyk/github-codeowners" "1.1.0"
-    chalk "^5.2.0"
+    chalk "^5.3.0"
     easy-table "1.2.0"
     fast-glob "3.3.2"
     globby "^14.0.0"
