@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
@@ -29,6 +30,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <ErrorBoundary>
+      <SpeedInsights />
       <SwrConfig>
         <Component {...pageProps} />
       </SwrConfig>
