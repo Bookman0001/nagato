@@ -1,10 +1,10 @@
-import { rest } from 'msw'
+import { http, HttpResponse } from 'msw'
 
+// MicroCMS handlers
 export const handlers = [
-  rest.get('http://localhost/technology-articles', (_, res, ctx) => {
-    return res(
-      ctx.status(200),
-      ctx.json([
+  http.get('/technology-articles', () => {
+    return HttpResponse.json(
+      [
         {
           id: '1',
           publishedAt: '1991-01-01',
@@ -19,40 +19,38 @@ export const handlers = [
           description: 'test description',
           content: '<p>test content</p>',
         },
-      ])
+      ],
+      { status: 200 }
     )
   }),
-  rest.get('http://localhost/technology-articles/test', (_, res, ctx) => {
-    return res(
-      ctx.status(200),
-      ctx.json({
+  http.get('/technology-articles/test', () => {
+    return HttpResponse.json(
+      {
         id: '1',
         publishedAt: '1991-01-01',
         title: 'test title',
         description: 'test description',
         content: '<p>test content</p>',
-      })
+      },
+      { status: 200 }
     )
   }),
-  rest.get('http://localhost/technology-articles/draft', (_, res, ctx) => {
-    return res(
-      ctx.status(200),
-      ctx.json({
-        id: '1',
-        title: 'test title',
-        description: 'test description',
-        content: '<p>test content</p>',
-      })
-    )
+  http.get('/technology-articles/draft', () => {
+    return HttpResponse.json({
+      id: '1',
+      title: 'test title',
+      description: 'test description',
+      content: '<p>test content</p>',
+    })
   }),
-  rest.post('http://localhost/messages', (_, res, ctx) => {
-    return res(
-      ctx.status(200),
-      ctx.json({
+  http.post('/messages', () => {
+    return HttpResponse.json(
+      {
         email: 'test@example.com',
         name: 'name',
         content: 'content',
-      })
+      },
+      { status: 200 }
     )
   }),
 ]
