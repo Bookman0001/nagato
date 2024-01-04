@@ -2768,10 +2768,15 @@ cookie@^0.5.0:
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
   integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
 
-core-js@^3.33.2:
-  version "3.33.2"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.33.2.tgz#312bbf6996a3a517c04c99b9909cdd27138d1ceb"
-  integrity sha512-XeBzWI6QL3nJQiHmdzbAOiMYqjrb7hwU7A39Qhvd/POSa/t9E1AeZyEZx3fNvp/vtM8zXwhoL0FsiS0hD0pruQ==
+cookie@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.6.0.tgz#2798b04b071b0ecbff0dbb62a505a8efa4e19051"
+  integrity sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==
+
+core-js@^3.35.0:
+  version "3.35.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.35.0.tgz#58e651688484f83c34196ca13f099574ee53d6b4"
+  integrity sha512-ntakECeqg81KqMueeGJ79Q5ZgQNR+6eaE8sxGCx62zMbAIj65q+uYvatToew3m6eAGdU4gNZwpZ34NMe4GYswg==
 
 core-util-is@1.0.2:
   version "1.0.2"
@@ -6246,13 +6251,13 @@ next-router-mock@0.9.11:
   resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.9.11.tgz#f4d4c0fa3249d9091d96d1fe6de494469a5e6e50"
   integrity sha512-3w7DdXDtjsBbPvHk3kBtmzyvn5BwRh133JM4G3gdjqt8zBzs08dvdU6EEPMZIiQv3mgxZwp7nFKGYEmUnMV/rQ==
 
-next-test-api-route-handler@3.1.10:
-  version "3.1.10"
-  resolved "https://registry.yarnpkg.com/next-test-api-route-handler/-/next-test-api-route-handler-3.1.10.tgz#657c04f0320cf2ac2afc2ed006793b81f644cceb"
-  integrity sha512-Xg14+hTOI8pD61rwprpMhi9ARo6wC/mMFs0lrDbtgQoQMt9TAeRzwLfCi2Q9o3IOWoiyi62S13xjI/89d9SZRg==
+next-test-api-route-handler@3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/next-test-api-route-handler/-/next-test-api-route-handler-3.2.0.tgz#0932e6132dfab4b7108c74a34d90a854085a2f16"
+  integrity sha512-gEev0YpErOjcfGY6Vj50xKAFBYCymYTdVCQuid1rqY2NIbA99GrTIEs79j6FF7+6j2R6ruQPcbwt+z0f9Z1J9w==
   dependencies:
-    cookie "^0.5.0"
-    core-js "^3.33.2"
+    cookie "^0.6.0"
+    core-js "^3.35.0"
     node-fetch "^2.6.7"
 
 next@14.0.4:
