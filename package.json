@@ -90,7 +90,7 @@
     "npm-run-all2": "6.1.2",
     "pathpida": "0.22.0",
     "postcss-syntax": "0.36.2",
-    "prettier": "3.2.4",
+    "prettier": "3.2.5",
     "react-test-renderer": "^18.2.0",
     "simple-git-hooks": "2.9.0",
     "stylelint": "^15.4.0",
