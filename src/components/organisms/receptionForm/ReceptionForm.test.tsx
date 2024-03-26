@@ -9,7 +9,9 @@ jest.mock('src/hooks/message/useCreateMessage', () => ({
   ...jest.requireActual('src/hooks/message/useCreateMessage'),
   useCreateMessage: () => {
     return {
-      createMessage: () => Promise.resolve(true),
+      createMessage: () => {
+        return { success: true }
+      },
       isLoading: false,
       error: null,
     }

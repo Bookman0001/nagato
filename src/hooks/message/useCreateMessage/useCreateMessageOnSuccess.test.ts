@@ -1,11 +1,13 @@
 import { waitFor } from '@testing-library/react'
-import { renderHook, act } from '@testing-library/react-hooks'
+import { renderHook } from '@testing-library/react-hooks'
 
 import { useCreateMessage } from 'src/hooks/message/useCreateMessage'
 
 jest.mock('src/repositories/client/message', () => ({
   ...jest.requireActual('src/repositories/client/message'),
-  postMessage: () => Promise.resolve(),
+  postMessage: () => {
+    return { success: true }
+  },
 }))
 
 describe('useCreateMessage', () => {
@@ -14,18 +16,15 @@ describe('useCreateMessage', () => {
   })
 
   it('to be submitted with true status', async () => {
-    await act(async () => {
-      const { result } = renderHook(() => useCreateMessage())
-      await waitFor(async () => {
-        const success = await result.current.createMessage({
-          email: '',
-          name: '',
-          content: 'test message',
-        })
-        expect(result.current.error).toBe(null)
-        expect(result.current.isLoading).toBe(false)
-        expect(success).toBe(true)
+    const { result } = renderHook(() => useCreateMessage())
+    await waitFor(async () => {
+      const { success } = await result.current.createMessage({
+        email: '',
+        name: '',
+        content: 'test message',
       })
+      expect(result.current.isLoading).toBe(false)
+      expect(success).toBe(true)
     })
   })
 })

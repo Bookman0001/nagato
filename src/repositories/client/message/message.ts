@@ -13,8 +13,9 @@ export async function postMessage(params: FormInput) {
       body: JSON.stringify(requestParams),
     })
     .then((response) => {
-      if (!response.ok) {
-        throw new Error('API Error')
-      }
+      return { success: response.ok }
+    })
+    .catch(() => {
+      return { success: false }
     })
 }
