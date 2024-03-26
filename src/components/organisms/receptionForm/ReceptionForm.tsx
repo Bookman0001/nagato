@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useId } from 'react'
+import { useId, useState } from 'react'
 import { useForm, useFormState } from 'react-hook-form'
 import styled from 'styled-components'
 
@@ -17,16 +17,19 @@ export function ReceptionForm() {
     resolver: zodResolver(schema),
   })
   const { errors, isSubmitting } = useFormState({ control })
-  const { isLoading, error, createMessage } = useCreateMessage()
+  const { isLoading, createMessage } = useCreateMessage()
   const { transitionToThanks } = useTransitionPage()
   const accessibleId = useId()
+  const [hasApiError, setHasApiError] = useState<boolean>(false)
   const submitDisabled = isLoading || isSubmitting
 
   const onSubmit = async (formInput: FormInput) => {
-    const completed = await createMessage(formInput)
-    if (completed) {
-      transitionToThanks()
+    const { success } = await createMessage(formInput)
+    if (!success) {
+      setHasApiError(true)
+      return
     }
+    transitionToThanks()
   }
 
   return (
@@ -103,7 +106,7 @@ export function ReceptionForm() {
           )}
         </Button>
       </ButtonContainer>
-      {error && (
+      {hasApiError && (
         <ApiErrorContent>サーバーでエラーが発生しました</ApiErrorContent>
       )}
     </form>
