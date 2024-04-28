@@ -43,24 +43,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `src/**`. The page auto-updates as you edit the file.
 
-## Storybook
-
-```bash
-yarn storybook
-```
-
-## Jest Unit Test
+## Running Unit & Integration Test
 
 ```bash
 yarn jest
 ```
 
-## e2e Intgration Test
+## Running E2E Test
 
 ```bash
 yarn cy:run
 ```
-Caution: M1 Mac(https://www.cypress.io/blog/2021/01/20/running-cypress-on-the-apple-m1-silicon-arm-architecture-using-rosetta-2/)
+
+Caution: [M1 Mac](https://www.cypress.io/blog/2021/01/20/running-cypress-on-the-apple-m1-silicon-arm-architecture-using-rosetta-2/)
 
 ## Learn More
 
