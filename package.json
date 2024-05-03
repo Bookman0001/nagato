@@ -41,7 +41,7 @@
     "sanitize-html": "2.13.0",
     "styled-components": "6.1.9",
     "swr": "2.2.5",
-    "zod": "3.23.5"
+    "zod": "3.23.6"
   },
   "devDependencies": {
     "@babel/core": "7.24.5",
