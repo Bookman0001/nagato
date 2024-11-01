@@ -5312,10 +5312,10 @@ jest@29.7.0:
     import-local "^3.0.2"
     jest-cli "^29.7.0"
 
-jiti@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/jiti/-/jiti-2.3.3.tgz#39c66fc77476b92a694e65dfe04b294070e2e096"
-  integrity sha512-EX4oNDwcXSivPrw2qKH2LB5PoFxEvgtv2JgwW0bU858HoLQ+kutSvjLMUqBd0PeJYEinLWhoI9Ol0eYMqj/wNQ==
+jiti@^2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/jiti/-/jiti-2.4.0.tgz#393d595fb6031a11d11171b5e4fc0b989ba3e053"
+  integrity sha512-H5UpaUI+aHOqZXlYOaFP/8AzKsg+guWu+Pr3Y8i7+Y3zr1aXAvCvTAQ1RxSc6oVD8R8c7brgNtTVP91E7upH/g==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -5482,17 +5482,17 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-knip@5.36.0:
-  version "5.36.0"
-  resolved "https://registry.yarnpkg.com/knip/-/knip-5.36.0.tgz#d756e42788a267a09145c562f556081aca7d77b6"
-  integrity sha512-Lzba5RwuhF0tr2ABLJVJLpNW3qSbpEy9DYjWhFWiOHat22DM326Fke/Ybpr5mkr48AVbWspdi6AHBKHHnLx6pQ==
+knip@5.36.1:
+  version "5.36.1"
+  resolved "https://registry.yarnpkg.com/knip/-/knip-5.36.1.tgz#bbee5c02054682b92ac13d2a52e0352497c338c6"
+  integrity sha512-xtzA6ArOA+6TOJucXuLQdDAg78VabaxAgrI9Zj1KwxpRmUrJqJoeS6B2SyQStOOw5CNZKXMfbNVCyNvO4UEFSg==
   dependencies:
     "@nodelib/fs.walk" "1.2.8"
     "@snyk/github-codeowners" "1.1.0"
     easy-table "1.2.0"
     enhanced-resolve "^5.17.1"
     fast-glob "^3.3.2"
-    jiti "^2.3.3"
+    jiti "^2.4.0"
     js-yaml "^4.1.0"
     minimist "^1.2.8"
     picocolors "^1.1.0"
