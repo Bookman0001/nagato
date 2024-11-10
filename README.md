@@ -35,8 +35,8 @@ First, settting .env.local following .env.sample
 Secondly, run the development server:
 
 ```bash
-yarn install
-yarn dev
+pnpm install
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -46,13 +46,13 @@ You can start editing the page by modifying `src/**`. The page auto-updates as y
 ## Running Unit & Integration Test
 
 ```bash
-yarn jest
+pnpm jest
 ```
 
 ## Running E2E Test
 
 ```bash
-yarn cy:run
+pnpm cy:run
 ```
 
 Caution: [M1 Mac](https://www.cypress.io/blog/2021/01/20/running-cypress-on-the-apple-m1-silicon-arm-architecture-using-rosetta-2/)
