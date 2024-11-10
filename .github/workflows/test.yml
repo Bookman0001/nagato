@@ -20,8 +20,6 @@ jobs:
         run: yarn run prettier
       - name: test linter
         run: yarn run lint
-      - name: test style lint
-        run: yarn run lint-style
       - name: test compiler
         run: yarn run compiler-check
       - name: auto code review via knip

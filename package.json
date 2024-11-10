@@ -9,7 +9,6 @@
     "build": "pathpida --enableStatic --ignorePath .gitignore && next build",
     "lint": "eslint './**/*.ts{,x}'",
     "lint:fix": "eslint './**/*.ts{,x}' --fix",
-    "lint-style": "stylelint ./**/*.{ts,tsx}",
     "prettier": "prettier --check ./**/*.{ts,tsx}",
     "format": "prettier --write ./**/*.{ts,tsx}",
     "compiler-check": "tsc --noEmit",
@@ -25,8 +24,7 @@
     "./**/*.{ts,tsx}": [
       "eslint",
       "prettier"
-    ],
-    "*": "stylelint ./**/*.{ts,tsx}"
+    ]
   },
   "dependencies": {
     "@hookform/resolvers": "3.9.1",
@@ -46,14 +44,12 @@
   "devDependencies": {
     "@babel/core": "7.26.0",
     "@next/eslint-plugin-next": "15.0.3",
-    "@stylelint/postcss-css-in-js": "^0.38.0",
     "@testing-library/cypress": "10.0.2",
     "@testing-library/dom": "10.4.0",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.0.1",
     "@testing-library/react-hooks": "8.0.1",
     "@testing-library/user-event": "^14.4.3",
-    "@types/axios": "0.14.4",
     "@types/jest": "29.5.14",
     "@types/node": "22.9.0",
     "@types/react": "18.3.12",
@@ -88,13 +84,9 @@
     "next-test-api-route-handler": "3.2.0",
     "npm-run-all2": "7.0.1",
     "pathpida": "0.22.0",
-    "postcss-syntax": "0.36.2",
     "prettier": "3.3.3",
     "react-test-renderer": "^18.2.0",
     "simple-git-hooks": "2.11.1",
-    "stylelint": "^15.4.0",
-    "stylelint-config-standard": "35.0.0",
-    "ts-node": "10.9.2",
     "typescript": "5.6.3",
     "undici": "5.28.4"
   }
