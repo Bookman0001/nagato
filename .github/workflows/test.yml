@@ -12,19 +12,18 @@ jobs:
       - name: use Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
-          cache: 'yarn'
+          node-version: '20'
       - name: install dependency
-        run: yarn install
+        run: pnpm i
       - name: test format
-        run: yarn run prettier
+        run: pnpm run prettier
       - name: test linter
-        run: yarn run lint
+        run: pnpm run lint
       - name: test style lint
-        run: yarn run lint-style
+        run: pnpm run lint-style
       - name: test compiler
-        run: yarn run compiler-check
+        run: pnpm run compiler-check
       - name: auto code review via knip
-        run: yarn run knip
+        run: pnpm run knip
       - name: test unit-testing and integration-testing
-        run: yarn run jest --ci
+        run: pnpm run jest --ci
