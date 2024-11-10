@@ -15,7 +15,7 @@ jobs:
           node-version: '20'
           version: '9.12.3'
       - name: install dependency
-        run: pnpm i --frozen-lockfile
+        run: pnpm i
       - name: test format
         run: pnpm run prettier
       - name: test linter
