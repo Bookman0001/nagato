@@ -10,12 +10,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: use Node.js
-        uses: pnpm/action-setup@v4
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
-          version: '9.12.3'
+          cache: 'pnpm'
+      - name: install pnpm
+        run: npm install -g pnpm
       - name: install dependency
-        run: pnpm i
+        run: pnpm install
       - name: test format
         run: pnpm run prettier
       - name: test linter
