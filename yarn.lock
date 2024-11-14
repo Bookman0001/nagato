@@ -5269,10 +5269,10 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-knip@5.36.7:
-  version "5.36.7"
-  resolved "https://registry.yarnpkg.com/knip/-/knip-5.36.7.tgz#5a570e89aa5781ea0f98929f558596c2128777e7"
-  integrity sha512-PSuu62+6wqd1Q1V/ZzbDhvJ3X+RU8wZILon90h2s93+d1OZL118ZE9WihzSqwP29GVt72MTlbS/HHG+O47H68w==
+knip@5.37.0:
+  version "5.37.0"
+  resolved "https://registry.yarnpkg.com/knip/-/knip-5.37.0.tgz#55d96408fdc4db8d38abae13a1569a6533b3c8a7"
+  integrity sha512-ppbIumjNNnFKGr+DGWJtnfc4kXgEzNI+TxHwnyafr0IxT5nfonwGL0Qs53ZgSiIswSWM77m7KRzzP1AEvBEn6Q==
   dependencies:
     "@nodelib/fs.walk" "1.2.8"
     "@snyk/github-codeowners" "1.1.0"
