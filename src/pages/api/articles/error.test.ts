@@ -15,8 +15,7 @@ describe('getSearchedArticles', () => {
   it('to be return error in 500 status', async () => {
     expect.hasAssertions()
     await testApiHandler({
-      requestPatcher: (req) => (req.url = '/api/articles'),
-      handler,
+      pagesHandler: handler,
       test: async ({ fetch }) => {
         const res = await fetch({
           method: 'POST',
