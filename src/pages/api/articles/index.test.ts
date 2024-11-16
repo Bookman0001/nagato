@@ -30,8 +30,7 @@ describe('getSearchedArticles', () => {
   it('to be return error in 405 status', async () => {
     expect.hasAssertions()
     await testApiHandler({
-      requestPatcher: (req) => (req.url = '/api/articles'),
-      handler,
+      pagesHandler: handler,
       test: async ({ fetch }) => {
         const res = await fetch({
           method: 'PUT',
@@ -49,8 +48,7 @@ describe('getSearchedArticles', () => {
   it('to be return error in 400 status', async () => {
     expect.hasAssertions()
     await testApiHandler({
-      requestPatcher: (req) => (req.url = '/api/articles'),
-      handler,
+      pagesHandler: handler,
       test: async ({ fetch }) => {
         const res = await fetch({
           method: 'POST',
@@ -77,8 +75,7 @@ describe('getSearchedArticles', () => {
   it('to be return articles in 200 status', async () => {
     expect.hasAssertions()
     await testApiHandler({
-      requestPatcher: (req) => (req.url = '/api/articles'),
-      handler,
+      pagesHandler: handler,
       test: async ({ fetch }) => {
         const res = await fetch({
           method: 'POST',

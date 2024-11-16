@@ -9,12 +9,18 @@
  * you don't want to deal with this.
  */
 
+// for msw
 const { TextDecoder, TextEncoder, ReadableStream } = require('node:util')
+// for next-test-api-route-ha
+const { clearImmediate } = require('node:timers')
+const { performance } = require('node:perf_hooks')
 
 Object.defineProperties(globalThis, {
   TextDecoder: { value: TextDecoder },
   TextEncoder: { value: TextEncoder },
   ReadableStream: { value: ReadableStream },
+  clearImmediate: { value: clearImmediate },
+  performance: { value: performance },
 })
 
 const { Blob, File } = require('node:buffer')

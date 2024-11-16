@@ -26,8 +26,7 @@ describe('getSearchedArticles', () => {
   it('to be return success object in 200 status', async () => {
     expect.hasAssertions()
     await testApiHandler({
-      requestPatcher: (req) => (req.url = '/api/message'),
-      handler,
+      pagesHandler: handler,
       test: async ({ fetch }) => {
         const res = await fetch({
           method: 'POST',
