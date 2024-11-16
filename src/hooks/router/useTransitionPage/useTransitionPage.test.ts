@@ -4,6 +4,7 @@ import { useTransitionPage } from 'src/hooks/router/useTransitionPage'
 
 const mockPush = jest.fn()
 
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
   push: mockPush,
 }))
