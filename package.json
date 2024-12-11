@@ -40,7 +40,7 @@
     "sanitize-html": "2.13.1",
     "styled-components": "6.1.13",
     "swr": "2.2.5",
-    "zod": "3.24.0"
+    "zod": "3.24.1"
   },
   "devDependencies": {
     "@babel/core": "7.26.0",
