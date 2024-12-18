@@ -5956,10 +5956,10 @@ path-to-regexp@^6.3.0:
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-6.3.0.tgz#2b6a26a337737a8e1416f9272ed0766b1c0389f4"
   integrity sha512-Yhpw4T9C6hPpgPeA28us07OJeqZ5EzQTkbfwuhsUg0c237RomFoETJgmp2sa3F/41gfLE6G5cqcYwznmeEeOlQ==
 
-pathpida@0.23.0:
-  version "0.23.0"
-  resolved "https://registry.yarnpkg.com/pathpida/-/pathpida-0.23.0.tgz#0f1f736dce7b15c45a717b305c14ade1b62cd292"
-  integrity sha512-ugftUoHXBBcoyqlJXQtn9Ml0iqjhHV27aZ9f16YXXAFCpSIm3y/TJvAbqcFz6KSLTiSVS3ZtzelYHVFnhoT6Qw==
+pathpida@0.23.1:
+  version "0.23.1"
+  resolved "https://registry.yarnpkg.com/pathpida/-/pathpida-0.23.1.tgz#12982de412a8714eb53e2d27210482ac5ea60cf0"
+  integrity sha512-H9d/3RcvAFtRtTaXYCXRbDhUiFHY3cSmzayxK59jFc4/3wAYpFwOJJQEReOxzSBN74/3c1D/2t+rvmPLpqR8KA==
   dependencies:
     chokidar "^4.0.1"
     ignore "^6.0.2"
