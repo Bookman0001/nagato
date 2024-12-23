@@ -39,7 +39,7 @@
     "react-hook-form": "7.54.2",
     "sanitize-html": "2.14.0",
     "styled-components": "6.1.13",
-    "swr": "2.2.5",
+    "swr": "2.3.0",
     "zod": "3.24.1"
   },
   "devDependencies": {
