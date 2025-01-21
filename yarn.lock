@@ -1378,10 +1378,10 @@
   dependencies:
     tslib "^2.8.0"
 
-"@testing-library/cypress@10.0.2":
-  version "10.0.2"
-  resolved "https://registry.yarnpkg.com/@testing-library/cypress/-/cypress-10.0.2.tgz#5d360f2aa43708c6c92e24765f892b09f3a58912"
-  integrity sha512-dKv95Bre5fDmNb9tOIuWedhGUryxGu1GWYWtXDqUsDPcr9Ekld0fiTb+pcBvSsFpYXAZSpmyEjhoXzLbhh06yQ==
+"@testing-library/cypress@10.0.3":
+  version "10.0.3"
+  resolved "https://registry.yarnpkg.com/@testing-library/cypress/-/cypress-10.0.3.tgz#4514b1bcace4f28acab7ba7db6b8f5c017f0bfd1"
+  integrity sha512-TeZJMCNtiS59cPWalra7LgADuufO5FtbqQBYxuAgdX6ZFAR2D9CtQwAG8VbgvFcchW3K414va/+7P4OkQ80UVg==
   dependencies:
     "@babel/runtime" "^7.14.6"
     "@testing-library/dom" "^10.1.0"
@@ -1443,9 +1443,9 @@
     "@babel/runtime" "^7.12.5"
 
 "@testing-library/user-event@^14.4.3":
-  version "14.6.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.6.0.tgz#6748ec1ac6df9291e92b6abc0f3530b3842bf34d"
-  integrity sha512-+jsfK7kVJbqnCYtLTln8Ja/NmVrZRwBJHmHR9IxIVccMWSOZ6Oy0FkDJNeyVu4QSpMNmRfy10Xb76ObRDlWWBQ==
+  version "14.6.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.6.1.tgz#13e09a32d7a8b7060fe38304788ebf4197cd2149"
+  integrity sha512-vq7fv0rnt+QTXgPxr5Hjc210p6YKq2kmdziLgnsZGgLJ9e6VAShx1pACLuRjd/AS/sr7phAR58OIIpf0LlmQNw==
 
 "@tootallnate/once@2":
   version "2.0.0"
