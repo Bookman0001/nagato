@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
-import { waitFor } from '@testing-library/react'
-import { renderHook, act } from '@testing-library/react-hooks'
+import { waitFor, renderHook } from '@testing-library/react'
 
 import { useSearchParams } from 'src/hooks/router/useSearchParams'
 
@@ -21,12 +19,10 @@ describe('useSearchParams', () => {
         },
         push: mockPush,
       }))
-    await act(async () => {
-      const { result } = renderHook(() => useSearchParams())
-      await waitFor(() =>
-        expect(result.current.params).toEqual({ keyword: 'test', page: '2' })
-      )
-    })
+    const { result } = renderHook(() => useSearchParams())
+    await waitFor(() =>
+      expect(result.current.params).toEqual({ keyword: 'test', page: '2' })
+    )
   })
 
   it('should be returned params with default', async () => {
@@ -37,12 +33,10 @@ describe('useSearchParams', () => {
       },
       push: mockPush,
     }))
-    await act(async () => {
-      const { result } = renderHook(() => useSearchParams())
-      await waitFor(() =>
-        expect(result.current.params).toEqual({ keyword: '', page: '1' })
-      )
-    })
+    const { result } = renderHook(() => useSearchParams())
+    await waitFor(() =>
+      expect(result.current.params).toEqual({ keyword: '', page: '1' })
+    )
   })
 
   it('should be worked searchArticlesWithPager', async () => {
@@ -54,12 +48,10 @@ describe('useSearchParams', () => {
       push: mockPush,
     }))
     const paginationIndex = 3
-    await act(async () => {
-      const { result } = renderHook(() => useSearchParams())
-      await waitFor(() => {
-        result.current.searchArticlesWithPager(paginationIndex)
-        expect(mockPush).toHaveBeenCalledTimes(1)
-      })
+    const { result } = renderHook(() => useSearchParams())
+    await waitFor(() => {
+      result.current.searchArticlesWithPager(paginationIndex)
+      expect(mockPush).toHaveBeenCalledTimes(1)
     })
   })
 
@@ -72,12 +64,10 @@ describe('useSearchParams', () => {
       push: mockPush,
     }))
     const keyword = 'dummy'
-    await act(async () => {
-      const { result } = renderHook(() => useSearchParams())
-      await waitFor(() => {
-        result.current.searchArticlesWithKeyword(keyword)
-        expect(mockPush).toHaveBeenCalledTimes(1)
-      })
+    const { result } = renderHook(() => useSearchParams())
+    await waitFor(() => {
+      result.current.searchArticlesWithKeyword(keyword)
+      expect(mockPush).toHaveBeenCalledTimes(1)
     })
   })
 })
