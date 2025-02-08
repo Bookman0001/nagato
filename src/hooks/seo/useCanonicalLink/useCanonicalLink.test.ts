@@ -1,6 +1,4 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
-import { waitFor } from '@testing-library/react'
-import { renderHook, act } from '@testing-library/react-hooks'
+import { waitFor, renderHook } from '@testing-library/react'
 
 import { useCanonicalLink } from 'src/hooks/seo/useCanonicalLink'
 
@@ -15,11 +13,9 @@ describe('useCanonicalLink', () => {
         keyword: 'test',
       },
     }))
-    await act(async () => {
-      const { result } = renderHook(() => useCanonicalLink())
-      await waitFor(() => {
-        expect(result.current.canonicalLink).toBe('/posts?keyword=test')
-      })
+    const { result } = renderHook(() => useCanonicalLink())
+    await waitFor(() => {
+      expect(result.current.canonicalLink).toBe('/posts?keyword=test')
     })
   })
 
@@ -29,11 +25,9 @@ describe('useCanonicalLink', () => {
         keyword: undefined,
       },
     }))
-    await act(async () => {
-      const { result } = renderHook(() => useCanonicalLink())
-      await waitFor(() => {
-        expect(result.current.canonicalLink).toBe('http://localhost/posts')
-      })
+    const { result } = renderHook(() => useCanonicalLink())
+    await waitFor(() => {
+      expect(result.current.canonicalLink).toBe('http://localhost/posts')
     })
   })
 })
