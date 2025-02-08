@@ -1,29 +1,17 @@
 import { testApiHandler } from 'next-test-api-route-handler'
 
-import handler from './'
-
+import handler from 'src/pages/api/message'
 import { errorCode } from 'src/types/error'
 
 jest.mock('src/repositories/message', () => ({
   ...jest.requireActual('src/repositories/message'),
   postMessage: async () => {
-    return await {
-      email: 'example@example.com',
-      name: 'John Doe',
-      content: 'Hello.',
-    }
-  },
-}))
-
-jest.mock('src/services/sendGrid', () => ({
-  ...jest.requireActual('src/services/sendGrid'),
-  sendMail: async () => {
-    return await Promise.reject(new Error('sendGrid error'))
+    return await Promise.reject(new Error('axios error'))
   },
 }))
 
 describe('getSearchedArticles', () => {
-  it('to be return success object in 200 status', async () => {
+  it('to be return success object in 500 status', async () => {
     expect.hasAssertions()
     await testApiHandler({
       pagesHandler: handler,
