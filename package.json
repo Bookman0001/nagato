@@ -85,7 +85,7 @@
     "next-test-api-route-handler": "4.0.14",
     "npm-run-all2": "7.0.2",
     "pathpida": "0.24.0",
-    "prettier": "3.4.2",
+    "prettier": "3.5.0",
     "react-test-renderer": "19.0.0",
     "simple-git-hooks": "2.11.1",
     "ts-node": "10.9.2",
