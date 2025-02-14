@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
 import { postMessage } from 'src/repositories/message'
-import { sendMail } from 'src/services/sendGrid'
 import { errorHandler, isValidMethod } from 'src/utils/api'
 import { parseSchema } from 'src/utils/zod/receptionForm'
 
@@ -21,14 +20,8 @@ async function sendMessage(req: _NextApiRequest, res: NextApiResponse) {
   }
 
   return await postMessage(validationResult.data)
-    .then(async () => {
-      await sendMail(validationResult.data)
-        .then(() => {
-          return res.status(200).json({ message: 'request is successful' })
-        })
-        .catch(() => {
-          return res.status(500).json(errorHandler.handleGeneralError())
-        })
+    .then(() => {
+      return res.status(200).json({ message: 'request is successful' })
     })
     .catch(() => {
       return res.status(500).json(errorHandler.handleGeneralError())

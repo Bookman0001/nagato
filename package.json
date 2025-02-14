@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "@hookform/resolvers": "4.0.0",
-    "@sendgrid/mail": "8.1.4",
     "@vercel/speed-insights": "1.2.0",
     "axios": "1.7.9",
     "dayjs": "1.11.13",

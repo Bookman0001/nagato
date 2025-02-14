@@ -14,13 +14,6 @@ jest.mock('src/repositories/message', () => ({
   },
 }))
 
-jest.mock('src/services/sendGrid', () => ({
-  ...jest.requireActual('src/services/sendGrid'),
-  sendMail: async () => {
-    return await undefined
-  },
-}))
-
 describe('getSearchedArticles', () => {
   it('to be return error in 405 status', async () => {
     expect.hasAssertions()
