@@ -6147,10 +6147,10 @@ path-to-regexp@^6.3.0:
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-6.3.0.tgz#2b6a26a337737a8e1416f9272ed0766b1c0389f4"
   integrity sha512-Yhpw4T9C6hPpgPeA28us07OJeqZ5EzQTkbfwuhsUg0c237RomFoETJgmp2sa3F/41gfLE6G5cqcYwznmeEeOlQ==
 
-pathpida@0.24.0:
-  version "0.24.0"
-  resolved "https://registry.yarnpkg.com/pathpida/-/pathpida-0.24.0.tgz#1af292afd5c8dc6d6db7c0b94a33a448a6caf075"
-  integrity sha512-taby+tAuiExzn6vwiMakaeXQ4wmYJ3zmTEesBU1CfajUgxVCLUvD0NdQCFEr/3Lhth+yqTjByDZhp0jl00/hog==
+pathpida@0.25.0:
+  version "0.25.0"
+  resolved "https://registry.yarnpkg.com/pathpida/-/pathpida-0.25.0.tgz#de2a091b45c1d39c1826625e7e5d149cf1300889"
+  integrity sha512-GS0nxTBO2vDcNsZMoBJu3kURSzB55jkAEH+XzFbfIFg8f93WKPUnhAru+VcFXKcXPIkljSM3zYw9TX9cyAP+og==
   dependencies:
     chokidar "^4.0.3"
     ignore "^7.0.3"
