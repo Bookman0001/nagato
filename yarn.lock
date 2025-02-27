@@ -1195,11 +1195,6 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@kamilkisiela/fast-url-parser@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@kamilkisiela/fast-url-parser/-/fast-url-parser-1.1.4.tgz#9d68877a489107411b953c54ea65d0658b515809"
-  integrity sha512-gbkePEBupNydxCelHCESvFSFM8XPh1Zs/OAVRW/rKpEqPAl5PbOM90Si8mv9bvnR53uPD2s/FiRxdvSejpRJew==
-
 "@mswjs/interceptors@^0.37.0":
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@mswjs/interceptors/-/interceptors-0.37.0.tgz#146467b36212b28df62eddc3a977df2ab9aaef5e"
@@ -1914,30 +1909,47 @@
   resolved "https://registry.yarnpkg.com/@vercel/speed-insights/-/speed-insights-1.2.0.tgz#1656c3596d4ec02d93d301ca45944c1b9b245186"
   integrity sha512-y9GVzrUJ2xmgtQlzFP2KhVRoCglwfRQgjyfY607aU0hh0Un6d0OUyrJkjuAlsV18qR4zfoFPs/BiIj9YDS6Wzw==
 
-"@whatwg-node/fetch@^0.10.0":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@whatwg-node/fetch/-/fetch-0.10.1.tgz#ca08b2b9928a465f6e562d6cc460840340c15d14"
-  integrity sha512-gmPOLrsjSZWEZlr9Oe5+wWFBq3CG6fN13rGlM91Jsj/vZ95G9CCvrORGBAxMXy0AJGiC83aYiHXn3JzTzXQmbA==
+"@whatwg-node/disposablestack@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@whatwg-node/disposablestack/-/disposablestack-0.0.6.tgz#2064a1425ea66194def6df0c7a1851b6939c82bb"
+  integrity sha512-LOtTn+JgJvX8WfBVJtF08TGrdjuFzGJc4mkP8EdDI8ADbvO7kiexYep1o8dwnt0okb0jYclCDXF13xU7Ge4zSw==
   dependencies:
-    "@whatwg-node/node-fetch" "^0.7.1"
-    urlpattern-polyfill "^10.0.0"
-
-"@whatwg-node/node-fetch@^0.7.1":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@whatwg-node/node-fetch/-/node-fetch-0.7.2.tgz#21c5d1c0750eea15acc8c16261739e917d872bdf"
-  integrity sha512-OAAEIbyspvQwkcRGutYN3D0a+hzQogvcZ7I3hf6vg742ZEq52yMJTGtkwjl3KZRmzzUltd/oEMxEGsXFLjnuLQ==
-  dependencies:
-    "@kamilkisiela/fast-url-parser" "^1.1.4"
-    busboy "^1.6.0"
-    fast-querystring "^1.1.1"
+    "@whatwg-node/promise-helpers" "^1.0.0"
     tslib "^2.6.3"
 
-"@whatwg-node/server@^0.9.50":
-  version "0.9.55"
-  resolved "https://registry.yarnpkg.com/@whatwg-node/server/-/server-0.9.55.tgz#2ff56b42d3a7bfbf79399dcc5be0b53cdd3da064"
-  integrity sha512-FW04dJZfgBGaGoHQosCTeSOXKksCVzMLMV5YZPMpUfEmkH8VeDjCIMguvw2cKgrjnLjwQ1J3irLg2eNQbLxLNg==
+"@whatwg-node/fetch@^0.10.5":
+  version "0.10.5"
+  resolved "https://registry.yarnpkg.com/@whatwg-node/fetch/-/fetch-0.10.5.tgz#8537e50d32bac0f2e9cecff206588ca41d836df5"
+  integrity sha512-+yFJU3hmXPAHJULwx0VzCIsvr/H0lvbPvbOH3areOH3NAuCxCwaJsQ8w6/MwwMcvEWIynSsmAxoyaH04KeosPg==
   dependencies:
-    "@whatwg-node/fetch" "^0.10.0"
+    "@whatwg-node/node-fetch" "^0.7.11"
+    urlpattern-polyfill "^10.0.0"
+
+"@whatwg-node/node-fetch@^0.7.11":
+  version "0.7.12"
+  resolved "https://registry.yarnpkg.com/@whatwg-node/node-fetch/-/node-fetch-0.7.12.tgz#41d7c35a1ea4d9ab8fd0fac5d0bc32350915ba22"
+  integrity sha512-ec9ZPDImceXD9gShv0VTc6q0waZ7ccpiYXNbAeGMjGQAZ8hkAeAYOXoiJsfaHO5Pt0UR+SbNVTJGP2aeFMYz0Q==
+  dependencies:
+    "@whatwg-node/disposablestack" "^0.0.6"
+    "@whatwg-node/promise-helpers" "^1.0.0"
+    busboy "^1.6.0"
+    tslib "^2.6.3"
+
+"@whatwg-node/promise-helpers@^1.0.0":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@whatwg-node/promise-helpers/-/promise-helpers-1.2.1.tgz#835006411e6f656159bc1ecc7e2475721feb5307"
+  integrity sha512-+faGtJlS4U8NSaSzRVN37xAprPdhoobYzUSUo4DgH8APtfFyizmNxp0ckwKcURoL8cy2B+bKxOWU/VIH2nFeLg==
+  dependencies:
+    tslib "^2.6.3"
+
+"@whatwg-node/server@^0.9.70":
+  version "0.9.70"
+  resolved "https://registry.yarnpkg.com/@whatwg-node/server/-/server-0.9.70.tgz#531f64522964637f60f0e6a78612732a8065214f"
+  integrity sha512-YjZgF5E29R8QwtYo5WWIERXA0Hn7TSmrpVsIGYZpJDSQNE0gFpcsijmzxpviYtSm69Ayu8B9xOg+EFVk+sVtgA==
+  dependencies:
+    "@whatwg-node/disposablestack" "^0.0.6"
+    "@whatwg-node/fetch" "^0.10.5"
+    "@whatwg-node/promise-helpers" "^1.0.0"
     tslib "^2.6.3"
 
 abab@^2.0.6:
@@ -2786,15 +2798,15 @@ cookie@^0.7.2:
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.7.2.tgz#556369c472a2ba910f2979891b526b3436237ed7"
   integrity sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==
 
-cookie@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/cookie/-/cookie-1.0.1.tgz#e1a00d20420e0266aff817815640289eef142751"
-  integrity sha512-Xd8lFX4LM9QEEwxQpF9J9NTUh8pmdJO0cyRJhFiDoLTk2eH8FXlRv2IFGYVadZpqI3j8fhNrSdKCeYPxiAhLXw==
+cookie@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/cookie/-/cookie-1.0.2.tgz#27360701532116bd3f1f9416929d176afe1e4610"
+  integrity sha512-9Kr/j4O16ISv8zBBhJoi4bXOYNTkFLOqSL3UDB0njXxCXNezjeyVrJyGOWtgfs/q2km1gwBcfH8q1yEGoMYunA==
 
-core-js@^3.38.1:
-  version "3.39.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.39.0.tgz#57f7647f4d2d030c32a72ea23a0555b2eaa30f83"
-  integrity sha512-raM0ew0/jJUqkJ0E6e8UDtl+y/7ktFivgWvqw8dNSQeNWoSDLvQ1H/RN3aPXB9tBd4/FhyR4RDPGhsNIMsAn7g==
+core-js@^3.40.0:
+  version "3.40.0"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.40.0.tgz#2773f6b06877d8eda102fc42f828176437062476"
+  integrity sha512-7vsMc/Lty6AGnn7uFpYT56QesI5D2Y/UkgKounk87OP9Z2H9Z8kj6jzcSGAxFmUtDOS0ntK6lbQz+Nsa0Jj6mQ==
 
 core-util-is@1.0.2:
   version "1.0.2"
@@ -3893,11 +3905,6 @@ extsprintf@^1.2.0:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.1.tgz#8d172c064867f235c0c84a596806d279bf4bcc07"
   integrity sha512-Wrk35e8ydCKDj/ArClo1VrPVmN8zph5V4AtHwIuHhvMXsKf73UT3BOD+azBIW+3wOJ4FhEH7zyaJCFvChjYvMA==
 
-fast-decode-uri-component@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/fast-decode-uri-component/-/fast-decode-uri-component-1.0.1.tgz#46f8b6c22b30ff7a81357d4f59abfae938202543"
-  integrity sha512-WKgKWg5eUxvRZGwW8FvfbaH7AXSh2cL+3j5fMGzUMCxWBJ3dV3a7Wz8y2f/uQ0e3B6WmodD3oS54jTQ9HVTIIg==
-
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
@@ -3934,13 +3941,6 @@ fast-levenshtein@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==
-
-fast-querystring@^1.1.1:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/fast-querystring/-/fast-querystring-1.1.2.tgz#a6d24937b4fc6f791b4ee31dcb6f53aeafb89f53"
-  integrity sha512-g6KuKWmFXc0fID8WWH0jit4g0AGBoJhCkJMb1RmbsSEUNvQ+ZC8D6CUZ+GtF8nMzSPXnhiePyyqqipzNNEnHjg==
-  dependencies:
-    fast-decode-uri-component "^1.0.1"
 
 fastq@^1.15.0, fastq@^1.6.0:
   version "1.18.0"
@@ -5796,14 +5796,14 @@ next-router-mock@0.9.13:
   resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.9.13.tgz#bdee2011ea6c09e490121c354ef917f339767f72"
   integrity sha512-906n2RRaE6Y28PfYJbaz5XZeJ6Tw8Xz1S6E31GGwZ0sXB6/XjldD1/2azn1ZmBmRk5PQRkzjg+n+RHZe5xQzWA==
 
-next-test-api-route-handler@4.0.14:
-  version "4.0.14"
-  resolved "https://registry.yarnpkg.com/next-test-api-route-handler/-/next-test-api-route-handler-4.0.14.tgz#b44e6216badcfe6d2d09399a65618c50cb666519"
-  integrity sha512-2nYhLyzLXNFtuYWjkKIW90Z1htjDQKKCLXQBqa2pMsChwxUb/5P954dMBudpLjebQ7Uv7tj6G79Etr25eJYHLw==
+next-test-api-route-handler@4.0.15:
+  version "4.0.15"
+  resolved "https://registry.yarnpkg.com/next-test-api-route-handler/-/next-test-api-route-handler-4.0.15.tgz#84af840af24c81633dab7c0169dc345a07fe0fc5"
+  integrity sha512-OoTqzO+DcXV7w4JqATcP98pmQG1pn83KAto8945xtmODR9e8iJnRoVyWsjtq3pLMXplXnVZC9GvDLJtaQqleTw==
   dependencies:
-    "@whatwg-node/server" "^0.9.50"
-    cookie "^1.0.1"
-    core-js "^3.38.1"
+    "@whatwg-node/server" "^0.9.70"
+    cookie "^1.0.2"
+    core-js "^3.40.0"
 
 next@15.2.0:
   version "15.2.0"
