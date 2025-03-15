@@ -64,7 +64,7 @@
     "eslint-config-next": "15.2.2",
     "eslint-config-prettier": "10.1.1",
     "eslint-config-standard": "17.1.0",
-    "eslint-import-resolver-typescript": "3.8.7",
+    "eslint-import-resolver-typescript": "3.9.0",
     "eslint-plugin-cypress": "4.2.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jest": "28.11.0",
