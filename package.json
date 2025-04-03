@@ -36,7 +36,7 @@
     "react-dom": "19.1.0",
     "react-hook-form": "7.55.0",
     "sanitize-html": "2.15.0",
-    "styled-components": "6.1.16",
+    "styled-components": "6.1.17",
     "swr": "2.3.3",
     "zod": "3.24.2"
   },
