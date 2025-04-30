@@ -5557,10 +5557,10 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-knip@5.51.0:
-  version "5.51.0"
-  resolved "https://registry.yarnpkg.com/knip/-/knip-5.51.0.tgz#b9d477d32811da292c03cd74c55e5ea8862ea4c8"
-  integrity sha512-gw5TzLt9FikIk1oPWDc7jPRb/+L3Aw1ia25hWUQBb+hXS/Rbdki/0rrzQygjU5/CVYnRWYqc1kgdNi60Jm1lPg==
+knip@5.51.1:
+  version "5.51.1"
+  resolved "https://registry.yarnpkg.com/knip/-/knip-5.51.1.tgz#ad081838b50bd22a8cf1691fac53b389d4a82b33"
+  integrity sha512-LIv9sQXA0wveWjCbKeKxOPKlCvs+0MXztB8lF0/i4rshxYOb7WZ2B5nCk0fMTodIk1pHdW5h7e0Dv0CsN1TjdQ==
   dependencies:
     "@nodelib/fs.walk" "^1.2.3"
     easy-table "1.2.0"
