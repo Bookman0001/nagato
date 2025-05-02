@@ -82,7 +82,7 @@
     "msw": "2.7.5",
     "next-router-mock": "0.9.13",
     "next-test-api-route-handler": "4.0.16",
-    "npm-run-all2": "7.0.2",
+    "npm-run-all2": "8.0.1",
     "pathpida": "0.25.0",
     "prettier": "3.5.3",
     "react-test-renderer": "19.1.0",
