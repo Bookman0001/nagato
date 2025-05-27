@@ -41,7 +41,7 @@
     "zod": "3.25.30"
   },
   "devDependencies": {
-    "@babel/core": "7.27.1",
+    "@babel/core": "7.27.3",
     "@next/eslint-plugin-next": "15.3.2",
     "@testing-library/cypress": "10.0.3",
     "@testing-library/dom": "10.4.0",
