@@ -27,7 +27,7 @@
     ]
   },
   "dependencies": {
-    "@hookform/resolvers": "5.0.1",
+    "@hookform/resolvers": "5.1.0",
     "@vercel/speed-insights": "1.2.0",
     "axios": "1.9.0",
     "dayjs": "1.11.13",
