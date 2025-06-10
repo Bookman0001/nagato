@@ -7984,10 +7984,10 @@ zod-validation-error@^3.0.3:
   resolved "https://registry.yarnpkg.com/zod-validation-error/-/zod-validation-error-3.1.0.tgz#ce6b74a67b1b28cbbc41f890e88b2778f856e1fe"
   integrity sha512-zujS6HqJjMZCsvjfbnRs7WI3PXN39ovTcY1n8a+KTm4kOH0ZXYsNiJkH1odZf4xZKMkBDL7M2rmQ913FCS1p9w==
 
-zod@3.25.56:
-  version "3.25.56"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-3.25.56.tgz#4cff0340b7cd3778314dac1e74d6a663ffeef914"
-  integrity sha512-rd6eEF3BTNvQnR2e2wwolfTmUTnp70aUTqr0oaGbHifzC3BKJsoV+Gat8vxUMR1hwOKBs6El+qWehrHbCpW6SQ==
+zod@3.25.57:
+  version "3.25.57"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.25.57.tgz#317c8a6eb8a8460bb4b58defb19e8b50c1200e51"
+  integrity sha512-6tgzLuwVST5oLUxXTmBqoinKMd3JeesgbgseXeFasKKj8Q1FCZrHnbqJOyiEvr4cVAlbug+CgIsmJ8cl/pU5FA==
 
 zod@^3.22.4:
   version "3.22.4"
