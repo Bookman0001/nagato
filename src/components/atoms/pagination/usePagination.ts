@@ -18,7 +18,6 @@ export function usePagination({
       ? onceShowingCountLength
       : totalPaginationCount
 
-  /* eslint-disable max-statements */
   const getDisplayPaginations = useCallback(() => {
     let end = currentIndex + distanceCountFromEdge
     let start =
@@ -42,7 +41,6 @@ export function usePagination({
       .fill(null)
       .map((_, i) => i + start)
   }, [currentIndex, defaultShowingCountLength, totalPaginationCount])
-  /* eslint-enable max-statements */
 
   return {
     getDisplayPaginations,
