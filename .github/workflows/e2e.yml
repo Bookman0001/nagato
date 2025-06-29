@@ -1,6 +1,8 @@
 name: E2E
 
 on: deployment_status
+permissions:
+  contents: read
 
 jobs:
   cypress:
