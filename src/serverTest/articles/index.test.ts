@@ -44,33 +44,6 @@ describe('getSearchedArticles', () => {
     })
   })
 
-  it('to be return error in 400 status', async () => {
-    expect.hasAssertions()
-    await testApiHandler({
-      pagesHandler: handler,
-      test: async ({ fetch }) => {
-        const res = await fetch({
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ dummy: '1' }),
-        })
-        await expect(res.json()).resolves.toStrictEqual({
-          errorCode: errorCode.badRequest,
-          issues: [
-            {
-              fieldName: 'keyword',
-              message: 'Required',
-            },
-            {
-              fieldName: 'page',
-              message: 'Required',
-            },
-          ],
-        })
-      },
-    })
-  })
-
   it('to be return articles in 200 status', async () => {
     expect.hasAssertions()
     await testApiHandler({

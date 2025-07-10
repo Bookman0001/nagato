@@ -15,7 +15,7 @@ async function sendMessage(req: _NextApiRequest, res: NextApiResponse) {
 
   const validationResult = parseSchema(req.body)
   if (!validationResult.success) {
-    const zodIssues = validationResult.error.errors
+    const zodIssues = validationResult.error.issues
     return res.status(400).json(errorHandler.handleBadRequest({ zodIssues }))
   }
 

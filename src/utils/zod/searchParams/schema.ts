@@ -1,8 +1,8 @@
 import { z } from 'zod'
 
 const schema = z.object({
-  keyword: z.string(),
-  page: z.string(),
+  keyword: z.string().default(''),
+  page: z.string().default('1'),
 })
 
 export const parseSchema = (data: unknown) => schema.safeParse(data)
