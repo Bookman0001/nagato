@@ -48,15 +48,15 @@ describe('getSearchedArticles', () => {
           issues: [
             {
               fieldName: 'email',
-              message: 'Required',
+              message: 'メールアドレスの形式が不正です',
             },
             {
               fieldName: 'name',
-              message: 'Required',
+              message: '必須です',
             },
             {
               fieldName: 'content',
-              message: 'Required',
+              message: '必須です',
             },
           ],
         })

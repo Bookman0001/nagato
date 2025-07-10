@@ -1,6 +1,8 @@
-import { ZodIssue } from 'zod'
+import { z } from 'zod'
 
 import { Error, errorCode } from 'src/types/error'
+
+type ZodIssue = z.core.$ZodIssue
 
 const handleBadRequest = ({ zodIssues }: { zodIssues: ZodIssue[] }): Error => {
   return {
