@@ -80,7 +80,7 @@
     "jest": "30.0.4",
     "jest-environment-jsdom": "30.0.4",
     "jest-fixed-jsdom": "0.0.9",
-    "knip": "5.61.3",
+    "knip": "5.62.0",
     "lint-staged": "16.1.2",
     "mockdate": "3.0.5",
     "msw": "2.10.4",
