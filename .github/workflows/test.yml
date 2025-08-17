@@ -27,4 +27,4 @@ jobs:
       - name: auto code review via knip
         run: yarn run knip
       - name: test unit-testing and integration-testing
-        run: yarn run jest --ci
+        run: yarn run jest
