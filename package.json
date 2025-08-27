@@ -30,7 +30,7 @@
     "@hookform/resolvers": "5.2.1",
     "@vercel/speed-insights": "1.2.0",
     "axios": "1.11.0",
-    "dayjs": "1.11.13",
+    "dayjs": "1.11.14",
     "next": "15.5.2",
     "react": "19.1.1",
     "react-dom": "19.1.1",
