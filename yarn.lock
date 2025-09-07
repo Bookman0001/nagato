@@ -6554,10 +6554,10 @@ next-router-mock@1.0.2:
   resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-1.0.2.tgz#aab37c2c4675dab2d1b24efacc138ac615ef02f3"
   integrity sha512-9bEA4Sytj1N6xp7UlE4L++QmuU2ZcNTs33Fx8ypNToMlIA7zEotNc0RP0POPP+C3PHWz61U66V6qRDqUg0b3Lg==
 
-next-test-api-route-handler@5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/next-test-api-route-handler/-/next-test-api-route-handler-5.0.2.tgz#cb15e3d03c15d2e7b02a6062be7fd21829e32b12"
-  integrity sha512-g7Iz4MLBpMhWIDNPGAhPYECf5UsvA1GNPJu6FNFmdqD+FvUvBeAMCgwEBf/ZLulo2Xb/8j9yaaeHDNVAim8cAg==
+next-test-api-route-handler@5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/next-test-api-route-handler/-/next-test-api-route-handler-5.0.3.tgz#f05261088ad6cc350734f6dc35cf0136aa291692"
+  integrity sha512-cAg3J2ZboQnzSWGo6EH54BQwlrXbcJ3eDF70dy2T4tfXui0Cb+ryBr+5R6n5gqB5e1i6mbsfsqXq1LI6eMm3GQ==
   dependencies:
     "@whatwg-node/server" "^0.10.12"
     cookie "^1.0.2"
