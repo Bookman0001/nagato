@@ -85,7 +85,7 @@
     "mockdate": "3.0.5",
     "msw": "2.11.1",
     "next-router-mock": "1.0.2",
-    "next-test-api-route-handler": "5.0.2",
+    "next-test-api-route-handler": "5.0.3",
     "npm-run-all2": "8.0.4",
     "pathpida": "0.25.0",
     "prettier": "3.6.2",
