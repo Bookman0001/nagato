@@ -22,14 +22,21 @@ const compat = new FlatCompat({
 })
 
 export default defineConfig([
-  globalIgnores(['src/utils/$path.ts']),
+  globalIgnores([
+    // For Next.js
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+    // For pathpida
+    'src/utils/$path.ts',
+  ]),
   {
     extends: compat.extends(
       'plugin:react/recommended',
       'plugin:jsx-a11y/recommended',
       'plugin:@typescript-eslint/recommended',
       'plugin:jest/recommended',
-      'plugin:@next/next/recommended',
       'plugin:import/typescript',
       'standard',
       'prettier'

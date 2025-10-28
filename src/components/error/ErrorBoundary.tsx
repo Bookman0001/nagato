@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { Component, ErrorInfo, ReactNode } from 'react'
 import styled from 'styled-components'
 
 import { Footer } from 'src/components/organisms/footer'
