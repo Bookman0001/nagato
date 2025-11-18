@@ -57,7 +57,7 @@
     "@types/react": "19.2.6",
     "@types/react-test-renderer": "19.1.0",
     "@types/sanitize-html": "2.16.0",
-    "@types/styled-components": "5.1.35",
+    "@types/styled-components": "5.1.36",
     "@typescript-eslint/eslint-plugin": "8.46.4",
     "@typescript-eslint/parser": "8.46.4",
     "babel-loader": "10.0.0",
