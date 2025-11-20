@@ -6211,10 +6211,10 @@ keyv@^4.5.4:
   dependencies:
     json-buffer "3.0.1"
 
-knip@5.70.0:
-  version "5.70.0"
-  resolved "https://registry.yarnpkg.com/knip/-/knip-5.70.0.tgz#17f0cfd099645827c3ddbd751117dfad698c0935"
-  integrity sha512-ZRO7GzegusadOqR0ICxEQfbM1RS+1Uu/LtATpzO71pHXZQnoj4K47/QtuCtfvJVjWb2R4a7YwHv+Ey9xoxjQCw==
+knip@5.70.1:
+  version "5.70.1"
+  resolved "https://registry.yarnpkg.com/knip/-/knip-5.70.1.tgz#602f73687e2b92576c35a9b8e2f572f82c61e651"
+  integrity sha512-tGRjOivkHPV+YoVVDz0oKSlvCAY6d009Mlhufs4Y+7VWl/Ky073+KURcrgMLzJVy4pkpZvoxYu3wmC0gK7XS5g==
   dependencies:
     "@nodelib/fs.walk" "^1.2.3"
     fast-glob "^3.3.3"
