@@ -1,4 +1,8 @@
 {
   "extends": ["config:base"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["every weekend"]
+  },
   "automerge": true
 }
