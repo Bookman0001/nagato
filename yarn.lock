@@ -4882,10 +4882,10 @@ keyv@^4.5.4:
   dependencies:
     json-buffer "3.0.1"
 
-knip@5.71.0:
-  version "5.71.0"
-  resolved "https://registry.yarnpkg.com/knip/-/knip-5.71.0.tgz#c1fcdb07a838ba598aa1f879da51565e9b9c65eb"
-  integrity sha512-hwgdqEJ+7DNJ5jE8BCPu7b57TY7vUwP6MzWYgCgPpg6iPCee/jKPShDNIlFER2koti4oz5xF88VJbKCb4Wl71g==
+knip@5.72.0:
+  version "5.72.0"
+  resolved "https://registry.yarnpkg.com/knip/-/knip-5.72.0.tgz#16879814b191b512c6eb20548af97288597d5ca9"
+  integrity sha512-rlyoXI8FcggNtM/QXd/GW0sbsYvNuA/zPXt7bsuVi6kVQogY2PDCr81bPpzNnl0CP8AkFm2Z2plVeL5QQSis2w==
   dependencies:
     "@nodelib/fs.walk" "^1.2.3"
     fast-glob "^3.3.3"
@@ -4893,7 +4893,7 @@ knip@5.71.0:
     jiti "^2.6.0"
     js-yaml "^4.1.1"
     minimist "^1.2.8"
-    oxc-resolver "^11.13.2"
+    oxc-resolver "^11.15.0"
     picocolors "^1.1.1"
     picomatch "^4.0.1"
     smol-toml "^1.5.2"
@@ -5408,7 +5408,7 @@ own-keys@^1.0.1:
     object-keys "^1.1.1"
     safe-push-apply "^1.0.0"
 
-oxc-resolver@^11.13.2:
+oxc-resolver@^11.15.0:
   version "11.15.0"
   resolved "https://registry.yarnpkg.com/oxc-resolver/-/oxc-resolver-11.15.0.tgz#fcb2fadda0a04460e6ef50bb60abace2b7937510"
   integrity sha512-Hk2J8QMYwmIO9XTCUiOH00+Xk2/+aBxRUnhrSlANDyCnLYc32R1WSIq1sU2yEdlqd53FfMpPEpnBYIKQMzliJw==
