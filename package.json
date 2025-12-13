@@ -63,7 +63,7 @@
     "babel-loader": "10.0.0",
     "babel-plugin-styled-components": "2.1.4",
     "cypress": "15.7.1",
-    "eslint": "9.39.1",
+    "eslint": "9.39.2",
     "eslint-config-next": "16.0.10",
     "eslint-config-prettier": "10.1.8",
     "eslint-config-standard": "17.1.0",
