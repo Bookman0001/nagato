@@ -1,5 +1,5 @@
 {
   "ignore": ["**/*.d.ts"],
   "ignoreDependencies": ["hidden-package"],
-  "ignoreWorkspaces": ["src/utils/$path.ts", "cypress/plugins/index.ts"]
+  "ignoreWorkspaces": ["src/utils/$path.ts"]
 }

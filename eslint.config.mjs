@@ -96,15 +96,6 @@ export default defineConfig([
     },
   },
   {
-    files: ['cypress/**/*.ts'],
-
-    rules: {
-      'jest/expect-expect': 'off',
-      'import/no-unresolved': 'error',
-      'no-undef': 'off',
-    },
-  },
-  {
     files: ['src/**/*.{ts,tsx}'],
 
     rules: {

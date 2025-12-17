@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/cypress/node_modules
 /.pnp
 .pnp.js
 
@@ -38,6 +37,3 @@ report.html
 # compiler
 tsconfig.tsbuildinfo
 
-# cypress
-cypress/screenshots
-cypress/videos
