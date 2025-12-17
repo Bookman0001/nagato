@@ -49,14 +49,6 @@ You can start editing the page by modifying `src/**`. The page auto-updates as y
 yarn jest
 ```
 
-## Running E2E Test
-
-```bash
-yarn cy:run
-```
-
-Caution: [M1 Mac](https://www.cypress.io/blog/2021/01/20/running-cypress-on-the-apple-m1-silicon-arm-architecture-using-rosetta-2/)
-
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
