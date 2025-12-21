@@ -4390,10 +4390,10 @@ keyv@^4.5.4:
   dependencies:
     json-buffer "3.0.1"
 
-knip@5.76.0:
-  version "5.76.0"
-  resolved "https://registry.yarnpkg.com/knip/-/knip-5.76.0.tgz#eba39532b7e1be24ad5a65361aaa0257dff0634f"
-  integrity sha512-Qw3rbm8oFzsegHQOP1m2VgVFB/mPiY9ws0axt/OPawqaf7glft561AC1woSFO0/UrzG3KUSwckQ2CcYBwpZ9iw==
+knip@5.76.1:
+  version "5.76.1"
+  resolved "https://registry.yarnpkg.com/knip/-/knip-5.76.1.tgz#fb19d834f69d3f376b9a57ba963bf7ef8f83c86e"
+  integrity sha512-V9CgrzE8ZhqsJeZE4VFUXZHm1cRDmL8WiRRZUPBi65rWJkExdJkEmV2ab+jiOQTzhoBIL/d3DegOPpMq5IF3DA==
   dependencies:
     "@nodelib/fs.walk" "^1.2.3"
     fast-glob "^3.3.3"
