@@ -1452,9 +1452,9 @@
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
 "@types/node@*":
-  version "25.0.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.0.4.tgz#0532f0f0e460533c81b1c63c156139ed6a5c05ed"
-  integrity sha512-9L7EOcoPf2mpvBL6GbE4z6zY9oaaP389dZ5ZZ05n2K9p3e1rEUwcXqwhXIKRMbK/uV1U8MYactPf1XH0xmtZWg==
+  version "25.0.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-25.0.5.tgz#7ee6356607b9c93b9d25bf5c5e8f8a8ed6240877"
+  integrity sha512-FuLxeLuSVOqHPxSN1fkcD8DLU21gAP7nCKqGRJ/FglbCUBs0NYN6TpHcdmyLeh8C0KwGIaZQJSv+OYG+KZz+Gw==
   dependencies:
     undici-types "~7.16.0"
 
@@ -1472,14 +1472,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
-  version "19.2.7"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-19.2.7.tgz#84e62c0f23e8e4e5ac2cadcea1ffeacccae7f62f"
-  integrity sha512-MWtvHrGZLFttgeEj28VXHxpmwYbor/ATPYbBfSFZEIRK0ecCFLl2Qo55z52Hss+UV9CRN7trSeq1zbgx7YDWWg==
-  dependencies:
-    csstype "^3.2.2"
-
-"@types/react@19.2.8":
+"@types/react@*", "@types/react@19.2.8":
   version "19.2.8"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-19.2.8.tgz#307011c9f5973a6abab8e17d0293f48843627994"
   integrity sha512-3MbSL37jEchWZz2p2mjntRZtPt837ij10ApxKfgmXCTuHWagYg7iA5bqPw6C8BMPfwidlvfPI/fxOc42HLhcyg==
