@@ -3572,7 +3572,7 @@ ignore@^5.2.0, ignore@^5.3.2:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.3.2.tgz#3cd40e729f3643fd87cb04e50bf0eb722bc596f5"
   integrity sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==
 
-ignore@^7.0.3, ignore@^7.0.5:
+ignore@^7.0.5:
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-7.0.5.tgz#4cb5f6cd7d4c7ab0365738c7aea888baa6d7efd9"
   integrity sha512-Hs59xBNfUIunMFgWAbGX5cq6893IbWg4KnrjbYwX3tx0ztorVgTDA6B2sxf8ejHJ4wz8BqGUMYlnzNBer5NvGg==
@@ -5040,13 +5040,13 @@ path-to-regexp@^6.3.0:
   resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-6.3.0.tgz#2b6a26a337737a8e1416f9272ed0766b1c0389f4"
   integrity sha512-Yhpw4T9C6hPpgPeA28us07OJeqZ5EzQTkbfwuhsUg0c237RomFoETJgmp2sa3F/41gfLE6G5cqcYwznmeEeOlQ==
 
-pathpida@0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/pathpida/-/pathpida-0.25.0.tgz#de2a091b45c1d39c1826625e7e5d149cf1300889"
-  integrity sha512-GS0nxTBO2vDcNsZMoBJu3kURSzB55jkAEH+XzFbfIFg8f93WKPUnhAru+VcFXKcXPIkljSM3zYw9TX9cyAP+og==
+pathpida@0.26.0:
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/pathpida/-/pathpida-0.26.0.tgz#3bd6e0f43ecb03f11d8ded4b743528e9a75b1ca9"
+  integrity sha512-Bk0f+n0bU832i2BvMPOPmpCsFJMwqtogAFkfHCkeHu8Yl86RHdsui2RidV8mW/D23RjpOy8z6r/xWRxTEcHAkA==
   dependencies:
     chokidar "^4.0.3"
-    ignore "^7.0.3"
+    ignore "^7.0.5"
     minimist "^1.2.8"
 
 picocolors@1.1.1, picocolors@^1.0.0, picocolors@^1.1.1:
