@@ -17,4 +17,10 @@ const customJestConfig: Config.InitialOptions = {
   },
 }
 
-module.exports = createJestConfig(customJestConfig)
+module.exports = async () => {
+  const nextJestConfig = await createJestConfig(customJestConfig)()
+  return {
+    ...nextJestConfig,
+    transformIgnorePatterns: ['/node_modules/(?!(until-async|msw)/)'],
+  }
+}
