@@ -10,10 +10,12 @@
  */
 
 // for msw
-const { TextDecoder, TextEncoder, ReadableStream } = require('node:util')
+const { TextDecoder, TextEncoder } = require('node:util')
+const { ReadableStream } = require('node:stream/web')
 // for next-test-api-route-ha
 const { clearImmediate } = require('node:timers')
 const { performance } = require('node:perf_hooks')
+const { MessageChannel, MessagePort } = require('node:worker_threads')
 
 Object.defineProperties(globalThis, {
   TextDecoder: { value: TextDecoder },
@@ -21,10 +23,16 @@ Object.defineProperties(globalThis, {
   ReadableStream: { value: ReadableStream },
   clearImmediate: { value: clearImmediate },
   performance: { value: performance },
+  MessageChannel: { value: MessageChannel },
+  MessagePort: { value: MessagePort },
 })
 
 const { Blob, File } = require('node:buffer')
 const { fetch, Headers, FormData, Request, Response } = require('undici')
+const {
+  setInterval: nodeSetInterval,
+  setTimeout: nodeSetTimeout,
+} = require('node:timers')
 
 Object.defineProperties(globalThis, {
   fetch: { value: fetch, writable: true },
@@ -34,4 +42,6 @@ Object.defineProperties(globalThis, {
   FormData: { value: FormData },
   Request: { value: Request },
   Response: { value: Response },
+  setInterval: { value: nodeSetInterval },
+  setTimeout: { value: nodeSetTimeout },
 })

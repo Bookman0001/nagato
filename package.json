@@ -78,7 +78,7 @@
     "knip": "5.87.0",
     "lint-staged": "16.4.0",
     "mockdate": "3.0.5",
-    "msw": "2.11.2",
+    "msw": "2.12.12",
     "next-router-mock": "1.0.5",
     "next-test-api-route-handler": "5.0.3",
     "npm-run-all2": "8.0.4",
@@ -88,6 +88,6 @@
     "simple-git-hooks": "2.13.1",
     "ts-node": "10.9.2",
     "typescript": "5.9.3",
-    "undici": "5.29.0"
+    "undici": "7.24.4"
   }
 }
