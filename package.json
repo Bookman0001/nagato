@@ -88,6 +88,6 @@
     "simple-git-hooks": "2.13.1",
     "ts-node": "10.9.2",
     "typescript": "5.9.3",
-    "undici": "7.24.4"
+    "undici": "7.24.5"
   }
 }
