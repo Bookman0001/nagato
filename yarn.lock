@@ -1844,7 +1844,7 @@
   dependencies:
     tslib "^2.6.3"
 
-"@whatwg-node/server@^0.10.12":
+"@whatwg-node/server@^0.10.18":
   version "0.10.18"
   resolved "https://registry.yarnpkg.com/@whatwg-node/server/-/server-0.10.18.tgz#e14c5129305745882e09ddaecdc96807304f73cf"
   integrity sha512-kMwLlxUbduttIgaPdSkmEarFpP+mSY8FEm+QWMBRJwxOHWkri+cxd8KZHO9EMrB9vgUuz+5WEaCawaL5wGVoXg==
@@ -2406,12 +2406,12 @@ convert-source-map@^2.0.0:
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-2.0.0.tgz#4b560f649fc4e918dd0ab75cf4961e8bc882d82a"
   integrity sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==
 
-cookie@^1.0.2:
+cookie@^1.0.2, cookie@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-1.1.1.tgz#3bb9bdfc82369db9c2f69c93c9c3ceb310c88b3c"
   integrity sha512-ei8Aos7ja0weRpFzJnEA9UHJ/7XQmqglbRwnf2ATjcB9Wq874VKH9kfjjirM6UhU2/E5fFYadylyhFldcqSidQ==
 
-core-js@^3.45.1:
+core-js@^3.49.0:
   version "3.49.0"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.49.0.tgz#8b4d520ac034311fa21aa616f017ada0e0dbbddd"
   integrity sha512-es1U2+YTtzpwkxVLwAFdSpaIMyQaq0PBgm3YD1W3Qpsn1NAmO3KSgZfu+oGSWVu6NvLHoHCV/aYcsE5wiB7ALg==
@@ -4779,14 +4779,14 @@ next-router-mock@1.0.5:
   resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-1.0.5.tgz#fb6b25e64235000efd6eb15daeeb6c946ea706ad"
   integrity sha512-mEndN1KdRlofR1Hf+FvfHogabpx1SQ8cbXYENCm3SA1W5Bj3UlaIW814DA6vg5gmPF6tBw5E1rX2JY4ogN9aaQ==
 
-next-test-api-route-handler@5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/next-test-api-route-handler/-/next-test-api-route-handler-5.0.3.tgz#f05261088ad6cc350734f6dc35cf0136aa291692"
-  integrity sha512-cAg3J2ZboQnzSWGo6EH54BQwlrXbcJ3eDF70dy2T4tfXui0Cb+ryBr+5R6n5gqB5e1i6mbsfsqXq1LI6eMm3GQ==
+next-test-api-route-handler@5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/next-test-api-route-handler/-/next-test-api-route-handler-5.0.4.tgz#6d34a9dbf247997b16dc5b485f6853f9bc69c35b"
+  integrity sha512-bvLRJAfK6NHVLVwJm+HRCxrU3UQbXLuuj1qcLg1sJK40lRzHmGtVGHLxFWj3LnEoH8UZFTwV0Be0jTg4zHckkw==
   dependencies:
-    "@whatwg-node/server" "^0.10.12"
-    cookie "^1.0.2"
-    core-js "^3.45.1"
+    "@whatwg-node/server" "^0.10.18"
+    cookie "^1.1.1"
+    core-js "^3.49.0"
 
 next@16.2.0:
   version "16.2.0"
