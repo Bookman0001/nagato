@@ -4,5 +4,6 @@
     "enabled": true,
     "schedule": ["every weekend"]
   },
+  "minimumReleaseAge": "3 days",
   "automerge": true
 }
