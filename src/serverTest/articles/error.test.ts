@@ -6,7 +6,7 @@ import { errorCode } from 'src/types/error'
 jest.mock('src/repositories/articles', () => ({
   ...jest.requireActual('src/repositories/articles'),
   fetchSearchedArticles: async () => {
-    return await Promise.reject(new Error('axios error'))
+    return await Promise.reject(new Error('error'))
   },
 }))
 
