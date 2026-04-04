@@ -1,4 +1,4 @@
-import { get } from 'src/services/axios'
+import { get } from 'src/services/serverFetch'
 import type { ArticlesResponse, PaginationParams } from 'src/types'
 import type { SearchParams } from 'src/utils/zod/searchParams'
 
