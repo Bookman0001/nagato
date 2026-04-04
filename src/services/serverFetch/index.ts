@@ -1,1 +1,1 @@
-export { get, post } from './axios'
+export { get, post } from './fetch'
