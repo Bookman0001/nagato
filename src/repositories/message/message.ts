@@ -1,4 +1,4 @@
-import { post } from 'src/services/axios'
+import { post } from 'src/services/serverFetch'
 import type { FormInput } from 'src/utils/zod/receptionForm'
 
 export async function postMessage(params: FormInput): Promise<FormInput> {

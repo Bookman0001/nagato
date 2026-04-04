@@ -1,4 +1,4 @@
-import { get } from 'src/services/axios'
+import { get } from 'src/services/serverFetch'
 import type {
   ArticleResponse,
   DraftArticleResponse,
