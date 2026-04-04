@@ -74,7 +74,7 @@
     "jest": "30.3.0",
     "jest-environment-jsdom": "30.3.0",
     "jest-fixed-jsdom": "0.0.11",
-    "knip": "6.1.1",
+    "knip": "6.2.0",
     "lint-staged": "16.4.0",
     "mockdate": "3.0.5",
     "msw": "2.12.14",
