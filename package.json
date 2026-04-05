@@ -86,7 +86,7 @@
     "react-test-renderer": "19.2.4",
     "simple-git-hooks": "2.13.1",
     "ts-node": "10.9.2",
-    "typescript": "5.9.3",
+    "typescript": "6.0.2",
     "undici": "8.0.0"
   }
 }
