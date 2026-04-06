@@ -31,7 +31,7 @@
     "next": "16.2.2",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-hook-form": "7.72.0",
+    "react-hook-form": "7.72.1",
     "sanitize-html": "2.17.2",
     "styled-components": "6.3.12",
     "swr": "2.4.1",
