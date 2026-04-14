@@ -2,8 +2,8 @@ import { waitFor, renderHook } from '@testing-library/react'
 
 import { useCreateMessage } from 'src/hooks/message/useCreateMessage'
 
-jest.mock('src/repositories/client/message', () => ({
-  ...jest.requireActual('src/repositories/client/message'),
+vi.mock('src/repositories/client/message', () => ({
+  ...vi.importActual('src/repositories/client/message'),
   postMessage: () => {
     return { success: true }
   },
@@ -11,7 +11,7 @@ jest.mock('src/repositories/client/message', () => ({
 
 describe('useCreateMessage', () => {
   beforeEach(() => {
-    jest.clearAllMocks()
+    vi.clearAllMocks()
   })
 
   it('to be submitted with true status', async () => {

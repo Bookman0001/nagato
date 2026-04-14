@@ -5,11 +5,11 @@ import { Select } from 'src/components/atoms/form'
 
 describe('Select', () => {
   beforeEach(() => {
-    jest.clearAllMocks()
+    vi.clearAllMocks()
   })
 
   it('should be rendered with onChange', async () => {
-    const handleChange = jest.fn()
+    const handleChange = vi.fn()
     const user = userEvent.setup()
     render(
       <Select defaultValue={'default value'} onChange={handleChange}>

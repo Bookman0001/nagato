@@ -4,11 +4,11 @@ import singletonRouter from 'next/router'
 
 import { SearchInputArea } from 'src/components/organisms/searchInputArea'
 
-jest.mock('next/router', () => require('next-router-mock'))
+vi.mock('next/router', () => require('next-router-mock'))
 
 describe('Search', () => {
   beforeEach(() => {
-    jest.clearAllMocks()
+    vi.clearAllMocks()
   })
 
   it('should be rendered correctlly', () => {

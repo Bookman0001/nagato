@@ -46,7 +46,7 @@ You can start editing the page by modifying `src/**`. The page auto-updates as y
 ## Running Unit & Integration Test
 
 ```bash
-yarn jest
+yarn test
 ```
 
 ## Learn More

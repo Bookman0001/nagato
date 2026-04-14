@@ -2,7 +2,7 @@ import { waitFor, renderHook } from '@testing-library/react'
 
 import { useSearchParams } from 'src/hooks/router/useSearchParams'
 
-const mockPush = jest.fn()
+const mockPush = vi.fn()
 
 describe('useSearchParams', () => {
   beforeEach(() => {
@@ -10,15 +10,15 @@ describe('useSearchParams', () => {
   })
 
   it('should be returned params', async () => {
-    jest
-      .spyOn(require('next/router'), 'useRouter')
-      .mockImplementationOnce(() => ({
+    vi.spyOn(require('next/router'), 'useRouter').mockImplementationOnce(
+      () => ({
         query: {
           keyword: 'test',
           page: '2',
         },
         push: mockPush,
-      }))
+      })
+    )
     const { result } = renderHook(() => useSearchParams())
     await waitFor(() =>
       expect(result.current.params).toEqual({ keyword: 'test', page: '2' })
@@ -26,7 +26,7 @@ describe('useSearchParams', () => {
   })
 
   it('should be returned params with default', async () => {
-    jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
+    vi.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
       query: {
         keyword: undefined,
         page: undefined,
@@ -40,7 +40,7 @@ describe('useSearchParams', () => {
   })
 
   it('should be worked searchArticlesWithPager', async () => {
-    jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
+    vi.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
       query: {
         keyword: 'test',
         page: '2',
@@ -56,7 +56,7 @@ describe('useSearchParams', () => {
   })
 
   it('should be worked searchArticlesWithKeyword', async () => {
-    jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
+    vi.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
       query: {
         keyword: 'test',
         page: '2',

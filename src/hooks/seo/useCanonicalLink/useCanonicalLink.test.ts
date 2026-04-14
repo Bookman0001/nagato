@@ -4,11 +4,11 @@ import { useCanonicalLink } from 'src/hooks/seo/useCanonicalLink'
 
 describe('useCanonicalLink', () => {
   beforeEach(() => {
-    jest.clearAllMocks()
+    vi.clearAllMocks()
   })
 
   it('should be returned canonicalLink with keyword', async () => {
-    jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
+    vi.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
       query: {
         keyword: 'test',
       },
@@ -20,14 +20,14 @@ describe('useCanonicalLink', () => {
   })
 
   it('should be returned canonicalLink with default', async () => {
-    jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
+    vi.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
       query: {
         keyword: undefined,
       },
     }))
     const { result } = renderHook(() => useCanonicalLink())
     await waitFor(() => {
-      expect(result.current.canonicalLink).toBe('http://localhost/posts')
+      expect(result.current.canonicalLink).toBe('http://localhost:3000/posts')
     })
   })
 })

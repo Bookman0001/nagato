@@ -3,10 +3,10 @@ import singletonRouter from 'next/router'
 
 import { ReceptionForm } from 'src/components/organisms/receptionForm'
 
-jest.mock('next/router', () => require('next-router-mock'))
+vi.mock('next/router', () => require('next-router-mock'))
 
-jest.mock('src/hooks/message/useCreateMessage', () => ({
-  ...jest.requireActual('src/hooks/message/useCreateMessage'),
+vi.mock('src/hooks/message/useCreateMessage', () => ({
+  ...vi.importActual('src/hooks/message/useCreateMessage'),
   useCreateMessage: () => {
     return {
       createMessage: () => {
@@ -20,7 +20,7 @@ jest.mock('src/hooks/message/useCreateMessage', () => ({
 
 describe('ReceptionForm', () => {
   beforeEach(() => {
-    jest.clearAllMocks()
+    vi.clearAllMocks()
     render(<ReceptionForm />)
   })
 

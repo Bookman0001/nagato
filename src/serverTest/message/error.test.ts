@@ -3,8 +3,8 @@ import { testApiHandler } from 'next-test-api-route-handler'
 import handler from 'src/pages/api/message'
 import { errorCode } from 'src/types/error'
 
-jest.mock('src/repositories/message', () => ({
-  ...jest.requireActual('src/repositories/message'),
+vi.mock('src/repositories/message', () => ({
+  ...vi.importActual('src/repositories/message'),
   postMessage: async () => {
     return await Promise.reject(new Error('error'))
   },
