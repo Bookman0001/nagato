@@ -3,7 +3,6 @@ import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import jsxA11Y from 'eslint-plugin-jsx-a11y'
 import typescriptEslint from '@typescript-eslint/eslint-plugin'
-import jest from 'eslint-plugin-jest'
 import importPlugin from 'eslint-plugin-import'
 import { fixupPluginRules } from '@eslint/compat'
 import globals from 'globals'
@@ -12,6 +11,7 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import js from '@eslint/js'
 import { FlatCompat } from '@eslint/eslintrc'
+import vitest from '@vitest/eslint-plugin'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -36,7 +36,6 @@ export default defineConfig([
       'plugin:react/recommended',
       'plugin:jsx-a11y/recommended',
       'plugin:@typescript-eslint/recommended',
-      'plugin:jest/recommended',
       'plugin:import/typescript',
       'standard',
       'prettier'
@@ -47,14 +46,14 @@ export default defineConfig([
       'react-hooks': fixupPluginRules(reactHooks),
       'jsx-a11y': jsxA11Y,
       '@typescript-eslint': typescriptEslint,
-      jest,
       import: importPlugin,
+      vitest,
     },
 
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.jest,
+        ...vitest.environments.env.globals,
       },
 
       parser: tsParser,
@@ -82,16 +81,13 @@ export default defineConfig([
     },
 
     rules: {
+      ...vitest.configs.recommended.rules,
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-var-requires': 'off',
       '@typescript-eslint/no-require-imports': 'off',
       'react/react-in-jsx-scope': 'off',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
-      'jest/no-disabled-tests': 'warn',
-      'jest/no-focused-tests': 'error',
-      'jest/no-identical-title': 'error',
-      'jest/prefer-to-have-length': 'warn',
       'max-statements': 'error',
     },
   },

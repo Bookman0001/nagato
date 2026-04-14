@@ -5,11 +5,11 @@ import { Input } from 'src/components/atoms/form'
 
 describe('Input', () => {
   beforeEach(() => {
-    jest.clearAllMocks()
+    vi.clearAllMocks()
   })
 
   it('should be rendered with onChange', async () => {
-    const handleChange = jest.fn()
+    const handleChange = vi.fn()
     const user = userEvent.setup()
     render(
       <Input
@@ -24,8 +24,8 @@ describe('Input', () => {
   })
 
   it('should be rendered with onKeyDown', async () => {
-    const handleChange = jest.fn()
-    const handleKeyDown = jest.fn()
+    const handleChange = vi.fn()
+    const handleKeyDown = vi.fn()
     const user = userEvent.setup()
     render(
       <Input

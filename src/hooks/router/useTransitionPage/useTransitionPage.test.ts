@@ -2,9 +2,9 @@ import { renderHook } from '@testing-library/react'
 
 import { useTransitionPage } from 'src/hooks/router/useTransitionPage'
 
-const mockPush = jest.fn()
+const mockPush = vi.fn()
 
-jest.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
+vi.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
   push: mockPush,
 }))
 

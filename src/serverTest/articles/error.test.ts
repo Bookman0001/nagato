@@ -3,8 +3,8 @@ import { testApiHandler } from 'next-test-api-route-handler'
 import handler from 'src/pages/api/articles'
 import { errorCode } from 'src/types/error'
 
-jest.mock('src/repositories/articles', () => ({
-  ...jest.requireActual('src/repositories/articles'),
+vi.mock('src/repositories/articles', () => ({
+  ...vi.importActual('src/repositories/articles'),
   fetchSearchedArticles: async () => {
     return await Promise.reject(new Error('error'))
   },

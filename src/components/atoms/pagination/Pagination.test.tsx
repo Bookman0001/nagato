@@ -5,11 +5,11 @@ import { Pagination } from 'src/components/atoms/pagination'
 
 describe('Pagination', () => {
   beforeEach(() => {
-    jest.clearAllMocks()
+    vi.clearAllMocks()
   })
 
   it('should be rendered', async () => {
-    const handleClick = jest.fn()
+    const handleClick = vi.fn()
     const user = userEvent.setup()
     render(
       <Pagination
@@ -25,7 +25,7 @@ describe('Pagination', () => {
   })
 
   it('should not to be rendered', () => {
-    const handleClick = jest.fn()
+    const handleClick = vi.fn()
     const { container } = render(
       <Pagination
         currentIndex={1}
