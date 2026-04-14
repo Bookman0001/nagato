@@ -4525,10 +4525,10 @@ keyv@^4.5.4:
   dependencies:
     json-buffer "3.0.1"
 
-knip@6.3.1:
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/knip/-/knip-6.3.1.tgz#3cccdee10fe6a682171f0023d39ac1ed3edc0abc"
-  integrity sha512-22kLJloVcOVOAudCxlFOC0ICAMme7dKsS7pVTEnrmyKGpswb8ieznvAiSKUeFVDJhb01ect6dkDc1Ha1g1sPpg==
+knip@6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/knip/-/knip-6.4.0.tgz#189551f86557cbd436fcebdd4b8ddf7ec4ab5f54"
+  integrity sha512-SAEeggehgkPdoLZWVEcFKzPw+vNlnrUBDqcX8cOcHGydRInSn5pnn9LN3dDJ8SkDHKXR7xYzNq3HtRJaYmxOHg==
   dependencies:
     "@nodelib/fs.walk" "^1.2.3"
     fast-glob "^3.3.3"
