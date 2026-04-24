@@ -3622,19 +3622,18 @@ keyv@^4.5.4:
   dependencies:
     json-buffer "3.0.1"
 
-knip@6.5.0:
-  version "6.5.0"
-  resolved "https://registry.yarnpkg.com/knip/-/knip-6.5.0.tgz#434646b9e101bfc1d304e185fc236387ccadb9fa"
-  integrity sha512-84xSq/g8CtPWLJcY5WZeGWj/pbqQxJRC7iXTTutB0MkMm260hKxlzIXSTnxuTuIxre2MBSokhLkfth8dQQYVPQ==
+knip@6.6.0:
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/knip/-/knip-6.6.0.tgz#4192dcfde5cc12a22da7766c008796f155b1ec6d"
+  integrity sha512-IT1YDiHyRctYYsuZNBd/ZiGoa7HmCaxs+ZrWxCfYjQKPG6QyRqMfkteqC+rBuMymBJeLXyBnRa7hn95O+sGG8Q==
   dependencies:
-    "@nodelib/fs.walk" "^1.2.3"
+    fdir "^6.5.0"
     formatly "^0.3.0"
     get-tsconfig "4.14.0"
     jiti "^2.6.0"
     minimist "^1.2.8"
     oxc-parser "^0.126.0"
     oxc-resolver "^11.19.1"
-    picocolors "^1.1.1"
     picomatch "^4.0.4"
     smol-toml "^1.6.1"
     strip-json-comments "5.0.3"
