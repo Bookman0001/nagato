@@ -3622,10 +3622,10 @@ keyv@^4.5.4:
   dependencies:
     json-buffer "3.0.1"
 
-knip@6.6.3:
-  version "6.6.3"
-  resolved "https://registry.yarnpkg.com/knip/-/knip-6.6.3.tgz#5828527ebc2d646a1f9b12c178aa24cf1df244a4"
-  integrity sha512-7HSf5bLx6r66+sjXwSvSiDEE9RjRzHuAkrEFLE6XXHqaPDY97tdzNvyRVF9DeusbiV72kStAFiNnhj72rxJNGQ==
+knip@6.7.0:
+  version "6.7.0"
+  resolved "https://registry.yarnpkg.com/knip/-/knip-6.7.0.tgz#7c965fda20ebc8e26360f5965f06627a0804d041"
+  integrity sha512-ckL51NDH1YJxnv1kNB0iUdDngB4f/e9Igz8uIqYfmNDoyOFmmk1V0WFv3LQ7/hzC63b2Z9X41gGUE9eOWrZpaA==
   dependencies:
     fdir "^6.5.0"
     formatly "^0.3.0"
