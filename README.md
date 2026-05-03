@@ -35,8 +35,8 @@ First, settting .env.local following .env.sample
 Secondly, run the development server:
 
 ```bash
-yarn install
-yarn dev
+pnpm i
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -46,7 +46,7 @@ You can start editing the page by modifying `src/**`. The page auto-updates as y
 ## Running Unit & Integration Test
 
 ```bash
-yarn test
+pnpm test
 ```
 
 ## Learn More

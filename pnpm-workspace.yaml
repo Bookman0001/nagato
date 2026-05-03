@@ -1,0 +1,6 @@
+allowBuilds:
+  core-js: true
+  msw: true
+  sharp: true
+  simple-git-hooks: true
+  unrs-resolver: true

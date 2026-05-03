@@ -15,16 +15,16 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: '24'
-          cache: 'yarn'
+          cache: 'pnpm'
       - name: install dependency
-        run: yarn install
+        run: pnpm ci
       - name: test format
-        run: yarn run prettier
+        run: pnpm prettier
       - name: test linter
-        run: yarn run lint
+        run: pnpm lint
       - name: test compiler
-        run: yarn run compiler-check
+        run: pnpm compiler-check
       - name: auto code review via knip
-        run: yarn run knip
+        run: pnpm knip
       - name: test unit-testing and integration-testing
-        run: yarn run test
+        run: pnpm test
