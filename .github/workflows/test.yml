@@ -16,7 +16,6 @@ jobs:
         with:
           version: 11
           run_install: true
-          cache: true
       - name: install dependency
         run: pnpm ci
       - name: test format
