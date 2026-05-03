@@ -14,7 +14,6 @@ jobs:
       - name: use Node.js
         uses: pnpm/action-setup@v6
         with:
-          node-version: '24'
           version: 11
           run_install: true
           cache: true
