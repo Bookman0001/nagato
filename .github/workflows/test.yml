@@ -13,10 +13,8 @@ jobs:
       - uses: actions/checkout@v6
       - name: use Node.js
         uses: pnpm/action-setup@v6
-        with:
-          version: 11
       - name: install dependency
-        run: pnpm ci
+        run: pnpm i
       - name: test format
         run: pnpm prettier
       - name: test linter
