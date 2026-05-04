@@ -11,5 +11,5 @@ pre-commit:
       glob: '*.{ts,tsx}'
       run: pnpm tsc
     knip:
-      glob: '*.{ts,tsx}'
+      glob: '*'
       run: pnpm knip
