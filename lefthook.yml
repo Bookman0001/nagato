@@ -10,3 +10,6 @@ pre-commit:
     tsc:
       glob: '*.{ts,tsx}'
       run: pnpm tsc
+    knip:
+      glob: '*.{ts,tsx}'
+      run: pnpm knip
