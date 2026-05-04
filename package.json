@@ -12,12 +12,9 @@
     "lint:fix": "eslint './**/*.ts{,x}' --fix",
     "prettier": "prettier --check ./**/*.{ts,tsx}",
     "format": "prettier --write ./**/*.{ts,tsx}",
-    "compiler-check": "tsc --noEmit",
+    "tsc": "tsc --noEmit",
     "knip": "knip --config knip.json --exclude devDependencies,unlisted",
     "test": "vitest run"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
     "./**/*.{ts,tsx}": [
@@ -73,7 +70,7 @@
     "globals": "17.5.0",
     "jsdom": "29.1.1",
     "knip": "6.9.0",
-    "lint-staged": "16.4.0",
+    "lefthook": "2.1.6",
     "mockdate": "3.0.5",
     "msw": "2.14.2",
     "next-router-mock": "1.0.5",
@@ -82,7 +79,6 @@
     "pathpida": "0.26.1",
     "prettier": "3.8.3",
     "react-test-renderer": "19.2.5",
-    "simple-git-hooks": "2.13.1",
     "ts-node": "10.9.2",
     "typescript": "5.9.3",
     "undici": "8.1.0",

@@ -35,6 +35,7 @@ First, settting .env.local following .env.sample
 Secondly, run the development server:
 
 ```bash
+npx lefthook install
 pnpm i
 pnpm dev
 ```

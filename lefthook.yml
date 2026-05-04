@@ -1,0 +1,15 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      glob: '*.{ts,tsx}'
+      run: pnpm lint
+    prettier:
+      glob: '*.{ts,tsx}'
+      run: pnpm prettier
+    tsc:
+      glob: '*.{ts,tsx}'
+      run: pnpm tsc
+    knip:
+      glob: '*.{ts,tsx}'
+      run: pnpm knip
