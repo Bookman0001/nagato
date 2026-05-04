@@ -16,12 +16,6 @@
     "knip": "knip --config knip.json --exclude devDependencies,unlisted",
     "test": "vitest run"
   },
-  "lint-staged": {
-    "./**/*.{ts,tsx}": [
-      "eslint",
-      "prettier"
-    ]
-  },
   "dependencies": {
     "@hookform/resolvers": "5.2.2",
     "@vercel/speed-insights": "2.0.0",
