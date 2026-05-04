@@ -20,7 +20,7 @@ jobs:
       - name: test linter
         run: pnpm lint
       - name: test compiler
-        run: pnpm compiler-check
+        run: pnpm tsc
       - name: auto code review via knip
         run: pnpm knip
       - name: test unit-testing and integration-testing
