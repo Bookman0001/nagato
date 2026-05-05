@@ -14,7 +14,7 @@ export function TopLayout({ children }: Props) {
     <>
       <Default />
       <Header />
-      <div className="flex justify-center items-center py-8 [&>div]:px-[50px]">
+      <div className="flex justify-center items-center py-8 [&>div]:px-12.5">
         <Rectangle size={180} />
       </div>
       {children}
