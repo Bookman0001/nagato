@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 
-import { color, deviceWidth, fontSize } from 'src/theme/constants'
+import { deviceWidth, fontSize } from 'src/theme/constants'
 import type { ContentInArticles } from 'src/types'
 import { pagesPath } from 'src/utils/$path'
 
@@ -11,30 +11,16 @@ interface Props {
 
 export function ArticleContent({ article }: Props) {
   return (
-    <Container>
+    <div>
       <Link href={pagesPath.posts._id(article.id).$url()} passHref>
-        <StyledLink>
+        <div className={'cursor-pointer leading-normal hover:opacity-70'}>
           <SubTitle key={article.id}>{article.title}</SubTitle>
           <DateMemo>{article.publishedAt}</DateMemo>
-        </StyledLink>
+        </div>
       </Link>
-    </Container>
+    </div>
   )
 }
-
-const Container = styled.div`
-  a {
-    color: ${color.WHITE};
-  }
-`
-
-const StyledLink = styled.div`
-  cursor: pointer;
-  line-height: 1.5;
-  :hover {
-    opacity: 0.7;
-  }
-`
 
 const SubTitle = styled.h3`
   font-size: ${fontSize.S};

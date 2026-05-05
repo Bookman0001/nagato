@@ -26,10 +26,6 @@ export const borderRadius = {
   DEFAULT: '8px',
 } as const
 
-export const zIndex = {
-  TOP_MOST: 1000,
-} as const
-
 export const deviceWidth = {
   PC: '1170px',
   TABLET: '768px',
