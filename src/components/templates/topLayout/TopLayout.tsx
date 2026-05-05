@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import { Rectangle } from 'src/components/atoms/icon'
 import { Footer } from 'src/components/organisms/footer'
@@ -15,21 +14,11 @@ export function TopLayout({ children }: Props) {
     <>
       <Default />
       <Header />
-      <PictureContainer>
+      <div className="flex justify-center items-center py-8 [&>div]:px-[50px]">
         <Rectangle size={180} />
-      </PictureContainer>
+      </div>
       {children}
       <Footer />
     </>
   )
 }
-
-const PictureContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0;
-  div {
-    padding: 0 50px;
-  }
-`

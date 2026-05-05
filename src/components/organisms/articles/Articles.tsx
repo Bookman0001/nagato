@@ -21,37 +21,22 @@ export function Articles({ articles }: Props) {
   }
 
   return (
-    <Section>
-      <DetailWrapper>
+    <section className={'.mb-8'}>
+      <div className={'.m-0'}>
         {contents.map((article) => {
           return (
-            <Wrapper key={article.id}>
+            <div key={article.id} className={'.pb-8 last:pb-0"'}>
               <ArticleContent article={article} />
-            </Wrapper>
+            </div>
           )
         })}
-      </DetailWrapper>
+      </div>
       <ButtonWrapper>
         <Button onClick={handleClick}>See More</Button>
       </ButtonWrapper>
-    </Section>
+    </section>
   )
 }
-
-const Section = styled.section`
-  margin-bottom: 2rem;
-`
-
-const DetailWrapper = styled.div`
-  margin: 0;
-`
-
-const Wrapper = styled.div`
-  padding-bottom: 2rem;
-  :last-child {
-    padding-bottom: 0;
-  }
-`
 
 const ButtonWrapper = styled.div`
   display: flex;
