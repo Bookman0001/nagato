@@ -21,7 +21,7 @@ export async function get<T>(path: string) {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function post<T>(path: string, data: any) {
-  const response = await fetch(path, {
+  const response = await fetch(`${X_API_BASE_URL}${path}`, {
     method: 'POST',
     headers,
     body: JSON.stringify(data),
