@@ -15,7 +15,9 @@ export function ErrorLayout({ children }: Props) {
     <>
       <Header />
       <Container>
-        <MainTitle>{children}</MainTitle>
+        <div className={'pb-8'}>
+          <MainTitle>{children}</MainTitle>
+        </div>
       </Container>
       <Footer />
     </>

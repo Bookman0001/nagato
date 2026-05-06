@@ -1,9 +1,6 @@
-import styled from 'styled-components'
-
 import { Pagination } from 'src/components/atoms/pagination'
 import { ArticleContent } from 'src/components/molecures/articleContent'
 import { useSearchParams } from 'src/hooks/router/useSearchParams'
-import { fontSize } from 'src/theme/constants'
 import type { ArticlesPagination } from 'src/types'
 
 interface Props {
@@ -20,51 +17,30 @@ export function Articles({ currentIndex, articles }: Props) {
   }
 
   return (
-    <DetailWrapper>
+    <div className={'m-0'}>
       {contents.length ? (
         <>
           {contents.map((article) => {
             return (
-              <Wrapper key={article.id}>
+              <div key={article.id} className={'pb-8 last:pb-0'}>
                 <ArticleContent article={article} />
-              </Wrapper>
+              </div>
             )
           })}
-          <PaginationWrapper>
+          <div className={'pb-8'}>
             <Pagination
               currentIndex={currentIndex}
               totalCount={totalCount}
               limit={limit}
               onClick={handleClick}
             />
-          </PaginationWrapper>
+          </div>
         </>
       ) : (
-        <NoResult>No Result!</NoResult>
+        <div className={'flex justify-center items-center mx-auto text-2xl'}>
+          No Result!
+        </div>
       )}
-    </DetailWrapper>
+    </div>
   )
 }
-
-const DetailWrapper = styled.div`
-  margin: 0;
-`
-
-const NoResult = styled.div`
-  font-size: ${fontSize.S};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-`
-
-const PaginationWrapper = styled.div`
-  padding-bottom: 2rem;
-`
-
-const Wrapper = styled.div`
-  padding-bottom: 2rem;
-  :last-child {
-    padding-bottom: 0;
-  }
-`

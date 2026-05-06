@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer
       className={
-        'flex justify-center items-center flex-1 w-full h-15 border-t border-[--color-gray] text-center bg-[--color-black]'
+        'flex justify-center items-center flex-1 w-full h-15 border-t text-center'
       }
     >
       <ParagraphContent>

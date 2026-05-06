@@ -22,7 +22,7 @@ export function Articles({ articles }: Props) {
       <div className={'m-0'}>
         {contents.map((article) => {
           return (
-            <div key={article.id} className={'pb-8 last:pb-0"'}>
+            <div key={article.id} className={'pb-8'}>
               <ArticleContent article={article} />
             </div>
           )

@@ -6,12 +6,6 @@ export const color = {
   WARNING: '#db235c',
 } as const
 
-export const buttopnBgColor = {
-  BLUE: '#00afcc',
-  BLACK: '#303030',
-  WARNING: '#db235c',
-} as const
-
 export const fontSize = {
   XXS: '0.75rem',
   XS: '1rem',

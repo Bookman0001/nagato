@@ -5,11 +5,7 @@ import { pagesPath } from 'src/utils/$path'
 
 export function Header() {
   return (
-    <div
-      className={
-        'w-full border-b border-[--color-gray] z-[--z-index-top-most] text-[--font-size-xxs] bg-[--color-black]'
-      }
-    >
+    <header className={'w-full border-b'}>
       <div
         className={
           'h-12.5 flex justify-center items-center pc:max-w-150 pc:mx-auto'
@@ -25,6 +21,6 @@ export function Header() {
           </div>
         </Link>
       </div>
-    </div>
+    </header>
   )
 }

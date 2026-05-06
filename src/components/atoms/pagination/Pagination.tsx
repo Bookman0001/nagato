@@ -1,9 +1,6 @@
 import { useMemo } from 'react'
-import styled, { css } from 'styled-components'
 
 import { usePagination } from './usePagination'
-
-import { borderRadius, color, fontSize } from 'src/theme/constants'
 
 interface Props {
   currentIndex: number
@@ -36,53 +33,27 @@ export function Pagination({
   }
 
   return (
-    <Container>
+    <div className={'flex items-center justify-center'}>
       {displayPaginations.map((num, index) => {
+        const selected = currentIndex === num
         return (
-          <ButtonWrapper key={index} $selected={currentIndex === num}>
-            <ButtonItem
+          <div key={index} data- className="group">
+            <button
               onClick={() => handleClick(num)}
               key={index}
-              role={'button'}
-            >
-              {num}
-            </ButtonItem>
-          </ButtonWrapper>
-        )
-      })}
-    </Container>
-  )
-}
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const ButtonWrapper = styled.div<{ $selected: boolean }>`
-  ${(props) =>
-    props.$selected &&
-    css`
-      button {
-        color: ${color.BLACK};
-        background-color: ${color.WHITE};
-        border: 3px solid ${color.WHITE};
+              className={`flex justify-center items-center border-3 border-solid border-white rounded-lg w-10 h-10 mx-4 text-lg cursor-pointer text-center
+      ${
+        selected
+          ? 'text-black bg-white border-white'
+          : 'text-white bg-transparent border-transparent'
       }
     `}
-`
-
-const ButtonItem = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${color.BLACK};
-  border: 2px solid ${color.WHITE};
-  border-radius: ${borderRadius.DEFAULT};
-  width: 40px;
-  height: 40px;
-  margin: 0 1rem;
-  font-size: ${fontSize.XS};
-  cursor: pointer;
-  text-align: center;
-`
+            >
+              {num}
+            </button>
+          </div>
+        )
+      })}
+    </div>
+  )
+}

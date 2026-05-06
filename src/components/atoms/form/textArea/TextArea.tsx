@@ -1,7 +1,4 @@
 import React, { InputHTMLAttributes } from 'react'
-import styled, { css } from 'styled-components'
-
-import { borderRadius, color, fontSize } from 'src/theme/constants'
 
 interface Props extends InputHTMLAttributes<HTMLTextAreaElement> {
   rows?: number
@@ -11,28 +8,19 @@ interface Props extends InputHTMLAttributes<HTMLTextAreaElement> {
 export const TextArea = React.forwardRef<HTMLTextAreaElement, Props>(
   function Element({ rows = 6, hasError = false, ...props }: Props, ref) {
     return (
-      <StyledTextArea
+      <textarea
         {...props}
-        role={'textbox'}
         ref={ref}
         rows={rows}
-        $hasError={hasError}
+        className={`flex-1 w-full text-base p-2.5 rounded-lg
+        ${
+          hasError
+            ? 'border-2 border-solid border-warning'
+            : 'border border-solid border-white'
+        }
+        
+        `}
       />
     )
   }
 )
-
-const StyledTextArea = styled.textarea<{ $hasError: boolean }>`
-  flex: 1;
-  width: calc(100% - 20px);
-  font-size: ${fontSize.S};
-  padding: 10px;
-  background-color: ${color.BLACK};
-  border: 1px solid ${color.WHITE};
-  border-radius: ${borderRadius.DEFAULT};
-  ${({ $hasError }) =>
-    $hasError &&
-    css`
-      border: 2px solid ${color.WARNING};
-    `}
-`
