@@ -1,59 +1,8 @@
-import styled, { css, keyframes } from 'styled-components'
-
 export function Skeleton() {
   return (
-    <Wrapper>
-      <SubTitleSkeleton data-testid={'title'} />
-      <DateSkeleton data-testid={'date'} />
-    </Wrapper>
+    <div className="flex pb-12">
+      <div className="skeleton w-full mr-auto" data-testid="title" />
+      <div className="skeleton w-52 ml-8" data-testid="date" />
+    </div>
   )
 }
-
-const Wrapper = styled.div`
-  display: flex;
-  padding-bottom: 3rem;
-`
-
-const Animation = keyframes`
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-`
-
-const skeleton = css`
-  height: 26px;
-  background-color: #696969;
-  position: relative;
-  overflow: hidden;
-  &::before {
-    content: '';
-    display: block;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.5),
-      transparent
-    );
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: ${Animation} 1.2s linear infinite;
-  }
-`
-
-const SubTitleSkeleton = styled.div`
-  width: 100%;
-  margin-right: auto;
-  ${skeleton}
-`
-
-const DateSkeleton = styled.div`
-  width: 13rem;
-  margin-left: 2rem;
-  ${skeleton}
-`

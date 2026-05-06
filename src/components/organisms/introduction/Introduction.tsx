@@ -1,21 +1,11 @@
-import styled from 'styled-components'
-
 import { MainTitle } from 'src/components/atoms/mainTitle'
 
 export function Introduction() {
   return (
-    <Section>
-      <TitleContainer>
+    <section>
+      <div className={'pb-8'}>
         <MainTitle>My Blog</MainTitle>
-      </TitleContainer>
-    </Section>
+      </div>
+    </section>
   )
 }
-
-const Section = styled.section``
-
-const TitleContainer = styled.div`
-  h1 {
-    align-items: baseline;
-  }
-`

@@ -1,11 +1,9 @@
 import { GetStaticProps } from 'next'
-import styled from 'styled-components'
 
 import { Articles } from 'src/components/organisms/articles'
 import { Introduction } from 'src/components/organisms/introduction'
 import { TopLayout } from 'src/components/templates/topLayout'
 import { articlesController } from 'src/controllers/articles'
-import { deviceWidth } from 'src/theme/constants'
 import type { ArticlesPagination } from 'src/types'
 
 interface Props {
@@ -25,18 +23,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 export default function Home({ articles }: Props) {
   return (
     <TopLayout>
-      <Container>
+      <main className={'m-auto tablet:max-w-180 phone:max-w-140 max-w-100'}>
         <Introduction />
         <Articles articles={articles} />
-      </Container>
+      </main>
     </TopLayout>
   )
 }
-
-const Container = styled.main`
-  max-width: 600px;
-  margin: 0 auto;
-  @media (max-width: ${deviceWidth.TABLET}) {
-    padding: 0 2rem;
-  }
-`

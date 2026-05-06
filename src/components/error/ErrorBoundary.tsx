@@ -1,9 +1,7 @@
 import { Component, ErrorInfo, ReactNode } from 'react'
-import styled from 'styled-components'
 
 import { Footer } from 'src/components/organisms/footer'
 import { Header } from 'src/components/organisms/header'
-import { fontSize } from 'src/theme/constants'
 
 interface Props {
   children?: ReactNode
@@ -31,7 +29,13 @@ class ErrorBoundary extends Component<Props, State> {
       return (
         <>
           <Header />
-          <ErrorContainer>Sorry...Something error happened!</ErrorContainer>
+          <div
+            className={
+              'mx-auto tablet:max-w-180 phone:max-w-140 max-w-100 h-[calc(100vh-50px-60px)] pt-16 text-lg flex justify-center items-center'
+            }
+          >
+            Sorry...Something error happened!
+          </div>
           <Footer />
         </>
       )
@@ -40,16 +44,5 @@ class ErrorBoundary extends Component<Props, State> {
     return this.props.children
   }
 }
-
-const ErrorContainer = styled.div`
-  max-width: 600px;
-  height: calc(100vh - 50px - 60px);
-  padding-top: 4rem;
-  margin: 0 auto;
-  font-size: ${fontSize.S};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
 
 export default ErrorBoundary

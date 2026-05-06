@@ -1,7 +1,5 @@
 import Link from 'next/link'
-import styled from 'styled-components'
 
-import { color, deviceWidth, fontSize } from 'src/theme/constants'
 import type { ContentInArticles } from 'src/types'
 import { pagesPath } from 'src/utils/$path'
 
@@ -11,45 +9,20 @@ interface Props {
 
 export function ArticleContent({ article }: Props) {
   return (
-    <Container>
+    <div>
       <Link href={pagesPath.posts._id(article.id).$url()} passHref>
-        <StyledLink>
-          <SubTitle key={article.id}>{article.title}</SubTitle>
-          <DateMemo>{article.publishedAt}</DateMemo>
-        </StyledLink>
+        <div className={'cursor-pointer leading-normal hover:opacity-70'}>
+          <h3
+            key={article.id}
+            className={'tablet:text-xl text-lg m-auto underline text-white'}
+          >
+            {article.title}
+          </h3>
+          <div className={'tablet:text-lg text-base text-white text-right'}>
+            {article.publishedAt}
+          </div>
+        </div>
       </Link>
-    </Container>
+    </div>
   )
 }
-
-const Container = styled.div`
-  a {
-    color: ${color.WHITE};
-  }
-`
-
-const StyledLink = styled.div`
-  cursor: pointer;
-  line-height: 1.5;
-  :hover {
-    opacity: 0.7;
-  }
-`
-
-const SubTitle = styled.h3`
-  font-size: ${fontSize.S};
-  margin-right: auto;
-  text-decoration: underline;
-  @media (max-width: ${deviceWidth.PHONE}) {
-    font-size: ${fontSize.XS};
-  }
-`
-
-const DateMemo = styled.div`
-  font-size: ${fontSize.XS};
-  text-align: right;
-  line-height: 1.7;
-  @media (max-width: ${deviceWidth.PHONE}) {
-    font-size: ${fontSize.XXS};
-  }
-`

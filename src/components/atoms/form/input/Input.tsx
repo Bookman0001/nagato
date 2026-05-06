@@ -1,7 +1,4 @@
 import React, { InputHTMLAttributes } from 'react'
-import styled, { css } from 'styled-components'
-
-import { borderRadius, color, fontSize } from 'src/theme/constants'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   hasError?: boolean
@@ -13,29 +10,17 @@ export const Input = React.forwardRef<HTMLInputElement, Props>(function Element(
   ref
 ) {
   return (
-    <StyledInput
+    <input
       {...props}
       type={type}
-      role={'textbox'}
       ref={ref}
-      $hasError={hasError}
+      className={`w-full flex-1 h-10 text-base indent-1.25 rounded-lg
+        ${
+          hasError
+            ? 'border-2 border-solid border-warning'
+            : 'border border-solid border-white'
+        }
+        `}
     />
   )
 })
-
-const StyledInput = styled.input<{ $hasError: boolean }>`
-  width: 100%;
-  flex: 1;
-  height: 100%;
-  height: 40px;
-  font-size: ${fontSize.S};
-  text-indent: 5px;
-  background-color: ${color.BLACK};
-  border: 1px solid ${color.WHITE};
-  border-radius: ${borderRadius.DEFAULT};
-  ${({ $hasError }) =>
-    $hasError &&
-    css`
-      border: 2px solid ${color.WARNING};
-    `}
-`

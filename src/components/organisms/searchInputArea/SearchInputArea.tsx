@@ -1,5 +1,4 @@
 import { ChangeEvent, useState, KeyboardEvent, useRef } from 'react'
-import styled from 'styled-components'
 
 import { Button } from 'src/components/atoms/button'
 import { Input } from 'src/components/atoms/form'
@@ -32,9 +31,11 @@ export function SearchInputArea({ defaultKeyword }: Props) {
   }
 
   return (
-    <Section>
-      <Title>Articles Search</Title>
-      <DetailWrapper>
+    <section className={'pb-8'}>
+      <div className={'pb-8'}>
+        <Title>Articles Search</Title>
+      </div>
+      <div className={'flex justify-center items-center m-0 h-12'}>
         <Input
           ref={inputRef}
           placeholder={'keyword'}
@@ -42,25 +43,12 @@ export function SearchInputArea({ defaultKeyword }: Props) {
           defaultValue={defaultKeyword}
           onKeyDown={handleKeyDown}
         />
-        <Button aria-label="検索" onClick={handleClick}>
-          <Search size={20} />
-        </Button>
-      </DetailWrapper>
-    </Section>
+        <div className={'ml-5'}>
+          <Button aria-label="検索" onClick={handleClick}>
+            <Search size={20} />
+          </Button>
+        </div>
+      </div>
+    </section>
   )
 }
-
-const Section = styled.section`
-  padding-bottom: 2rem;
-`
-
-const DetailWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  height: 3rem;
-  button {
-    margin-left: 20px;
-  }
-`

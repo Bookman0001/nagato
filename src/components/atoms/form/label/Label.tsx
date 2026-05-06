@@ -1,18 +1,13 @@
 import React, { LabelHTMLAttributes } from 'react'
-import styled from 'styled-components'
-
-import { fontSize } from 'src/theme/constants'
 
 interface Props extends LabelHTMLAttributes<HTMLLabelElement> {
   children: React.ReactNode
 }
 
 export function Label({ children, ...rest }: Props) {
-  return <LabelItem {...rest}>{children}</LabelItem>
+  return (
+    <label className={'block text-sm font-bold'} {...rest}>
+      {children}
+    </label>
+  )
 }
-
-const LabelItem = styled.label`
-  display: block;
-  font-size: ${fontSize.XS};
-  font-weight: bold;
-`

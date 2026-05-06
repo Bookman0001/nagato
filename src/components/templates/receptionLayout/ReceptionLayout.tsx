@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import { Rectangle } from 'src/components/atoms/icon'
 import { Footer } from 'src/components/organisms/footer'
@@ -15,18 +14,11 @@ export function ReceptionLayout({ children }: Props) {
     <>
       <Default />
       <Header />
-      <Container>
+      <div className={'flex justify-center items-center pt-8'}>
         <Rectangle size={180} />
-      </Container>
+      </div>
       {children}
       <Footer />
     </>
   )
 }
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem 0 0;
-`
