@@ -23,8 +23,7 @@ async function sendMessage(req: _NextApiRequest, res: NextApiResponse) {
     .then(() => {
       return res.status(200).json({ message: 'request is successful' })
     })
-    .catch((e) => {
-      console.log(e)
+    .catch(() => {
       return res.status(500).json(errorHandler.handleGeneralError())
     })
 }
