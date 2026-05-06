@@ -9,7 +9,7 @@ export default function Thanks() {
     <ThanksLayout>
       <section>
         <div
-          className={'m-auto tablet:max-w-180 phone:max-w-140 max-w-100 my-20'}
+          className={'m-auto tablet:max-w-180 phone:max-w-140 max-w-80 my-20'}
         >
           <div className={'w-full flex justify-center text-5xl my-20'}>
             <div>Thank you!🥳</div>

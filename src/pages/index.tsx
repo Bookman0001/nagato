@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 export default function Home({ articles }: Props) {
   return (
     <TopLayout>
-      <main className={'m-auto tablet:max-w-180 phone:max-w-140 max-w-100'}>
+      <main className={'m-auto tablet:max-w-180 phone:max-w-140 max-w-80'}>
         <Introduction />
         <Articles articles={articles} />
       </main>

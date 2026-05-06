@@ -22,7 +22,7 @@ export function BlogLayout({ article, children }: Props) {
       <Header />
       <div
         className={
-          'tablet:max-w-180 phone:max-w-140 max-w-100 mx-auto my-12 text-s'
+          'tablet:max-w-180 phone:max-w-140 max-w-80 mx-auto my-12 text-s'
         }
       >
         <div className={'pb-8'}>

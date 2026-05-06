@@ -8,7 +8,7 @@ export function Skeletons({ itemCount }: Props) {
   return (
     <div
       className={
-        'mx-auto tablet:max-w-180 phone:max-w-140 max-w-100 min-h-[calc(100vh-110px)]'
+        'mx-auto tablet:max-w-180 phone:max-w-140 max-w-80 min-h-[calc(100vh-110px)]'
       }
     >
       {[...Array(itemCount)].map((_, i) => {

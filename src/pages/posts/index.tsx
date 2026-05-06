@@ -18,7 +18,7 @@ export default function Posts() {
       <SearchLayout>
         <section
           className={
-            'mx-auto tablet:max-w-180 phone:max-w-140 max-w-100 min-h-[calc(100vh-110px)] pt-8 pb-0 px-0'
+            'mx-auto tablet:max-w-180 phone:max-w-140 max-w-80 min-h-[calc(100vh-110px)] pt-8 pb-0 px-0'
           }
         >
           <div>
@@ -34,7 +34,7 @@ export default function Posts() {
     <SearchLayout>
       <section
         className={
-          'mx-auto tablet:max-w-180 phone:max-w-140 max-w-100 min-h-[calc(100vh-110px)] pt-8 pb-0 px-0'
+          'mx-auto tablet:max-w-180 phone:max-w-140 max-w-80 min-h-[calc(100vh-110px)] pt-8 pb-0 px-0'
         }
       >
         <div>
