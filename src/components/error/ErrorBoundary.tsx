@@ -31,7 +31,7 @@ class ErrorBoundary extends Component<Props, State> {
           <Header />
           <div
             className={
-              'mx-auto tablet:max-w-180 phone:max-w-140 max-w-100 h-[calc(100vh-50px-60px)] pt-16 text-lg flex justify-center items-center'
+              'mx-auto tablet:max-w-180 phone:max-w-140 max-w-80 h-[calc(100vh-50px-60px)] pt-16 text-lg flex justify-center items-center'
             }
           >
             Sorry...Something error happened!

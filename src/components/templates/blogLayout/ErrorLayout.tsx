@@ -14,7 +14,7 @@ export function ErrorLayout({ children }: Props) {
       <Header />
       <div
         className={
-          'tablet:max-w-180 phone:max-w-140 max-w-100 text-lg my-16 mx-auto p-4'
+          'tablet:max-w-180 phone:max-w-140 max-w-80 text-lg my-16 mx-auto p-4'
         }
       >
         <div className={'pb-8'}>
