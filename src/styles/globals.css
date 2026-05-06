@@ -56,4 +56,54 @@
   --breakpoint-pc: 1170px;
   --breakpoint-tablet: 768px;
   --breakpoint-phone: 600px;
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -124;
+    }
+  }
+
+  --animate-spinner-dash: dash 1.5s ease-in-out infinite;
+}
+
+@utility skeleton {
+  height: 26px;
+  background-color: #696969;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: shimmer 1.2s linear infinite;
+  }
 }

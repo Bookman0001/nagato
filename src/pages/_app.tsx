@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 import ErrorBoundary from 'src/components/error/ErrorBoundary'
 import * as gtag from 'src/services/gtag'
 import SwrConfig from 'src/services/swr/SwrConfig'
-import '../../styles/globals.css'
+import 'src/styles/globals.css'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()

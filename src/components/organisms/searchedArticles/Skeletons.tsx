@@ -1,5 +1,3 @@
-import styled from 'styled-components'
-
 import { Skeleton } from 'src/components/molecures/skeleton'
 
 interface Props {
@@ -8,7 +6,11 @@ interface Props {
 
 export function Skeletons({ itemCount }: Props) {
   return (
-    <Container>
+    <div
+      className={
+        'mx-auto tablet:max-w-180 phone:max-w-140 max-w-100 min-h-[calc(100vh-110px)]'
+      }
+    >
       {[...Array(itemCount)].map((_, i) => {
         return (
           <div key={i}>
@@ -16,12 +18,6 @@ export function Skeletons({ itemCount }: Props) {
           </div>
         )
       })}
-    </Container>
+    </div>
   )
 }
-
-const Container = styled.div`
-  max-width: 600px;
-  min-height: calc(100vh - 50px - 60px);
-  margin: 0 auto;
-`

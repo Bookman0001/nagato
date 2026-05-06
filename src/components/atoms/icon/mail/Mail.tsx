@@ -1,20 +1,21 @@
-import styled from 'styled-components'
-
-import { color } from 'src/theme/constants'
-
 interface Props {
   size: number
 }
 
 export function Mail({ size }: Props) {
   return (
-    <Svg
+    <svg
       data-testid={'mail-icon'}
       width={size}
       height={size}
       viewBox="0 0 243 178"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      // 子要素の rect と line に対してスタイルを適用
+      className="
+        [&_rect]:fill-black [&_rect]:stroke-white 
+        [&_line]:stroke-white
+      "
     >
       <rect
         x="4"
@@ -22,8 +23,9 @@ export function Mail({ size }: Props) {
         width="235"
         height="170"
         rx="16"
-        fill={color.WHITE}
-        stroke={color.BLACK}
+        // 初期値（フォールバック用）
+        fill="#ffffff"
+        stroke="black"
         strokeWidth="8"
       />
       <line
@@ -31,7 +33,7 @@ export function Mail({ size }: Props) {
         y1="122.122"
         x2="234.222"
         y2="10.1224"
-        stroke={color.BLACK}
+        stroke="black"
         strokeWidth="8"
       />
       <line
@@ -39,19 +41,9 @@ export function Mail({ size }: Props) {
         y1="10.1467"
         x2="123.803"
         y2="122.147"
-        stroke={color.BLACK}
+        stroke="black"
         strokeWidth="8"
       />
-    </Svg>
+    </svg>
   )
 }
-
-const Svg = styled.svg`
-  rect {
-    fill: ${color.BLACK};
-    stroke: ${color.WHITE};
-  }
-  line {
-    stroke: ${color.WHITE};
-  }
-`

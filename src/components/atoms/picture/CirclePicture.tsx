@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import React from 'react'
 
 interface Props {
   src: string
@@ -9,20 +9,16 @@ interface Props {
 
 export function CirclePicture({ src, alt, width = 100, height = 100 }: Props) {
   return (
-    <Container width={width} height={height}>
-      <Image src={src} alt={alt} />
-    </Container>
+    <div
+      style={
+        {
+          '--w': `${width}px`,
+          '--h': `${height}px`,
+        } as React.CSSProperties
+      }
+      className="overflow-hidden rounded-full w-(--w) h-(--h)"
+    >
+      <img src={src} alt={alt} className="block h-full w-full object-cover" />
+    </div>
   )
 }
-
-const Container = styled.div<{ width: number; height: number }>`
-  border-radius: 100%;
-  width: ${(props) => props.width}px;
-  height: ${(props) => props.height}px;
-`
-
-const Image = styled.img<{ src: string; alt: string }>`
-  width: 100%;
-  src: ${(props) => props.src};
-  alt: ${(props) => props.alt};
-`
