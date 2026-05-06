@@ -154,8 +154,8 @@ importers:
         specifier: 1.0.5
         version: 1.0.5(next@16.2.4(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))(react@19.2.5)
       next-test-api-route-handler:
-        specifier: 5.0.4
-        version: 5.0.4(next@16.2.4(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))
+        specifier: 5.0.5
+        version: 5.0.5(next@16.2.4(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5))
       npm-run-all2:
         specifier: 8.0.4
         version: 8.0.4
@@ -2981,8 +2981,8 @@ packages:
       next: '>=10.0.0'
       react: '>=17.0.0'
 
-  next-test-api-route-handler@5.0.4:
-    resolution: {integrity: sha512-bvLRJAfK6NHVLVwJm+HRCxrU3UQbXLuuj1qcLg1sJK40lRzHmGtVGHLxFWj3LnEoH8UZFTwV0Be0jTg4zHckkw==}
+  next-test-api-route-handler@5.0.5:
+    resolution: {integrity: sha512-ku6YBjF8s4kbDMO7t9vM8dOAj7jJ1tTCHNY6hnBRgx5TvUYqrppZ7RWQIywMyVSntX9UaFGDH5/KFNDEr9zRvw==}
     engines: {node: ^20.18.0 || >=22.12.0}
     peerDependencies:
       next: '>=9'
@@ -6653,7 +6653,7 @@ snapshots:
       next: 16.2.4(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       react: 19.2.5
 
-  next-test-api-route-handler@5.0.4(next@16.2.4(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)):
+  next-test-api-route-handler@5.0.5(next@16.2.4(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)):
     dependencies:
       '@whatwg-node/server': 0.10.18
       cookie: 1.1.1
