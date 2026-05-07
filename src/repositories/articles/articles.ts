@@ -10,7 +10,7 @@ export async function fetchAllArticles({
   offset: number
 }): Promise<ArticlesResponse> {
   return await get<ArticlesResponse>(
-    `/technology-articles?offset=${offset}&limit=${limit}&fields=id,createdAt,updatedAt,publishedAt,title,description`
+    `/technology-articles?offset=${offset}&limit=${limit}&fields=id,createdAt,updatedAt,publishedAt,title,description&orders=-publishedAt`
   )
 }
 
@@ -18,7 +18,7 @@ export async function fetchLimitedArtcles(
   params: PaginationParams
 ): Promise<ArticlesResponse> {
   return await get<ArticlesResponse>(
-    `/technology-articles?limit=${params.limit}&fields=id,createdAt,updatedAt,publishedAt,title,description`
+    `/technology-articles?limit=${params.limit}&fields=id,createdAt,updatedAt,publishedAt,title,description&orders=-publishedAt`
   )
 }
 
@@ -29,6 +29,6 @@ export async function fetchSearchedArticles(
   const page = Number(params.page) || 1
   const offset = page > 1 ? page * limit - limit : 0
   return await get<ArticlesResponse>(
-    `/technology-articles?q=${params.keyword}&limit=${limit}&offset=${offset}&fields=id,createdAt,updatedAt,publishedAt,title,description`
+    `/technology-articles?q=${params.keyword}&limit=${limit}&offset=${offset}&fields=id,createdAt,updatedAt,publishedAt,title,description&orders=-publishedAt`
   )
 }
