@@ -11,7 +11,9 @@ export function ArticleContent({ article }: Props) {
   return (
     <div>
       <Link href={pagesPath.posts._id(article.id).$url()} passHref>
-        <div className={'cursor-pointer leading-normal hover:opacity-70'}>
+        <div
+          className={'cursor-pointer leading-normal hover:opacity-70 font-bold'}
+        >
           <h3
             key={article.id}
             className={'tablet:text-xl text-lg m-auto underline text-white'}

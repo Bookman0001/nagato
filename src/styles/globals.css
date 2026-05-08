@@ -17,10 +17,8 @@
     font-family: initial;
     margin: 0;
     padding: 0;
-    font-size: 1.5rem;
   }
   p {
-    font-size: 1rem;
     margin: 0;
   }
   a {
@@ -39,6 +37,22 @@
   }
   input {
     padding: 0;
+  }
+}
+
+@layer components {
+  .blog-markdown {
+    h3 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    h4 {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    p {
+      font-size: 1.2rem;
+    }
   }
 }
 

@@ -28,7 +28,9 @@ export function BlogLayout({ article, children }: Props) {
         <div className={'pb-8'}>
           <MainTitle>{article.title}</MainTitle>
         </div>
-        <main className={'flex items-center leading-loose'}>{children}</main>
+        <main className={'flex items-center leading-loose mb-8'}>
+          <div className={'blog-markdown'}>{children}</div>
+        </main>
         <div className={'min-w-full flex justify-center items-center'}>
           <Button onClick={transitionToTop}>Back To Top</Button>
         </div>
