@@ -6,7 +6,11 @@ interface Props {
 
 export function Title({ children }: Props) {
   return (
-    <h2 className={'flex justify-center items-center leading-normal text-4xl'}>
+    <h2
+      className={
+        'flex justify-center items-center leading-normal text-4x font-bold'
+      }
+    >
       {children}
     </h2>
   )
