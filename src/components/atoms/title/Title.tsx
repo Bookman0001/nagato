@@ -8,7 +8,7 @@ export function Title({ children }: Props) {
   return (
     <h2
       className={
-        'flex justify-center items-center leading-normal text-4x font-bold'
+        'flex justify-center items-center leading-normal text-4xl font-bold'
       }
     >
       {children}
