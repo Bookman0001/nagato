@@ -68,7 +68,7 @@
     "msw": "2.14.6",
     "next-router-mock": "1.0.5",
     "next-test-api-route-handler": "5.0.5",
-    "npm-run-all2": "8.0.4",
+    "npm-run-all2": "9.0.0",
     "pathpida": "0.26.1",
     "postcss": "8.5.14",
     "prettier": "3.8.3",
