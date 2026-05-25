@@ -17,7 +17,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@hookform/resolvers": "5.2.2",
+    "@hookform/resolvers": "5.4.0",
     "@vercel/speed-insights": "2.0.0",
     "dayjs": "1.11.20",
     "next": "16.2.6",
