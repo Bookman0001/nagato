@@ -71,7 +71,7 @@
     "npm-run-all2": "9.0.1",
     "pathpida": "0.26.1",
     "postcss": "8.5.15",
-    "prettier": "3.8.3",
+    "prettier": "3.8.4",
     "react-test-renderer": "19.2.7",
     "tailwindcss": "4.3.0",
     "tailwindcss-cli": "0.1.2",
