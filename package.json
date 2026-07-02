@@ -70,7 +70,7 @@
     "next-test-api-route-handler": "5.0.5",
     "npm-run-all2": "9.0.2",
     "pathpida": "0.26.1",
-    "postcss": "8.5.15",
+    "postcss": "8.5.16",
     "prettier": "3.9.1",
     "react-test-renderer": "19.2.7",
     "tailwindcss": "4.3.1",
