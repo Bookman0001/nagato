@@ -62,7 +62,7 @@
     "eslint-plugin-react-hooks": "7.1.1",
     "globals": "17.7.0",
     "jsdom": "29.1.1",
-    "knip": "6.23.0",
+    "knip": "6.24.0",
     "lefthook": "2.1.9",
     "mockdate": "3.0.5",
     "msw": "2.14.6",
