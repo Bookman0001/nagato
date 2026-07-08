@@ -23,7 +23,7 @@
     "next": "16.2.10",
     "react": "19.2.7",
     "react-dom": "19.2.7",
-    "react-hook-form": "7.80.0",
+    "react-hook-form": "7.81.0",
     "sanitize-html": "2.17.5",
     "swr": "2.4.2",
     "zod": "4.4.3"
