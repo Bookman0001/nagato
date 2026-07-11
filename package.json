@@ -63,7 +63,7 @@
     "globals": "17.7.0",
     "jsdom": "29.1.1",
     "knip": "6.25.0",
-    "lefthook": "2.1.9",
+    "lefthook": "2.1.10",
     "mockdate": "3.0.5",
     "msw": "2.15.0",
     "next-router-mock": "1.0.5",
