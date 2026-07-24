@@ -20,7 +20,7 @@
     "@hookform/resolvers": "5.4.0",
     "@vercel/speed-insights": "2.0.0",
     "dayjs": "1.11.21",
-    "next": "16.2.10",
+    "next": "16.2.11",
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "react-hook-form": "7.82.0",
