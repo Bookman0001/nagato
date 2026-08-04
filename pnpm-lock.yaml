@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@hookform/resolvers':
-        specifier: 5.5.7
-        version: 5.5.7(@standard-schema/spec@1.1.0)(react-hook-form@7.84.0(react@19.2.8))(zod@4.4.3)
+        specifier: 5.6.0
+        version: 5.6.0(@standard-schema/spec@1.1.0)(react-hook-form@7.84.0(react@19.2.8))(zod@4.4.3)
       '@vercel/speed-insights':
         specifier: 2.0.0
         version: 2.0.0(next@16.2.12(@babel/core@8.0.1)(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react@19.2.8)
@@ -470,8 +470,8 @@ packages:
   '@fastify/busboy@3.2.0':
     resolution: {integrity: sha512-m9FVDXU3GT2ITSe0UaMA5rU3QkfC/UXtCU8y0gSN/GugTqtVldOBWIB5V6V3sbmenVZUIpU6f+mPEO2+m5iTaA==}
 
-  '@hookform/resolvers@5.5.7':
-    resolution: {integrity: sha512-CyPCYV8/KlXfEXLWj8HHHhVsR/IZ6Ckm3b/a4fWtO/lRnRK1huqncb8LlAWrmpPRsse5glF5aVuDRMHEr3UGag==}
+  '@hookform/resolvers@5.6.0':
+    resolution: {integrity: sha512-qtgE4NUK/WQFPq8aDe+GOhr0/UiUSKT0m9ta9SMnDS5ZE63yC850ShAGz1lxtwO+dBjhUKvUxmHwkp4eN7/kBQ==}
     peerDependencies:
       '@sinclair/typebox': '>=0.25.24'
       '@standard-schema/spec': ^1.0.0
@@ -4473,7 +4473,7 @@ snapshots:
 
   '@fastify/busboy@3.2.0': {}
 
-  '@hookform/resolvers@5.5.7(@standard-schema/spec@1.1.0)(react-hook-form@7.84.0(react@19.2.8))(zod@4.4.3)':
+  '@hookform/resolvers@5.6.0(@standard-schema/spec@1.1.0)(react-hook-form@7.84.0(react@19.2.8))(zod@4.4.3)':
     dependencies:
       '@standard-schema/utils': 0.3.0
       react-hook-form: 7.84.0(react@19.2.8)
