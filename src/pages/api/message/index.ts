@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-
 import { postMessage } from 'src/repositories/message'
 import { errorHandler, isValidMethod } from 'src/utils/api'
 import { parseSchema } from 'src/utils/zod/receptionForm'

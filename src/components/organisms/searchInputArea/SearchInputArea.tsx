@@ -1,5 +1,4 @@
 import { ChangeEvent, useState, KeyboardEvent, useRef } from 'react'
-
 import { Button } from 'src/components/atoms/button'
 import { Input } from 'src/components/atoms/form'
 import { Search } from 'src/components/atoms/icon'

@@ -1,20 +1,21 @@
 import Link from 'next/link'
-
+import { useState } from 'react'
 import { Mail } from 'src/components/atoms/icon'
 import { ParagraphContent } from 'src/components/atoms/paragraphContent'
 import { CirclePicture } from 'src/components/atoms/picture'
 import { pagesPath, staticPath } from 'src/utils/$path'
 
 export function Footer() {
+  const [date] = useState<Date>(() => new Date())
+  const fullYear = date.getFullYear().toString()
+
   return (
     <footer
       className={
         'flex justify-center items-center flex-1 w-full h-15 border-t text-center'
       }
     >
-      <ParagraphContent>
-        © {new Date().getFullYear().toString()} k-puppeteer.com
-      </ParagraphContent>
+      <ParagraphContent>© {fullYear} k-puppeteer.com</ParagraphContent>
       <div className={'ml-4'}>
         <a
           href="https://github.com/Bookman0001"

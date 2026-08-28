@@ -1,7 +1,6 @@
-import useSWRMutation from 'swr/mutation'
-
 import { postMessage } from 'src/repositories/client/message'
 import type { FormInput } from 'src/utils/zod/receptionForm'
+import useSWRMutation from 'swr/mutation'
 
 export function useCreateMessage() {
   const createMessage = async (_: string, { arg }: { arg: FormInput }) => {

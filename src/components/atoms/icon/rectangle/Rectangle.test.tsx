@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-
 import { Rectangle } from 'src/components/atoms/icon'
 
 describe('Rectangle', () => {

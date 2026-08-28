@@ -1,5 +1,4 @@
 import { waitFor, renderHook } from '@testing-library/react'
-
 import { useSearchParams } from 'src/hooks/router/useSearchParams'
 
 const mockPush = vi.fn()
@@ -10,6 +9,7 @@ describe('useSearchParams', () => {
   })
 
   it('should be returned params', async () => {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     vi.spyOn(require('next/router'), 'useRouter').mockImplementationOnce(
       () => ({
         query: {
@@ -26,6 +26,7 @@ describe('useSearchParams', () => {
   })
 
   it('should be returned params with default', async () => {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     vi.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
       query: {
         keyword: undefined,
@@ -40,6 +41,7 @@ describe('useSearchParams', () => {
   })
 
   it('should be worked searchArticlesWithPager', async () => {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     vi.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
       query: {
         keyword: 'test',
@@ -56,6 +58,7 @@ describe('useSearchParams', () => {
   })
 
   it('should be worked searchArticlesWithKeyword', async () => {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
     vi.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
       query: {
         keyword: 'test',

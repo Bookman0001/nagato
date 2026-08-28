@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-
 import { Pagination } from 'src/components/atoms/pagination'
 
 describe('Pagination', () => {

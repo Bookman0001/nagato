@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-
 import { Circle } from 'src/components/atoms/icon'
 
 describe('SearchIcon', () => {

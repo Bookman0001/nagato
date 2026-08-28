@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-
 import { Title } from 'src/components/atoms/title'
 
 describe('Title', () => {

@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-
 import { ErrorMessage } from 'src/components/organisms/receptionForm/ErrorMessage'
 
 describe('ErrorMessage', () => {

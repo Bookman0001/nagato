@@ -1,8 +1,8 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import singletonRouter from 'next/router'
-
 import { ReceptionForm } from 'src/components/organisms/receptionForm'
 
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 vi.mock('next/router', () => require('next-router-mock'))
 
 vi.mock('src/hooks/message/useCreateMessage', () => ({

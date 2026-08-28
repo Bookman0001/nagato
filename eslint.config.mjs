@@ -1,102 +1,38 @@
-import { defineConfig, globalIgnores } from 'eslint/config'
-import react from 'eslint-plugin-react'
+import eslintReact from '@eslint-react/eslint-plugin'
 import reactHooks from 'eslint-plugin-react-hooks'
-import jsxA11Y from 'eslint-plugin-jsx-a11y'
-import typescriptEslint from '@typescript-eslint/eslint-plugin'
-import importPlugin from 'eslint-plugin-import'
-import { fixupPluginRules } from '@eslint/compat'
-import globals from 'globals'
-import tsParser from '@typescript-eslint/parser'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-import js from '@eslint/js'
-import { FlatCompat } from '@eslint/eslintrc'
+import tseslint from 'typescript-eslint'
 import vitest from '@vitest/eslint-plugin'
+import importPlugin from 'eslint-plugin-import-x'
+import js from '@eslint/js'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-})
-
-export default defineConfig([
-  globalIgnores([
-    // For Next.js
-    '.next/**',
-    'out/**',
-    'build/**',
-    'next-env.d.ts',
-    // For pathpida
-    'src/utils/$path.ts',
-  ]),
+export default tseslint.config(
   {
-    extends: compat.extends(
-      'plugin:react/recommended',
-      'plugin:jsx-a11y/recommended',
-      'plugin:@typescript-eslint/recommended',
-      'plugin:import/typescript',
-      'standard',
-      'prettier'
-    ),
-
+    ignores: ['dist', 'build', 'node_modules', '.next'],
+  },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    files: ['**/*.{ts,tsx}'],
     plugins: {
-      react,
-      'react-hooks': fixupPluginRules(reactHooks),
-      'jsx-a11y': jsxA11Y,
-      '@typescript-eslint': typescriptEslint,
-      import: importPlugin,
+      'react-hooks': reactHooks,
+      '@eslint-react': eslintReact,
+      'import-x': importPlugin,
       vitest,
     },
-
     languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...vitest.environments.env.globals,
-      },
-
-      parser: tsParser,
-      ecmaVersion: 12,
-      sourceType: 'module',
-
       parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
+        project: ['./tsconfig.json'],
+        tsconfigRootDir: import.meta.dirname,
       },
     },
-
-    settings: {
-      react: {
-        version: 'detect',
-      },
-      'import/parsers': {
-        espree: ['.js', '.cjs', '.mjs', '.jsx'],
-      },
-      'import/resolver': {
-        typescript: true,
-        node: true,
-      },
-    },
-
     rules: {
+      ...reactHooks.configs.recommended.rules,
+      ...eslintReact.configs.recommended.rules,
       ...vitest.configs.recommended.rules,
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-var-requires': 'off',
-      '@typescript-eslint/no-require-imports': 'off',
-      'react/react-in-jsx-scope': 'off',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-      'max-statements': 'error',
-    },
-  },
-  {
-    files: ['src/**/*.{ts,tsx}'],
-
-    rules: {
-      'import/order': [
-        'error',
+      '@eslint-react/no-array-index-key': 'off',
+      '@eslint-react/dom-no-dangerously-set-innerhtml': 'off',
+      'import-x/order': [
+        'warn',
         {
           groups: [
             'builtin',
@@ -109,19 +45,17 @@ export default defineConfig([
 
           pathGroups: [
             {
-              pattern: '@alias/**',
+              pattern: '@/**',
               group: 'parent',
               position: 'before',
             },
           ],
-
           alphabetize: {
             order: 'asc',
           },
-
           'newlines-between': 'always',
         },
       ],
     },
-  },
-])
+  }
+)

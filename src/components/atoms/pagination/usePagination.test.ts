@@ -1,5 +1,4 @@
 import { renderHook } from '@testing-library/react'
-
 import { usePagination } from 'src/components/atoms/pagination/usePagination'
 
 describe('usePagination', () => {

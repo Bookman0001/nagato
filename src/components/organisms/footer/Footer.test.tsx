@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react'
 import MockDate from 'mockdate'
-
 import { Footer } from 'src/components/organisms/footer'
 
 MockDate.set('2021-01-01')

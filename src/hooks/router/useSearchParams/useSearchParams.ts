@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-
 import { pagesPath } from 'src/utils/$path'
 import type { SearchParams } from 'src/utils/zod/searchParams'
 

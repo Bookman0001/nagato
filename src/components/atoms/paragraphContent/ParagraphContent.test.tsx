@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-
 import { ParagraphContent } from 'src/components/atoms/paragraphContent'
 
 describe('ParagraphContent', () => {

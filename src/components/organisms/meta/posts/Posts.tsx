@@ -1,9 +1,6 @@
 import Head from 'next/head'
 
-import { useCanonicalLink } from 'src/hooks/seo/useCanonicalLink'
-
 export function Posts() {
-  const { canonicalLink } = useCanonicalLink()
   return (
     <Head>
       <title>K工房</title>
@@ -22,7 +19,6 @@ export function Posts() {
         property="og:image"
         content={`https://k-puppeteer.com/assets/ogp.jpg`}
       />
-      <link rel="canonical" href={canonicalLink}></link>
     </Head>
   )
 }

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-
 import type { ContentInArticles } from 'src/types'
 import { pagesPath } from 'src/utils/$path'
 

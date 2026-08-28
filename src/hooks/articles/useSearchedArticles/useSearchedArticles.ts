@@ -1,7 +1,6 @@
-import useSWR from 'swr'
-
 import { articlesClientController } from 'src/controllers/articles'
 import type { SearchParams } from 'src/utils/zod/searchParams'
+import useSWR from 'swr'
 
 export function useSearchedArticles(params: SearchParams) {
   const { getSearchedArticles } = articlesClientController(params)
