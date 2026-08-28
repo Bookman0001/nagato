@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-
 import { Skeleton } from 'src/components/molecures/skeleton'
 
 describe('SkeletonArticle', () => {

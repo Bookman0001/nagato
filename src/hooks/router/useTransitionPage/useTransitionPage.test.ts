@@ -1,9 +1,9 @@
 import { renderHook } from '@testing-library/react'
-
 import { useTransitionPage } from 'src/hooks/router/useTransitionPage'
 
 const mockPush = vi.fn()
 
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 vi.spyOn(require('next/router'), 'useRouter').mockImplementation(() => ({
   push: mockPush,
 }))

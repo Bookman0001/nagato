@@ -1,9 +1,9 @@
 import { waitFor } from '@testing-library/dom'
 import { render, screen, fireEvent } from '@testing-library/react'
 import singletonRouter from 'next/router'
-
 import { SearchInputArea } from 'src/components/organisms/searchInputArea'
 
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 vi.mock('next/router', () => require('next-router-mock'))
 
 describe('Search', () => {

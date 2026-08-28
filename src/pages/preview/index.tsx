@@ -1,5 +1,4 @@
 import sanitizeHtml from 'sanitize-html'
-
 import { BlogLayout } from 'src/components/templates/blogLayout'
 import { ErrorLayout } from 'src/components/templates/blogLayout/ErrorLayout'
 import { draftArticleController } from 'src/controllers/article'
@@ -19,7 +18,6 @@ interface Props {
 
 export const getServerSideProps = async (context: Context) => {
   const { getDraftArticle } = draftArticleController()
-  /* eslint-disable camelcase */
   const { content_id, draft_key } = context.query
 
   try {
@@ -38,7 +36,6 @@ export const getServerSideProps = async (context: Context) => {
     }
     throw e
   }
-  /* eslint-enable camelcase */
 }
 
 export default function Preview({ article, errorMessage }: Props) {

@@ -1,5 +1,4 @@
 import { render, screen } from '@testing-library/react'
-
 import { CirclePicture } from 'src/components/atoms/picture'
 
 describe('Picture', () => {

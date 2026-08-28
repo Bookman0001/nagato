@@ -1,5 +1,4 @@
 import { waitFor, renderHook } from '@testing-library/react'
-
 import { useCreateMessage } from 'src/hooks/message/useCreateMessage'
 
 vi.mock('src/repositories/client/message', () => ({

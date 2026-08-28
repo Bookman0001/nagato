@@ -2,7 +2,6 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
-
 import ErrorBoundary from 'src/components/error/ErrorBoundary'
 import * as gtag from 'src/services/gtag'
 import SwrConfig from 'src/services/swr/SwrConfig'

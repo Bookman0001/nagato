@@ -1,14 +1,17 @@
-import React, { InputHTMLAttributes } from 'react'
+import { InputHTMLAttributes, Ref } from 'react'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   hasError?: boolean
+  ref?: Ref<HTMLInputElement>
   type?: 'email' | 'text'
 }
 
-export const Input = React.forwardRef<HTMLInputElement, Props>(function Element(
-  { hasError = false, type = 'text', ...props }: Props,
-  ref
-) {
+export function Input({
+  hasError = false,
+  type = 'text',
+  ref,
+  ...props
+}: Props) {
   return (
     <input
       {...props}
@@ -23,4 +26,4 @@ export const Input = React.forwardRef<HTMLInputElement, Props>(function Element(
         `}
     />
   )
-})
+}

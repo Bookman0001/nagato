@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Header } from 'src/components/organisms/header'
 import { Default } from 'src/components/organisms/meta/default'
 

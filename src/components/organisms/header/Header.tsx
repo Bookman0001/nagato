@@ -1,5 +1,4 @@
 import Link from 'next/link'
-
 import { Header as Icon } from 'src/components/atoms/icon'
 import { pagesPath } from 'src/utils/$path'
 

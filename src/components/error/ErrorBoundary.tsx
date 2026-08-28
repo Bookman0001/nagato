@@ -1,5 +1,4 @@
 import { Component, ErrorInfo, ReactNode } from 'react'
-
 import { Footer } from 'src/components/organisms/footer'
 import { Header } from 'src/components/organisms/header'
 

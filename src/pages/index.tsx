@@ -1,5 +1,4 @@
 import { GetStaticProps } from 'next'
-
 import { Articles } from 'src/components/organisms/articles'
 import { Introduction } from 'src/components/organisms/introduction'
 import { TopLayout } from 'src/components/templates/topLayout'

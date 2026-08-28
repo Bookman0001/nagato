@@ -2,7 +2,6 @@ import { ParsedUrlQuery } from 'querystring'
 
 import { GetStaticPaths, GetStaticProps } from 'next'
 import sanitizeHtml from 'sanitize-html'
-
 import { BlogLayout } from 'src/components/templates/blogLayout'
 import { articleController } from 'src/controllers/article'
 import { articlesController } from 'src/controllers/articles'

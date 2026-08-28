@@ -1,5 +1,4 @@
 import { testApiHandler } from 'next-test-api-route-handler'
-
 import handler from 'src/pages/api/articles'
 import { errorCode } from 'src/types/error'
 

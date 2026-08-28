@@ -1,5 +1,4 @@
 import Head from 'next/head'
-
 import type { Article } from 'src/types'
 
 interface Props {

@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { MainTitle } from 'src/components/atoms/mainTitle'
 import { Footer } from 'src/components/organisms/footer'
 import { Header } from 'src/components/organisms/header'

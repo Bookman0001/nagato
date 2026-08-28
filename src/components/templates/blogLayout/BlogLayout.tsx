@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Button } from 'src/components/atoms/button'
 import { MainTitle } from 'src/components/atoms/mainTitle'
 import { Footer } from 'src/components/organisms/footer'
