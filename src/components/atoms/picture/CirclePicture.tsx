@@ -1,4 +1,4 @@
-import React from 'react'
+import Image from 'next/image'
 
 interface Props {
   src: string
@@ -18,7 +18,13 @@ export function CirclePicture({ src, alt, width = 100, height = 100 }: Props) {
       }
       className="overflow-hidden rounded-full w-(--w) h-(--h)"
     >
-      <img src={src} alt={alt} className="block h-full w-full object-cover" />
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className="block h-full w-full object-cover"
+      />
     </div>
   )
 }
