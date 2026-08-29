@@ -91,7 +91,7 @@ importers:
         specifier: 4.17.1
         version: 4.17.1(@typescript-eslint/utils@8.68.0(eslint@10.9.1(jiti@2.7.0))(typescript@6.0.3))(eslint-import-resolver-node@0.3.10)(eslint@10.9.1(jiti@2.7.0))
       eslint-plugin-react-hooks:
-        specifier: ^7.1.1
+        specifier: 7.1.1
         version: 7.1.1(eslint@10.9.1(jiti@2.7.0))
       jsdom:
         specifier: 30.0.1
