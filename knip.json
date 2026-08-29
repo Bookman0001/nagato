@@ -1,4 +1,0 @@
-{
-  "ignoreWorkspaces": ["src/utils/$path.ts"],
-  "ignoreBinaries": ["only-allow"]
-}
