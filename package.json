@@ -64,5 +64,5 @@
     "undici": "8.10.1",
     "vitest": "4.1.11"
   },
-  "packageManager": "pnpm@10.34.5"
+  "packageManager": "pnpm@12.3.0"
 }
