@@ -83,7 +83,7 @@ importers:
         version: 1.6.27(@typescript-eslint/eslint-plugin@8.69.0(@typescript-eslint/parser@8.69.0(eslint@10.9.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.9.1(jiti@2.7.0))(typescript@6.0.3))(eslint@10.9.1(jiti@2.7.0))(typescript@6.0.3)(vitest@5.0.0(@types/node@24.13.3)(jsdom@30.0.1)(msw@2.15.0(@types/node@24.13.3)(typescript@6.0.3))(vite@8.0.8(@types/node@24.13.3)(jiti@2.7.0)(yaml@2.9.0)))
       autoprefixer:
         specifier: 10.5.4
-        version: 10.5.4(postcss@8.5.27)
+        version: 10.5.4(postcss@8.5.28)
       eslint:
         specifier: 10.9.1
         version: 10.9.1(jiti@2.7.0)
@@ -121,8 +121,8 @@ importers:
         specifier: 0.26.1
         version: 0.26.1
       postcss:
-        specifier: 8.5.27
-        version: 8.5.27
+        specifier: 8.5.28
+        version: 8.5.28
       prettier:
         specifier: 3.9.6
         version: 3.9.6
@@ -2713,11 +2713,6 @@ packages:
     resolution: {integrity: sha512-dkEJPVvun4FryqBmZ5KhDo0K9iDXAwn08tMLDinNdRBNPcYEDiWYysLcc6k3mjTMlbP9KyylvRpd4wFtwrT9rw==}
     engines: {node: ^20.17.0 || >=22.9.0}
 
-  nanoid@3.3.17:
-    resolution: {integrity: sha512-xQLf0A3HOMlgHq0n247/LRuAOYmB7dXJ/DvAxGvsSBij45XtBSmQycu+F8ODbHwns/XyFZagyL1+J0Offw1E0g==}
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-
   nanoid@3.3.18:
     resolution: {integrity: sha512-DTg4MJbGMWkfi6VZFdNt2/caMbQy4Ou+Op/hJQvGEWcnVfoA1QA+xzRKAzw9jD6+GVOOeYr/mIcuDSdug6F6+w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -2885,8 +2880,8 @@ packages:
     resolution: {integrity: sha512-g50586zr4bZmwFiTlflMu8E0bDTb5I5gertgwAKmsdUlTQIhZtunzUlD1WSzwcVWPoAVpsrA6vlfCD7oXvRwgg==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.27:
-    resolution: {integrity: sha512-79Iho8QeYyooJ8e9lCRyTVlyTAkS/kXBYKff6TMzS3kEWGQ8Ds5UEtXpGrSUDLUWok6QTvxeYy0GO8fopHnaSA==}
+  postcss@8.5.28:
+    resolution: {integrity: sha512-RRuzqDtt5Y9h3quz5hWhK+TPnsmVs6WwSU6LkJMeY4HstUEDuYTG8UJSdawMRzmzAtV+KEoG8N3Qg2qLy5vM/A==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -4308,7 +4303,7 @@ snapshots:
       '@alloc/quick-lru': 5.2.0
       '@tailwindcss/node': 4.3.3
       '@tailwindcss/oxide': 4.3.3
-      postcss: 8.5.27
+      postcss: 8.5.28
       tailwindcss: 4.3.3
 
   '@testing-library/dom@10.4.1':
@@ -4720,13 +4715,13 @@ snapshots:
   async-function@1.0.0:
     optional: true
 
-  autoprefixer@10.5.4(postcss@8.5.27):
+  autoprefixer@10.5.4(postcss@8.5.28):
     dependencies:
       browserslist: 4.28.7
       caniuse-lite: 1.0.30001806
       fraction.js: 5.3.4
       picocolors: 1.1.1
-      postcss: 8.5.27
+      postcss: 8.5.28
       postcss-value-parser: 4.2.0
 
   available-typed-arrays@1.0.7:
@@ -5928,8 +5923,6 @@ snapshots:
 
   mute-stream@3.0.0: {}
 
-  nanoid@3.3.17: {}
-
   nanoid@3.3.18: {}
 
   napi-postinstall@0.3.4: {}
@@ -6135,11 +6128,11 @@ snapshots:
 
   postcss@8.5.23:
     dependencies:
-      nanoid: 3.3.17
+      nanoid: 3.3.18
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.27:
+  postcss@8.5.28:
     dependencies:
       nanoid: 3.3.18
       picocolors: 1.1.1
@@ -6281,7 +6274,7 @@ snapshots:
       is-plain-object: 5.0.0
       launder: 1.7.1
       parse-srcset: 1.0.2
-      postcss: 8.5.27
+      postcss: 8.5.28
 
   saxes@6.0.0:
     dependencies:
@@ -6643,7 +6636,7 @@ snapshots:
     dependencies:
       lightningcss: 1.33.0
       picomatch: 4.0.7
-      postcss: 8.5.27
+      postcss: 8.5.28
       rolldown: 1.0.0-rc.15
       tinyglobby: 0.2.17
     optionalDependencies:
