@@ -61,7 +61,7 @@
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3",
     "typescript-eslint": "8.70.1",
-    "undici": "8.10.2",
+    "undici": "8.11.0",
     "vitest": "5.0.1"
   },
   "packageManager": "pnpm@10.34.5"
