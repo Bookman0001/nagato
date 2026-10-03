@@ -1,7 +1,10 @@
 packages:
   - '.'
 allowBuilds:
+  core-js: false
   lefthook: true
+  msw: false
+  unrs-resolver: false
 minimumReleaseAge: 4320
 minimumReleaseAgeExclude:
   # Renovate security update: undici@8.5.0
