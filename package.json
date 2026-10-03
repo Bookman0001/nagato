@@ -51,7 +51,7 @@
     "knip": "6.38.0",
     "lefthook": "2.1.15",
     "mockdate": "3.0.5",
-    "msw": "2.15.0",
+    "msw": "3.0.0",
     "next-router-mock": "1.0.5",
     "next-test-api-route-handler": "5.0.7",
     "npm-run-all2": "9.0.3",
