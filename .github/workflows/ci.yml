@@ -1,0 +1,36 @@
+name: ci
+permissions:
+  contents: read
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - name: Use Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version-file: .nvmrc
+      - name: Install pnpm
+        uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413
+        with:
+          version: 12.10.0
+          run_install: false
+      - name: install dependency
+        run: pnpm i
+      - name: install dependency
+        run: pnpm i
+      - name: test format
+        run: pnpm prettier
+      - name: test linter
+        run: pnpm lint
+      - name: test compiler
+        run: pnpm tsc
+      - name: auto code review via knip
+        run: pnpm knip
+      - name: test unit-testing and integration-testing
+        run: pnpm test
