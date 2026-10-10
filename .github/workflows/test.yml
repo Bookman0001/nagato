@@ -1,4 +1,4 @@
-name: auto-test
+name: ci
 permissions:
   contents: read
 
@@ -10,9 +10,12 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       - name: use Node.js
-        uses: pnpm/action-setup@v6
+        uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413
+        with:
+          node-version-file: '.node-version'
+          cache: 'pnpm'
       - name: install dependency
         run: pnpm i
       - name: test format
