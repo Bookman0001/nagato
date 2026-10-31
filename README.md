@@ -1,48 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Description
 
-This app is Blog app using Next.js and microCMS service.(https://microcms.io)
+Blog app using Next.js with [microCMS](https://microcms.io)
 
-MIT License. You can freely use and customize in your responsibility.
+MIT License
 
 ## Before Starting
 
-You start micoCMS service account.
-Then, settting for endopoint as follows.
+You set up micoCMS service account, then creating endopoint as follows.
 
-```
-endpoint name
+GET /technology-articles /technology-articles/${id}
 
-/technology-articles
-/technology-articles/${id}
+| name        | data type        |
+| ----------- | ---------------- |
+| title       | text field       |
+| description | text field       |
+| content     | richEditor field |
 
+POST /messages
 
-schema
+| name    | data type      |
+| ------- | -------------- |
+| email   | text field     |
+| name    | text field     |
+| content | textarea field |
 
-title - text field
-description - text field
-content - richEditor field
-
-```
-
-In Detail, Please read docs in microCMS(https://document.microcms.io)
+→ [docs](https://document.microcms.io)
 
 ## Getting Started
 
-First, settting .env.local following .env.sample
+- settting .env.local
 
-Secondly, run the development server:
+- run the development server:
 
 ```bash
 npx lefthook install
 pnpm i
 pnpm dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `src/**`. The page auto-updates as you edit the file.
 
 ## Running Unit & Integration Test
 
