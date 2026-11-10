@@ -45,6 +45,7 @@
     "@types/sanitize-html": "2.16.2",
     "@typescript-eslint/eslint-plugin": "8.72.1",
     "@typescript-eslint/parser": "8.72.1",
+    "@typescript/native": "npm:typescript@7.0.2",
     "@vitest/eslint-plugin": "1.6.28",
     "autoprefixer": "10.6.2",
     "eslint": "10.14.0",
@@ -62,7 +63,7 @@
     "postcss": "8.5.32",
     "prettier": "3.9.10",
     "tailwindcss": "4.3.5",
-    "typescript": "6.0.3",
+    "typescript": "npm:@typescript/typescript6@6.0.2",
     "typescript-eslint": "8.72.1",
     "undici": "8.12.4",
     "vitest": "5.1.0"
