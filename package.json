@@ -23,7 +23,7 @@
     "@hookform/resolvers": "7.0.5",
     "@vercel/speed-insights": "2.1.0",
     "dayjs": "1.11.23",
-    "next": "16.4.5",
+    "next": "16.4.6",
     "react": "19.3.1",
     "react-dom": "19.3.1",
     "react-hook-form": "7.91.0",
@@ -34,7 +34,7 @@
   "devDependencies": {
     "@eslint-react/eslint-plugin": "5.28.8",
     "@eslint/js": "10.0.1",
-    "@next/eslint-plugin-next": "16.4.5",
+    "@next/eslint-plugin-next": "16.4.6",
     "@tailwindcss/postcss": "4.3.5",
     "@testing-library/dom": "10.4.2",
     "@testing-library/jest-dom": "7.0.1",
