@@ -32,9 +32,9 @@ export function articlesController() {
   const getAllArticlesIds = async () => {
     const pager = { limit: 20 as const, offset: 0 }
     let allArticlesIds: string[] = []
-    let isIncludedArticles = true
+    let shouldFetch = true
 
-    while (isIncludedArticles) {
+    while (shouldFetch) {
       const fetchedIds = (
         await fetchArticlesIds({ limit: pager.limit, offset: pager.offset })
       ).contents.map((content) => content.id)
@@ -42,7 +42,7 @@ export function articlesController() {
       allArticlesIds = [...allArticlesIds, ...fetchedIds]
 
       if (fetchedIds.length < pager.limit) {
-        isIncludedArticles = false
+        shouldFetch = false
       } else {
         pager.offset = pager.offset + pager.limit
       }
