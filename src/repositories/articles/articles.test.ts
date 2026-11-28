@@ -1,11 +1,9 @@
-import {
-  fetchAllArticles,
-  fetchLimitedArtcles,
-} from 'src/repositories/articles'
+import { fetchArticlesIds, fetchLatestArtcles } from 'src/repositories/articles'
 
-describe('fetchAllArticles', () => {
+describe('fetchArticlesIds', () => {
+  // FIX ME: adapt to the query mode.
   it('to be fetched correctly', () => {
-    return fetchAllArticles({ limit: 10, offset: 0 }).then((data) => {
+    return fetchArticlesIds({ limit: 10, offset: 0 }).then((data) => {
       expect(data).toEqual([
         {
           id: '1',
@@ -26,9 +24,9 @@ describe('fetchAllArticles', () => {
   })
 })
 
-describe('fetchLimitedArticles', () => {
+describe('fetchLatestArtcles', () => {
   it('to be fetched correctly', () => {
-    return fetchLimitedArtcles({ limit: 10 }).then((data) => {
+    return fetchLatestArtcles({ limit: 10 }).then((data) => {
       expect(data).toEqual([
         {
           id: '1',

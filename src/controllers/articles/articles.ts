@@ -1,8 +1,6 @@
 import dayjs from 'dayjs'
-import {
-  fetchAllArticles,
-  fetchLimitedArtcles,
-} from 'src/repositories/articles'
+import { fetchLatestArtcles } from 'src/repositories/articles'
+import { fetchArticlesIds } from 'src/repositories/articles/articles'
 import { fetchSearchedArticles } from 'src/repositories/client/articles'
 import type {
   ArticlesResponse,
@@ -31,38 +29,36 @@ function mappingArticles(response: ArticlesResponse): ArticlesPagination {
 }
 
 export function articlesController() {
-  const getAllArticleIds = async () => {
-    const pager: { readonly limit: 20; offset: number } = {
-      limit: 20,
-      offset: 0,
-    }
-    let totalArticleIds: string[] = []
-    let isArticlesEmpty = false
+  const getAllArticlesIds = async () => {
+    const pager = { limit: 20 as const, offset: 0 }
+    let allArticlesIds: string[] = []
+    let shouldFetch = true
 
-    while (!isArticlesEmpty) {
+    while (shouldFetch) {
       const fetchedIds = (
-        await fetchAllArticles({ limit: pager.limit, offset: pager.offset })
-      ).contents.map((contents) => contents.id)
+        await fetchArticlesIds({ limit: pager.limit, offset: pager.offset })
+      ).contents.map((content) => content.id)
 
-      if (!fetchedIds.length) {
-        isArticlesEmpty = true
+      allArticlesIds = [...allArticlesIds, ...fetchedIds]
+
+      if (fetchedIds.length < pager.limit) {
+        shouldFetch = false
       } else {
-        totalArticleIds = [...totalArticleIds, ...fetchedIds]
         pager.offset = pager.offset + pager.limit
       }
     }
-    return totalArticleIds
+    return allArticlesIds
   }
 
-  const getLimitedArticles = async (params: PaginationParams) => {
-    return await fetchLimitedArtcles(params).then((articles) => {
+  const getLatestArticles = async (params: PaginationParams) => {
+    return await fetchLatestArtcles(params).then((articles) => {
       return mappingArticles(articles)
     })
   }
 
   return {
-    getAllArticleIds,
-    getLimitedArticles,
+    getAllArticlesIds,
+    getLatestArticles,
   }
 }
 

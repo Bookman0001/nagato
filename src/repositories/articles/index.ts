@@ -1,5 +1,5 @@
 export {
-  fetchAllArticles,
-  fetchLimitedArtcles,
+  fetchArticlesIds,
+  fetchLatestArtcles,
   fetchSearchedArticles,
 } from './articles'
