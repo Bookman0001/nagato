@@ -1,20 +1,24 @@
 import { get } from 'src/services/serverFetch'
-import type { ArticlesResponse, PaginationParams } from 'src/types'
+import type {
+  ArticlesIdResponses,
+  ArticlesResponse,
+  PaginationParams,
+} from 'src/types'
 import type { SearchParams } from 'src/utils/zod/searchParams'
 
-export async function fetchAllArticles({
+export async function fetchArticlesIds({
   limit,
   offset,
 }: {
   limit: number
   offset: number
-}): Promise<ArticlesResponse> {
-  return await get<ArticlesResponse>(
-    `/technology-articles?offset=${offset}&limit=${limit}&fields=id,createdAt,updatedAt,publishedAt,title,description&orders=-publishedAt`
+}): Promise<ArticlesIdResponses> {
+  return await get<ArticlesIdResponses>(
+    `/technology-articles?offset=${offset}&limit=${limit}&fields=id`
   )
 }
 
-export async function fetchLimitedArtcles(
+export async function fetchLatestArtcles(
   params: PaginationParams
 ): Promise<ArticlesResponse> {
   return await get<ArticlesResponse>(

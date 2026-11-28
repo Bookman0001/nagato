@@ -10,8 +10,8 @@ interface Props {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const { getLimitedArticles } = articlesController()
-  const articles = await getLimitedArticles({ limit: 5 })
+  const { getLatestArticles } = articlesController()
+  const articles = await getLatestArticles({ limit: 5 })
   return {
     props: {
       articles,

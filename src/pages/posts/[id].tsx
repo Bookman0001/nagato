@@ -16,8 +16,8 @@ interface Props {
 }
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const { getAllArticleIds } = articlesController()
-  const articleIds = await getAllArticleIds()
+  const { getAllArticlesIds } = articlesController()
+  const articleIds = await getAllArticlesIds()
   const paths = articleIds.map((id) => {
     return { params: { id } }
   })

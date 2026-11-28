@@ -18,6 +18,10 @@ type ContentResponseInArticles = {
   description: string
 }
 
+export type ArticlesIdResponses = Readonly<{
+  contents: Array<Pick<ArticleResponse, 'id'>>
+}>
+
 export type ArticlesResponse = Readonly<{
   contents: Array<ContentResponseInArticles>
   totalCount: number
